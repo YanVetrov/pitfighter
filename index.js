@@ -138,7 +138,7 @@ app.post("/client/:id", (req, res) => {
   } else return res.status(404).json({ message: "Client not found" });
 });
 
-http.listen(443, host, () =>
+http.listen(port, host, () =>
   console.log(`Server listens http://${host}:${port}`)
 );
 async function getPlayersInRoom(room) {
