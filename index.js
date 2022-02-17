@@ -36,7 +36,7 @@ let units = {
     weapon: "gun",
   },
 };
-let unit_count = 2;
+let unit_count = 3;
 
 io.on("connection", function (socket) {
   console.log("a user connected");
