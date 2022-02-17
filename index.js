@@ -60,10 +60,10 @@ io.on("connection", function (socket) {
     if (unit) {
       let diffX = Math.abs(unit.x - x);
       let diffY = Math.abs(unit.y - y);
-      unit.y = y;
-      unit.x = x;
       if (diffX > unit.speed || diffY > unit.speed)
         return console.log("no speed");
+      unit.y = y;
+      unit.x = x;
       const room = socket.gameRoom;
       let enemy = await getEnemyInRoom(socket);
       io.to(room).emit("unit_moved", { id, x, y });
