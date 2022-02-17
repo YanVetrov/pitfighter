@@ -202,18 +202,18 @@ export default {
           y: target.posY,
         });
     },
-    async attackUnit({ id, target_id, hp }) {
-      console.log("attacked", id, target_id, hp);
+    async attackUnit({ id, target_id, hp, critical }) {
+      console.log("attacked", id, target_id, hp, critical);
       let unit = store.gameScene.children.find(el => el.id === id);
       let target = store.gameScene.children.find(el => el.id === target_id);
-      if (unit.blocked || target.blocked) return 0;
-      if (target.health <= 0) return 0;
-      unit.blocked = true;
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
       else unit.unit.x = 1;
+      let damage = target.health - hp;
       target.health = hp;
+      target.alphaCounter(`-${damage}`, 0xff3333);
+      if (critical) target.alphaCounter(`CRITICAL!`, 0xffff00, 0.3);
       unit.unit._textures = unit.unit.attack;
       let bullet = Sprite.from("./assets/Bullet.png");
       store.gameScene.addChild(bullet);
@@ -229,7 +229,7 @@ export default {
           store.gameScene.removeChild(bullet);
         },
       });
-      setTimeout(() => {
+      unit.timeoutAnimation = setTimeout(() => {
         unit.unit._textures = unit.unit.idle;
         unit.blocked = false;
       }, 1000);
@@ -242,7 +242,7 @@ export default {
         target.ground = null;
       } else {
         target.unit._textures = target.unit.hurt;
-        setTimeout(() => {
+        target.timeoutAnimation = setTimeout(() => {
           target.unit._textures = target.unit.idle;
           unit.blocked = false;
         }, 1000);
@@ -347,6 +347,24 @@ export default {
       });
       container.ownerText.y = -30;
       container.addChild(container.ownerText);
+      container.alphaCounter = async function(
+        text = "+1",
+        color = 0xeeeeee,
+        delay = 0
+      ) {
+        let options = {
+          fill: color,
+          fontFamily: "metalwar",
+          fontSize: 95,
+        };
+        let node = new Text(text, options);
+        node.zIndex = 12;
+        this.addChild(node);
+        node.x = 40;
+        node.y = 40;
+        await gsap.to(node, { y: 0, alpha: 0, duration: 2, delay });
+        this.removeChild(node);
+      };
       let healthBar = new Container();
       healthBar.scale.x = 4;
       healthBar.scale.y = 4;
@@ -469,7 +487,7 @@ export default {
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
           [...data.self, ...data.enemy].forEach(el => {
-            let hero = vm.getUnit(el, el.x, el.y, el.x > 9 ? -0.2 : 0.2);
+            let hero = vm.getUnit(el, el.x, el.y, el.x > 14 ? -0.2 : 0.2);
             store.gameScene.addChild(hero);
           });
         });
@@ -482,8 +500,8 @@ export default {
           console.log("users removed");
         });
         socket.on("unit_moved", ({ id, x, y }) => vm.moveUnit({ id, x, y }));
-        socket.on("attacked", ({ id, target_id, hp }) =>
-          vm.attackUnit({ id, target_id, hp })
+        socket.on("attacked", ({ id, target_id, hp, critical }) =>
+          vm.attackUnit({ id, target_id, hp, critical })
         );
         socket.on("turn_changed", ({ whoTurn, whoWait, availableTime }) => {
           console.log("turned");

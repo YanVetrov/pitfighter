@@ -119,7 +119,7 @@ function initMap(arr, store, count) {
     let x = (i % multiplier) + 1;
     let random = Math.ceil(Math.random() * 10 - 1);
     if (!random) random = 1;
-    if (x > 5 && x < 15 && y > 5 && y < 15) random = 1;
+    if (x > 5 && x < 25 && y > 5 && y < 25) random = 1;
     let sprite = Sprite.from(
       `./assets/Grass/grass_${random >= 10 ? "" : "0"}${random}.png`
     );
