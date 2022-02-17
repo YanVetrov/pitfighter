@@ -461,7 +461,7 @@ export default {
         // store.gameScene.addChild(soldier);
         // hero = vm.getUnit({ name: "sold", weapon: "gun" }, 12, 6, 0.2);
         // store.gameScene.addChild(hero);
-        const socket = io(`ws://${window.location.host}`);
+        const socket = io(`ws://${window.location.host.split(":")[0]}:8080`);
         socket.status = "waiting";
         vm.socket = socket;
         socket.on("start_game", data => {

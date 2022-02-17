@@ -17,8 +17,8 @@ const MAX_WAITING = 30000;
 let units = {
   sold: {
     id: 0,
-    hp: 250,
-    strength: 250,
+    hp: 300,
+    strength: 300,
     damage: 20,
     fire_radius: 2,
     speed: 1,
@@ -29,8 +29,8 @@ let units = {
     id: 0,
     hp: 190,
     strength: 190,
-    damage: 40,
-    fire_radius: 4,
+    damage: 20,
+    fire_radius: 3,
     speed: 2,
     type: "hero",
     weapon: "gun",
