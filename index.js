@@ -37,57 +37,18 @@ let units = {
   },
 };
 let unit_count = 2;
-function next_turn() {
-  console.log("next turn");
-  _turn = current_turn++ % players.length;
-  players[_turn].emit("your_turn");
-  console.log("next turn triggered ", _turn);
-  triggerTimeout();
-}
-
-function triggerTimeout() {
-  timeOut = setTimeout(() => {
-    next_turn();
-  }, MAX_WAITING);
-}
-
-function resetTimeOut() {
-  if (typeof timeOut === "object") {
-    console.log("timeout reset");
-    clearTimeout(timeOut);
-  }
-}
 
 io.on("connection", function (socket) {
-  console.log("A player connected");
-  let first = !players.length || players.some(el => el.side === "right");
-  let min = first ? 5 : 11;
-  let max = first ? 10 : 15;
-  socket.units = [];
-  let type = first ? "hero" : "sold";
-  socket.side = first ? "left" : "right";
-  for (let i = 0; i < unit_count; i++) {
-    let x = Math.floor(Math.random() * (max - min) + min);
-    let y = Math.floor(Math.random() * (15 - 5) + 5);
-    socket.units.push({
-      ...units[type],
-      id: Date.now() + i,
-      owner: socket.id,
-      x,
-      y,
-      type,
-      side: first ? "left" : "right",
-    });
-  }
-  socket.emit("set_units", {
-    self: socket.units,
-    enemy: !first ? players[0].units : [],
-  });
-  socket.broadcast.emit("new_player", socket.units);
+  console.log("a user connected");
+  socket.status = "waiting";
+  let anotherPlayer = players.find(el => el.status === "waiting");
   players.push(socket);
-  socket.on("disconnect", function () {
+  if (anotherPlayer) startSession(socket, anotherPlayer);
+  socket.on("disconnect", function (e) {
+    const room = socket.gameRoom;
     players.splice(players.indexOf(socket), 1);
-    socket.broadcast.emit("user_leaved", socket.id);
+    io.to(room).emit("user_leaved", socket.id);
+    destroySession(room);
     console.log("A player disconnected");
     console.log("A number of players now ", players.length);
   });
@@ -97,10 +58,10 @@ io.on("connection", function (socket) {
     if (unit) {
       let diffX = Math.abs(unit.x - x);
       let diffY = Math.abs(unit.y - y);
-      //   if (diffX > unit.speed || diffY > unit.speed) return 0;
       unit.y = y;
       unit.x = x;
-      io.emit("unit_moved", { id, x, y });
+      const room = socket.gameRoom;
+      io.to(room).emit("unit_moved", { id, x, y });
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
@@ -108,16 +69,51 @@ io.on("connection", function (socket) {
     console.log(id, target_id, target_owner);
     let unit = socket.units.find(el => el.id === id);
     let target_user = players.find(el => el.id === target_owner);
-    if (!unit || !target_user) return 0;
+    if (!unit || !target_user) return console.log("no unit or user");
     let target = target_user.units.find(el => el.id === target_id);
     let diffX = Math.abs(unit.x - target.x);
     let diffY = Math.abs(unit.y - target.x);
     if (diffX > unit.fire_radius || diffY > unit.fire_radius) return 0;
     target.hp -= unit.damage;
-    io.emit("attacked", { id, target_id, hp: target.hp });
+    const room = socket.gameRoom;
+    io.to(room).emit("attacked", { id, target_id, hp: target.hp });
   });
 });
-
+function startSession(player1, player2) {
+  [player1, player2].forEach((socket, i) => {
+    let first = i === 0;
+    let min = first ? 5 : 11;
+    let max = first ? 10 : 15;
+    socket.units = [];
+    let type = first ? "hero" : "sold";
+    socket.side = first ? "left" : "right";
+    for (let i = 0; i < unit_count; i++) {
+      let x = Math.floor(Math.random() * (max - min) + min);
+      let y = Math.floor(Math.random() * (15 - 5) + 5);
+      socket.units.push({
+        ...units[type],
+        id: Date.now() + x + y + i,
+        owner: socket.id,
+        x,
+        y,
+        type,
+        side: first ? "left" : "right",
+      });
+    }
+    socket.status = "playing";
+    let room = Date.now();
+    socket.join(room);
+    socket.gameRoom = room;
+  });
+  player1.emit("start_game", {
+    self: player1.units,
+    enemy: player2.units,
+  });
+  player2.emit("start_game", {
+    self: player2.units,
+    enemy: player1.units,
+  });
+}
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => res.render("index"));
@@ -145,3 +141,14 @@ app.post("/client/:id", (req, res) => {
 http.listen(port, host, () =>
   console.log(`Server listens http://${host}:${port}`)
 );
+async function getPlayersInRoom(room) {
+  const sockets = await io.in(room).fetchSockets();
+  return sockets;
+}
+async function destroySession(room) {
+  let sockets = await getPlayersInRoom(room);
+  sockets.forEach(el => {
+    el.leave(room);
+    el.status = "waiting";
+  });
+}
