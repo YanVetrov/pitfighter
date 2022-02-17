@@ -31,7 +31,7 @@ let units = {
     strength: 190,
     damage: 40,
     fire_radius: 4,
-    speed: 1,
+    speed: 2,
     type: "hero",
     weapon: "gun",
   },
