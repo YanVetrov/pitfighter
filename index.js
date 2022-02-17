@@ -13,7 +13,7 @@ let players = [];
 let current_turn = 0;
 let timeOut;
 let _turn = 0;
-const MAX_WAITING = 5000;
+const MAX_WAITING = 30000;
 let units = {
   sold: {
     id: 0,
@@ -52,31 +52,37 @@ io.on("connection", function (socket) {
     console.log("A player disconnected");
     console.log("A number of players now ", players.length);
   });
-  socket.on("move_unit", ({ id, x, y }) => {
-    if (!id) return 0;
+  socket.on("move_unit", async ({ id, x, y }) => {
+    if (!id || !socket.turn) return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
     if (unit) {
       let diffX = Math.abs(unit.x - x);
       let diffY = Math.abs(unit.y - y);
       unit.y = y;
       unit.x = x;
+      if (diffX > unit.speed || diffY > unit.speed)
+        return console.log("no speed");
       const room = socket.gameRoom;
+      let enemy = await getEnemyInRoom(socket);
       io.to(room).emit("unit_moved", { id, x, y });
+      swapTurn(socket, enemy);
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
-    if (!id || !target_id || !target_owner) return 0;
-    console.log(id, target_id, target_owner);
+    if (!id || !target_id || !target_owner || !socket.turn)
+      return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
     let target_user = players.find(el => el.id === target_owner);
     if (!unit || !target_user) return console.log("no unit or user");
     let target = target_user.units.find(el => el.id === target_id);
     let diffX = Math.abs(unit.x - target.x);
-    let diffY = Math.abs(unit.y - target.x);
-    if (diffX > unit.fire_radius || diffY > unit.fire_radius) return 0;
+    let diffY = Math.abs(unit.y - target.y);
+    if (diffX > unit.fire_radius || diffY > unit.fire_radius)
+      return console.log(diffX, diffY);
     target.hp -= unit.damage;
     const room = socket.gameRoom;
     io.to(room).emit("attacked", { id, target_id, hp: target.hp });
+    swapTurn(socket, target_user);
   });
 });
 function startSession(player1, player2) {
@@ -101,31 +107,76 @@ function startSession(player1, player2) {
       });
     }
     socket.status = "playing";
-    let room = Date.now();
-    socket.join(room);
-    socket.gameRoom = room;
   });
+  let room = Date.now();
+  player1.join(room);
+  player1.gameRoom = room;
+  player2.join(room);
+  player2.gameRoom = room;
+  setTimeout(() => swapTurn(player1, player2), 2000);
   player1.emit("start_game", {
     self: player1.units,
     enemy: player2.units,
+    roomId: room,
   });
   player2.emit("start_game", {
     self: player2.units,
     enemy: player1.units,
+    roomId: room,
   });
+}
+
+async function getPlayersInRoom(room) {
+  const sockets = await io.in(room).fetchSockets();
+  return sockets;
+}
+async function getEnemyInRoom(socket) {
+  const sockets = await io.in(socket.gameRoom).fetchSockets();
+  return sockets.filter(el => el.id !== socket.id)[0];
+}
+async function destroySession(room) {
+  let sockets = await getPlayersInRoom(room);
+  sockets.forEach(el => {
+    el.leave(room);
+    el.status = "waiting";
+    clearTimeout(el.timeout);
+  });
+}
+function swapTurn(player1, player2) {
+  if (!player1 || !player2 || !player1.gameRoom || !player2.gameRoom)
+    return console.log(player2);
+  clearTimeout(player1.timeout);
+  clearTimeout(player2.timeout);
+  let availableTime = Date.now() + MAX_WAITING;
+  if (!player1.turn && !player2.turn) player1.turn = true;
+  player1.turn = !player1.turn;
+  player2.turn = !player2.turn;
+  let timeout = setTimeout(() => {
+    swapTurn(player1, player2);
+  }, MAX_WAITING);
+  player1.timeout = timeout;
+  player2.timeout = timeout;
+  let whoTurn = player1.turn ? player1.id : player2.id;
+  let whoWait = player1.turn ? player2.id : player1.id;
+  setTimeout(
+    () =>
+      io.to(player1.gameRoom).emit("turn_changed", {
+        whoTurn,
+        whoWait,
+        availableTime,
+      }),
+    1000
+  );
 }
 app.use(express.static(__dirname));
 
-app.get("/", (req, res) => res.render("index"));
-
-//получение количества активных клиентов
+app.get("/", (req, res) => res.sendFile(__dirname + "/client/dist/index.html"));
+app.get("*", (req, res) => res.sendFile(__dirname + "/client/dist" + req.url));
 app.get("/clients-count", (req, res) => {
   res.send({
     count: io.engine.clientsCount,
   });
 });
-
-//отправка сообщения конкретному клиенту по его id
 app.post("/client/:id", (req, res) => {
   if (clients.indexOf(req.params.id) !== -1) {
     io.sockets.connected[req.params.id].emit(
@@ -141,14 +192,3 @@ app.post("/client/:id", (req, res) => {
 http.listen(port, host, () =>
   console.log(`Server listens http://${host}:${port}`)
 );
-async function getPlayersInRoom(room) {
-  const sockets = await io.in(room).fetchSockets();
-  return sockets;
-}
-async function destroySession(room) {
-  let sockets = await getPlayersInRoom(room);
-  sockets.forEach(el => {
-    el.leave(room);
-    el.status = "waiting";
-  });
-}
