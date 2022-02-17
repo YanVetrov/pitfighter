@@ -96,11 +96,9 @@ function startSession(player1, player2) {
     for (let i = 0; i < unit_count; i++) {
       let x = Math.floor(Math.random() * (max - min) + min);
       let y = Math.floor(Math.random() * (15 - 5) + 5);
-      while(socket.units.find(el => el.x === x && el.y === y)) {
+      while (socket.units.find(el => el.x === x && el.y === y)) {
         x = Math.floor(Math.random() * (max - min) + min);
         y = Math.floor(Math.random() * (15 - 5) + 5);
-      }
-
       }
       socket.units.push({
         ...units[type],
