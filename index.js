@@ -8,7 +8,7 @@ const express = require("express"),
   });
 
 const host = "0.0.0.0";
-const port = 443;
+const port = 8080;
 let players = [];
 let current_turn = 0;
 let timeOut;
