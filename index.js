@@ -8,7 +8,7 @@ const express = require("express"),
   });
 
 const host = "0.0.0.0";
-const port = 8080;
+const port = proccess.env.PORT;
 let players = [];
 let current_turn = 0;
 let timeOut;
