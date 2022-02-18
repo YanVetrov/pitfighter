@@ -184,7 +184,7 @@ export default {
       ]);
     },
     async clickSprite(target, event) {
-      console.log(target);
+      if (store.gameScene.blockedUI) return console.log("blocked");
       if (!store.unit && target.unit && target.unit.owner === this.socket.id)
         store.unit = target.unit;
       if (store.unit && target.unit) {
