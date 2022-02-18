@@ -93,10 +93,14 @@ let unit_count = 6;
 
 io.on("connection", function (socket) {
   console.log("a user connected");
-  socket.status = "waiting";
-  let anotherPlayer = players.find(el => el.status === "waiting");
+  socket.status = "choose";
   players.push(socket);
-  if (anotherPlayer) startSession(socket, anotherPlayer);
+  socket.on("choose", units => {
+    let anotherPlayer = players.find(el => el.status === "waiting");
+    addUnits(socket, units, !!anotherPlayer);
+    socket.status = "waiting";
+    if (anotherPlayer) startSession(socket, anotherPlayer);
+  });
   socket.on("disconnect", function (e) {
     const room = socket.gameRoom;
     players.splice(players.indexOf(socket), 1);
@@ -157,41 +161,13 @@ io.on("connection", function (socket) {
   });
 });
 function startSession(player1, player2) {
-  [player1, player2].forEach((socket, i) => {
-    let first = i === 0;
-    let min = first ? 5 : 15;
-    let max = first ? 14 : 25;
-    socket.units = [];
-    socket.turnCount = turnCount;
-    socket.side = first ? "left" : "right";
-    for (let i = 0; i < unit_count; i++) {
-      let x = Math.floor(Math.random() * (max - min) + min);
-      let y = Math.floor(Math.random() * (25 - 5) + 5);
-      while (socket.units.find(el => el.x === x && el.y === y)) {
-        x = Math.floor(Math.random() * (max - min) + min);
-        y = Math.floor(Math.random() * (25 - 5) + 5);
-      }
-      let type =
-        Object.values(units)[
-          Math.floor(Math.random() * Object.values(units).length)
-        ].type;
-      socket.units.push({
-        ...units[type],
-        id: Date.now() + "" + x + y + i,
-        owner: socket.id,
-        x,
-        y,
-        type,
-        side: first ? "left" : "right",
-      });
-    }
-    socket.status = "playing";
-  });
   let room = Date.now();
-  player1.join(room);
-  player1.gameRoom = room;
-  player2.join(room);
-  player2.gameRoom = room;
+  [player1, player2].forEach(socket => {
+    socket.turnCount = turnCount;
+    socket.status = "playing";
+    socket.join(room);
+    socket.gameRoom = room;
+  });
   setTimeout(() => swapTurn(player1, player2), 2000);
   player1.emit("start_game", {
     self: player1.units,
@@ -204,7 +180,30 @@ function startSession(player1, player2) {
     roomId: room,
   });
 }
-
+function addUnits(socket, names, first) {
+  let min = first ? 5 : 15;
+  let max = first ? 14 : 25;
+  socket.units = [];
+  socket.side = first ? "left" : "right";
+  for (let i = 0; i < names.length; i++) {
+    let x = Math.floor(Math.random() * (max - min) + min);
+    let y = Math.floor(Math.random() * (25 - 5) + 5);
+    while (socket.units.find(el => el.x === x && el.y === y)) {
+      x = Math.floor(Math.random() * (max - min) + min);
+      y = Math.floor(Math.random() * (25 - 5) + 5);
+    }
+    let type = units[names[i]].type;
+    socket.units.push({
+      ...units[type],
+      id: Date.now() + "" + x + y + i,
+      owner: socket.id,
+      x,
+      y,
+      type,
+      side: first ? "left" : "right",
+    });
+  }
+}
 async function getPlayersInRoom(room) {
   const sockets = await io.in(room).fetchSockets();
   return sockets;
@@ -233,7 +232,7 @@ async function destroySession(room) {
   sockets.forEach(el => {
     el.leave(room);
     el.units = [];
-    el.status = "waiting";
+    el.status = "choose";
     clearTimeout(el.timeout);
     el.stun = false;
   });

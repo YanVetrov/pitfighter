@@ -15,6 +15,38 @@
       YOUR TURN
     </div>
     <div class="turn" v-else>ENEMY TURN</div>
+
+    <div class="characters" v-if="choose">
+      <div class="character_block" v-for="(val, key) in units" :key="key">
+        <div>
+          <button @click="val.count > 0 ? val.count-- : ''">-</button
+          ><button
+            @click="
+              Object.values(units)
+                .map(el => el.count)
+                .reduce((acc, el) => (acc += el), 0) < 6
+                ? val.count++
+                : ''
+            "
+          >
+            +
+          </button>
+          <button @click="onChoose" style="position:fixed;bottom:50px;left:45%">
+            I'M READY
+          </button>
+        </div>
+
+        <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
+        <div style="font-size:12px;color:gray;margin:5px;">
+          <div>HP: {{ val.strength }}</div>
+          <div>SPEED: {{ val.speed }}</div>
+          <div>DAMAGE: {{ val.attack }}</div>
+          <div>RADIUS: {{ val.fire_radius }}</div>
+        </div>
+        <div class="character_count" style="color:silver">{{ val.count }}</div>
+        <div class="character_name">{{ key }}</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,6 +86,86 @@ export default {
       whoTurn: "",
       whoWait: "",
       availableTime: "",
+      choose: true,
+      units: {
+        sold: {
+          id: 0,
+          hp: 300,
+          strength: 300,
+          damage: 20,
+          fire_radius: 4,
+          speed: 1,
+          type: "sold",
+          weapon: "gun",
+          count: 0,
+        },
+        hero: {
+          id: 0,
+          hp: 200,
+          strength: 200,
+          damage: 30,
+          fire_radius: 4,
+          speed: 1,
+          type: "hero",
+          weapon: "gun",
+          count: 0,
+        },
+        samurai: {
+          id: 0,
+          hp: 400,
+          strength: 400,
+          damage: 90,
+          fire_radius: 1,
+          speed: 2,
+          type: "samurai",
+          weapon: "sword",
+          count: 0,
+        },
+        bandit: {
+          id: 0,
+          hp: 250,
+          strength: 250,
+          damage: 90,
+          fire_radius: 1,
+          speed: 3,
+          type: "bandit",
+          weapon: "sword",
+          count: 0,
+        },
+        goblin: {
+          id: 0,
+          hp: 550,
+          strength: 550,
+          damage: 100,
+          fire_radius: 1,
+          speed: 2,
+          type: "goblin",
+          weapon: "sword",
+          count: 0,
+        },
+        goblin: {
+          id: 0,
+          hp: 550,
+          strength: 550,
+          damage: 100,
+          fire_radius: 1,
+          speed: 2,
+          type: "goblin",
+          weapon: "sword",
+          count: 0,
+        },
+        knight: {
+          id: 0,
+          hp: 750,
+          strength: 750,
+          damage: 80,
+          fire_radius: 1,
+          speed: 2,
+          type: "knight",
+          weapon: "sword",
+          count: 0,
+        },
+      },
     };
   },
   methods: {
@@ -260,6 +372,16 @@ export default {
           unit.blocked = false;
         }, 1000);
       }
+    },
+    onChoose() {
+      let units = [];
+      Object.keys(this.units).forEach(key => {
+        for (let i = 0; i < this.units[key].count; i++) {
+          units.push(key);
+        }
+      });
+      this.socket.emit("choose", units);
+      this.choose = false;
     },
     async moveUnit({ id, x, y }) {
       let unit = store.gameScene.children.find(el => el.id === id);
@@ -515,6 +637,7 @@ export default {
           vm.removeUnit(id);
           vm.removeUnit(vm.socket.id);
           store.unit = null;
+          vm.choose = true;
           vm.socket.status = "waiting";
           console.log("users removed");
         });
@@ -563,6 +686,29 @@ export default {
   position: absolute;
   top: 0;
   text-shadow: 1px 1px 3px darkslategrey;
+}
+.characters {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: black;
+}
+.character_block {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.character_block > img {
+  width: 100px;
 }
 .time_turn {
   display: block;
