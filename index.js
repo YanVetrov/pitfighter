@@ -37,8 +37,58 @@ let units = {
     type: "hero",
     weapon: "gun",
   },
+  samurai: {
+    id: 0,
+    hp: 400,
+    strength: 400,
+    damage: 90,
+    fire_radius: 1,
+    speed: 3,
+    type: "samurai",
+    weapon: "sword",
+  },
+  bandit: {
+    id: 0,
+    hp: 250,
+    strength: 250,
+    damage: 90,
+    fire_radius: 1,
+    speed: 5,
+    type: "bandit",
+    weapon: "sword",
+  },
+  goblin: {
+    id: 0,
+    hp: 550,
+    strength: 550,
+    damage: 100,
+    fire_radius: 1,
+    speed: 2,
+    type: "goblin",
+    weapon: "sword",
+  },
+  goblin: {
+    id: 0,
+    hp: 550,
+    strength: 550,
+    damage: 100,
+    fire_radius: 1,
+    speed: 2,
+    type: "goblin",
+    weapon: "sword",
+  },
+  knight: {
+    id: 0,
+    hp: 750,
+    strength: 750,
+    damage: 80,
+    fire_radius: 1,
+    speed: 2,
+    type: "knight",
+    weapon: "sword",
+  },
 };
-let unit_count = 5;
+let unit_count = 6;
 
 io.on("connection", function (socket) {
   console.log("a user connected");
@@ -98,7 +148,6 @@ function startSession(player1, player2) {
     let min = first ? 5 : 15;
     let max = first ? 14 : 25;
     socket.units = [];
-    let type = first ? "hero" : "sold";
     socket.side = first ? "left" : "right";
     for (let i = 0; i < unit_count; i++) {
       let x = Math.floor(Math.random() * (max - min) + min);
@@ -107,9 +156,13 @@ function startSession(player1, player2) {
         x = Math.floor(Math.random() * (max - min) + min);
         y = Math.floor(Math.random() * (25 - 5) + 5);
       }
+      let type =
+        Object.values(units)[
+          Math.floor(Math.random() * Object.values(units).length)
+        ].type;
       socket.units.push({
         ...units[type],
-        id: Date.now() + x + y + i,
+        id: Date.now() + "" + x + y + i,
         owner: socket.id,
         x,
         y,

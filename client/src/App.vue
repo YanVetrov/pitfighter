@@ -184,6 +184,7 @@ export default {
       ]);
     },
     async clickSprite(target, event) {
+      console.log(target);
       if (!store.unit && target.unit && target.unit.owner === this.socket.id)
         store.unit = target.unit;
       if (store.unit && target.unit) {
@@ -215,20 +216,22 @@ export default {
       target.alphaCounter(`-${damage}`, 0xff3333);
       if (critical) target.alphaCounter(`CRITICAL!`, 0xffff00, 0.3);
       unit.unit._textures = unit.unit.attack;
-      let bullet = Sprite.from("./assets/Bullet.png");
-      store.gameScene.addChild(bullet);
-      bullet.x = unit.x;
-      bullet.y = unit.y;
-      bullet.scale.x = 0.2;
-      bullet.scale.y = 0.2;
-      gsap.to(bullet, {
-        x: target.x,
-        y: target.y,
-        duration: 1,
-        onComplete: () => {
-          store.gameScene.removeChild(bullet);
-        },
-      });
+      if (unit.weapon === "gun") {
+        let bullet = Sprite.from("./assets/Bullet.png");
+        store.gameScene.addChild(bullet);
+        bullet.x = unit.x;
+        bullet.y = unit.y;
+        bullet.scale.x = 0.2;
+        bullet.scale.y = 0.2;
+        gsap.to(bullet, {
+          x: target.x,
+          y: target.y,
+          duration: 1,
+          onComplete: () => {
+            store.gameScene.removeChild(bullet);
+          },
+        });
+      }
       unit.timeoutAnimation = setTimeout(() => {
         unit.unit._textures = unit.unit.idle;
         unit.blocked = false;
@@ -237,6 +240,7 @@ export default {
         if (target.unit === store.unit) store.unit = {};
         target.unit.loop = false;
         target.unit._textures = target.unit.die;
+        if (target === store.unit) store.unit = null;
         target.unit.gotoAndPlay(0);
         target.ground.unit = null;
         target.ground = null;
@@ -318,6 +322,8 @@ export default {
       container.id = el.id;
       container.owner = el.owner;
       container.self = el.owner === this.socket.id;
+      container.weapon = weapon;
+      container.name = el.type;
       soldier.idle = idle;
       soldier.attack = attack;
       soldier.run = run;
@@ -333,10 +339,13 @@ export default {
       container.y = ground.y + 20;
       container.scale.x = 0.2;
       container.scale.y = 0.2;
+      let reversed = el.name === "knight" || el.name === "goblin" ? -1 : 1;
       if (scaleX < 0) {
         soldier.scale.x = -1;
         soldier.x = 360;
       }
+      soldier.anchor.x = 0.1;
+      soldier.anchor.y = 0.1;
       let color = container.self ? 0x00aaff : 0xff0000;
       container.ownerText = new Text(`${this.socket.id}`, {
         fill: color,
@@ -486,6 +495,7 @@ export default {
           console.log(data);
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
+          console.log([...data.self, ...data.enemy].map(el => el.id));
           [...data.self, ...data.enemy].forEach(el => {
             let hero = vm.getUnit(el, el.x, el.y, el.x > 14 ? -0.2 : 0.2);
             store.gameScene.addChild(hero);
