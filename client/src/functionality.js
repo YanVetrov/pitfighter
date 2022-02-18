@@ -115,8 +115,8 @@ function initMap(arr, store, count) {
   let map = [];
   let multiplier = Math.sqrt(count);
   for (let i = 0; i < count; i++) {
-    let y = Math.floor(i / multiplier) + 1;
-    let x = (i % multiplier) + 1;
+    let y = Math.floor(i / multiplier);
+    let x = i % multiplier;
     let random = Math.ceil(Math.random() * 10 - 1);
     if (!random) random = 1;
     if (x > 5 && x < 25 && y > 5 && y < 25) random = 1;

@@ -14,6 +14,7 @@ let players = [];
 let current_turn = 0;
 let timeOut;
 let _turn = 0;
+let turnCount = 2;
 const stunTime = 500;
 const MAX_WAITING = 30000;
 let units = {
@@ -22,7 +23,7 @@ let units = {
     hp: 300,
     strength: 300,
     damage: 20,
-    fire_radius: 2,
+    fire_radius: 4,
     speed: 1,
     type: "sold",
     weapon: "gun",
@@ -32,8 +33,8 @@ let units = {
     hp: 200,
     strength: 200,
     damage: 30,
-    fire_radius: 3,
-    speed: 2,
+    fire_radius: 4,
+    speed: 1,
     type: "hero",
     weapon: "gun",
   },
@@ -43,7 +44,7 @@ let units = {
     strength: 400,
     damage: 90,
     fire_radius: 1,
-    speed: 3,
+    speed: 2,
     type: "samurai",
     weapon: "sword",
   },
@@ -53,7 +54,7 @@ let units = {
     strength: 250,
     damage: 90,
     fire_radius: 1,
-    speed: 5,
+    speed: 3,
     type: "bandit",
     weapon: "sword",
   },
@@ -108,16 +109,23 @@ io.on("connection", function (socket) {
     if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
     if (unit) {
-      let diffX = Math.abs(unit.x - x);
-      let diffY = Math.abs(unit.y - y);
-      if (diffX > unit.speed || diffY > unit.speed)
-        return console.log("no speed");
+      console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
+      if (
+        !isAvailable({
+          x1: unit.x,
+          y1: unit.y,
+          x2: x,
+          y2: y,
+          available: unit.speed,
+        })
+      )
+        return console.log("no speed", { x, y, unitX: unit.x, unitY: unit.y });
       unit.y = y;
       unit.x = x;
       const room = socket.gameRoom;
       let enemy = await getEnemyInRoom(socket);
       io.to(room).emit("unit_moved", { id, x, y });
-      swapTurn(socket, enemy);
+      setTurn(socket, enemy);
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
@@ -131,15 +139,21 @@ io.on("connection", function (socket) {
     let damage = unit.damage;
     let critical = Math.random() < 0.4;
     if (critical) damage *= 2;
+    let miss = Math.random() > 0.9;
+    if (miss) damage = 0;
     let target = target_user.units.find(el => el.id === target_id);
-    let diffX = Math.abs(unit.x - target.x);
-    let diffY = Math.abs(unit.y - target.y);
-    if (diffX > unit.fire_radius || diffY > unit.fire_radius)
-      return console.log(diffX, diffY);
+    let options = {
+      x1: unit.x,
+      y1: unit.y,
+      x2: target.x,
+      y2: target.y,
+      available: unit.fire_radius,
+    };
+    if (!isAvailable(options)) return console.log(options);
     target.hp -= damage;
     const room = socket.gameRoom;
     io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
-    swapTurn(socket, target_user);
+    setTurn(socket, target_user);
   });
 });
 function startSession(player1, player2) {
@@ -148,6 +162,7 @@ function startSession(player1, player2) {
     let min = first ? 5 : 15;
     let max = first ? 14 : 25;
     socket.units = [];
+    socket.turnCount = turnCount;
     socket.side = first ? "left" : "right";
     for (let i = 0; i < unit_count; i++) {
       let x = Math.floor(Math.random() * (max - min) + min);
@@ -198,6 +213,21 @@ async function getEnemyInRoom(socket) {
   const sockets = await io.in(socket.gameRoom).fetchSockets();
   return sockets.filter(el => el.id !== socket.id)[0];
 }
+function isAvailable({ x1, x2, y1, y2, available }) {
+  let hex1 = y1 % 2;
+  let hex2 = y2 % 2;
+  let hexagonDiff = Math.abs(hex1 - hex2);
+  let modificator = 0;
+  if (hexagonDiff === 1) {
+    if (hex1 && x2 < x1) modificator = -1;
+    if (hex2 && x2 > x1) modificator = 1;
+    x2 += modificator;
+  }
+  let diffX = Math.abs(x1 - x2);
+  let diffY = Math.abs(y1 - y2);
+  if (diffX > available || diffY > available) return false;
+  else return true;
+}
 async function destroySession(room) {
   let sockets = await getPlayersInRoom(room);
   sockets.forEach(el => {
@@ -211,6 +241,10 @@ async function destroySession(room) {
 function setStun(socket) {
   socket.stun = true;
   setTimeout(() => (socket.stun = false), stunTime);
+}
+function setTurn(socket, enemy) {
+  socket.turnCount--;
+  if (socket.turnCount <= 0) swapTurn(socket, enemy);
 }
 async function swapTurn(player1, player2) {
   if (!player1 || !player2 || !player1.gameRoom || !player2.gameRoom)
@@ -228,6 +262,8 @@ async function swapTurn(player1, player2) {
   player2.timeout = timeout;
   let whoTurn = player1.turn ? player1.id : player2.id;
   let whoWait = player1.turn ? player2.id : player1.id;
+  player1.turnCount = turnCount;
+  player2.turnCount = turnCount;
   io.to(player1.gameRoom).emit("turn_changed", {
     whoTurn,
     whoWait,

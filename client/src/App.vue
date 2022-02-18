@@ -11,6 +11,10 @@
       NEXT TURN IN: <timer :time="availableTime" />
     </div>
     <div class="time_turn" v-else>WAITING FOR READY ALL PLAYERS</div>
+    <div class="turn" v-if="whoTurn === socket.id">
+      YOUR TURN
+    </div>
+    <div class="turn" v-else>ENEMY TURN</div>
   </div>
 </template>
 
@@ -184,6 +188,7 @@ export default {
       ]);
     },
     async clickSprite(target, event) {
+      console.log(target.posX, target.posY);
       if (store.gameScene.blockedUI) return console.log("blocked");
       if (!store.unit && target.unit && target.unit.owner === this.socket.id)
         store.unit = target.unit;
@@ -211,10 +216,12 @@ export default {
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
       else unit.unit.x = 1;
+      let miss = target.health == hp;
       let damage = target.health - hp;
       target.health = hp;
       target.alphaCounter(`-${damage}`, 0xff3333);
       if (critical) target.alphaCounter(`CRITICAL!`, 0xffff00, 0.3);
+      if (miss) target.alphaCounter(`MISSED!`, 0xffffff, 0.3);
       unit.unit._textures = unit.unit.attack;
       if (unit.weapon === "gun") {
         let bullet = Sprite.from("./assets/Bullet.png");
@@ -238,12 +245,14 @@ export default {
       }, 1000);
       if (target.health <= 0) {
         if (target.unit === store.unit) store.unit = {};
+        clearTimeout(target.timeoutAnimation);
         target.unit.loop = false;
         target.unit._textures = target.unit.die;
         if (target === store.unit) store.unit = null;
         target.unit.gotoAndPlay(0);
         target.ground.unit = null;
         target.ground = null;
+        gsap.to(target, { alpha: 0.3, delay: 1 });
       } else {
         target.unit._textures = target.unit.hurt;
         target.timeoutAnimation = setTimeout(() => {
@@ -521,8 +530,10 @@ export default {
           let waitUnits = store.gameScene.children.filter(
             el => el.owner === whoWait
           );
-          turnedUnits.forEach(el => (el.alpha = 1));
-          waitUnits.forEach(el => (el.alpha = 0.5));
+          turnedUnits.forEach(el => (el.unit.alpha = 1));
+          waitUnits.forEach(el =>
+            gsap.to(el.unit, { alpha: 0.7, duration: 0.5 })
+          );
           vm.whoTurn = whoTurn;
           vm.whoWait = whoWait;
           vm.availableTime = availableTime;
@@ -544,17 +555,28 @@ export default {
 };
 </script>
 <style scoped>
+.turn {
+  font-size: 35px;
+  left: 40%;
+  color: darkseagreen;
+  display: block;
+  position: absolute;
+  top: 0;
+  text-shadow: 1px 1px 3px darkslategrey;
+}
 .time_turn {
   display: block;
   position: absolute;
   top: 0;
   right: 0;
   color: brown;
+  text-shadow: 1px 1px 3px darkslategrey;
 }
 .room {
   position: fixed;
   top: 0;
   color: white;
+  text-shadow: 1px 1px 3px darkslategrey;
 }
 .waiting {
   z-index: 999;
