@@ -17,34 +17,38 @@
     <div class="turn" v-else>ENEMY TURN</div>
 
     <div class="characters" v-if="choose">
-      <div class="character_block" v-for="(val, key) in units" :key="key">
-        <div>
-          <button @click="val.count > 0 ? val.count-- : ''">-</button
-          ><button
-            @click="
-              Object.values(units)
-                .map(el => el.count)
-                .reduce((acc, el) => (acc += el), 0) < 6
-                ? val.count++
-                : ''
-            "
-          >
-            +
-          </button>
-          <button @click="onChoose" style="position:fixed;bottom:50px;left:45%">
-            I'M READY
-          </button>
-        </div>
+      <div>
+        <div class="character_block" v-for="(val, key) in units" :key="key">
+          <div>
+            <button @click="val.count > 0 ? val.count-- : ''">-</button
+            ><button
+              @click="
+                Object.values(units)
+                  .map(el => el.count)
+                  .reduce((acc, el) => (acc += el), 0) < 6
+                  ? val.count++
+                  : ''
+              "
+            >
+              +
+            </button>
+          </div>
 
-        <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
-        <div style="font-size:12px;color:gray;margin:5px;">
-          <div>HP: {{ val.strength }}</div>
-          <div>SPEED: {{ val.speed }}</div>
-          <div>DAMAGE: {{ val.attack }}</div>
-          <div>RADIUS: {{ val.fire_radius }}</div>
+          <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
+          <div style="font-size:12px;color:gray;margin:5px;">
+            <div>HP: {{ val.strength }}</div>
+            <div>SPEED: {{ val.speed }}</div>
+            <div>DAMAGE: {{ val.attack }}</div>
+            <div>RADIUS: {{ val.fire_radius }}</div>
+          </div>
+          <div class="character_count" style="color:silver">
+            {{ val.count }}
+          </div>
+          <div class="character_name">{{ key }}</div>
         </div>
-        <div class="character_count" style="color:silver">{{ val.count }}</div>
-        <div class="character_name">{{ key }}</div>
+        <button @click="onChoose" style="position:fixed;bottom:50px;left:45%">
+          I'M READY
+        </button>
       </div>
     </div>
   </div>
@@ -693,11 +697,19 @@ export default {
   height: 100%;
   top: 0;
   z-index: 999;
+  background: black;
+}
+.characters > div {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 999;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  background: black;
+  padding: 20px 0;
+  overflow-y: scroll;
 }
 .character_block {
   width: 200px;
@@ -706,6 +718,7 @@ export default {
   justify-content: center;
   flex-direction: column;
   color: white;
+  margin: 20px 0;
 }
 .character_block > img {
   width: 100px;
