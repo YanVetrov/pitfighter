@@ -316,6 +316,6 @@ app.post("/client/:id", (req, res) => {
   } else return res.status(404).json({ message: "Client not found" });
 });
 
-http.listen(443, host, () =>
+http.listen(process.env.PORT, process.env.HOST, () =>
   console.log(`Server listens http://${host}:${port}`)
 );
