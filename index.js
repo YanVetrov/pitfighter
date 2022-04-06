@@ -11,6 +11,7 @@ const host = "0.0.0.0";
 const port = 8080;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let players = [];
+const rooms = {};
 let current_turn = 0;
 let timeOut;
 let _turn = 0;
@@ -129,6 +130,13 @@ io.on("connection", function (socket) {
       const room = socket.gameRoom;
       let enemy = await getEnemyInRoom(socket);
       io.to(room).emit("unit_moved", { id, x, y });
+      let poison = rooms[room].poison;
+      if (poison) {
+        if (poison.x === x && poison.y === y) {
+          unit.hp += 100;
+          io.to(room).emit("poison_hit", { id, hp: unit.hp });
+        }
+      }
       setTurn(socket, enemy);
     }
   });
@@ -157,6 +165,17 @@ io.on("connection", function (socket) {
     target.hp -= damage;
     const room = socket.gameRoom;
     io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
+    if (
+      target.hp / target.strength < 0.3 &&
+      !rooms[room].poison &&
+      Math.random() > 0.6
+    ) {
+      console.log("posion set");
+      let x = target.x + Math.floor(Math.random() * 2);
+      let y = target.y + Math.floor(Math.random() * 2);
+      rooms[room].poison = { x, y };
+      io.to(room).emit("poison_set", { x, y });
+    }
     setTurn(socket, target_user);
   });
 });
@@ -168,6 +187,10 @@ function startSession(player1, player2) {
     socket.join(room);
     socket.gameRoom = room;
   });
+  rooms[room] = {};
+  rooms[room].id = room;
+  rooms[room].players = [player1, player2];
+  rooms[room].turns = 0;
   setTimeout(() => swapTurn(player1, player2), 2000);
   player1.emit("start_game", {
     self: player1.units,
@@ -235,6 +258,8 @@ async function destroySession(room) {
     el.status = "choose";
     clearTimeout(el.timeout);
     el.stun = false;
+    Object.values(rooms[room]).forEach(el => clearTimeout(el));
+    rooms[room] = null;
   });
 }
 function setStun(socket) {
@@ -243,6 +268,7 @@ function setStun(socket) {
 }
 function setTurn(socket, enemy) {
   socket.turnCount--;
+  rooms[socket.gameRoom].turns++;
   if (socket.turnCount <= 0) swapTurn(socket, enemy);
 }
 async function swapTurn(player1, player2) {

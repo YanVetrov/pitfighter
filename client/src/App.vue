@@ -649,6 +649,25 @@ export default {
         socket.on("attacked", ({ id, target_id, hp, critical }) =>
           vm.attackUnit({ id, target_id, hp, critical })
         );
+        socket.on("poison_set", ({ x, y }) => {
+          console.log("poison set", { x, y });
+          let poison = Sprite.from("./assets/poison.png");
+          poison.poison = true;
+          let ground = store.map[y][x];
+          poison.x = ground.x + 20;
+          poison.y = ground.y + 20;
+          poison.scale.x = 0.15;
+          poison.scale.y = 0.15;
+          store.gameScene.addChild(poison);
+        });
+        socket.on("poison_hit", ({ id, hp }) => {
+          console.log("poison hit");
+          let unit = store.gameScene.children.find(el => el.id === id);
+          store.gameScene.removeChild(
+            store.gameScene.children.find(el => el.poison)
+          );
+          unit.health = hp;
+        });
         socket.on("turn_changed", ({ whoTurn, whoWait, availableTime }) => {
           console.log("turned");
           let turnedUnits = store.gameScene.children.filter(
