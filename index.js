@@ -1,6 +1,6 @@
 const express = require("express"),
   app = express(),
-  http = require("http").createServer(app),
+  http = require("https").createServer(app),
   io = require("socket.io")(http, {
     cors: {
       origin: "*",
