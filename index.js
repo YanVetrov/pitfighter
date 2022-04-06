@@ -1,5 +1,5 @@
 const express = require("express"),
-  app = express(),
+  app = express();
 //   http = require("http").createServer(app),
 
 const host = "0.0.0.0";
@@ -88,10 +88,10 @@ let units = {
 let unit_count = 6;
 const server = app.listen(process.env.PORT, () => console.log("okkkk"));
 io = require("socket.io")(server, {
-    cors: {
-      origin: "*",
-    },
-  });
+  cors: {
+    origin: "*",
+  },
+});
 io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
@@ -315,5 +315,3 @@ app.post("/client/:id", (req, res) => {
     });
   } else return res.status(404).json({ message: "Client not found" });
 });
-
-
