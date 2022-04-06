@@ -1,11 +1,11 @@
-const express = require("express"),
-  app = express(),
-  http = require("https").createServer(app),
-  io = require("socket.io")(http, {
-    cors: {
-      origin: "*",
-    },
-  });
+const express = require("express");
+const app = express();
+//   http = require("https").createServer(app),
+//   io = require("socket.io")(http, {
+//     cors: {
+//       origin: "*",
+//     },
+//   });
 
 // const host = "0.0.0.0";
 // const port = 8080;
