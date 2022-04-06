@@ -1,7 +1,7 @@
 const express = require("express"),
   app = express(),
   http = require("https").createServer(app),
-  io = require("socket.io")(http, {
+  io = require("socket.io")(app, {
     cors: {
       origin: "*",
     },
@@ -316,4 +316,4 @@ app.post("/client/:id", (req, res) => {
   } else return res.status(404).json({ message: "Client not found" });
 });
 
-http.listen(process.env.IP, process.env.PORT, () => console.log("okkkk"));
+app.listen(process.env.PORT, () => console.log("okkkk"));
