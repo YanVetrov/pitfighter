@@ -6,16 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "git pull; npm run build --prefix client/; node index.js",
-    "build": "node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  },
-  "engines": {
-    "node": "12.18.4",
-      "npm": "6.14.6"
   },
   "dependencies": {
     "express": "^4.17.2",
