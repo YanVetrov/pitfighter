@@ -317,5 +317,5 @@ app.post("/client/:id", (req, res) => {
 });
 
 http.listen(process.env.PORT, process.env.HOST, () =>
-  console.log(`Server listens http://${host}:${port}`)
+  console.log(`Server listens http://${process.env.HOST}:${process.env.PORT}`)
 );
