@@ -1,6 +1,6 @@
 {
-  "name": "Metal war game",
-  "short_name": "MWG",
+  "name": "PitFighter",
+  "short_name": "PF",
   "icons": [{
     "src": "/android-chrome-96x96.png",
     "sizes": "96x96",

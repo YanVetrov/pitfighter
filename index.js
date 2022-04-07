@@ -1,9 +1,7 @@
 const express = require("express"),
   app = express();
-//   http = require("http").createServer(app),
-
-const host = "0.0.0.0";
-const port = 8080;
+const host = process.env.IP || "0.0.0.0";
+const port = process.env.PORT || 3000;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let players = [];
 const rooms = {};
@@ -86,7 +84,9 @@ let units = {
   },
 };
 let unit_count = 6;
-const server = app.listen(process.env.PORT, () => console.log("okkkk"));
+const server = app.listen(process.env.PORT, () =>
+  console.log(host + ":" + port)
+);
 io = require("socket.io")(server, {
   cors: {
     origin: "*",
