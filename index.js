@@ -45,7 +45,8 @@ io.on("connection", function (socket) {
     console.log("A number of players now ", players.length);
   });
   socket.on("move_unit", async ({ id, x, y }) => {
-    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+    if (!id || !socket.turn || socket.stun || socket.turnCount < moveCost)
+      return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
     if (unit) {
       console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
@@ -75,7 +76,14 @@ io.on("connection", function (socket) {
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
-    if (!id || !target_id || !target_owner || !socket.turn || socket.stun)
+    if (
+      !id ||
+      !target_id ||
+      !target_owner ||
+      !socket.turn ||
+      socket.stun ||
+      socket.turnCount < attackCost
+    )
       return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
     let target_user = players.find(el => el.id === target_owner);
