@@ -25,7 +25,12 @@
 
     <div class="characters" v-if="choose">
       <div>
-        <div class="character_block" v-for="(val, key) in units" :key="key">
+        <div
+          class="character_block"
+          :style="{ background: `url(${require('./assets/card.png')})` }"
+          v-for="(val, key) in units"
+          :key="key"
+        >
           <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
           <div class="character_stats" style="margin:5px;">
             <div><img :src="`./assets/heart.svg`" /> {{ val.strength }}</div>
@@ -701,7 +706,6 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   padding: 10px;
-  background: url("./assets/card.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
