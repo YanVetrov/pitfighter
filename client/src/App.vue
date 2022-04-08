@@ -19,7 +19,7 @@
       @end="fireMessage = ''"
       :message="fireMessage"
     />
-    <div class="room" v-show="roomId">ARENA ID: {{ roomId }}</div>
+    <div class="room" v-show="roomId">ARENA ID: {{ roomId }} ver 0.0.2</div>
     <div
       class="time_turn"
       v-if="availableTime && !fireMessage"
