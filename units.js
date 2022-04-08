@@ -39,7 +39,7 @@ module.exports = {
     damage: 90,
     fire_radius: 1,
     speed: 2,
-    agility: 50,
+    agility: 40,
     type: "bandit",
     weapon: "sword",
   },
