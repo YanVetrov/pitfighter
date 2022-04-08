@@ -1,10 +1,13 @@
 <template>
-  <div class="wrapper">
-    <div>STAMINA</div>
-    <div class="outer">
+  <div class="wrapper" :style="{ color: color || 'coral' }">
+    <div>{{ title }}</div>
+    <div class="outer" :style="{ borderColor: color || 'chocolate' }">
       <div
         class="inner"
-        :style="{ width: (available / total) * 100 + '%' }"
+        :style="{
+          width: (available / total) * 100 + '%',
+          background: color || 'coral',
+        }"
       ></div>
       <div class="inner_text">{{ available }}/{{ total }}</div>
     </div>
@@ -12,7 +15,7 @@
 </template>
 <script>
 export default {
-  props: ["available", "total"],
+  props: ["available", "total", "title", "color"],
 };
 </script>
 <style scoped>

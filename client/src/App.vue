@@ -6,16 +6,34 @@
     <div class="waiting" v-show="socket.status === 'waiting'">
       SEARCHING FOR PLAYERS...
     </div>
-    <ranger :available="availableCost" :total="totalCost" />
+    <ranger title="STAMINA" :available="availableCost" :total="totalCost" />
+    <ranger
+      title="HP"
+      color="#33ff99"
+      style="bottom:45px;"
+      :available="health"
+      :total="strength"
+    />
     <fireText
       v-if="fireMessage"
       @end="fireMessage = ''"
       :message="fireMessage"
     />
     <div class="room" v-show="roomId">ARENA ID: {{ roomId }}</div>
-    <div class="time_turn" v-if="availableTime && !fireMessage">
+    <div
+      class="time_turn"
+      v-if="availableTime && !fireMessage"
+      style="display:flex;flex-direction:column;align-items:center;"
+    >
       <timer :time="availableTime" />
     </div>
+    <button
+      style="position:fixed;right:10px;top:10px;font-size:30px"
+      @click="turnPass"
+      v-if="whoTurn === socket.id"
+    >
+      PASS
+    </button>
     <div class="turn" v-if="whoTurn === socket.id && !fireMessage">
       YOUR TURN
     </div>
@@ -111,7 +129,9 @@ export default {
       whoWait: "",
       availableTime: "",
       availableCost: 0,
-      totalCost: 0,
+      totalCost: 9,
+      health: 1,
+      strength: 1,
       fireMessage: "",
       choose: true,
       units: {},
@@ -251,8 +271,12 @@ export default {
     async clickSprite(target, event) {
       console.log(target.posX, target.posY);
       if (store.gameScene.blockedUI) return console.log("blocked");
-      if (!store.unit && target.unit && target.unit.owner === this.socket.id)
+      if (!store.unit && target.unit && target.unit.owner === this.socket.id) {
         store.unit = target.unit;
+        this.availableCost = store.unit.stamina;
+        this.health = store.unit.health;
+        this.strength = store.unit.strength;
+      }
       if (store.unit && target.unit) {
         if (store.unit.owner !== target.unit.owner)
           return this.socket.emit("attack", {
@@ -260,7 +284,12 @@ export default {
             target_id: target.unit.id,
             target_owner: target.unit.owner,
           });
-        else store.unit = target.unit;
+        else {
+          store.unit = target.unit;
+          this.availableCost = store.unit.stamina;
+          this.health = store.unit.health;
+          this.strength = store.unit.strength;
+        }
       }
       if (store.unit && !target.unit)
         return this.socket.emit("move_unit", {
@@ -269,10 +298,14 @@ export default {
           y: target.posY,
         });
     },
+    async turnPass() {
+      this.socket.emit("turn_pass");
+    },
     async attackUnit({ id, target_id, hp, critical }) {
       console.log("attacked", id, target_id, hp, critical);
       let unit = store.gameScene.children.find(el => el.id === id);
       let target = store.gameScene.children.find(el => el.id === target_id);
+      if (target === store.unit) this.health = hp;
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
@@ -408,13 +441,15 @@ export default {
       container.self = el.owner === this.socket.id;
       container.weapon = weapon;
       container.name = el.type;
+      container.stam = el.stamina;
+      container.strength = el.strength;
       soldier.idle = idle;
       soldier.attack = attack;
       soldier.run = run;
       soldier.die = die;
       soldier.hurt = hurt;
       soldier.animationSpeed = 0.35;
-      soldier.hp = 250;
+      soldier.hp = el.hp;
       setTimeout(() => soldier.play(), Math.random() * 1000);
       let ground = store.map[y][x];
       container.ground = ground;
@@ -438,7 +473,7 @@ export default {
         stroke: "#000",
         strokeThickness: 2,
       });
-      container.ownerText.y = -30;
+      container.ownerText.y = -100;
       container.addChild(container.ownerText);
       container.alphaCounter = async function(
         text = "+1",
@@ -506,6 +541,55 @@ export default {
           this.hpText.text = `${val}/${el.strength}`;
           await gsap.to(this.hpText.scale, { x: 1.1, y: 1.1, duration: 0.1 });
           await gsap.to(this.hpText.scale, { x: 1, y: 1, duration: 0.1 });
+        },
+      });
+
+      let staminaBar = new Container();
+      staminaBar.scale.x = 4;
+      staminaBar.scale.y = 4;
+      staminaBar.x = 50;
+      staminaBar.y = -30;
+      container.addChild(staminaBar);
+      staminaBar.zIndex = 3;
+      let innerBar1 = new Graphics();
+      innerBar1.beginFill(0x333);
+      innerBar1.drawRoundedRect(0, 0, 100, 8, 30);
+      innerBar1.endFill();
+      staminaBar.addChild(innerBar1);
+
+      let outerBar1 = new Graphics();
+      outerBar1.beginFill(0xff9900);
+      outerBar1.drawRoundedRect(0, 0, (el.stamina / 9) * 100, 8, 30);
+      outerBar1.endFill();
+      staminaBar.addChild(outerBar1);
+
+      staminaBar.outer = outerBar1;
+      container.staminaText = new Text(`${el.stamina}/${9}`, {
+        fill: 0xefefef,
+        fontSize: 10,
+        stroke: "#454545",
+        strokeThickness: 2,
+      });
+      staminaBar.addChild(container.staminaText);
+      container.staminaText.x = 38;
+      container.staminaText.y = -3;
+      container.staminaBar = outerBar1;
+      Object.defineProperty(container, "stamina", {
+        get() {
+          return this.stam;
+        },
+        async set(val) {
+          if (val < 0) val = 0;
+          let percent = (val / 9) * 100;
+          this.staminaBar.width = (val / 9) * 100 || 1;
+          this.stam = val;
+          this.staminaText.text = `${val}/${9}`;
+          await gsap.to(this.staminaText.scale, {
+            x: 1.1,
+            y: 1.1,
+            duration: 0.1,
+          });
+          await gsap.to(this.staminaText.scale, { x: 1, y: 1, duration: 0.1 });
         },
       });
       return container;
@@ -598,10 +682,10 @@ export default {
           console.log("users removed");
         });
         socket.on("unit_moved", ({ id, x, y }) => vm.moveUnit({ id, x, y }));
-        socket.on("update_cost", ({ total, available }) => {
-          vm.availableCost = available;
-          vm.totalCost = total;
-          console.log("cost");
+        socket.on("update_stamina", ({ id, stamina }) => {
+          let unit = store.gameScene.children.find(el => el.id === id);
+          unit.stamina = stamina;
+          if (unit === store.unit) vm.availableCost = stamina;
         });
         socket.on("attacked", ({ id, target_id, hp, critical }) =>
           vm.attackUnit({ id, target_id, hp, critical })
@@ -639,6 +723,10 @@ export default {
           waitUnits.forEach(el =>
             gsap.to(el.unit, { alpha: 0.7, duration: 0.5 })
           );
+          [...turnedUnits, ...waitUnits].forEach(
+            el => (el.stamina = vm.totalCost)
+          );
+          vm.availableCost = vm.totalCost;
           vm.whoTurn = whoTurn;
           vm.whoWait = whoWait;
           vm.availableTime = availableTime;

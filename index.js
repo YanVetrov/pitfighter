@@ -45,10 +45,11 @@ io.on("connection", function (socket) {
     console.log("A number of players now ", players.length);
   });
   socket.on("move_unit", async ({ id, x, y }) => {
-    if (!id || !socket.turn || socket.stun || socket.turnCount < moveCost)
-      return console.log("no id or turn");
+    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
+
     if (unit) {
+      if (unit.stamina < moveCost) return console.log("no stamina");
       console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
       if (
         !isAvailable({
@@ -72,20 +73,14 @@ io.on("connection", function (socket) {
           io.to(room).emit("poison_hit", { id, hp: unit.hp });
         }
       }
-      setTurn(socket, enemy, moveCost);
+      setTurn(socket, enemy, moveCost, unit);
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
-    if (
-      !id ||
-      !target_id ||
-      !target_owner ||
-      !socket.turn ||
-      socket.stun ||
-      socket.turnCount < attackCost
-    )
+    if (!id || !target_id || !target_owner || !socket.turn || socket.stun)
       return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
+    if (unit.stamina < attackCost) return console.log("no stamina");
     let target_user = players.find(el => el.id === target_owner);
     if (!unit || !target_user) return console.log("no unit or user");
     setStun(socket);
@@ -122,7 +117,14 @@ io.on("connection", function (socket) {
       rooms[room].poison = { x, y };
       io.to(room).emit("poison_set", { x, y });
     }
-    setTurn(socket, target_user, attackCost);
+    setTurn(socket, target_user, attackCost, unit);
+  });
+  socket.on("turn_pass", async () => {
+    if (socket.turn) {
+      let room = socket.gameRoom;
+      let enemy = await getEnemyInRoom(socket);
+      swapTurn(socket, enemy);
+    }
   });
 });
 function startSession(player1, player2) {
@@ -174,6 +176,7 @@ function addUnits(socket, names, first) {
       y,
       type,
       side: first ? "left" : "right",
+      stamina: turnCount,
     });
   }
 }
@@ -216,16 +219,14 @@ function setStun(socket) {
   socket.stun = true;
   setTimeout(() => (socket.stun = false), stunTime);
 }
-function setTurn(socket, enemy, cost) {
-  socket.turnCount -= cost;
+function setTurn(socket, enemy, cost, unit) {
+  unit.stamina -= cost;
   rooms[socket.gameRoom].turns++;
-  socket.emit("update_cost", {
-    total: turnCount,
-    available: socket.turnCount,
+  io.to(socket.gameRoom).emit("update_stamina", {
+    id: unit.id,
+    stamina: unit.stamina,
   });
-  if (socket.turnCount < moveCost && socket.turnCount < attackCost) {
-    swapTurn(socket, enemy);
-  }
+  if (socket.units.every(el => el.stamina < moveCost)) swapTurn(socket, enemy);
 }
 async function swapTurn(player1, player2) {
   if (!player1 || !player2 || !player1.gameRoom || !player2.gameRoom)
@@ -243,8 +244,8 @@ async function swapTurn(player1, player2) {
   player2.timeout = timeout;
   let whoTurn = player1.turn ? player1.id : player2.id;
   let whoWait = player1.turn ? player2.id : player1.id;
-  player1.turnCount = turnCount;
-  player2.turnCount = turnCount;
+  player1.units.forEach(el => (el.stamina = turnCount));
+  player2.units.forEach(el => (el.stamina = turnCount));
   io.to(player1.gameRoom).emit("update_cost", {
     total: turnCount,
     available: turnCount,
