@@ -1,97 +1,31 @@
 const express = require("express"),
   app = express();
-const host = process.env.IP || "0.0.0.0";
-const port = process.env.PORT || 3000;
+const cors = require("cors");
+const units = require("./units.js");
+const port = process.env.PORT || 8080;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let players = [];
 const rooms = {};
 let current_turn = 0;
 let timeOut;
 let _turn = 0;
-let turnCount = 2;
+let turnCount = 9;
+let moveCost = 2;
+let attackCost = 4;
 const stunTime = 500;
 const MAX_WAITING = 30000;
-let units = {
-  sold: {
-    id: 0,
-    hp: 300,
-    strength: 300,
-    damage: 20,
-    fire_radius: 4,
-    speed: 1,
-    type: "sold",
-    weapon: "gun",
-  },
-  hero: {
-    id: 0,
-    hp: 200,
-    strength: 200,
-    damage: 30,
-    fire_radius: 4,
-    speed: 1,
-    type: "hero",
-    weapon: "gun",
-  },
-  samurai: {
-    id: 0,
-    hp: 400,
-    strength: 400,
-    damage: 90,
-    fire_radius: 1,
-    speed: 2,
-    type: "samurai",
-    weapon: "sword",
-  },
-  bandit: {
-    id: 0,
-    hp: 250,
-    strength: 250,
-    damage: 90,
-    fire_radius: 1,
-    speed: 3,
-    type: "bandit",
-    weapon: "sword",
-  },
-  goblin: {
-    id: 0,
-    hp: 550,
-    strength: 550,
-    damage: 100,
-    fire_radius: 1,
-    speed: 2,
-    type: "goblin",
-    weapon: "sword",
-  },
-  goblin: {
-    id: 0,
-    hp: 550,
-    strength: 550,
-    damage: 100,
-    fire_radius: 1,
-    speed: 2,
-    type: "goblin",
-    weapon: "sword",
-  },
-  knight: {
-    id: 0,
-    hp: 750,
-    strength: 750,
-    damage: 80,
-    fire_radius: 1,
-    speed: 2,
-    type: "knight",
-    weapon: "sword",
-  },
-};
 let unit_count = 6;
-const server = app.listen(process.env.PORT, () =>
-  console.log(host + ":" + port)
-);
+const server = app.listen(port, () => console.log("server started"));
 io = require("socket.io")(server, {
   cors: {
     origin: "*",
   },
 });
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
@@ -137,7 +71,7 @@ io.on("connection", function (socket) {
           io.to(room).emit("poison_hit", { id, hp: unit.hp });
         }
       }
-      setTurn(socket, enemy);
+      setTurn(socket, enemy, moveCost);
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
@@ -148,11 +82,6 @@ io.on("connection", function (socket) {
     if (!unit || !target_user) return console.log("no unit or user");
     setStun(socket);
     setStun(target_user);
-    let damage = unit.damage;
-    let critical = Math.random() < 0.4;
-    if (critical) damage *= 2;
-    let miss = Math.random() > 0.9;
-    if (miss) damage = 0;
     let target = target_user.units.find(el => el.id === target_id);
     let options = {
       x1: unit.x,
@@ -162,6 +91,15 @@ io.on("connection", function (socket) {
       available: unit.fire_radius,
     };
     if (!isAvailable(options)) return console.log(options);
+    let damage = unit.damage;
+    let chanceToHit = 100 - target.agility;
+    if (chanceToHit <= 5) chanceToHit = 5;
+    let miss = Math.round(Math.random() * 100) > chanceToHit;
+    if (miss) damage = 0;
+    let critical = false;
+    if (Math.round(Math.random() * 100) < 25 && !miss) critical = true;
+    if (critical) damage *= 1.5;
+
     target.hp -= damage;
     const room = socket.gameRoom;
     io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
@@ -176,7 +114,7 @@ io.on("connection", function (socket) {
       rooms[room].poison = { x, y };
       io.to(room).emit("poison_set", { x, y });
     }
-    setTurn(socket, target_user);
+    setTurn(socket, target_user, attackCost);
   });
 });
 function startSession(player1, player2) {
@@ -201,6 +139,10 @@ function startSession(player1, player2) {
     self: player2.units,
     enemy: player1.units,
     roomId: room,
+  });
+  io.to(room).emit("update_cost", {
+    total: turnCount,
+    available: turnCount,
   });
 }
 function addUnits(socket, names, first) {
@@ -266,10 +208,16 @@ function setStun(socket) {
   socket.stun = true;
   setTimeout(() => (socket.stun = false), stunTime);
 }
-function setTurn(socket, enemy) {
-  socket.turnCount--;
+function setTurn(socket, enemy, cost) {
+  socket.turnCount -= cost;
   rooms[socket.gameRoom].turns++;
-  if (socket.turnCount <= 0) swapTurn(socket, enemy);
+  socket.emit("update_cost", {
+    total: turnCount,
+    available: socket.turnCount,
+  });
+  if (socket.turnCount < moveCost && socket.turnCount < attackCost) {
+    swapTurn(socket, enemy);
+  }
 }
 async function swapTurn(player1, player2) {
   if (!player1 || !player2 || !player1.gameRoom || !player2.gameRoom)
@@ -289,6 +237,10 @@ async function swapTurn(player1, player2) {
   let whoWait = player1.turn ? player2.id : player1.id;
   player1.turnCount = turnCount;
   player2.turnCount = turnCount;
+  io.to(player1.gameRoom).emit("update_cost", {
+    total: turnCount,
+    available: turnCount,
+  });
   io.to(player1.gameRoom).emit("turn_changed", {
     whoTurn,
     whoWait,
@@ -303,6 +255,9 @@ app.get("/clients-count", (req, res) => {
   res.send({
     count: io.engine.clientsCount,
   });
+});
+app.post("/units_templates", (req, res) => {
+  res.send(units);
 });
 app.post("/client/:id", (req, res) => {
   if (clients.indexOf(req.params.id) !== -1) {

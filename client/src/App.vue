@@ -6,20 +6,44 @@
     <div class="waiting" v-show="socket.status === 'waiting'">
       SEARCHING FOR PLAYERS...
     </div>
+    <ranger :available="availableCost" :total="totalCost" />
+    <fireText
+      v-if="fireMessage"
+      @end="fireMessage = ''"
+      :message="fireMessage"
+    />
     <div class="room" v-show="roomId">ARENA ID: {{ roomId }}</div>
-    <div class="time_turn" v-if="availableTime">
-      NEXT TURN IN: <timer :time="availableTime" />
+    <div class="time_turn" v-if="availableTime && !fireMessage">
+      <timer :time="availableTime" />
     </div>
-    <div class="time_turn" v-else>WAITING FOR READY ALL PLAYERS</div>
-    <div class="turn" v-if="whoTurn === socket.id">
+    <div class="turn" v-if="whoTurn === socket.id && !fireMessage">
       YOUR TURN
     </div>
-    <div class="turn" v-else>ENEMY TURN</div>
+    <div class="turn" v-if="whoTurn !== socket.id && !fireMessage">
+      ENEMY TURN
+    </div>
 
     <div class="characters" v-if="choose">
       <div>
-        <div class="character_block" v-for="(val, key) in units" :key="key">
-          <div>
+        <div
+          class="character_block"
+          :style="{ background: `url(${require('./assets/card.png')})` }"
+          v-for="(val, key) in units"
+          :key="key"
+        >
+          <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
+          <div class="character_stats" style="margin:5px;">
+            <div><img src="./assets/heart.svg" /> {{ val.strength }}</div>
+            <div><img src="./assets/speed.svg" /> {{ val.speed }}</div>
+            <div><img src="./assets/damage.svg" /> {{ val.damage }}</div>
+            <div><img src="./assets/radius.svg" /> {{ val.fire_radius }}</div>
+            <div><img src="./assets/agility.svg" /> {{ val.agility }}</div>
+          </div>
+          <div class="character_count" style="color:black">
+            {{ val.count }}
+          </div>
+          <div class="character_name">{{ key }}</div>
+          <div style="display:flex;width:100%;justify-content:space-around;">
             <button @click="val.count > 0 ? val.count-- : ''">-</button
             ><button
               @click="
@@ -33,20 +57,11 @@
               +
             </button>
           </div>
-
-          <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
-          <div style="font-size:12px;color:gray;margin:5px;">
-            <div>HP: {{ val.strength }}</div>
-            <div>SPEED: {{ val.speed }}</div>
-            <div>DAMAGE: {{ val.attack }}</div>
-            <div>RADIUS: {{ val.fire_radius }}</div>
-          </div>
-          <div class="character_count" style="color:silver">
-            {{ val.count }}
-          </div>
-          <div class="character_name">{{ key }}</div>
         </div>
-        <button @click="onChoose" style="position:fixed;bottom:50px;left:45%">
+        <button
+          @click="onChoose"
+          style="position:fixed;bottom:50px;left:45%;background:snow;color:black"
+        >
           I'M READY
         </button>
       </div>
@@ -81,8 +96,11 @@ import { initGsap } from "./utils";
 import { ColorMatrixFilter } from "@pixi/filter-color-matrix";
 import { io } from "socket.io-client";
 import timer from "./components/timer.vue";
+import fireText from "./components/fireText.vue";
+import ranger from "./components/range.vue";
+import axios from "axios";
 export default {
-  components: { timer },
+  components: { timer, fireText, ranger },
   data() {
     return {
       socket: {},
@@ -90,86 +108,11 @@ export default {
       whoTurn: "",
       whoWait: "",
       availableTime: "",
+      availableCost: 0,
+      totalCost: 0,
+      fireMessage: "",
       choose: true,
-      units: {
-        sold: {
-          id: 0,
-          hp: 300,
-          strength: 300,
-          damage: 20,
-          fire_radius: 4,
-          speed: 1,
-          type: "sold",
-          weapon: "gun",
-          count: 0,
-        },
-        hero: {
-          id: 0,
-          hp: 200,
-          strength: 200,
-          damage: 30,
-          fire_radius: 4,
-          speed: 1,
-          type: "hero",
-          weapon: "gun",
-          count: 0,
-        },
-        samurai: {
-          id: 0,
-          hp: 400,
-          strength: 400,
-          damage: 90,
-          fire_radius: 1,
-          speed: 2,
-          type: "samurai",
-          weapon: "sword",
-          count: 0,
-        },
-        bandit: {
-          id: 0,
-          hp: 250,
-          strength: 250,
-          damage: 90,
-          fire_radius: 1,
-          speed: 3,
-          type: "bandit",
-          weapon: "sword",
-          count: 0,
-        },
-        goblin: {
-          id: 0,
-          hp: 550,
-          strength: 550,
-          damage: 100,
-          fire_radius: 1,
-          speed: 2,
-          type: "goblin",
-          weapon: "sword",
-          count: 0,
-        },
-        goblin: {
-          id: 0,
-          hp: 550,
-          strength: 550,
-          damage: 100,
-          fire_radius: 1,
-          speed: 2,
-          type: "goblin",
-          weapon: "sword",
-          count: 0,
-        },
-        knight: {
-          id: 0,
-          hp: 750,
-          strength: 750,
-          damage: 80,
-          fire_radius: 1,
-          speed: 2,
-          type: "knight",
-          weapon: "sword",
-          count: 0,
-        },
-      },
+      units: {},
     };
   },
   methods: {
@@ -337,7 +280,9 @@ export default {
       target.health = hp;
       target.alphaCounter(`-${damage}`, 0xff3333);
       if (critical) target.alphaCounter(`CRITICAL!`, 0xffff00, 0.3);
-      if (miss) target.alphaCounter(`MISSED!`, 0xffffff, 0.3);
+      if (miss) {
+        target.alphaCounter(`MISS!`, 0xffffff, 0.3);
+      }
       unit.unit._textures = unit.unit.attack;
       if (unit.weapon === "gun") {
         let bullet = Sprite.from("./assets/Bullet.png");
@@ -359,22 +304,24 @@ export default {
         unit.unit._textures = unit.unit.idle;
         unit.blocked = false;
       }, 1000);
-      if (target.health <= 0) {
-        if (target.unit === store.unit) store.unit = {};
-        clearTimeout(target.timeoutAnimation);
-        target.unit.loop = false;
-        target.unit._textures = target.unit.die;
-        if (target === store.unit) store.unit = null;
-        target.unit.gotoAndPlay(0);
-        target.ground.unit = null;
-        target.ground = null;
-        gsap.to(target, { alpha: 0.3, delay: 1 });
-      } else {
-        target.unit._textures = target.unit.hurt;
-        target.timeoutAnimation = setTimeout(() => {
-          target.unit._textures = target.unit.idle;
-          unit.blocked = false;
-        }, 1000);
+      if (!miss) {
+        if (target.health <= 0) {
+          if (target.unit === store.unit) store.unit = {};
+          clearTimeout(target.timeoutAnimation);
+          target.unit.loop = false;
+          target.unit._textures = target.unit.die;
+          if (target === store.unit) store.unit = null;
+          target.unit.gotoAndPlay(0);
+          target.ground.unit = null;
+          target.ground = null;
+          gsap.to(target, { alpha: 0.3, delay: 1 });
+        } else {
+          target.unit._textures = target.unit.hurt;
+          target.timeoutAnimation = setTimeout(() => {
+            target.unit._textures = target.unit.idle;
+            unit.blocked = false;
+          }, 1000);
+        }
       }
     },
     onChoose() {
@@ -623,7 +570,10 @@ export default {
         // store.gameScene.addChild(soldier);
         // hero = vm.getUnit({ name: "sold", weapon: "gun" }, 12, 6, 0.2);
         // store.gameScene.addChild(hero);
-        const socket = io();
+        let url = undefined;
+        if (window.location.href.includes("localhost"))
+          url = "ws://localhost:8080";
+        const socket = io(url);
         socket.status = "waiting";
         vm.socket = socket;
         socket.on("start_game", data => {
@@ -646,6 +596,11 @@ export default {
           console.log("users removed");
         });
         socket.on("unit_moved", ({ id, x, y }) => vm.moveUnit({ id, x, y }));
+        socket.on("update_cost", ({ total, available }) => {
+          vm.availableCost = available;
+          vm.totalCost = total;
+          console.log("cost");
+        });
         socket.on("attacked", ({ id, target_id, hp, critical }) =>
           vm.attackUnit({ id, target_id, hp, critical })
         );
@@ -670,6 +625,8 @@ export default {
         });
         socket.on("turn_changed", ({ whoTurn, whoWait, availableTime }) => {
           console.log("turned");
+          vm.fireMessage =
+            vm.socket.id === whoTurn ? "Your turn" : "Enemy turn";
           let turnedUnits = store.gameScene.children.filter(
             el => el.owner === whoTurn
           );
@@ -694,20 +651,26 @@ export default {
       });
     },
   },
-  mounted() {
+  async mounted() {
     store.vue = this;
     this.initPixi();
+    let url = "";
+    if (window.location.href.includes("localhost"))
+      url = "http://localhost:8080";
+    let r = await axios.post(url + "/units_templates");
+    Object.values(r.data).forEach(el => (el.count = 0));
+    this.units = r.data;
   },
 };
 </script>
 <style scoped>
 .turn {
   font-size: 35px;
-  left: 40%;
+  bottom: 10px;
   color: darkseagreen;
   display: block;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  left: 10px;
   text-shadow: 1px 1px 3px darkslategrey;
 }
 .characters {
@@ -736,19 +699,26 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
-  margin: 20px 0;
+  color: black;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .character_block > img {
-  width: 100px;
+  height: 110px;
 }
 .time_turn {
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: brown;
+  position: fixed;
+  font-size: 30px;
+  top: 20px;
+  right: 48%;
+  color: rgb(214, 156, 168);
   text-shadow: 1px 1px 3px darkslategrey;
+  animation: bubble 1s linear infinite alternate-reverse;
 }
 .room {
   position: fixed;
@@ -767,5 +737,30 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.character_stats {
+  font-size: 20px;
+  border-radius: 5%;
+  padding: 5px;
+  width: 100%;
+}
+.character_stats div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+  margin: 5px;
+}
+.character_stats img {
+  height: 30px;
+}
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
 }
 </style>

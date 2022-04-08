@@ -23,7 +23,7 @@ input {
 
 button:active {
 
-  background: #a173cd;
+  background: rgba(255,255,255,0.2);
   color: white;
   transform: scale(1.05);
 
@@ -267,8 +267,8 @@ body {
 
 button {
   background: rgba(0, 0, 0, 0.4);
-  border: 1px solid #a173cd;
-  color: #a173cd;
+  border: 1px solid black;
+    color: white;
   padding: 5px 15px;
   border-radius: 10px;
   font-weight: bold;
