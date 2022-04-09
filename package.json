@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15",
+    "sass-loader": "^12.6.0"
   },
   "dependencies": {
     "axios": "^0.26.1",

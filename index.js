@@ -30,8 +30,9 @@ io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
   players.push(socket);
-  socket.on("choose", units => {
+  socket.on("choose", ({ units, nickname }) => {
     let anotherPlayer = players.find(el => el.status === "waiting");
+    if (nickname) socket.nickname = nickname;
     addUnits(socket, units, !!anotherPlayer);
     socket.status = "waiting";
     if (anotherPlayer) startSession(socket, anotherPlayer);
@@ -172,6 +173,7 @@ function addUnits(socket, names, first) {
       ...units[type],
       id: Date.now() + "" + x + y + i,
       owner: socket.id,
+      nickname: socket.nickname,
       x,
       y,
       type,

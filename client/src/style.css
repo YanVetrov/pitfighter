@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|VT323');
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +7,8 @@ body {
 
 input {
   background: rgba(0, 0, 0, 0.3);
-  border: 3px solid rebeccapurple;
+  border: 1px solid wheat;
+  border-radius: 3px;
   font-size: 15px;
   margin: 12px 0;
   padding: 5px;
@@ -22,9 +24,6 @@ input {
 }
 
 button:active {
-
-  background: rgba(255,255,255,0.2);
-  color: white;
   transform: scale(1.05);
 
 }
@@ -266,16 +265,20 @@ body {
 }
 
 button {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid black;
-    color: white;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-weight: bold;
+  color: white;
+  font-family: 'Bungee' !important;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: red;
+  margin: 1.8em auto;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: orange;
+  box-shadow: 1px 1px 30px 8px #f56b00;
   font-family: "metalwar", sans-serif;
   cursor: pointer;
 }
-
 img {
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -937,7 +940,7 @@ button:active {
   -webkit-text-stroke-color: green;
 } */
 
-.button:hover {
+button:hover {
   transform: scale(1.05);
 }
 

@@ -6,11 +6,16 @@
     <div class="waiting" v-show="socket.status === 'waiting'">
       SEARCHING FOR PLAYERS...
     </div>
-    <ranger title="STAMINA" :available="availableCost" :total="totalCost" />
+    <ranger
+      title="STAMINA"
+      color="#ffaa00"
+      :available="availableCost"
+      :total="totalCost"
+    />
     <ranger
       title="HP"
       color="#33ff99"
-      style="bottom:45px;"
+      style="left:0;right:auto"
       :available="health"
       :total="strength"
     />
@@ -78,12 +83,12 @@
             </button>
           </div>
         </div>
-        <button
-          @click="onChoose"
-          style="position:fixed;bottom:50px;left:45%;background:snow;color:black"
-        >
-          I'M READY
-        </button>
+        <div style="position:fixed;bottom:50px;left:40%;">
+          <input placeholder="nickname" v-model="nickname" />
+          <button @click="onChoose">
+            I'M READY
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -131,6 +136,7 @@ export default {
       availableCost: 0,
       totalCost: 9,
       health: 1,
+      nickname: "",
       strength: 1,
       fireMessage: "",
       choose: true,
@@ -269,7 +275,7 @@ export default {
       ]);
     },
     async clickSprite(target, event) {
-      console.log(target.posX, target.posY);
+      console.log(target);
       if (store.gameScene.blockedUI) return console.log("blocked");
       if (!store.unit && target.unit && target.unit.owner === this.socket.id) {
         store.unit = target.unit;
@@ -366,7 +372,7 @@ export default {
           units.push(key);
         }
       });
-      this.socket.emit("choose", units);
+      this.socket.emit("choose", { units, nickname: this.nickname });
       this.choose = false;
     },
     async moveUnit({ id, x, y }) {
@@ -465,15 +471,17 @@ export default {
       }
       soldier.anchor.x = 0.1;
       soldier.anchor.y = 0.1;
-      let color = container.self ? 0x00aaff : 0xff0000;
-      container.ownerText = new Text(`${this.socket.id}`, {
+      let name = el.nickname || this.socket.id;
+      let color = container.self ? 0x0033fa : 0xff0000;
+      container.ownerText = new Text(`${name}`, {
         fill: color,
         fontFamily: "metalwar",
-        fontSize: 45,
+        fontSize: 90 - name.length * 2,
         stroke: "#000",
-        strokeThickness: 2,
+        strokeThickness: 5,
       });
-      container.ownerText.y = -100;
+      container.ownerText.y = -130;
+      container.ownerText.x = 30;
       container.addChild(container.ownerText);
       container.alphaCounter = async function(
         text = "+1",
@@ -760,7 +768,7 @@ export default {
   color: darkseagreen;
   display: block;
   position: fixed;
-  left: 10px;
+  left: 40%;
   text-shadow: 1px 1px 3px darkslategrey;
 }
 .characters {
