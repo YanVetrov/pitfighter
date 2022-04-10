@@ -33,11 +33,8 @@ export default {
     };
   },
   async mounted() {
-    gsap.to(this, { wavy: 5, duration: 0.4 });
-    gsap.to(this, { opacity: 0.9, duration: 0.2 });
-    gsap.to(this, { wavy: 200, duration: 0.4, delay: 3 });
-    await gsap.to(this, { opacity: 0, duration: 0.2, delay: 3 });
-    setTimeout(() => this.$emit("end"), 400);
+    gsap.to(this, { wavy: 8, duration: 0.4, delay: 1 });
+    gsap.to(this, { opacity: 0.9, duration: 0.2, delay: 1 });
   },
 };
 </script>
@@ -49,19 +46,19 @@ export default {
   --boxShadow: calc(var(--size) / 12);
 }
 .circle {
-  position: absolute;
+  /* position: absolute; */
   pointer-events: none;
   z-index: 9999999;
   color: white;
   font-size: 35px;
   left: 50%;
-  top: 10%;
-  padding: 130px;
+  top: 30%;
+  padding: 174px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   /* width: 60%;
   height: 60%; */
   filter: url(#wavy) blur(1px);
@@ -76,9 +73,9 @@ export default {
   right: var(--s);
   bottom: var(--s);
   border-radius: 50%;
-  width: 50%;
-  height: 50%;
-  border: 10px solid #fff;
+  width: 70%;
+  height: 70%;
+  border: 15px solid #fff;
 }
 .circle:before {
   box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
@@ -97,20 +94,20 @@ export default {
     filter: hue-rotate(0deg);
   }
   20% {
-    box-shadow: 0 0 60px #000, inset 0 0 60px #0f0;
+    box-shadow: 0 0 60px #0f0, inset 0 0 60px #0f0;
   }
 
   40% {
-    box-shadow: 0 0 40px #333, inset 0 0 40px #0f0;
+    box-shadow: 0 0 40px #0f0, inset 0 0 40px #0f0;
   }
   60% {
-    box-shadow: 0 0 80px #222, inset 0 0 80px #999;
+    box-shadow: 0 0 80px #0f0, inset 0 0 80px #0f0;
   }
   80% {
-    box-shadow: 0 0 100px #111, inset 0 0 100px #555;
+    box-shadow: 0 0 100px #0f0, inset 0 0 100px #0f0;
   }
   100% {
-    box-shadow: 0 0 var(--boxShadow) #000, inset 0 0 var(--boxShadow) #0f0;
+    box-shadow: 0 0 var(--boxShadow) #0f0, inset 0 0 var(--boxShadow) #0f0;
     filter: hue-rotate(360deg);
   }
 }

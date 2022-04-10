@@ -151,10 +151,6 @@ function startSession(player1, player2) {
     enemy: player1.units,
     roomId: room,
   });
-  io.to(room).emit("update_cost", {
-    total: turnCount,
-    available: turnCount,
-  });
 }
 function addUnits(socket, names, first) {
   let min = first ? 5 : 15;

@@ -1,96 +1,105 @@
 <template>
   <div class="main_view">
-    <transition name="fade">
-      <canvas id="canvas1"></canvas>
-    </transition>
-    <div class="waiting" v-show="socket.status === 'waiting'">
+    <transition-group tag="div" class="main_view" mode="out-in" name="fade">
+      <canvas
+        v-show="socket.status === 'playing'"
+        id="canvas1"
+        key="0"
+      ></canvas>
+      <!-- <div class="waiting" v-show="socket.status === 'waiting'">
       SEARCHING FOR PLAYERS...
-    </div>
-    <ranger
-      title="STAMINA"
-      color="#ffaa00"
-      :available="availableCost"
-      :total="totalCost"
-    />
-    <ranger
-      title="HP"
-      color="#33ff99"
-      style="left:0;right:auto"
-      :available="health"
-      :total="strength"
-    />
-    <fireText
-      v-if="fireMessage"
-      @end="fireMessage = ''"
-      :message="fireMessage"
-    />
-    <div class="room" v-show="roomId">ARENA ID: {{ roomId }} ver 0.0.2</div>
-    <div
-      class="time_turn"
-      v-if="availableTime && !fireMessage"
-      style="display:flex;flex-direction:column;align-items:center;"
-    >
-      <timer :time="availableTime" />
-    </div>
-    <button
-      style="position:fixed;right:10px;top:10px;font-size:30px"
-      @click="turnPass"
-      v-if="whoTurn === socket.id"
-    >
-      PASS
-    </button>
-    <div class="turn" v-if="whoTurn === socket.id && !fireMessage">
-      YOUR TURN
-    </div>
-    <div class="turn" v-if="whoTurn !== socket.id && !fireMessage">
-      ENEMY TURN
-    </div>
+    </div> -->
+      <ranger
+        title="STAMINA"
+        color="#ffaa00"
+        :available="availableCost"
+        :total="totalCost"
+        v-if="availableCost !== null"
+        key="23"
+      />
+      <ranger
+        title="HP"
+        color="#33ff99"
+        style="left:0;right:auto"
+        :available="health"
+        v-if="health !== null"
+        :total="strength"
+        key="44"
+      />
+      <coin key="9" :yourTurn="whoTurn === socket.id" />
+      <div
+        class="waiting"
+        :key="1"
+        v-if="socket.status === 'waiting' && !choose"
+      >
+        <fireText message="searching for players..." />
+      </div>
+      <div key="101" class="room" v-show="roomId">
+        ARENA ID: {{ roomId }} ver 0.0.2
+      </div>
+      <div
+        key="202"
+        class="time_turn"
+        v-if="availableTime && !fireMessage"
+        style="display:flex;flex-direction:column;align-items:center;"
+      >
+        <timer :time="availableTime" />
+      </div>
+      <button
+        key="15"
+        style="position:fixed;right:10px;top:10px;font-size:30px"
+        @click="turnPass"
+        v-if="whoTurn === socket.id"
+      >
+        PASS
+      </button>
 
-    <div class="characters" v-if="choose">
-      <div>
-        <div
-          class="character_block"
-          :style="{ background: `url(${require('./assets/card.png')})` }"
-          v-for="(val, key) in units"
-          :key="key"
-        >
-          <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
-          <div class="character_stats" style="margin:5px;">
-            <div><img :src="`./assets/heart.svg`" /> {{ val.strength }}</div>
-            <div><img :src="`./assets/speed.svg`" /> {{ val.speed }}</div>
-            <div><img :src="`./assets/damage.svg`" /> {{ val.damage }}</div>
-            <div>
-              <img :src="`./assets/radius.svg`" /> {{ val.fire_radius }}
+      <div key="440" class="characters" v-if="choose">
+        <div>
+          <div
+            class="character_block"
+            :style="{ background: `url(${require('./assets/card.png')})` }"
+            v-for="(val, key) in units"
+            :key="key"
+          >
+            <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
+            <div class="character_stats" style="margin:5px;">
+              <div><img :src="`./assets/heart.svg`" /> {{ val.strength }}</div>
+              <div><img :src="`./assets/speed.svg`" /> {{ val.speed }}</div>
+              <div><img :src="`./assets/damage.svg`" /> {{ val.damage }}</div>
+              <div>
+                <img :src="`./assets/radius.svg`" /> {{ val.fire_radius }}
+              </div>
+              <div><img :src="`./assets/agility.svg`" /> {{ val.agility }}</div>
             </div>
-            <div><img :src="`./assets/agility.svg`" /> {{ val.agility }}</div>
+            <div class="character_count" style="color:black">
+              {{ val.count }}
+            </div>
+            <div class="character_name">{{ key }}</div>
+            <div style="display:flex;width:100%;justify-content:space-around;">
+              <button @click="val.count > 0 ? val.count-- : ''">-</button
+              ><button
+                @click="
+                  Object.values(units)
+                    .map(el => el.count)
+                    .reduce((acc, el) => (acc += el), 0) < 6
+                    ? val.count++
+                    : ''
+                "
+              >
+                +
+              </button>
+            </div>
           </div>
-          <div class="character_count" style="color:black">
-            {{ val.count }}
-          </div>
-          <div class="character_name">{{ key }}</div>
-          <div style="display:flex;width:100%;justify-content:space-around;">
-            <button @click="val.count > 0 ? val.count-- : ''">-</button
-            ><button
-              @click="
-                Object.values(units)
-                  .map(el => el.count)
-                  .reduce((acc, el) => (acc += el), 0) < 6
-                  ? val.count++
-                  : ''
-              "
-            >
-              +
+          <div style="position:fixed;bottom:50px;left:40%;">
+            <input placeholder="nickname" v-model="nickname" />
+            <button @click="onChoose">
+              I'M READY
             </button>
           </div>
         </div>
-        <div style="position:fixed;bottom:50px;left:40%;">
-          <input placeholder="nickname" v-model="nickname" />
-          <button @click="onChoose">
-            I'M READY
-          </button>
-        </div>
       </div>
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -124,8 +133,9 @@ import timer from "./components/timer.vue";
 import fireText from "./components/fireText.vue";
 import ranger from "./components/range.vue";
 import axios from "axios";
+import coin from "./components/coin.vue";
 export default {
-  components: { timer, fireText, ranger },
+  components: { timer, fireText, ranger, coin },
   data() {
     return {
       socket: {},
@@ -133,9 +143,9 @@ export default {
       whoTurn: "",
       whoWait: "",
       availableTime: "",
-      availableCost: 0,
+      availableCost: null,
       totalCost: 9,
-      health: 1,
+      health: null,
       nickname: "",
       strength: 1,
       fireMessage: "",
