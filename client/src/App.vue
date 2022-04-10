@@ -744,7 +744,7 @@ export default {
           [...turnedUnits, ...waitUnits].forEach(
             el => (el.stamina = vm.totalCost)
           );
-          vm.availableCost = vm.totalCost;
+          if (store.unit) vm.availableCost = vm.totalCost;
           vm.whoTurn = whoTurn;
           vm.whoWait = whoWait;
           vm.availableTime = availableTime;
