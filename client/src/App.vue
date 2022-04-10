@@ -40,10 +40,11 @@
       <div
         key="202"
         class="time_turn"
-        v-if="availableTime && !fireMessage"
-        style="display:flex;flex-direction:column;align-items:center;"
+        v-if="availableTime"
+        style="display:flex;flex-direction:column;align-items:center;left:8px;"
       >
-        <timer :time="availableTime" />
+        <timer @timerUpdated="timeLeft = $event" :time="availableTime" />
+        <div :style="{ height: timeLeft * 2 + '%' }" class="time_count"></div>
       </div>
       <button
         key="15"
@@ -151,6 +152,7 @@ export default {
       fireMessage: "",
       choose: true,
       units: {},
+      timeLeft: 0,
     };
   },
   methods: {
@@ -823,9 +825,29 @@ export default {
   position: fixed;
   font-size: 30px;
   top: 20px;
-  right: 48%;
-  color: rgb(214, 156, 168);
+  left: 20px;
   text-shadow: 1px 1px 3px darkslategrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* padding: 15px; */
+  border: 5px solid white;
+  width: 100px;
+  border-radius: 100%;
+  height: 100px;
+  box-shadow: inset 1px 1px 15px black;
+  color: white;
+}
+.time_count {
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+}
+.time_turn span {
   animation: bubble 1s linear infinite alternate-reverse;
 }
 .room {

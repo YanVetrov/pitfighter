@@ -20,15 +20,14 @@ export default {
         let days = Math.floor(hours / 24);
         hours = hours % 24;
         minutes = minutes % 60;
-        if (minutes < 10) minutes = "0" + minutes;
-        if (hours < 10) hours = "0" + hours;
+        if (minutes && minutes < 10) minutes = "0" + minutes;
+        if (hours && hours < 10) hours = "0" + hours;
         this.tmp = seconds;
+        this.$emit('timerUpdated',(this.time-Date.now())/1000);
         return (
           (days ? `${days}d ` : "") +
-          hours +
-          ":" +
-          minutes +
-          ":" +
+          (hours ? hours + ":" : "") +
+          (minutes ? minutes + ":" : "") +
           (seconds < 10 ? "0" : "") +
           seconds
         );
@@ -43,6 +42,7 @@ export default {
   },
   watch: {
     time() {
+      this.$emit('timeSetted',(this.time-Date.now())/1000);
       this.intevral = setInterval(() => {
         this.tmp = Date.now();
         if (Date.now() > this.time) clearInterval(this.interval);
