@@ -71,7 +71,7 @@
         @click="$refs.about.$el.scrollIntoView({ behavior: 'smooth' })"
       >
         <div>about</div>
-        <img src="./assets/arrow_down.svg" />
+        <img class="about_animation" src="./assets/arrow_down.svg" />
       </div>
     </cornerDiv>
     <cornerDiv ref="about">
@@ -480,6 +480,12 @@
         </div>
       </div>
     </cornerDiv>
+    <div class="sub_footer">
+      <div class="copyright">2022 © pitfighter.io</div>
+      <div class="privacy">
+        Privacy Policy | Terms of Services | refund policy
+      </div>
+    </div>
   </div>
 </template>
 

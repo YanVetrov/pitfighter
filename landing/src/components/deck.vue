@@ -28,7 +28,7 @@
     </div>
     <transition mode="out-in" name="fade">
       <div
-        class="card_title"
+        class="card_title fire"
         v-if="cards.every(k => !k.flip)"
         :key="[...cards].sort((a, b) => b.id - a.id)[0].name"
       >
@@ -156,7 +156,9 @@ export default {
 }
 .card_title {
   position: absolute;
-  bottom: 80px;
-  font-size: 30px;
+  bottom: 20px;
+  font-size: 40px;
+  color: black;
+  margin-left: 100px;
 }
 </style>
