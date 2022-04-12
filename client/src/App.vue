@@ -503,14 +503,14 @@ export default {
         let options = {
           fill: color,
           fontFamily: "metalwar",
-          fontSize: 95,
+          fontSize: 195,
         };
         let node = new Text(text, options);
         node.zIndex = 12;
         this.addChild(node);
         node.x = 40;
-        node.y = 40;
-        await gsap.to(node, { y: 0, alpha: 0, duration: 2, delay });
+        node.y = -200;
+        await gsap.to(node, { y: -250, alpha: 0, duration: 3, delay });
         this.removeChild(node);
       };
       let healthBar = new Container();
