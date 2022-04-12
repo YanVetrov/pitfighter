@@ -86,17 +86,22 @@ export default {
   computed: {},
   methods: {
     rotate(id) {
+      this.cards.forEach(k => (k.flip = false));
       let card = this.cards.find(card => card.id === id);
       console.log(id);
       card.rotate = true;
     },
     flip(id) {
       let card = this.cards.find(card => card.id === id);
-      card.flip = !card.flip;
+      if (!card.flip) card.flip = true;
+      else {
+        this.rotate(id);
+        card.flip = false;
+      }
     },
     animationEnd(id) {
       let card = this.cards.find(card => card.id === id);
-      if (!card.rotate) return 0;
+      if (!card.rotate || card.flip) return 0;
       this.cards.forEach(card => card.id++);
       card.id = 1;
       setTimeout(() => (card.rotate = false), 100);
