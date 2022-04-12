@@ -5,7 +5,6 @@
       v-for="(k, i) in cards"
       :key="i"
       @click="flip(k.id)"
-      @transitionend="animationEnd(k.id)"
       :class="{ rotate_card: k.rotate, flip_card: k.flip }"
       :style="{
         zIndex: k.id,
@@ -39,6 +38,7 @@
 export default {
   data() {
     return {
+      block: false,
       cards: [
         {
           id: 1,
@@ -85,23 +85,25 @@ export default {
   },
   computed: {},
   methods: {
-    rotate(id) {
-      this.cards.forEach(k => (k.flip = false));
+    rotate(id, flipped) {
+      if (this.cards.some(el => el.rotate)) return;
       let card = this.cards.find(card => card.id === id);
       console.log(id);
       card.rotate = true;
+      setTimeout(() => this.animationEnd(id), 300);
     },
     flip(id) {
       let card = this.cards.find(card => card.id === id);
       if (!card.flip) card.flip = true;
       else {
-        this.rotate(id);
         card.flip = false;
+        this.rotate(id);
       }
     },
-    animationEnd(id) {
+    animationEnd(id, e) {
+      console.log("end");
       let card = this.cards.find(card => card.id === id);
-      if (!card.rotate || card.flip) return 0;
+      console.log("ok");
       this.cards.forEach(card => card.id++);
       card.id = 1;
       setTimeout(() => (card.rotate = false), 100);
