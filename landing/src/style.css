@@ -273,7 +273,7 @@ ul {
   border-radius: 100%;
   position: absolute;
   /* left:-15px; */
-  margin-top: 5px;
+  margin-top: 0px;
   margin-left: -18px;
 }
 .token_list {
@@ -377,9 +377,51 @@ ul {
   opacity: 0;
 }
 @media screen and (max-width:830px){
-  .header,.footer{
+  .footer{
     display: none;
   }
+  .mobile_header{
+    display: flex;
+    position: fixed;
+    z-index: 5;
+    background:rgba(90,90,90,0.8);
+    width: 92%;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom:1px solid #ffb548;
+    height: 7vh;
+    align-items: center;
+  }
+  .title_block{
+    margin-top: 7vh;
+    height: 93vh;
+}
+
+  
+  .mobile_header>img{
+    width:46px;
+  }
+  .header{
+    flex-direction: column;
+    background: rgba(255,255,255,0.8);
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    overflow: hidden;
+    height:0;
+    transition: all .3s ease;
+    top: 7.1vh;
+    
+  }
+  .active_header{
+    height:447px;
+    border-bottom: 1px solid #ffb548;
+  }
+  .header_point {
+    margin: 21px 9px;
+    color: black;
+    left:0
+}
   .main_title{
     transform: scale(0.5) !important;
   }

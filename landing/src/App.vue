@@ -1,41 +1,57 @@
 <template>
   <div class="main_view">
     <div class="mobile_header">
-      <div class="header_point button">connect near</div>
+      <div class="button">connect near</div>
+      <img @click="active_header = !active_header" src="./assets/menu.svg" />
     </div>
     <cornerDiv
       class="title_block"
       style="background-image: url('./assets/bg.jpeg')"
     >
-      <div class="header">
+      <div class="header" :class="{ active_header }">
         <div class="header_point">main</div>
         <div
           class="header_point"
-          @click="$refs.about.$el.scrollIntoView({ behavior: 'smooth' })"
+          @click="
+            $refs.about.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
         >
           about
         </div>
         <div
           class="header_point"
-          @click="$refs.fighters.$el.scrollIntoView({ behavior: 'smooth' })"
+          @click="
+            $refs.fighters.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
         >
           fighters
         </div>
         <div
           class="header_point"
-          @click="$refs.features.$el.scrollIntoView({ behavior: 'smooth' })"
+          @click="
+            $refs.features.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
         >
           features
         </div>
         <div
           class="header_point"
-          @click="$refs.tokenomic.$el.scrollIntoView({ behavior: 'smooth' })"
+          @click="
+            $refs.tokenomic.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
         >
           tokenomics
         </div>
         <div
           class="header_point"
-          @click="$refs.roadmap.$el.scrollIntoView({ behavior: 'smooth' })"
+          @click="
+            $refs.roadmap.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
         >
           roadmap
         </div>
@@ -446,6 +462,11 @@ import accordionItem from "./components/accordion_item.vue";
 import deck from "./components/deck.vue";
 export default {
   components: { cornerDiv, accordion, accordionItem, deck },
+  data() {
+    return {
+      active_header: false,
+    };
+  },
   methods: {
     consol() {
       console.log(this.$refs.about);
