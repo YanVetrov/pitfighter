@@ -90,7 +90,7 @@ export default {
       let card = this.cards.find(card => card.id === id);
       console.log(id);
       card.rotate = true;
-      setTimeout(() => this.animationEnd(id), 300);
+      setTimeout(() => this.animationEnd(id), 200);
     },
     flip(id) {
       let card = this.cards.find(card => card.id === id);
