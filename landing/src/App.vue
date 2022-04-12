@@ -298,8 +298,13 @@
             </accordion-item>
           </accordion>
         </div>
-        <div class="deck_wrapper">
-          <deck />
+        <div class="slider_wrapper">
+          <carousel :autoplay="true" :autoplayTimeout="3000" :perPage="1">
+            <slide> <img src="./assets/game.png" /> </slide>
+            <slide> <img src="./assets/game1.png" /> </slide>
+            <slide> <img src="./assets/game2.png" /> </slide>
+            <slide> <img src="./assets/game3.jpeg" /> </slide>
+          </carousel>
         </div>
       </div>
     </cornerDiv>

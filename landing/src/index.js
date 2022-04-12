@@ -4,7 +4,8 @@ import "./style.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Vue2TouchEvents from "vue2-touch-events";
-
+import VueCarousel from "vue-carousel";
+Vue.use(VueCarousel);
 Vue.use(Vue2TouchEvents, {
   touchHoldTolerance: 400,
   swipeTolerance: 10,
