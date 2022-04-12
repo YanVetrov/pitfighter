@@ -299,7 +299,7 @@
           </accordion>
         </div>
         <div class="slider_wrapper">
-          <carousel :autoplay="true" :autoplayTimeout="3000" :perPage="1">
+          <carousel :autoplay="true" :autoplayTimeout="timeout" :perPage="1">
             <slide> <img src="./assets/game.png" /> </slide>
             <slide> <img src="./assets/game1.png" /> </slide>
             <slide> <img src="./assets/game2.png" /> </slide>
@@ -470,12 +470,16 @@ export default {
   data() {
     return {
       active_header: false,
+      timeout: 3000,
     };
   },
   methods: {
     consol() {
       console.log(this.$refs.about);
     },
+  },
+  mounted() {
+    setTimeout(() => this.timeout++, 3000);
   },
 };
 </script>
