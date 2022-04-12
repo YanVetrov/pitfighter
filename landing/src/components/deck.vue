@@ -6,7 +6,7 @@
       :key="i"
       @click="flip(k.id)"
       v-touch:swipe.right="
-        rotate(cards.reduce((acc, curr) => Math.max(acc, curr.id), 0))
+        () => rotate(cards.reduce((acc, curr) => Math.max(acc, curr.id), 0))
       "
       :class="{ rotate_card: k.rotate, flip_card: k.flip }"
       :style="{
