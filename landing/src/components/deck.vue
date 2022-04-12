@@ -121,7 +121,7 @@ export default {
 .flip_card {
   transform: scale(-1.5, 1.5) !important;
   z-index: 9 !important;
-  box-shadow: -10px 10px 25px rgba(255, 255, 255, 0.2);
+  box-shadow: -10px 10px 25px black;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -130,7 +130,7 @@ export default {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
   left: 0;
 }

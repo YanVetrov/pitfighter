@@ -19,6 +19,9 @@ body {
   width: 100%;
   height: 100%;
 }
+.VueCarousel-wrapper{
+  box-shadow: 1px 1px 100px #ffb548;
+}
 .VueCarousel-dot{
   transition:all .3s ease;
 }
@@ -183,6 +186,30 @@ h1 {
   text-align: center;
   letter-spacing: 3px;
 }
+.road{
+  width:15%;
+  position: relative;
+}
+.road img{
+  width:100%;
+}
+.road_title{
+  position:absolute ;
+  top:9%;
+  font-size:10px;
+  text-align: center;
+  color:#FFB548;
+  width: 100%;
+}
+.road_descr{
+  position:absolute ;
+  top:60%;
+  font-size:10px;
+  text-align: center;
+  color:#FFB548;
+  width: 100%;
+}
+
 .padding {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -373,6 +400,26 @@ ul {
   background: none;
   outline: none;
 }
+.roadmap_row{
+  justify-content: space-around;
+  padding:0 20px;
+  margin:40px 0;
+}
+
+.roadmap_row_mobile{
+  width:90%;
+  display: none;
+}
+.roadmap_row_mobile img{
+    width: 50%;
+}
+.roadmap_row_mobile .road{
+  display: flex;
+  justify-content: center;
+}
+.roadmap_row_mobile .VueCarousel-wrapper {
+  box-shadow: none;
+}
 .footer img {
   width: 20px;
   margin-left: 40px;
@@ -396,9 +443,17 @@ ul {
   .footer{
     display: none;
   }
+  .roadmap_row_mobile{
+    display: flex;
+  }
+  .roadmap_row{
+    display: none;
+  }
   .slider_wrapper{
-    width:100%;
-    padding:10px;
+    width: 90%;
+    padding: 0;
+    margin-bottom: 50px;
+    margin-top: 35px;
   }
   .mobile_header{
     display: flex;
@@ -492,7 +547,7 @@ ul {
 .wrapper{
   flex-direction: column;
   align-items: center;
-  min-height: 70vh;
+  min-height: 76vh;
 }
 .time_line{
   width:auto;

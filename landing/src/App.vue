@@ -298,8 +298,15 @@
             </accordion-item>
           </accordion>
         </div>
-        <div class="slider_wrapper">
-          <carousel :autoplay="true" :autoplayTimeout="timeout" :perPage="1">
+        <div
+          class="slider_wrapper"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
+          <carousel :autoplay="false" :autoplayTimeout="timeout" :perPage="1">
             <slide> <img src="./assets/game.png" /> </slide>
             <slide> <img src="./assets/game1.png" /> </slide>
             <slide> <img src="./assets/game2.png" /> </slide>
@@ -440,6 +447,22 @@
           <h1>Roadmap</h1>
           <img src="./assets/paper.png" />
         </div>
+        <div class="row center roadmap_row">
+          <div class="road" v-for="(k, i) in roadmap" :key="k">
+            <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+            <div class="road_title">{{ k.title }}</div>
+            <div class="road_descr">{{ k.content }}</div>
+          </div>
+        </div>
+        <div class="row center roadmap_row_mobile">
+          <carousel :autoplay="false" :autoplayTimeout="timeout" :perPage="1">
+            <slide class="road" v-for="(k, i) in roadmap" :key="k">
+              <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+              <div class="road_title">{{ k.title }}</div>
+              <div class="road_descr">{{ k.content }}</div>
+            </slide>
+          </carousel>
+        </div>
         <div class="row center input_row">
           <div class="input margin15">
             <span>Enter your email address</span>
@@ -471,6 +494,14 @@ export default {
     return {
       active_header: false,
       timeout: 3000,
+      roadmap: [
+        { title: "NFT COLLECTION", content: "SOON" },
+        { title: "EARLY ACCESS", content: "soon" },
+        { title: "soon", content: "soon" },
+        { title: "soon", content: "soon" },
+        { title: "soon", content: "soon" },
+        { title: "soon", content: "soon" },
+      ],
     };
   },
   methods: {
