@@ -13,7 +13,7 @@
         transform: `translate(${k.id * 10}px,${k.id * 10}px)`,
       }"
     >
-      <img :src="`../assets/${k.img}.png`" />
+      <img :src="require(`../assets/${k.img}.png`)" />
       <transition name="fade">
         <div v-if="k.flip" class="card_info">some info example</div>
       </transition>
