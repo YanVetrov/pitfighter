@@ -81,7 +81,7 @@
             class="block_intro"
             data-aos="fade-up"
             data-aos-once="true"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -106,7 +106,7 @@
           <div
             class="block_demo"
             data-aos="fade-left"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="350"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
@@ -145,7 +145,7 @@
           <div class="row">
             <h1
               data-aos="fade-down"
-              data-aos-offset="200"
+              data-aos-offset="150"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -155,7 +155,7 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              data-aos-offset="200"
+              data-aos-offset="150"
               data-aos-delay="500"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -164,7 +164,7 @@
           </div>
           <h2
             data-aos="fade-left"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -173,7 +173,7 @@
           </h2>
           <accordion
             data-aos="fade-left"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -227,7 +227,7 @@
           <div class="row">
             <h1
               data-aos="fade-down"
-              data-aos-offset="200"
+              data-aos-offset="150"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -237,7 +237,7 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              data-aos-offset="200"
+              data-aos-offset="150"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
@@ -246,7 +246,7 @@
           </div>
           <h2
             data-aos="fade-right"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -255,7 +255,7 @@
           </h2>
           <accordion
             data-aos="fade-right"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
@@ -301,7 +301,7 @@
         <div
           class="slider_wrapper"
           data-aos="fade-left"
-          data-aos-offset="200"
+          data-aos-offset="150"
           data-aos-delay="50"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
@@ -324,7 +324,7 @@
         <div class="token_main">
           <div
             data-aos="fade-down"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
@@ -338,7 +338,7 @@
           <div
             data-aos="fade-up"
             data-aos-once="true"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
@@ -351,7 +351,7 @@
           <div
             class="token_block"
             data-aos="fade-left"
-            data-aos-offset="200"
+            data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
@@ -376,8 +376,8 @@
           <div
             class="token_block"
             data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-delay="350"
+            data-aos-offset="150"
+            data-aos-delay="250"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
@@ -401,8 +401,8 @@
           <div
             class="token_block"
             data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-delay="650"
+            data-aos-offset="150"
+            data-aos-delay="350"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
