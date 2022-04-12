@@ -8,9 +8,6 @@
       v-touch:swipe.right="
         rotate(cards.reduce((acc, curr) => Math.max(acc, curr.id), 0))
       "
-      v-touch:swipe.left="
-        rotate(cards.reduce((acc, curr) => Math.max(acc, curr.id), 0))
-      "
       :class="{ rotate_card: k.rotate, flip_card: k.flip }"
       :style="{
         zIndex: k.id,
