@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
 body {
   margin: 0;
   padding: 0;
@@ -199,15 +199,16 @@ h1 {
 .road_title{
   position:absolute ;
   top:9%;
-  font-size:10px;
+  font-size:12px;
   text-align: center;
   color:#FFB548;
   width: 100%;
+  font-family: 'Metamorphous', cursive;
 }
 .road_descr{
   position:absolute ;
   top:60%;
-  font-size:10px;
+  font-size:0.7vw;
   text-align: center;
   color:#FFB548;
   width: 100%;
@@ -425,10 +426,13 @@ ul {
 }
 
 .fire {
-  animation: animation 1s ease-in-out infinite alternate;
-  -moz-animation: animation 1s ease-in-out infinite alternate;
-  -webkit-animation: animation 1s ease-in-out infinite alternate;
-  -o-animation: animation 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px #fefcc9,
+  10px -10px 30px #feec85,
+  -20px -20px 40px #ffae34,
+  20px -40px 50px #ec760c,
+  -20px -60px 60px #cd4606,
+  0 -80px 70px #973716,
+  10px -90px 80px #451b0e;
 }
 .footer img {
   width: 20px;
@@ -453,23 +457,6 @@ ul {
   color:gray;
 }
 
-@keyframes animation
-{
-0% {text-shadow: 0 0 20px #fefcc9,
-  10px -10px 30px #feec85,
-  -20px -20px 40px #ffae34,
-  20px -40px 50px #ec760c,
-  -20px -60px 60px #cd4606,
-  0 -80px 70px #973716,
-  10px -90px 80px #451b0e;}
-100% {text-shadow: 0 0 20px #fefcc9,
-  10px -10px 30px #fefcc9,
-  -20px -20px 40px #feec85,
-  22px -42px 60px #ffae34,
-  -22px -58px 50px #ec760c,
-  0 -82px 80px #cd4606,
-  10px -90px 80px  #973716;}
-}
 @keyframes updown{
   0%{
     transform: translateY(0px);
@@ -538,6 +525,9 @@ ul {
 }
   .mobile_header>img{
     width:46px;
+  }
+  .road_descr{
+    font-size:8px;
   }
   .header{
     flex-direction: column;

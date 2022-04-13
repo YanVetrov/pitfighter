@@ -70,7 +70,7 @@ export default {
         {
           id: 4,
           name: "OLD GUY",
-          img: "card4",
+          img: "card3",
           color: "blue",
           rotate: false,
           flip: false,
@@ -78,7 +78,7 @@ export default {
         {
           id: 5,
           name: "ZHYKUL",
-          img: "card3",
+          img: "card4",
           color: "green",
           rotate: false,
           flip: false,

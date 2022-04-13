@@ -6,7 +6,7 @@
     </div>
     <cornerDiv
       class="title_block"
-      style="background-image: url('./assets/bg.jpeg')"
+      style="background-image: url('./assets/bg.png')"
     >
       <div class="header" :class="{ active_header }">
         <div class="header_point">main</div>
@@ -92,15 +92,16 @@
             </div>
 
             <div class="sub_intro">
-              The Pit Fighter is a turn based strategy RPG
+              The pit fighter Is a play to earn turn based rpg in medieval
+              fantasy.
             </div>
             <div class="intro_descr">
-              which has you leading a mercenary company in a gritty, low-power,
-              medieval fantasy world. You decide where to go, whom to hire, what
-              contracts to take and how to train and equip your men. Do you have
-              what it takes to lead them through bloody arena battles and to
-              victory? The game consists of a strategic world map and a tactical
-              combat layer.
+              Choose the right fighters for your squad. Equip them with a
+              variety of weapons, dress them in the strongest armor. Become the
+              best in the arena with your squad. Become the best in your town,
+              get an invitation to the great arena, write your name in history.
+              Earn the reputation to build your clan. Make the world reckon with
+              you: seize power in your city.
             </div>
           </div>
           <div
@@ -451,7 +452,10 @@
           <div class="road" v-for="(k, i) in roadmap" :key="k">
             <img :src="require(`./assets/roadmap${i + 1}.png`)" />
             <div class="road_title">{{ k.title }}</div>
-            <div class="road_descr">{{ k.content }}</div>
+            <div
+              class="road_descr"
+              v-html="k.content.replace(/\./g, '<br/>')"
+            ></div>
           </div>
         </div>
         <div class="row center roadmap_row_mobile">
@@ -459,7 +463,10 @@
             <slide class="road" v-for="(k, i) in roadmap" :key="k">
               <img :src="require(`./assets/roadmap${i + 1}.png`)" />
               <div class="road_title">{{ k.title }}</div>
-              <div class="road_descr">{{ k.content }}</div>
+              <div
+                class="road_descr"
+                v-html="k.content.replace(/\./g, '<br/>')"
+              ></div>
             </slide>
           </carousel>
         </div>
@@ -501,10 +508,24 @@ export default {
       active_header: false,
       timeout: 3000,
       roadmap: [
-        { title: "NFT COLLECTION", content: "SOON" },
-        { title: "EARLY ACCESS", content: "soon" },
-        { title: "soon", content: "soon" },
-        { title: "soon", content: "soon" },
+        {
+          title: "Q1 2022",
+          content:
+            "MINT PASS. DEMO ARENA. TOKENS REALEASE. STAKING CONTRACT. MARKETPLACE",
+        },
+        {
+          title: "Q2 2022",
+          content: "TWO CITIES. HERO FORGING. WEAPON FORGING. UNRANKED ARENA ",
+        },
+        {
+          title: "Q3 2022",
+          content:
+            "rANKED ARENA. more cities. nft collection. grand arena tournament. dao clan. good and chattels ",
+        },
+        {
+          title: "soon",
+          content: "renting mechanics. storage clanwars. grand arena bets",
+        },
         { title: "soon", content: "soon" },
         { title: "soon", content: "soon" },
       ],
