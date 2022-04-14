@@ -344,8 +344,8 @@
             :autoplayTimeout="timeout"
             :perPage="1"
           >
-            <slide> <img src="./assets/game.png" /> </slide>
-            <slide> <img src="./assets/game1.png" /> </slide>
+            <slide> <img src="./assets/slide1.png" /> </slide>
+            <slide> <img src="./assets/slide2.png" /> </slide>
             <slide> <img src="./assets/game2.png" /> </slide>
             <slide> <img src="./assets/game3.jpeg" /> </slide>
           </carousel>
