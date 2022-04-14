@@ -76,10 +76,7 @@
     </cornerDiv>
     <cornerDiv ref="about">
       <div class="wrapper" style="min-height: 100vh">
-        <div
-          class="bg_blur"
-          style="background-image: url('./assets/bg4.jpeg')"
-        ></div>
+        <div class="bg_blur"></div>
         <div class="main_intro padding">
           <div
             class="block_intro"
@@ -228,10 +225,7 @@
     </cornerDiv>
     <cornerDiv ref="features">
       <div class="wrapper padding">
-        <div
-          class="bg_blur"
-          style="background-image: url('./assets/bg.jpeg')"
-        ></div>
+        <div class="bg_blur"></div>
         <div class="time_line">
           <div class="row">
             <h1
