@@ -6,10 +6,19 @@
     </div>
     <cornerDiv
       class="title_block"
+      ref="main"
       style="background-image: url('./assets/bg.png')"
     >
       <div class="header" :class="{ active_header }">
-        <div class="header_point">main</div>
+        <div
+          class="header_point"
+          @click="
+            $refs.main.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+        >
+          main
+        </div>
         <div
           class="header_point"
           @click="
@@ -45,6 +54,15 @@
           "
         >
           tokenomics
+        </div>
+        <div
+          class="header_point"
+          @click="
+            $refs.partners.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+        >
+          partners
         </div>
         <div
           class="header_point"
@@ -568,10 +586,42 @@
           <div class="button">Subscribe</div>
         </div>
         <div class="footer row center">
-          <div class="header_point">main</div>
-          <div class="header_point">about</div>
-          <div class="header_point">features</div>
-          <div class="header_point">tokenomics</div>
+          <div
+            class="header_point"
+            @click="
+              $refs.main.$el.scrollIntoView({ behavior: 'smooth' });
+              active_header = false;
+            "
+          >
+            main
+          </div>
+          <div
+            @click="
+              $refs.about.$el.scrollIntoView({ behavior: 'smooth' });
+              active_header = false;
+            "
+            class="header_point"
+          >
+            about
+          </div>
+          <div
+            @click="
+              $refs.features.$el.scrollIntoView({ behavior: 'smooth' });
+              active_header = false;
+            "
+            class="header_point"
+          >
+            features
+          </div>
+          <div
+            @click="
+              $refs.tokenomic.$el.scrollIntoView({ behavior: 'smooth' });
+              active_header = false;
+            "
+            class="header_point"
+          >
+            tokenomics
+          </div>
           <img style="width: 10px" src="./assets/fb.svg" />
           <img src="./assets/twitter.svg" />
         </div>
