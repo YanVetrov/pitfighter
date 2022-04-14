@@ -45,7 +45,7 @@ export default {
       cards: [
         {
           id: 1,
-          name: "KNIGHT",
+          name: "goblin",
           img: "card",
           color: "#abc",
           rotate: false,
@@ -53,7 +53,7 @@ export default {
         },
         {
           id: 2,
-          name: "VAMPYR",
+          name: "knight",
           img: "card1",
           color: "#bfc",
           rotate: false,
@@ -61,7 +61,7 @@ export default {
         },
         {
           id: 3,
-          name: "WOMEN",
+          name: "margrave",
           img: "card2",
           color: "red",
           rotate: false,
@@ -69,7 +69,7 @@ export default {
         },
         {
           id: 4,
-          name: "OLD GUY",
+          name: "smuggler",
           img: "card3",
           color: "blue",
           rotate: false,
@@ -77,7 +77,7 @@ export default {
         },
         {
           id: 5,
-          name: "ZHYKUL",
+          name: "hobgoblin",
           img: "card4",
           color: "green",
           rotate: false,

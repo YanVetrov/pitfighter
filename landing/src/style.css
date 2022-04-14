@@ -12,6 +12,21 @@ body {
   scrollbar-width: none;
   color: white;
 }
+a{
+  text-decoration: none;
+  color: #333;
+  padding:5px;
+  background:#ffb548;
+  margin-top: 5px;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+}
+.schema_img{
+  width:140%;
+  position: relative;
+  left: -20%;
+}
 .main_view {
   overflow: hidden;
 }
@@ -82,6 +97,24 @@ img {
   left: 15%;
   cursor: pointer;
 }
+.bg_blur{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(2.5px);
+}
+.bg_blur::after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.8) 100%);
+}
 .button {
   background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
   border-radius: 4px;
@@ -125,8 +158,35 @@ img {
   align-items: center;
   /* background: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%); */
 }
+.partner{
+  width:25%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 1px 1px 100px rgba(255, 255, 255,0.2);
+  border: 2px solid rgba(255,255,255,0.2);
+  padding: 43px;
+}
+.partner_row{
+  display: flex;
+  justify-content: space-around;
+  align-items: center !important;
+}
+.partner img{
+  width:50%;
+}
+.partner_title{
+  font-size: 30px;
+  text-align: center;
+  margin:30px 0px;
+}
+.partner_descr{
+  text-align: center;
+  font-size: 12px;
+}
 .intro_descr{
-  font-size: 13px;
+  font-size: 17px;
   margin-top: 40px;
 }
 .slider_wrapper{
@@ -279,7 +339,7 @@ ul {
   margin-top:10px;
 }
 .token_blocks {
-  width: 70%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -487,6 +547,24 @@ ul {
   .roadmap_row{
     display: none;
   }
+  .schema_img{
+    position: relative;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+  .partner_row{
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  .partner_h1{
+    position: relative;
+    top: 50px;
+  }
+  .partner{
+    width:60%;
+    margin-top: 70px;
+  }
   .slider_wrapper{
     width: 90%;
     padding: 0;
@@ -589,6 +667,7 @@ ul {
   flex-direction: column;
   align-items: center;
   min-height: 76vh;
+  position: relative;
 }
 .time_line{
   width:auto;

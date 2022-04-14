@@ -75,7 +75,11 @@
       </div>
     </cornerDiv>
     <cornerDiv ref="about">
-      <div class="wrapper gradient">
+      <div class="wrapper" style="min-height: 100vh">
+        <div
+          class="bg_blur"
+          style="background-image: url('./assets/bg4.jpeg')"
+        ></div>
         <div class="main_intro padding">
           <div
             class="block_intro"
@@ -213,8 +217,8 @@
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
-                  >Each race will have their own town, arena, and more with
-                  local benefits.</span
+                  >IMPRESS THE ARENA WITH THE STRENGTH OF YOUR FIGHTERS AND
+                  INGENIOUS TACTICAL SOLUTIONS</span
                 >
               </template>
             </accordion-item>
@@ -224,6 +228,10 @@
     </cornerDiv>
     <cornerDiv ref="features">
       <div class="wrapper padding">
+        <div
+          class="bg_blur"
+          style="background-image: url('./assets/bg.jpeg')"
+        ></div>
         <div class="time_line">
           <div class="row">
             <h1
@@ -260,41 +268,63 @@
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
+            @update="page = $event"
+            :page="page"
           >
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>Arena PvP</h3>
+                <h3>fORGING FEATURE</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
-                  >Choose between alliances with already three playable
-                  characters for each side.</span
+                  >Each piece of equipment has 10 levels, as well as each
+                  character has 11 levels to which they can be upgraded.</span
                 >
               </template>
             </accordion-item>
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>training hall</h3>
+                <h3>CHARACTERS TRAITS</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
-                  >Fighters can be upgraded for better performance and
-                  value.</span
+                  >UPGRADED FIGHTERS MAY HAVE 0TO 2 RANDOMLY SELECTED TRAITS
+                  THAT AFFECT THEIR STATS IN POSITIVE WAYS.SOME BACKGROUNDS WILL
+                  DISALLOW CERTAIN TRAITS, AS WILL SOME TRAITS DISALLOW
+                  OTHERS.</span
                 >
               </template>
             </accordion-item>
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>Grand Arena Tournament</h3>
+                <h3>LEVEL and EXPERINCE</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
-                <span>Monthly tournament between cities.</span>
+                <span
+                  >THE CHARACTERS LEVEL IS A VALUE BETWEEN 1 AND 11 AND MEASURES
+                  IN BATTLE. CHARACTERS RISE IN LEVELS AS THEY GAIN EXPERINCE
+                  AND ARE ABLE TO INCREASE THEIR ATTRIBUTES</span
+                >
+              </template>
+            </accordion-item>
+            <accordion-item>
+              <!-- This slot will handle the title/header of the accordion and is the part you click on -->
+              <template slot="accordion-trigger">
+                <h3>BACKGROUND AND TIERS</h3>
+              </template>
+              <!-- This slot will handle all the content that is passed to the accordion -->
+              <template slot="accordion-content">
+                <span
+                  >CHARACTERS BACKGROUNDS DEFINE A CHARACTER’S STORY,STARTING
+                  ATTRIBUTES, AND EQUIPMENT.BACKGROUNDS ALSO DETERMINE WHAT KIND
+                  OF TRAITS A CHARACTER CAN GET.</span
+                >
               </template>
             </accordion-item>
           </accordion>
@@ -307,7 +337,13 @@
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
         >
-          <carousel :autoplay="false" :autoplayTimeout="timeout" :perPage="1">
+          <carousel
+            :autoplay="false"
+            :value="page"
+            @page-change="page = $event"
+            :autoplayTimeout="timeout"
+            :perPage="1"
+          >
             <slide> <img src="./assets/game.png" /> </slide>
             <slide> <img src="./assets/game1.png" /> </slide>
             <slide> <img src="./assets/game2.png" /> </slide>
@@ -344,8 +380,7 @@
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
-            Combine cards to gain levels Convert cards to crypto Trade with
-            anyone Sell on multiple platforms
+            <img class="schema_img" src="./assets/schema.png" />
           </div>
         </div>
         <div class="token_blocks">
@@ -440,6 +475,34 @@
         </div>
       </div>
     </cornerDiv>
+    <cornerDiv ref="partners">
+      <div style="text-align: center" class="roadmap_title partner_h1">
+        <h1>PARTNERS</h1>
+      </div>
+      <div class="wrapper column">
+        <div class="row partner_row">
+          <div class="partner">
+            <img src="./assets/near.svg" />
+            <div class="partner_title">NEAR protocol</div>
+            <div class="partner_descr">
+              decentralized application platform that enables decentralized
+              applications to run on the blockchain.
+              <br />
+              <a target="_blank" href="https://near.org/">Go to near</a>
+            </div>
+          </div>
+
+          <div class="partner">
+            <img src="./assets/paras.svg" />
+            <div class="partner_title">Paras.id</div>
+            <div class="partner_descr">
+              NFT market based on near protocol.<br />
+              <a target="_blank" href="https://paras.id/">Go to paras.id</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </cornerDiv>
     <cornerDiv ref="roadmap">
       <div class="wrapper column">
         <img class="element" src="./assets/element.png" />
@@ -507,6 +570,7 @@ export default {
     return {
       active_header: false,
       timeout: 3000,
+      page: 0,
       roadmap: [
         {
           title: "Q1 2022",

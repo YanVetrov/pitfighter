@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  props: {},
+  props: ["page"],
   data() {
     return {
       Accordion: {
@@ -17,6 +17,22 @@ export default {
   },
   provide() {
     return { Accordion: this.Accordion };
+  },
+  computed: {
+    active() {
+      return this.Accordion.active;
+    },
+  },
+  watch: {
+    active(val, old) {
+      if (val !== old) {
+        this.$emit("update", val);
+        console.log("okokoko");
+      }
+    },
+    page() {
+      this.Accordion.active = this.page;
+    },
   },
 };
 </script>
