@@ -64,7 +64,7 @@ export default {
 <style lang="scss" scoped>
 .accordion__item {
   cursor: pointer;
-  padding: 10px 20px 10px 40px;
+  padding: 10px 20px 10px 20px;
   position: relative;
 }
 

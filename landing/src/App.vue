@@ -60,7 +60,7 @@
       <div
         class="main_title"
         data-aos="fade-up"
-        data-aos-once="true"
+        data-aos-once="false"
         data-aos-duration="1000"
       >
         <div class="main_name">pitfighter</div>
@@ -75,13 +75,19 @@
       </div>
     </cornerDiv>
     <cornerDiv ref="about">
-      <div class="wrapper" style="min-height: 100vh">
+      <div
+        class="wrapper"
+        style="
+          min-height: 100vh;
+          background-image: url('./assets/intro_bg.png');
+        "
+      >
         <div class="bg_blur"></div>
         <div class="main_intro padding">
           <div
             class="block_intro"
             data-aos="fade-up"
-            data-aos-once="true"
+            data-aos-once="false"
             data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="1000"
@@ -138,7 +144,7 @@
     <cornerDiv ref="fighters">
       <div
         class="wrapper padding bg1"
-        style="background-image: url('./assets/bg1.jpg')"
+        style="background-image: url('./assets/fighters_bg.png')"
       >
         <div class="deck_wrapper">
           <deck />
@@ -156,7 +162,7 @@
             </h1>
             <img
               data-aos="fade-up"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-offset="150"
               data-aos-delay="500"
               data-aos-duration="1000"
@@ -239,7 +245,7 @@
             </h1>
             <img
               data-aos="fade-up"
-              data-aos-once="true"
+              data-aos-once="false"
               data-aos-offset="150"
               data-aos-delay="50"
               data-aos-duration="1000"
@@ -334,7 +340,7 @@
           <carousel
             :autoplay="false"
             :value="page"
-            @page-change="page = $event"
+            @page-change="changePage"
             :autoplayTimeout="timeout"
             :perPage="1"
           >
@@ -368,7 +374,7 @@
           </div>
           <div
             data-aos="fade-up"
-            data-aos-once="true"
+            data-aos-once="false"
             data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="500"
@@ -380,7 +386,7 @@
         <div class="token_blocks">
           <div
             class="token_block"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-offset="150"
             data-aos-delay="50"
             data-aos-duration="500"
@@ -405,7 +411,7 @@
           </div>
           <div
             class="token_block"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-offset="150"
             data-aos-delay="250"
             data-aos-duration="500"
@@ -430,7 +436,7 @@
           </div>
           <div
             class="token_block"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-offset="150"
             data-aos-delay="350"
             data-aos-duration="500"
@@ -475,7 +481,15 @@
       </div>
       <div class="wrapper column">
         <div class="row partner_row">
-          <div class="partner">
+          <div
+            class="partner"
+            data-aos="flip-right"
+            data-aos-once="false"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+          >
             <img src="./assets/near.svg" />
             <div class="partner_title">NEAR protocol</div>
             <div class="partner_descr">
@@ -486,7 +500,15 @@
             </div>
           </div>
 
-          <div class="partner">
+          <div
+            class="partner"
+            data-aos="flip-left"
+            data-aos-once="false"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+          >
             <img src="./assets/paras.svg" />
             <div class="partner_title">Paras.id</div>
             <div class="partner_descr">
@@ -506,7 +528,17 @@
           <img src="./assets/paper.png" />
         </div>
         <div class="row center roadmap_row">
-          <div class="road" v-for="(k, i) in roadmap" :key="k">
+          <div
+            class="road"
+            data-aos="flip-left"
+            data-aos-once="false"
+            data-aos-offset="150"
+            :data-aos-delay="100 * i"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+            v-for="(k, i) in roadmap"
+            :key="k"
+          >
             <img :src="require(`./assets/roadmap${i + 1}.png`)" />
             <div class="road_title">{{ k.title }}</div>
             <div
@@ -592,6 +624,10 @@ export default {
   methods: {
     consol() {
       console.log(this.$refs.about);
+    },
+    changePage(page) {
+      if (window.innerWidth <= 830) return 0;
+      this.page = page;
     },
   },
   mounted() {

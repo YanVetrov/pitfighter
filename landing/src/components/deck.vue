@@ -1,5 +1,5 @@
 <template>
-  <div class="deck">
+  <div class="deck" ref="deck">
     <div
       class="card"
       v-for="(k, i) in cards"
@@ -11,6 +11,7 @@
       :class="{ rotate_card: k.rotate, flip_card: k.flip }"
       :style="{
         zIndex: k.id,
+        opacity: k.opacity,
         transition: 'all .3s ease',
         transform: `translate(${k.id * 10}px,${k.id * 10}px)`,
       }"
@@ -48,40 +49,45 @@ export default {
           name: "goblin",
           img: "card",
           color: "#abc",
-          rotate: false,
+          rotate: true,
           flip: false,
+          opacity: 0,
         },
         {
           id: 2,
           name: "knight",
           img: "card1",
           color: "#bfc",
-          rotate: false,
+          rotate: true,
           flip: false,
+          opacity: 0,
         },
         {
           id: 3,
           name: "margrave",
           img: "card2",
           color: "red",
-          rotate: false,
+          rotate: true,
           flip: false,
+          opacity: 0,
         },
         {
           id: 4,
           name: "smuggler",
           img: "card3",
           color: "blue",
-          rotate: false,
+          rotate: true,
           flip: false,
+          opacity: 0,
         },
         {
           id: 5,
           name: "hobgoblin",
           img: "card4",
           color: "green",
-          rotate: false,
+          rotate: true,
           flip: false,
+          opacity: 0,
         },
       ],
     };
@@ -111,6 +117,22 @@ export default {
       card.id = 1;
       setTimeout(() => (card.rotate = false), 100);
     },
+    checkRotate() {
+      let count =
+        this.$refs.deck.getBoundingClientRect().top - window.innerHeight / 2;
+      if (count < 0) {
+        window.removeEventListener("scroll", this.checkRotate);
+        this.cards.forEach((el, i) =>
+          setTimeout(() => {
+            el.rotate = false;
+            el.opacity = 1;
+          }, i * 150)
+        );
+      }
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.checkRotate);
   },
 };
 </script>
