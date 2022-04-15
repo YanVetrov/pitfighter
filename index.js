@@ -256,19 +256,21 @@ async function swapTurn(player1, player2) {
 }
 app.use(express.static(__dirname));
 
-app.get("/", (req, res) => res.sendFile(__dirname + "/client/dist/index.html"));
+app.get("/", (req, res) =>
+  res.sendFile(__dirname + "/landing/dist/index.html")
+);
 app.get(
-  "/landing",
-  (req, res) => res.sendFile(__dirname + "/landing/dist/index.html")
+  "/game",
+  (req, res) => res.sendFile(__dirname + "/client/dist/index.html")
   // console.log(req)
 );
 app.get(
-  "/landing/*",
+  "/game/*",
   (req, res) =>
-    res.sendFile(__dirname + "/landing/" + req.url.replace("landing", "dist"))
+    res.sendFile(__dirname + "/client/" + req.url.replace("game", "dist"))
   // console.log(req)
 );
-app.get("*", (req, res) => res.sendFile(__dirname + "/client/dist" + req.url));
+app.get("*", (req, res) => res.sendFile(__dirname + "/landing/dist" + req.url));
 app.get("/clients-count", (req, res) => {
   res.send({
     count: io.engine.clientsCount,
