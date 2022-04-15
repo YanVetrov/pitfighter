@@ -260,8 +260,19 @@ app.get("/", (req, res) =>
   res.sendFile(__dirname + "/landing/dist/index.html")
 );
 app.get(
+  "/landing",
+  (req, res) => res.sendFile(__dirname + "/landing/dist/index.html")
+  // console.log(req)
+);
+app.get(
   "/game",
   (req, res) => res.sendFile(__dirname + "/client/dist/index.html")
+  // console.log(req)
+);
+app.get(
+  "/landing/*",
+  (req, res) =>
+    res.sendFile(__dirname + "/landing/" + req.url.replace("landing", "dist"))
   // console.log(req)
 );
 app.get(
