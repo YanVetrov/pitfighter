@@ -96,6 +96,7 @@ export default {
   methods: {
     rotate(id, flipped) {
       if (this.cards.some(el => el.rotate)) return;
+      this.cards.forEach(el => (el.flip = false));
       let card = this.cards.find(card => card.id === id);
       console.log(id);
       card.rotate = true;

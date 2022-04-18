@@ -117,12 +117,12 @@ function initMap(arr, store, count) {
   for (let i = 0; i < count; i++) {
     let y = Math.floor(i / multiplier);
     let x = i % multiplier;
-    let random = Math.ceil(Math.random() * 10 - 1);
+    let random = Math.ceil(Math.random() * 8 - 1);
     if (!random) random = 1;
     if (x > 5 && x < 25 && y > 5 && y < 25) random = 1;
-    let sprite = Sprite.from(
-      `./assets/Grass/grass_${random >= 10 ? "" : "0"}${random}.png`
-    );
+    if (y < 5 && Math.random() > 0.2) random = 3;
+    if (y >= 25 && Math.random() > 0.2) random = 6;
+    let sprite = Sprite.from(`./assets/Grass/${random}.png`);
     sprite.posX = x;
     sprite.posY = y;
     if (i % multiplier === 0) map.push([]);

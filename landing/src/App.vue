@@ -139,7 +139,7 @@
           >
             <div class="wrapper_demo">
               <img src="./assets/border.png" />
-              <iframe
+              <!-- <iframe
                 height="315"
                 style="
                   width: 486px;
@@ -153,7 +153,8 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-              ></iframe>
+              ></iframe> -->
+              <div class="soon">COMING SOON</div>
             </div>
           </div>
         </div>
@@ -365,8 +366,8 @@
           >
             <slide> <img src="./assets/slide1.png" /> </slide>
             <slide> <img src="./assets/slide2.png" /> </slide>
-            <slide> <img src="./assets/game2.png" /> </slide>
-            <slide> <img src="./assets/game3.jpeg" /> </slide>
+            <slide> <img src="./assets/slide3.png" /> </slide>
+            <slide> <img src="./assets/slide4.png" /> </slide>
           </carousel>
         </div>
       </div>
@@ -425,6 +426,7 @@
               </div>
               <div class="token_img">
                 <img src="./assets/shield.png" />
+                <img src="./assets/gold.png" class="token_icon" />
               </div>
             </div>
           </div>
@@ -450,46 +452,58 @@
               </div>
               <div class="token_img">
                 <img src="./assets/shield.png" />
+                <img
+                  style="transform: scale(0.7)"
+                  src="./assets/rune.png"
+                  class="token_icon"
+                />
               </div>
             </div>
           </div>
           <div
-            class="token_block"
+            class="token_block crates_block"
             data-aos="zoom-in"
             data-aos-offset="150"
             data-aos-delay="350"
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
-            <div class="token_title">nft box</div>
-            <div class="token_content" style="position: relative; top: 20px">
-              <div class="token_list token_row">
-                <div class="token_listitem">
-                  <span class="green">lightbox</span>
-                  <span>common</span>
-                  <span>uncommon</span>
-                  <span>rare</span>
-                  <span class="token_percent">75%</span>
-                </div>
-                <div class="token_listitem">
-                  <span class="blue">medium box</span>
-                  <span>common</span>
-                  <span>uncommon</span>
-                  <span>rare</span>
-                  <span class="token_percent">20%</span>
-                </div>
-                <div class="token_listitem">
-                  <span class="purple">hard box</span>
-                  <span>common</span>
-                  <span>uncommon</span>
-                  <span>rare</span>
-                  <span class="token_percent">75%</span>
-                </div>
-              </div>
-              <div class="token_img">
-                <img src="./assets/shield.png" />
-              </div>
+            <div class="token_title">nft crates</div>
+            <div class="crates_row" style="position: relative">
+              <crate
+                crate="crate1"
+                @open="crateText = true"
+                openCrate="crate2"
+                :preShake="true"
+              />
+              <crate
+                crate="crate2"
+                @open="crateText = true"
+                openCrate="crate3"
+              />
+              <crate
+                crate="crate3"
+                @open="crateText = true"
+                openCrate="crate1"
+              />
             </div>
+            <transition name="fade">
+              <div class="crates_pelen" v-if="crateText">
+                <div class="row">
+                  <img src="./assets/card.png" />
+                  <img src="./assets/card2.png" />
+                  <img src="./assets/card3.png" />
+                </div>
+                <div class="row">
+                  MOST RECENT OFFER EVER BEST CARDS FOR YOUR GAME PLAY ! ! ! !
+                </div>
+                <img
+                  src="./assets/close.svg"
+                  @click="crateText = false"
+                  class="close"
+                />
+              </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -641,13 +655,15 @@ import cornerDiv from "./components/corner_block.vue";
 import accordion from "./components/accordion.vue";
 import accordionItem from "./components/accordion_item.vue";
 import deck from "./components/deck.vue";
+import crate from "./components/crate.vue";
 export default {
-  components: { cornerDiv, accordion, accordionItem, deck },
+  components: { cornerDiv, accordion, accordionItem, deck, crate },
   data() {
     return {
       active_header: false,
       timeout: 3000,
       page: 0,
+      crateText: "",
       roadmap: [
         {
           title: "Q1 2022",

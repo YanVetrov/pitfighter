@@ -265,7 +265,7 @@ app.get(
   // console.log(req)
 );
 app.get(
-  "/game",
+  "/game/",
   (req, res) => res.sendFile(__dirname + "/client/dist/index.html")
   // console.log(req)
 );

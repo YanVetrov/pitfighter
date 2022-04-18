@@ -237,9 +237,9 @@ export default {
       let y = Math.ceil(i / store.cellsInLine);
       let x = i % store.cellsInLine;
       let multiplier = 0;
-      if (y % 2 === 0) multiplier = 60;
-      target.x = x * 120 + multiplier;
-      target.y = y * 103;
+      if (y % 2 === 0) multiplier = 84;
+      target.x = x * 168 + multiplier;
+      target.y = y * 139;
       target.interactive = true;
       target.buttonMode = true;
       store.gameScene.addChild(target);

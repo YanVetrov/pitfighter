@@ -227,6 +227,107 @@ img {
   width: 520px;
   height: 380px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crates_row{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  height:100%;
+  position: relative;
+}
+.crates_pelen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.7);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding:0 10px;
+  text-align: center;
+  justify-content: center;
+}
+.crates_pelen img{
+  margin:5px;
+  width:40px;
+}
+.close{
+  position: absolute;
+  right:10px;
+  top:10px;
+  cursor: pointer;
+  width: 20px;
+}
+.crate_main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 33%;
+  height: 100%;
+  cursor: pointer;
+}
+.shield {
+  position: absolute;
+  width: 100%;
+}
+.crate_img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.shake {
+  animation: spaceboots 1s forwards;
+  transform-origin: 50% 50%;
+}
+@keyframes spaceboots {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg) scale(1, 1);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg) scale(0.9, 1);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(2deg) scale(0.9, 1);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg) scale(0.9, 1);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(2deg) scale(0.8, 1);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg) scale(0.8, 1);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-1deg) scale(0.9, 1);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(2deg) scale(0.9, 1);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg) scale(0.9, 1);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg) scale(1);
+  }
+}
+.soon{
+  height:84%;
+  width:95%;
+  background:rgba(0, 0, 0, 0.7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .wrapper_demo > img {
   width: 100%;
@@ -359,7 +460,7 @@ ul {
   border-bottom: 1px solid #ffb548;
   padding-bottom: 2px;
   font-size: 22px;
-  width: 150px;
+  width: 200px;
   text-align: center;
 }
 .token_content {
@@ -389,9 +490,15 @@ ul {
 }
 .token_img {
   width: 120px;
+  position: relative;
 }
 .token_img img {
   width: 120px;
+}
+.token_icon{
+  position: absolute;
+  top: -5px;
+  left: 0px;
 }
 .token_row {
   display: flex;
@@ -685,6 +792,18 @@ ul {
 }
 .token_block{
   transform: scale(0.8) !important;
+}
+.crates_block{
+  height:auto;
+}
+.crates_row{
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 76px 0;
+}
+.crate_main{
+  width: 54%;
+  margin:33px;
 }
 .roadmap_title img {
   width: 40px;
