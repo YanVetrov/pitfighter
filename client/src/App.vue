@@ -115,6 +115,7 @@ import {
   AnimatedSprite,
   Texture,
 } from "pixi.js";
+import { Spine } from "pixi-spine";
 import {
   initMap,
   sortUnit,
@@ -662,20 +663,32 @@ export default {
         });
         store.coordinates.zIndex = 3;
         app.stage.addChild(store.coordinates);
-        // document.getElementById("log").addEventListener("click", e => {
-        //   console.log(store.logs);
-        // });
-        // document
-        //   .getElementById("garage_button")
-        //   .addEventListener("click", () => showGarage(false));
-        // let soldier = vm.getUnit({ name: "sold", weapon: "gun" }, 8, 8);
-        // store.gameScene.addChild(soldier);
-        // let hero = vm.getUnit({ name: "hero", weapon: "gun" }, 10, 12);
-        // store.gameScene.addChild(hero);
-        // soldier = vm.getUnit({ name: "sold", weapon: "gun" }, 11, 9, -0.2);
-        // store.gameScene.addChild(soldier);
-        // hero = vm.getUnit({ name: "sold", weapon: "gun" }, 12, 6, 0.2);
-        // store.gameScene.addChild(hero);
+
+        app.loader
+          .add("pirate", "./assets/pirate/Pirate.json")
+          .add("shark", "./assets/shark/Shark.json")
+          .load(function(loader, resources) {
+            const pirate = new Spine(resources.pirate.spineData);
+            const shark = new Spine(resources.shark.spineData);
+
+            // add the animation to the scene and render...
+            store.gameScene.addChild(pirate);
+            shark.x = 800;
+            store.gameScene.addChild(shark);
+            [shark, pirate].forEach(el => {
+              el.interactive = true;
+              if (el.state.hasAnimation("Idle"))
+                el.state.setAnimation(0, "Idle", true);
+              else el.state.setAnimation(0, "Walk", true);
+              el.on("pointerdown", () => {
+                el.state.setAnimation(0, "Attack_1", false);
+                if (el.state.hasAnimation("Idle"))
+                  el.state.addAnimation(0, "Idle", true, 0);
+                else el.state.addAnimation(0, "Walk", true, 0);
+              });
+            });
+          });
+
         let url = undefined;
         if (window.location.href.includes("localhost"))
           url = "ws://localhost:8080";

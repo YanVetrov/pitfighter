@@ -10,6 +10,7 @@
     "fontfaceobserver": "^2.1.0",
     "gsap": "^3.6.1",
     "pixi-filters": "^4.1.2",
+    "pixi-spine": "^3.0.13",
     "pixi.js": "^6.0.4",
     "puxi.js": "0.0.5",
     "resolve-url-loader": "^4.0.0",
