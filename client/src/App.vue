@@ -239,7 +239,7 @@ export default {
       let multiplier = 0;
       if (y % 2 === 0) multiplier = 84;
       target.x = x * 168 + multiplier;
-      target.y = y * 139;
+      target.y = y * 138;
       target.interactive = true;
       target.buttonMode = true;
       store.gameScene.addChild(target);
@@ -268,21 +268,21 @@ export default {
       target.on("pointerup", e => this.clickSprite(target, event));
       target.hitArea = new Polygon([
         0,
-        46,
+        50,
 
         0,
-        92,
-
-        60,
         140,
 
-        120,
-        92,
+        86,
+        186,
 
-        120,
-        46,
+        170,
+        140,
 
-        60,
+        170,
+        50,
+
+        86,
         0,
       ]);
     },
@@ -474,8 +474,8 @@ export default {
       ground.unit = container;
       container.x = ground.x + 20;
       container.y = ground.y + 20;
-      container.scale.x = 0.2;
-      container.scale.y = 0.2;
+      container.scale.x = 0.3;
+      container.scale.y = 0.3;
       let reversed = el.name === "knight" || el.name === "goblin" ? -1 : 1;
       if (scaleX < 0) {
         soldier.scale.x = -1;
