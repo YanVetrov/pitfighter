@@ -18,9 +18,14 @@
       }"
     >
       <img :src="require(`../assets/${k.img}.png`)" />
-      <transition name="fade">
-        <div v-if="k.flip" class="card_info">some info example</div>
-      </transition>
+      <div
+        style="background-image: url('../assets/back_card.png')"
+        class="card_info"
+      >
+        <div class="backstory">
+          Backstore of character some information lorem ipsum etc.
+        </div>
+      </div>
     </div>
     <div
       class="arrow_right"
@@ -148,20 +153,12 @@ export default {
   border-radius: 10px;
   overflow: hidden;
 }
-.flip_card::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease;
-  left: 0;
-}
+
 .card > img {
   transition: all 0.3s ease;
 }
 .flip_card > img {
-  filter: blur(2px);
+  // filter: blur(2px);
 }
 .arrow_right {
 }
@@ -172,10 +169,38 @@ export default {
 }
 .card_info {
   position: absolute;
-  top: 30%;
+  top: 0;
   transform: scale(-1, 1);
   z-index: 2;
-  left: 2%;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+.flip_card .card_info::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  left: 0;
+  top: 0;
+}
+.flip_card .card_info {
+  opacity: 1;
+}
+.backstory {
+  position: relative;
+  top: 113px;
+  font-size: 10px;
+  padding: 0px 38px;
+  text-align: center;
+  line-height: 1.7;
+  z-index: 3;
 }
 .card_title {
   position: absolute;
