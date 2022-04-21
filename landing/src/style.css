@@ -278,12 +278,12 @@ img {
   width: 100%;
 }
 .crate_img {
-  width: 100%;
+  width: 80%;
   position: relative;
   z-index: 2;
 }
 .shake {
-  animation: spaceboots 1s forwards;
+  animation: spaceboots .6s forwards;
   transform-origin: 50% 50%;
 }
 @keyframes spaceboots {
@@ -799,7 +799,7 @@ ul {
 .crates_row{
   flex-direction: column;
   align-items: center;
-  padding: 0 0 76px 0;
+  padding: 70px 0 70px 0;
 }
 .crate_main{
   width: 54%;

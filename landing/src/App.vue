@@ -473,18 +473,18 @@
               <crate
                 crate="crate1"
                 @open="crateText = true"
-                openCrate="crate2"
+                openCrate="opencrate1"
                 :preShake="true"
               />
               <crate
                 crate="crate2"
                 @open="crateText = true"
-                openCrate="crate3"
+                openCrate="opencrate2"
               />
               <crate
                 crate="crate3"
                 @open="crateText = true"
-                openCrate="crate1"
+                openCrate="opencrate3"
               />
             </div>
             <transition name="fade">

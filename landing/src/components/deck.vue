@@ -4,6 +4,7 @@
       class="card"
       v-for="(k, i) in cards"
       :key="i"
+      ref="card"
       @click="flip(k.id)"
       v-touch:swipe.right="
         () => rotate(cards.reduce((acc, curr) => Math.max(acc, curr.id), 0))
@@ -92,7 +93,6 @@ export default {
       ],
     };
   },
-  computed: {},
   methods: {
     rotate(id, flipped) {
       if (this.cards.some(el => el.rotate)) return;
