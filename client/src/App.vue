@@ -199,12 +199,14 @@
             <div style="display:flex;width:100%;justify-content:space-around;">
               <button
                 @click="
-                  choosen.push({
-                    name: val.type,
-                    weapon: val.weap,
-                    armor: val.armor,
-                    boots: val.boots,
-                  })
+                  choosen.length < 6
+                    ? choosen.push({
+                        name: val.type,
+                        weapon: val.weap,
+                        armor: val.armor,
+                        boots: val.boots,
+                      })
+                    : ''
                 "
               >
                 TAKE

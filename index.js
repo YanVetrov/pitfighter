@@ -157,6 +157,7 @@ function addUnits(socket, names, first) {
   let max = first ? 14 : 25;
   socket.units = [];
   socket.side = first ? "left" : "right";
+  names = names.slice(0, 6);
   for (let i = 0; i < names.length; i++) {
     let x = Math.floor(Math.random() * (max - min) + min);
     let y = Math.floor(Math.random() * (25 - 5) + 5);
