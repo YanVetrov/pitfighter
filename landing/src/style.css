@@ -174,7 +174,8 @@ img {
   align-items: center !important;
 }
 .partner img{
-  width:50%;
+  /* width:100%; */
+  height:30%;
 }
 .partner_title{
   font-size: 30px;

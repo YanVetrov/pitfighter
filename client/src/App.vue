@@ -54,7 +54,56 @@
       >
         PASS
       </button>
-
+      <div class="units_bottom" key="12">
+        <div class="units">
+          <div
+            class="unit"
+            v-for="(u, i) in selfUnits"
+            @click="teleportation(u)"
+            :key="i"
+          >
+            <div class="unit_info">
+              <img src="./assets/info.svg" />
+              <div class="unit_info_blank">
+                <div class="unit_info_stats">
+                  <div class="unit_info_stat">
+                    <span>{{ u.strength }}</span>
+                    <img :src="`./assets/heart.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.damage }}</span>
+                    <img :src="`./assets/damage.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.speed }}</span>
+                    <img :src="`./assets/speed.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.fire_radius }}</span>
+                    <img :src="`./assets/radius.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.agility }}</span>
+                    <img :src="`./assets/agility.svg`" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="unit_img">
+              <img
+                :src="require(`./assets/${u.type}/${u.weapon}/idle/1.png`)"
+              />
+            </div>
+            <div style="color:mediumseagreen;font-size:10px">
+              <span :style="{ color: u.hp < 20 ? 'red' : 'mediumseagreen' }">{{
+                u.hp
+              }}</span
+              >/{{ u.strength }}
+            </div>
+            <div class="unit_name">{{ u.type }}</div>
+          </div>
+        </div>
+      </div>
       <div key="440" class="characters" v-if="choose">
         <div>
           <div
@@ -141,6 +190,7 @@ export default {
   data() {
     return {
       socket: {},
+      selfUnits: [],
       roomId: "",
       whoTurn: "",
       whoWait: "",
@@ -157,6 +207,22 @@ export default {
     };
   },
   methods: {
+    async teleportation({ x, y, id }) {
+      gsap.to(store.gameScene, {
+        duration: 0.5,
+        x: -x * 170 + window.innerWidth / 3.5,
+        y: -y * 139 + window.innerHeight / 3.5,
+      });
+      gsap.to(store.gameScene.scale, {
+        duration: 0.5,
+        x: 1,
+        y: 1,
+      });
+      if (id) {
+        let unit = store.gameScene.children.find(el => el.id === id);
+        if (unit) store.unit = unit;
+      }
+    },
     getTime(num) {
       let d = new Date(num);
       let h = d.getHours();
@@ -246,25 +312,10 @@ export default {
       store.gameScene.addChild(target);
       if (target.unclickable) return 0;
       target.on("pointerover", e => {
-        let filter = new BevelFilter({
-          lightColor: 0xaaffaa,
-          thickness: 4,
-          rotation: 0,
-          shadowColor: 0xaaffaa,
-          lightAlpha: 0.8,
-          shadowAlpha: 0.8,
-        });
-        filter.hover = true;
-        target.filters = [filter];
+        target.alpha = 0.9;
       });
       target.on("pointerout", e => {
         target.alpha = 1;
-        if (store.unit !== target.unit)
-          target.filters = target.filters.filter(el => !el.hover);
-        if (target.unit) {
-          target.unit.filters = [];
-          if (target.unit.unit) target.unit.unit.filters = [];
-        }
       });
       target.on("pointerup", e => this.clickSprite(target, event));
       target.hitArea = new Polygon([
@@ -399,18 +450,9 @@ export default {
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
       else unit.unit.x = 1;
 
-      unit.ground.filters = [];
+      unit.ground.tint = 0xffffff;
       unit.ground.unit = null;
-      target.filters = [
-        new BevelFilter({
-          lightColor: 0xaaffaa,
-          thickness: 6,
-          rotation: 0,
-          shadowColor: 0xaaffaa,
-          lightAlpha: 0.8,
-          shadowAlpha: 0.8,
-        }),
-      ];
+      target.tint = 0x99ff99;
       unit.ground = target;
       target.unit = unit;
       await gsap.to(unit, {
@@ -699,6 +741,7 @@ export default {
           console.log(data);
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
+          vm.selfUnits = data.self;
           console.log([...data.self, ...data.enemy].map(el => el.id));
           [...data.self, ...data.enemy].forEach(el => {
             let hero = vm.getUnit(el, el.x, el.y, el.x > 14 ? -0.2 : 0.2);

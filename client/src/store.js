@@ -77,23 +77,13 @@ Object.defineProperty(store, "unit", {
       this.u.active = false;
       this.u.interactive = false;
       this.u.buttonMode = false;
-      if (this.u.ground) this.u.ground.filters = [];
+      if (this.u.ground) this.u.ground.tint = 0xffffff;
     }
     if (unit) {
       unit.active = true;
       unit.buttonMode = true;
       unit.interactive = true;
-      if (unit.ground)
-        unit.ground.filters = [
-          new BevelFilter({
-            lightColor: 0xff69,
-            thickness: 15,
-            rotation: 0,
-            shadowColor: 0xff69,
-            lightAlpha: 1,
-            shadowAlpha: 1,
-          }),
-        ];
+      if (unit.ground) unit.ground.tint = 0x99ff99;
     }
     this.u = unit;
   },
