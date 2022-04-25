@@ -2,13 +2,11 @@ const express = require("express"),
   app = express();
 const cors = require("cors");
 const units = require("./units.js");
+const items = require("./items.js");
 const port = process.env.PORT || 8080;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let players = [];
 const rooms = {};
-let current_turn = 0;
-let timeOut;
-let _turn = 0;
 let turnCount = 9;
 let moveCost = 2;
 let attackCost = 4;
@@ -48,9 +46,11 @@ io.on("connection", function (socket) {
   socket.on("move_unit", async ({ id, x, y }) => {
     if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
     let unit = socket.units.find(el => el.id === id);
-
+    let cost = moveCost;
     if (unit) {
-      if (unit.stamina < moveCost) return console.log("no stamina");
+      if (unit.effects && unit.effects["stamina_discount"])
+        cost -= unit.effects["stamina_discount"];
+      if (unit.stamina < cost) return console.log("no stamina");
       console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
       if (
         !isAvailable({
@@ -74,7 +74,7 @@ io.on("connection", function (socket) {
           io.to(room).emit("poison_hit", { id, hp: unit.hp });
         }
       }
-      setTurn(socket, enemy, moveCost, unit);
+      setTurn(socket, enemy, cost, unit);
     }
   });
   socket.on("attack", ({ id, target_id, target_owner }) => {
@@ -164,12 +164,18 @@ function addUnits(socket, names, first) {
       x = Math.floor(Math.random() * (max - min) + min);
       y = Math.floor(Math.random() * (25 - 5) + 5);
     }
-    let type = units[names[i]].type;
+    let type = units[names[i].name].type;
+    let weapon = items[names[i].weapon];
+    let armor = items[names[i].armor];
+    let boots = items[names[i].boots];
+    let unit = calculateUnit(units[type], [weapon, armor, boots]);
     socket.units.push({
-      ...units[type],
+      ...unit,
+      originUnit: units[type],
       id: Date.now() + "" + x + y + i,
       owner: socket.id,
       nickname: socket.nickname,
+      hp: unit.strength,
       x,
       y,
       type,
@@ -177,6 +183,24 @@ function addUnits(socket, names, first) {
       stamina: turnCount,
     });
   }
+}
+function calculateUnit(unit, items) {
+  let newUnit = { ...unit };
+  items.forEach(item => {
+    if (!item) return 0;
+    Object.keys(item.stats).forEach(key => {
+      let value = item.stats[key];
+      let newVal;
+      if (typeof value === "number") {
+        newVal = newUnit[key] + value;
+      } else {
+        newVal = newUnit[key] + (newUnit[key] * Number(value)) / 100;
+      }
+      newUnit[key] = Math.round(newVal);
+    });
+    if (item.effects) newUnit.effects = item.effects;
+  });
+  return newUnit;
 }
 async function getPlayersInRoom(room) {
   const sockets = await io.in(room).fetchSockets();
@@ -224,7 +248,6 @@ function setTurn(socket, enemy, cost, unit) {
     id: unit.id,
     stamina: unit.stamina,
   });
-  if (socket.units.every(el => el.stamina < moveCost)) swapTurn(socket, enemy);
 }
 async function swapTurn(player1, player2) {
   if (!player1 || !player2 || !player1.gameRoom || !player2.gameRoom)
@@ -288,7 +311,7 @@ app.get("/clients-count", (req, res) => {
   });
 });
 app.post("/units_templates", (req, res) => {
-  res.send(units);
+  res.send({ units, items });
 });
 app.post("/client/:id", (req, res) => {
   if (clients.indexOf(req.params.id) !== -1) {

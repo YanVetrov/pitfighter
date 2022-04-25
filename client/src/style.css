@@ -210,8 +210,7 @@ button:active {
 select {
   background: rgba(0, 0, 0, 0.5);
   color: white;
-  padding: 5px;
-  border: 1px solid #a173cd;
+  font-size:10px;
 }
 
 .__bar-button-is-vertical-start {
@@ -359,6 +358,34 @@ img {
   background: rgba(50,50,50,0.7);
   border-top: 1px solid #f56b00;
 }
+.hide_bottom{
+      bottom:-130px;
+}
+.hider{
+  position: absolute;
+  top: -33px;
+  /* padding: 4px; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  left: 50%;
+    transform: translate(-50%, 0);
+  height: 33px;
+  width: 59px;
+  background: rgba(50,50,50,0.7);
+  border: 1px solid #f56b00;
+  border-radius: 30px 30px 0 0;
+  border-bottom: 1px solid rgba(50,50,50,0.7);
+  z-index: 2;
+}
+.hider img{
+  width: 32px;
+  opacity: 0.5;
+  transition: all .3s ease;
+}
+.hide_bottom .hider img{
+  opacity: 1;
+}
 .unit_info{
   width:100%;
   position:relative;
@@ -368,8 +395,8 @@ img {
   right: 0;
 }
 .unit_img{
-  width: 100px;
-  height:90px;
+  width: 88px;
+  height:80px;
 }
 .unit_img img{
   width: 100%;
@@ -380,6 +407,7 @@ img {
     align-items: center;
     justify-content: center;
     margin: 10px;
+    font-size:10px;
     color: antiquewhite;
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 9px;
@@ -403,6 +431,7 @@ img {
   border: 1px solid #333;
   transition: all .15s ease;
   opacity: 0;
+  pointer-events: none;
   transform: scale(0.8);
 }
 .unit_info:hover .unit_info_blank{

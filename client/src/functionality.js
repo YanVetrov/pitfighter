@@ -208,17 +208,18 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
   target.addEventListener("mousewheel", e => {
     let { x, y } = zone.scale;
     let k = 1.02;
+    let m = 20;
     if (e.deltaY > 0 && x > 0.3) {
-      zone.y +=
-        ((store.cellsInLine * (150 - 2)) / 2) * zone.scale.y * (1 - 1 / k);
       zone.scale.x /= k;
       zone.scale.y /= k;
+      zone.x += m;
+      zone.y += m;
     }
     if (e.deltaY < 0 && x < 1.5) {
-      zone.y +=
-        ((store.cellsInLine * (150 - 2)) / 2) * zone.scale.y * (1 - 1 * k);
       zone.scale.x *= k;
       zone.scale.y *= k;
+      zone.x -= m;
+      zone.y -= m;
     }
     // centerVisibleZone(zone, renderMap);
   });
@@ -281,6 +282,7 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
       return 0;
     }
     if (e.touches.length >= 2) {
+      console.log("multitouch");
       let leftFinger =
         e.targetTouches[0].clientX < e.targetTouches[1].clientX
           ? e.targetTouches[0]
@@ -296,8 +298,8 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
       if ((diff > 0 && x < 1.5) || (diff < 0 && x > 0.4)) {
         zone.scale.x += diff / 300;
         zone.scale.y += diff / 300;
-        zone.x -= diff;
-        zone.y -= diff;
+        zone.x += diff / 3;
+        zone.y += diff / 3;
       }
       tpCache.rightFinger = rightFinger;
       tpCache.leftFinger = leftFinger;

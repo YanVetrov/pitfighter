@@ -54,7 +54,10 @@
       >
         PASS
       </button>
-      <div class="units_bottom" key="12">
+      <div class="units_bottom" :class="{ hide_bottom }" key="12">
+        <div class="hider" @click="hide_bottom = !hide_bottom">
+          <img src="./assets/cards.svg" />
+        </div>
         <div class="units">
           <div
             class="unit"
@@ -62,7 +65,7 @@
             @click="teleportation(u)"
             :key="i"
           >
-            <div class="unit_info">
+            <div class="unit_info" @click.prevent="strength = strength">
               <img src="./assets/info.svg" />
               <div class="unit_info_blank">
                 <div class="unit_info_stats">
@@ -105,7 +108,23 @@
         </div>
       </div>
       <div key="440" class="characters" v-if="choose">
-        <div>
+        CHOOSEN:
+        <div class="character_wrapper">
+          <div
+            v-for="(k, i) in choosen"
+            :key="i"
+            style="border: 1px solid rgba(255,255,255,0.2);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;"
+          >
+            <div>{{ k.name }}</div>
+            <div>{{ k.weapon || "origin" }}</div>
+            <div>{{ k.armor || "origin" }}</div>
+            <div>{{ k.boots || "origin" }}</div>
+          </div>
+        </div>
+        <div class="character_wrapper">
           <div
             class="character_block"
             :style="{ background: `url(${require('./assets/card.png')})` }"
@@ -122,31 +141,87 @@
               </div>
               <div><img :src="`./assets/agility.svg`" /> {{ val.agility }}</div>
             </div>
-            <div class="character_count" style="color:black">
-              {{ val.count }}
+            <div class="item">
+              <span>weapon</span>
+              <select v-model="val.weap">
+                <option selected value="">origin</option>
+                <option
+                  v-for="item in Object.values(items).filter(
+                    el => el.type === 'weapon' && val.range === el.available
+                  )"
+                  :value="
+                    Object.keys(items).find(
+                      key => items[key].name === item.name
+                    )
+                  "
+                  :key="item.name"
+                  >{{ item.name }}</option
+                >
+              </select>
+            </div>
+            <div class="item">
+              <span>armor</span>
+              <select v-model="val.armor">
+                <option selected value="">origin</option>
+                <option
+                  v-for="item in Object.values(items).filter(
+                    el => el.part === 'body'
+                  )"
+                  :key="item.name"
+                  :value="
+                    Object.keys(items).find(
+                      key => items[key].name === item.name
+                    )
+                  "
+                  >{{ item.name }}</option
+                >
+              </select>
+            </div>
+            <div class="item">
+              <span>boots</span>
+              <select v-model="val.boots">
+                <option selected value="">origin</option>
+                <option
+                  v-for="item in Object.values(items).filter(
+                    el => el.part === 'boots'
+                  )"
+                  :value="
+                    Object.keys(items).find(
+                      key => items[key].name === item.name
+                    )
+                  "
+                  :key="item.name"
+                  >{{ item.name }}</option
+                >
+              </select>
             </div>
             <div class="character_name">{{ key }}</div>
             <div style="display:flex;width:100%;justify-content:space-around;">
-              <button @click="val.count > 0 ? val.count-- : ''">-</button
-              ><button
+              <button
                 @click="
-                  Object.values(units)
-                    .map(el => el.count)
-                    .reduce((acc, el) => (acc += el), 0) < 6
-                    ? val.count++
-                    : ''
+                  choosen.push({
+                    name: val.type,
+                    weapon: val.weap,
+                    armor: val.armor,
+                    boots: val.boots,
+                  })
                 "
               >
-                +
+                TAKE
               </button>
             </div>
           </div>
-          <div style="position:fixed;bottom:50px;left:40%;">
-            <input placeholder="nickname" v-model="nickname" />
-            <button @click="onChoose">
-              I'M READY
-            </button>
-          </div>
+        </div>
+        <div
+          style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;"
+        >
+          <input placeholder="nickname" v-model="nickname" />
+          <button @click="onChoose">
+            I'M READY
+          </button>
         </div>
       </div>
     </transition-group>
@@ -191,7 +266,9 @@ export default {
     return {
       socket: {},
       selfUnits: [],
+      items: {},
       roomId: "",
+      hide_bottom: false,
       whoTurn: "",
       whoWait: "",
       availableTime: "",
@@ -203,6 +280,7 @@ export default {
       fireMessage: "",
       choose: true,
       units: {},
+      choosen: [],
       timeLeft: 0,
     };
   },
@@ -210,13 +288,8 @@ export default {
     async teleportation({ x, y, id }) {
       gsap.to(store.gameScene, {
         duration: 0.5,
-        x: -x * 170 + window.innerWidth / 3.5,
-        y: -y * 139 + window.innerHeight / 3.5,
-      });
-      gsap.to(store.gameScene.scale, {
-        duration: 0.5,
-        x: 1,
-        y: 1,
+        x: -x * (170 * store.gameScene.scale.x) + window.innerWidth / 3.5,
+        y: -y * (139 * store.gameScene.scale.y) + window.innerHeight / 5,
       });
       if (id) {
         let unit = store.gameScene.children.find(el => el.id === id);
@@ -376,6 +449,8 @@ export default {
       let unit = store.gameScene.children.find(el => el.id === id);
       let target = store.gameScene.children.find(el => el.id === target_id);
       if (target === store.unit) this.health = hp;
+      let selfUnit = this.selfUnits.find(el => el.id === target_id);
+      if (selfUnit) selfUnit.hp = hp;
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
@@ -430,13 +505,10 @@ export default {
       }
     },
     onChoose() {
-      let units = [];
-      Object.keys(this.units).forEach(key => {
-        for (let i = 0; i < this.units[key].count; i++) {
-          units.push(key);
-        }
+      this.socket.emit("choose", {
+        units: this.choosen,
+        nickname: this.nickname,
       });
-      this.socket.emit("choose", { units, nickname: this.nickname });
       this.choose = false;
     },
     async moveUnit({ id, x, y }) {
@@ -444,6 +516,11 @@ export default {
       let target = store.gameScene.children.find(
         el => el.posX === x && el.posY === y
       );
+      let selfUnit = this.selfUnits.find(el => el.id === id);
+      if (selfUnit) {
+        selfUnit.x = x;
+        selfUnit.y = y;
+      }
       unit.unit._textures = unit.unit.run;
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
@@ -531,7 +608,7 @@ export default {
       container.ownerText = new Text(`${name}`, {
         fill: color,
         fontFamily: "metalwar",
-        fontSize: 90 - name.length * 2,
+        fontSize: 70 - name.length * 2,
         stroke: "#000",
         strokeThickness: 5,
       });
@@ -824,8 +901,12 @@ export default {
     if (window.location.href.includes("localhost"))
       url = "http://localhost:8080";
     let r = await axios.post(url + "/units_templates");
-    Object.values(r.data).forEach(el => (el.count = 0));
-    this.units = r.data;
+    Object.values(r.data.units).forEach(el => {
+      el.weap = "";
+      (el.armor = ""), (el.boots = "");
+    });
+    this.units = r.data.units;
+    this.items = r.data.items;
   },
 };
 </script>
@@ -846,10 +927,18 @@ export default {
   top: 0;
   z-index: 999;
   background: black;
+  overflow-y: scroll;
+  color: white;
+  text-align: center;
 }
-.characters > div {
-  width: 100%;
-  height: 100%;
+.item {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.characters > .character_wrapper {
   top: 0;
   z-index: 999;
   display: flex;
@@ -857,7 +946,6 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0;
-  overflow-y: scroll;
 }
 .character_block {
   width: 200px;
@@ -872,9 +960,11 @@ export default {
   padding: 10px;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  font-size: 15px;
 }
 .character_block > img {
-  height: 110px;
+  height: 60px;
 }
 .time_turn {
   display: block;
@@ -929,17 +1019,22 @@ export default {
   border-radius: 5%;
   padding: 5px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .character_stats div {
+  width: 33%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: #333;
   margin: 5px;
+  font-size: 10px;
 }
 .character_stats img {
-  height: 30px;
+  height: 15px;
 }
 @keyframes bubble {
   0% {
