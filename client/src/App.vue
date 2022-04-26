@@ -9,7 +9,7 @@
       <!-- <div class="waiting" v-show="socket.status === 'waiting'">
       SEARCHING FOR PLAYERS...
     </div> -->
-      <ranger
+      <!-- <ranger
         title="STAMINA"
         color="#ffaa00"
         :available="availableCost"
@@ -25,7 +25,7 @@
         v-if="health !== null"
         :total="strength"
         key="44"
-      />
+      /> -->
       <coin key="9" :yourTurn="whoTurn === socket.id" />
       <div
         class="waiting"
@@ -41,7 +41,7 @@
         key="202"
         class="time_turn"
         v-if="availableTime"
-        style="display:flex;flex-direction:column;align-items:center;left:8px;"
+        style="display:flex;flex-direction:column;align-items:center;left:8px;justify-content:flex-end"
       >
         <timer @timerUpdated="timeLeft = $event" :time="availableTime" />
         <div :style="{ height: timeLeft * 2 + '%' }" class="time_count"></div>
@@ -54,21 +54,95 @@
       >
         PASS
       </button>
-      <div
-        class="units_bottom"
-        :style="{ backgroundImage: `url(${require('./assets/deck.jpeg')})` }"
-        :class="{ hide_bottom }"
-        key="12"
-      >
+      <div class="units_bottom" :class="{ hide_bottom }" key="12">
         <div class="hider" @click="hide_bottom = !hide_bottom">
           <img src="./assets/cards.svg" />
         </div>
-        <div class="units">
+        <div
+          class="unit_main_info"
+          style="background:url('./assets/steel.jpeg')"
+          v-if="activeUnit"
+        >
+          <div class="img_info">
+            <img
+              :src="
+                require(`./assets/${activeUnit.type}/${activeUnit.weapon}/idle/1.png`)
+              "
+            />
+            <div class="main_hp bar">
+              <div
+                class="inner_bar"
+                :style="{
+                  width: (activeUnit.hp / activeUnit.strength) * 100 + '%',
+                }"
+              ></div>
+              <div class="inner_text">
+                {{ activeUnit.hp }}/{{ activeUnit.strength }}
+              </div>
+            </div>
+            <div class="main_stamina bar">
+              <div
+                class="inner_bar"
+                :style="{ width: (availableCost / totalCost) * 100 + '%' }"
+              ></div>
+              <div class="inner_text">{{ availableCost }}/{{ totalCost }}</div>
+            </div>
+          </div>
+          <div class="skills_info">
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.strength }}</span>
+              <img :src="`./assets/heart.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.damage }}</span>
+              <img :src="`./assets/damage.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.speed }}</span>
+              <img :src="`./assets/speed.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.fire_radius }}</span>
+              <img :src="`./assets/radius.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.agility }}</span>
+              <img :src="`./assets/agility.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.defence_melee }}</span>
+              <img :src="`./assets/sword_shield.svg`" />
+            </div>
+            <div class="unit_info_stat">
+              <span>{{ activeUnit.defence_ranged }}</span>
+              <img :src="`./assets/arrow-shield.svg`" />
+            </div>
+            <div class="row">
+              <img
+                v-if="activeUnit.items.weapon"
+                :src="require(`./assets/${activeUnit.items.weapon.key}.svg`)"
+              />
+              <img
+                v-if="activeUnit.items.armor"
+                :src="require(`./assets/${activeUnit.items.armor.key}.svg`)"
+              />
+              <img
+                v-if="activeUnit.items.boots"
+                :src="require(`./assets/${activeUnit.items.boots.key}.svg`)"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="units"
+          :style="{ backgroundImage: `url(${require('./assets/deck.jpeg')})` }"
+        >
           <div
             class="unit"
             v-for="(u, i) in selfUnits"
             @click="teleportation(u)"
             :key="i"
+            :style="u === activeUnit ? { border: '1px solid whitesmoke' } : {}"
           >
             <div class="unit_info" @click.prevent="strength = strength">
               <img src="./assets/info.svg" />
@@ -370,7 +444,7 @@ export default {
       whoTurn: "",
       whoWait: "",
       availableTime: "",
-      availableCost: null,
+      availableCost: 9,
       totalCost: 9,
       health: null,
       nickname: "",
@@ -381,6 +455,11 @@ export default {
       choosen: [],
       timeLeft: 0,
     };
+  },
+  computed: {
+    activeUnit() {
+      return this.selfUnits.find(el => el.active);
+    },
   },
   methods: {
     calculatePlus(unit, key) {
@@ -405,6 +484,7 @@ export default {
       if (id) {
         let unit = store.gameScene.children.find(el => el.id === id);
         if (unit) store.unit = unit;
+        console.log(this.activeUnit);
       }
     },
     getTime(num) {
@@ -929,6 +1009,7 @@ export default {
           console.log(data);
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
+          data.self.forEach(el => (el.active = false));
           vm.selfUnits = data.self;
           console.log([...data.self, ...data.enemy].map(el => el.id));
           [...data.self, ...data.enemy].forEach(el => {
@@ -1014,6 +1095,7 @@ export default {
     let r = await axios.post(url + "/units_templates");
     Object.values(r.data.units).forEach(el => {
       el.weap = "";
+      el.active = false;
       (el.armor = ""), (el.boots = "");
     });
     this.units = r.data.units;
@@ -1080,7 +1162,7 @@ export default {
 .time_turn {
   display: block;
   position: fixed;
-  font-size: 30px;
+  font-size: 25px;
   top: 20px;
   left: 20px;
   text-shadow: 1px 1px 3px darkslategrey;
@@ -1090,11 +1172,9 @@ export default {
   justify-content: center;
   overflow: hidden;
   /* padding: 15px; */
-  border: 5px solid white;
   width: 100px;
   border-radius: 100%;
   height: 100px;
-  box-shadow: inset 1px 1px 15px black;
   color: white;
 }
 .time_count {

@@ -1,4 +1,4 @@
-module.exports = {
+let obj = {
   fire_sword: {
     name: "Fire sword",
     available: "melee",
@@ -123,3 +123,5 @@ module.exports = {
     },
   },
 };
+Object.keys(obj).forEach(key => (obj[key].key = key));
+module.exports = obj;

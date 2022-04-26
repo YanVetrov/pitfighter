@@ -1,7 +1,8 @@
 <template>
   <div
-    style="position:fixed;top:20px;left:45%;border-radius:100%"
+    style="position:fixed;top:20px;left:9px;border-radius:100%"
     :class="{ shadow: flip }"
+    :style="{ zIndex: flip ? 1 : 0 }"
   >
     <div class="floor">
       <div

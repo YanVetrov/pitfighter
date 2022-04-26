@@ -177,6 +177,7 @@ function addUnits(socket, names, first) {
       owner: socket.id,
       nickname: socket.nickname,
       hp: unit.strength,
+      items: { weapon, armor, boots },
       x,
       y,
       type,
