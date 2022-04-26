@@ -212,12 +212,7 @@
           </div>
         </div>
         <div class="character_wrapper">
-          <div
-            class="character_block"
-            :style="{ background: `url(${require('./assets/card.png')})` }"
-            v-for="(val, key) in units"
-            :key="key"
-          >
+          <div class="character_block" v-for="(val, key) in units" :key="key">
             <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
             <div class="character_stats" style="margin:5px;">
               <div>
@@ -1148,16 +1143,21 @@ export default {
   flex-direction: column;
   color: black;
   margin: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(-21deg, transparent 27%, white);
+  border: 5px solid orange;
   border-radius: 8px;
   padding: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   font-size: 15px;
 }
 .character_block > img {
-  height: 60px;
+  height: 146px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.5;
+}
+.character_name {
+  color: aliceblue;
 }
 .time_turn {
   display: block;
