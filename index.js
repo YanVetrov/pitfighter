@@ -103,7 +103,11 @@ io.on("connection", function (socket) {
     let critical = false;
     if (Math.round(Math.random() * 100) < 25 && !miss) critical = true;
     if (critical) damage *= 1.5;
-
+    if (unit.range === "melee")
+      damage = damage - (damage * target.defence_melee) / 100;
+    else damage = damage - (damage * target.defence_ranged) / 100;
+    if (!miss && damage <= 0) damage = 1;
+    damage = Math.round(damage);
     target.hp -= damage;
     const room = socket.gameRoom;
     io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
