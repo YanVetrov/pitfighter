@@ -35,6 +35,7 @@ module.exports = {
       agility: "-99",
       defence_melee: "-70",
       defence_ranged: "-70",
+      strength: "-30",
     },
     effects: {
       stamina_discount: 0.5,
@@ -58,10 +59,10 @@ module.exports = {
     type: "clothes",
     part: "body",
     stats: {
-      strength: -50,
+      strength: -30,
       defence_melee: "-5",
       defence_ranged: "-10",
-      agility: "10",
+      agility: 20,
     },
   },
   leather_boots: {
@@ -73,7 +74,7 @@ module.exports = {
       strength: -10,
       defence_melee: "-3",
       defence_ranged: "-5",
-      agility: "5",
+      agility: 10,
     },
   },
   chain_armor: {
