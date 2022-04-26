@@ -17,6 +17,16 @@ module.exports = {
       fire_radius: -2,
     },
   },
+  revolver: {
+    name: "Revolver",
+    available: "ranged",
+    type: "weapon",
+    stats: {
+      damage: "40",
+      fire_radius: -1,
+      agility: "-10",
+    },
+  },
   magic_sword: {
     name: "Magic sword",
     available: "melee",
@@ -77,6 +87,18 @@ module.exports = {
       agility: 10,
     },
   },
+  power_boots: {
+    name: "Power boots",
+    available: "*",
+    type: "clothes",
+    part: "boots",
+    stats: {
+      strength: 10,
+      defence_melee: "3",
+      defence_ranged: "5",
+      agility: "-20",
+    },
+  },
   chain_armor: {
     name: "Chain armor",
     available: "*",
@@ -85,7 +107,7 @@ module.exports = {
     stats: {
       strength: 20,
       defence_melee: "10",
-      defence_ranged: "20",
+      defence_ranged: "-30",
       agility: "-20",
     },
   },

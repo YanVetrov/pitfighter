@@ -54,7 +54,12 @@
       >
         PASS
       </button>
-      <div class="units_bottom" :class="{ hide_bottom }" key="12">
+      <div
+        class="units_bottom"
+        :style="{ backgroundImage: `url(${require('./assets/deck.jpeg')})` }"
+        :class="{ hide_bottom }"
+        key="12"
+      >
         <div class="hider" @click="hide_bottom = !hide_bottom">
           <img src="./assets/cards.svg" />
         </div>
@@ -88,6 +93,14 @@
                   <div class="unit_info_stat">
                     <span>{{ u.agility }}</span>
                     <img :src="`./assets/agility.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.defence_melee }}</span>
+                    <img :src="`./assets/sword_shield.svg`" />
+                  </div>
+                  <div class="unit_info_stat">
+                    <span>{{ u.defence_ranged }}</span>
+                    <img :src="`./assets/arrow-shield.svg`" />
                   </div>
                 </div>
               </div>
@@ -133,67 +146,150 @@
           >
             <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
             <div class="character_stats" style="margin:5px;">
-              <div><img :src="`./assets/heart.svg`" /> {{ val.strength }}</div>
-              <div><img :src="`./assets/speed.svg`" /> {{ val.speed }}</div>
-              <div><img :src="`./assets/damage.svg`" /> {{ val.damage }}</div>
               <div>
-                <img :src="`./assets/radius.svg`" /> {{ val.fire_radius }}
+                <img :src="`./assets/heart.svg`" /> {{ val.strength }}
+                <span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'strength') > 0 ? 'green' : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "strength") || " " }}</span
+                >
               </div>
-              <div><img :src="`./assets/agility.svg`" /> {{ val.agility }}</div>
+              <div>
+                <img :src="`./assets/speed.svg`" /> {{ val.speed
+                }}<span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'speed') > 0 ? 'green' : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "speed") || " " }}</span
+                >
+              </div>
+              <div>
+                <img :src="`./assets/damage.svg`" /> {{ val.damage
+                }}<span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'damage') > 0 ? 'green' : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "damage") || " " }}</span
+                >
+              </div>
+              <div>
+                <img :src="`./assets/radius.svg`" /> {{ val.fire_radius
+                }}<span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'fire_radius') > 0
+                        ? 'green'
+                        : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "fire_radius") || " " }}</span
+                >
+              </div>
+              <div>
+                <img :src="`./assets/agility.svg`" /> {{ val.agility }}%
+                <span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'agility') > 0 ? 'green' : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "agility") || " " }}</span
+                >
+              </div>
+              <div>
+                <img :src="`./assets/sword_shield.svg`" />
+                {{ val.defence_melee }}%
+                <span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'defence_melee') > 0
+                        ? 'green'
+                        : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "defence_melee") || "&zwnj;" }}</span
+                >
+              </div>
+              <div>
+                <img :src="`./assets/arrow-shield.svg`" />
+                {{ val.defence_ranged }}%
+                <span
+                  :style="{
+                    color:
+                      calculatePlus(val, 'defence_ranged') > 0
+                        ? 'green'
+                        : 'darkred',
+                  }"
+                >
+                  {{ calculatePlus(val, "defence_ranged") || "&zwnj;" }}</span
+                >
+              </div>
             </div>
             <div class="item">
-              <span>weapon</span>
-              <select v-model="val.weap">
-                <option selected value="">origin</option>
-                <option
-                  v-for="item in Object.values(items).filter(
-                    el => el.type === 'weapon' && val.range === el.available
-                  )"
-                  :value="
-                    Object.keys(items).find(
-                      key => items[key].name === item.name
-                    )
-                  "
-                  :key="item.name"
-                  >{{ item.name }}</option
-                >
-              </select>
+              <div
+                class="none"
+                @click="val.weap = ''"
+                :style="{ borderColor: !val.weap ? 'mediumvioletred' : '' }"
+              ></div>
+              <img
+                v-for="item in Object.keys(items).filter(
+                  el =>
+                    items[el].type === 'weapon' &&
+                    val.range === items[el].available
+                )"
+                class="item_img"
+                :style="{
+                  borderColor: val.weap === item ? 'mediumvioletred' : '',
+                }"
+                :src="require(`./assets/${item}.svg`)"
+                @click="val.weap = item"
+                :key="item.name"
+              />
             </div>
             <div class="item">
-              <span>armor</span>
-              <select v-model="val.armor">
-                <option selected value="">origin</option>
-                <option
-                  v-for="item in Object.values(items).filter(
-                    el => el.part === 'body'
-                  )"
-                  :key="item.name"
-                  :value="
-                    Object.keys(items).find(
-                      key => items[key].name === item.name
-                    )
-                  "
-                  >{{ item.name }}</option
-                >
-              </select>
+              <div
+                class="none"
+                @click="val.armor = ''"
+                :style="{ borderColor: !val.armor ? 'darkorange' : '' }"
+              ></div>
+              <img
+                v-for="item in Object.keys(items).filter(
+                  el => items[el].part === 'body'
+                )"
+                class="item_img"
+                :style="{
+                  borderColor: val.armor === item ? 'darkorange' : '',
+                }"
+                :src="require(`./assets/${item}.svg`)"
+                @click="val.armor = item"
+                :key="item.name"
+              />
             </div>
             <div class="item">
-              <span>boots</span>
-              <select v-model="val.boots">
-                <option selected value="">origin</option>
-                <option
-                  v-for="item in Object.values(items).filter(
-                    el => el.part === 'boots'
-                  )"
-                  :value="
-                    Object.keys(items).find(
-                      key => items[key].name === item.name
-                    )
-                  "
-                  :key="item.name"
-                  >{{ item.name }}</option
-                >
-              </select>
+              <div
+                class="none"
+                @click="val.boots = ''"
+                :style="{ borderColor: !val.boots ? 'cornflowerblue' : '' }"
+              ></div>
+              <img
+                v-for="item in Object.keys(items).filter(
+                  el => items[el].part === 'boots'
+                )"
+                class="item_img"
+                :style="{
+                  borderColor: val.boots === item ? 'cornflowerblue' : '',
+                }"
+                :src="require(`./assets/${item}.svg`)"
+                @click="val.boots = item"
+                :key="item.name"
+              />
             </div>
             <div class="character_name">{{ key }}</div>
             <div style="display:flex;width:100%;justify-content:space-around;">
@@ -287,6 +383,19 @@ export default {
     };
   },
   methods: {
+    calculatePlus(unit, key) {
+      let val = [unit.weap, unit.armor, unit.boots]
+        .filter(el => el)
+        .map(el => this.items[el].stats[key])
+        .filter(el => el)
+        .map(el =>
+          typeof el === "number"
+            ? el
+            : Math.round(unit[key] * (Number(el) / 100))
+        )
+        .reduce((a, b) => a + b, 0);
+      return val > 0 ? `+${val}` : val;
+    },
     async teleportation({ x, y, id }) {
       gsap.to(store.gameScene, {
         duration: 0.5,
@@ -937,8 +1046,8 @@ export default {
   font-size: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
+  justify-content: flex-start;
+  width: 100%;
 }
 .characters > .character_wrapper {
   top: 0;
@@ -959,7 +1068,7 @@ export default {
   margin: 20px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -1019,21 +1128,21 @@ export default {
 .character_stats {
   font-size: 20px;
   border-radius: 5%;
-  padding: 5px;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 .character_stats div {
-  width: 33%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: flex-start;
   color: #333;
-  margin: 5px;
+  flex-direction: column;
+  margin: 2px;
   font-size: 10px;
+}
+.character_stats div span {
+  font-family: monospace;
 }
 .character_stats img {
   height: 15px;

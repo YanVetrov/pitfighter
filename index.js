@@ -70,7 +70,7 @@ io.on("connection", function (socket) {
       let poison = rooms[room].poison;
       if (poison) {
         if (poison.x === x && poison.y === y) {
-          unit.hp += 100;
+          unit.hp = unit.strength;
           io.to(room).emit("poison_hit", { id, hp: unit.hp });
         }
       }

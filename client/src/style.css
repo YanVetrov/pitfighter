@@ -212,7 +212,21 @@ select {
   color: white;
   font-size:10px;
 }
-
+.item_img{
+  width:31px;
+  margin:2px;
+  border: 2px solid transparent;
+  border-radius: 42%;
+}
+.none{
+  width:25px;
+  height:25px;
+  border:1px solid rgba(0, 0, 0, 0.5);
+  background:rgba(0, 0, 0, 0.2);
+  border-radius:100%;
+  margin:2px;
+  cursor:pointer;
+}
 .__bar-button-is-vertical-start {
   transform: translate(-1.5px, -15px);
 }
