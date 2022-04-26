@@ -363,6 +363,8 @@
             <div class="character_name">{{ key }}</div>
             <div style="display:flex;width:100%;justify-content:space-around;">
               <button
+                style=" width: 100%;
+  margin: 40px 0 0 0;border-radius:0"
                 @click="
                   choosen.length < 6
                     ? choosen.push({
