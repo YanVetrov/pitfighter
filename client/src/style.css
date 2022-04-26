@@ -435,7 +435,7 @@ img {
     transform: translate(-50%, 0px);
 }
 .hide_bottom{
-      bottom:-142px;
+      bottom:-142px !important;
 }
 .hider{
   position: absolute;
