@@ -1,5 +1,12 @@
 <template>
   <div class="main_view">
+    <audio
+      src="./assets/sounds/main_theme.mp3"
+      style="position:absolute;top:-999px"
+      autoplay
+      ref="audio"
+      loop
+    ></audio>
     <transition-group tag="div" class="main_view" mode="out-in" name="fade">
       <canvas
         v-show="socket.status === 'playing'"
@@ -140,7 +147,10 @@
           <div
             class="unit"
             v-for="(u, i) in selfUnits"
-            @click="teleportation(u)"
+            @click="
+              teleportation(u);
+              tap();
+            "
             :key="i"
             :style="u === activeUnit ? { border: '1px solid whitesmoke' } : {}"
           >
@@ -304,7 +314,10 @@
             <div class="item">
               <div
                 class="none"
-                @click="val.weap = ''"
+                @click="
+                  val.weap = '';
+                  tap();
+                "
                 :style="{ borderColor: !val.weap ? 'mediumvioletred' : '' }"
               ></div>
               <img
@@ -318,14 +331,20 @@
                   borderColor: val.weap === item ? 'mediumvioletred' : '',
                 }"
                 :src="require(`./assets/${item}.svg`)"
-                @click="val.weap = item"
+                @click="
+                  val.weap = item;
+                  tap();
+                "
                 :key="item.name"
               />
             </div>
             <div class="item">
               <div
                 class="none"
-                @click="val.armor = ''"
+                @click="
+                  val.armor = '';
+                  tap();
+                "
                 :style="{ borderColor: !val.armor ? 'darkorange' : '' }"
               ></div>
               <img
@@ -337,14 +356,20 @@
                   borderColor: val.armor === item ? 'darkorange' : '',
                 }"
                 :src="require(`./assets/${item}.svg`)"
-                @click="val.armor = item"
+                @click="
+                  val.armor = item;
+                  tap();
+                "
                 :key="item.name"
               />
             </div>
             <div class="item">
               <div
                 class="none"
-                @click="val.boots = ''"
+                @click="
+                  val.boots = '';
+                  tap();
+                "
                 :style="{ borderColor: !val.boots ? 'cornflowerblue' : '' }"
               ></div>
               <img
@@ -356,7 +381,10 @@
                   borderColor: val.boots === item ? 'cornflowerblue' : '',
                 }"
                 :src="require(`./assets/${item}.svg`)"
-                @click="val.boots = item"
+                @click="
+                  val.boots = item;
+                  tap();
+                "
                 :key="item.name"
               />
             </div>
@@ -373,6 +401,8 @@
                         armor: val.armor,
                         boots: val.boots,
                       })
+                      ? tap()
+                      : tap()
                     : ''
                 "
               >
@@ -388,7 +418,12 @@
     align-items: center;"
         >
           <input placeholder="nickname" v-model="nickname" />
-          <button @click="onChoose">
+          <button
+            @click="
+              onChoose();
+              tap();
+            "
+          >
             I'M READY
           </button>
         </div>
@@ -429,6 +464,20 @@ import fireText from "./components/fireText.vue";
 import ranger from "./components/range.vue";
 import axios from "axios";
 import coin from "./components/coin.vue";
+import { sound } from "@pixi/sound";
+for (let i = 0; i < 4; i++) {
+  sound.add("shot_" + i, "./assets/sounds/battle/shots/_" + i + ".wav");
+}
+for (let i = 0; i < 10; i++) {
+  sound.add("sword_" + i, "./assets/sounds/battle/sword/_" + i + ".ogg");
+}
+sound.add({
+  click: "./assets/sounds/click.wav",
+  move: "./assets/sounds/move.mp3",
+  flip: "./assets/sounds/coin_flip.mp3",
+  switch_on: "./assets/sounds/switch_on.wav",
+  switch_off: "./assets/sounds/switch_off.wav",
+});
 export default {
   components: { timer, fireText, ranger, coin },
   data() {
@@ -459,6 +508,9 @@ export default {
     },
   },
   methods: {
+    tap() {
+      sound.play("click");
+    },
     calculatePlus(unit, key) {
       let val = [unit.weap, unit.armor, unit.boots]
         .filter(el => el)
@@ -602,6 +654,7 @@ export default {
     async clickSprite(target, event) {
       console.log(target);
       if (store.gameScene.blockedUI) return console.log("blocked");
+      sound.play("click");
       if (!store.unit && target.unit && target.unit.owner === this.socket.id) {
         store.unit = target.unit;
         this.availableCost = store.unit.stamina;
@@ -639,6 +692,13 @@ export default {
       if (target === store.unit) this.health = hp;
       let selfUnit = this.selfUnits.find(el => el.id === target_id);
       if (selfUnit) selfUnit.hp = hp;
+      if (unit.range === "ranged") {
+        let random = Math.ceil(Math.random() * 4 - 1);
+        sound.play("shot_" + random);
+      } else {
+        let random = Math.ceil(Math.random() * 10 - 1);
+        sound.play("sword_" + random);
+      }
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
@@ -699,7 +759,11 @@ export default {
       });
       this.choose = false;
     },
+    sound() {
+      return sound;
+    },
     async moveUnit({ id, x, y }) {
+      sound.play("move", { volume: 0.2 });
       let unit = store.gameScene.children.find(el => el.id === id);
       let target = store.gameScene.children.find(
         el => el.posX === x && el.posY === y
@@ -768,6 +832,7 @@ export default {
       container.weapon = weapon;
       container.name = el.type;
       container.stam = el.stamina;
+      container.range = el.range;
       container.strength = el.strength;
       soldier.idle = idle;
       soldier.attack = attack;
@@ -956,6 +1021,45 @@ export default {
           vm.renderMap,
           vm
         );
+        store.gameScene.children
+          .filter(el => el.tileMap)
+          .forEach(el => {
+            if (el.posX < 5 || el.posY < 5 || el.posX > 25 || el.posY > 25) {
+              let random = Math.ceil(Math.random() * 7 - 1);
+              let tree = Sprite.from(`./assets/trees/${random}.png`);
+              tree.width = 300;
+              tree.height = 300;
+              el.nonPlayable = true;
+              tree.x = el.x;
+              tree.y = el.y;
+              store.gameScene.addChild(tree);
+              if (Math.random() > 0.75) {
+                let textures = [];
+                for (let x = 0; x < 25; x++) {
+                  textures.push(Texture.from(`./assets/fires/${x}.png`));
+                }
+                let fire = new AnimatedSprite(textures);
+                fire.animationSpeed = 0.3;
+                let r = Math.random() * 4;
+                fire.scale.x = r;
+                fire.scale.y = r;
+                fire.x = el.x + Math.random() * 5;
+                fire.y = el.y + Math.random() * 5;
+                fire.play();
+                store.gameScene.addChild(fire);
+              }
+            } else {
+              if (Math.random() > 0.9) {
+                let random = Math.ceil(Math.random() * 50 - 1);
+                let stuff = Sprite.from(`./assets/stuff/_${random}.png`);
+                stuff.texture.baseTexture.on("loaded", () => {
+                  stuff.x = el.x + 85 - stuff.width / 2;
+                  stuff.y = el.y + 93 - stuff.height / 2;
+                  store.gameScene.addChild(stuff);
+                });
+              }
+            }
+          });
         document.addEventListener(
           "contextmenu",
           e => {
@@ -1004,7 +1108,7 @@ export default {
         socket.status = "waiting";
         vm.socket = socket;
         socket.on("start_game", data => {
-          console.log(data);
+          gsap.to(vm.$refs.audio, { volume: 0.15, duration: 0.5 });
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
           data.self.forEach(el => (el.active = false));
@@ -1054,6 +1158,7 @@ export default {
         });
         socket.on("turn_changed", ({ whoTurn, whoWait, availableTime }) => {
           console.log("turned");
+          sound.play("flip");
           vm.fireMessage =
             vm.socket.id === whoTurn ? "Your turn" : "Enemy turn";
           let turnedUnits = store.gameScene.children.filter(
@@ -1082,6 +1187,12 @@ export default {
       document.querySelector("canvas").addEventListener("contextmenu", e => {
         e.preventDefault();
       });
+    },
+  },
+  watch: {
+    hide_bottom() {
+      if (this.hide_bottom) sound.play("switch_off");
+      else sound.play("switch_on");
     },
   },
   async mounted() {

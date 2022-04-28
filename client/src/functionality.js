@@ -131,6 +131,8 @@ function initMap(arr, store, count) {
     container.addChild(sprite);
     container.posX = x;
     container.posY = y;
+    container.tileMap = true;
+    container.spriteMap = sprite;
     Object.defineProperty(container, "tint", {
       get() {
         return sprite.tint;
@@ -139,37 +141,6 @@ function initMap(arr, store, count) {
         sprite.tint = value;
       },
     });
-    // container.zIndex = 1;
-    if (y < 5 || y > 25 || x < 5 || x > 25) {
-      let tree = Sprite.from(`./assets/trees/${random}.png`);
-      tree.width = 300;
-      tree.height = 300;
-      tree.anchor.x = 0.25;
-      tree.anchor.y = 0.45;
-      container.addChild(tree);
-      container.zIndex = y;
-      if (Math.random() > 0.6) {
-        let textures = [];
-        for (let x = 0; x < 25; x++) {
-          textures.push(Texture.from(`./assets/fires/${x}.png`));
-        }
-        let fire = new AnimatedSprite(textures);
-        fire.animationSpeed = 0.3;
-        let r = Math.random() * 4;
-        fire.scale.x = r;
-        fire.scale.y = r;
-        fire.x = Math.random() * 5;
-        fire.y = Math.random() * 5;
-        fire.play();
-        container.addChild(fire);
-      }
-    } else {
-      if (Math.random() > 0.95) {
-        random = Math.ceil(Math.random() * 45 - 1);
-        let stuff = Sprite.from(`./assets/stuff/_${random}.png`);
-        container.addChild(stuff);
-      }
-    }
     if (i % multiplier === 0) map.push([]);
     map[Math.floor(i / multiplier)].push(container);
   }

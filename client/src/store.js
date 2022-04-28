@@ -12,7 +12,6 @@ import base from "./units_templates.js";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import unpack_units from "./parser";
 import { BevelFilter } from "@pixi/filter-bevel";
-import { transaction } from "./auth.js";
 const objectsOnMap = [];
 let friends = localStorage.getItem("friends");
 if (!friends) {

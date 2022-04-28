@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@pixi/sound": "^4.0.4",
+    "@pixi/sound": "^4.2.0",
     "buffer": "^6.0.3",
     "fontfaceobserver": "^2.1.0",
     "gsap": "^3.6.1",
