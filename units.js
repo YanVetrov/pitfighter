@@ -77,15 +77,4 @@ module.exports = {
     weapon: "sword",
     range: "melee",
   },
-  //   warrior: {
-  //     id: 0,
-  //     hp: 750,
-  //     strength: 750,
-  //     damage: 80,
-  //     fire_radius: 1,
-  //     speed: 1,
-  //     agility: 10,
-  //     type: "warrior",
-  //     weapon: "sword",
-  //   },
 };

@@ -780,6 +780,7 @@ export default {
       let ground = store.map[y][x];
       container.ground = ground;
       ground.unit = container;
+      container.zIndex = el.y + el.x;
       container.x = ground.x + 20;
       container.y = ground.y + 20;
       container.scale.x = 0.3;
@@ -971,30 +972,30 @@ export default {
         store.coordinates.zIndex = 3;
         app.stage.addChild(store.coordinates);
 
-        app.loader
-          .add("pirate", "./assets/pirate/Pirate.json")
-          .add("shark", "./assets/shark/Shark.json")
-          .load(function(loader, resources) {
-            const pirate = new Spine(resources.pirate.spineData);
-            const shark = new Spine(resources.shark.spineData);
+        // app.loader
+        //   .add("pirate", "./assets/pirate/Pirate.json")
+        //   .add("shark", "./assets/shark/Shark.json")
+        //   .load(function(loader, resources) {
+        //     const pirate = new Spine(resources.pirate.spineData);
+        //     const shark = new Spine(resources.shark.spineData);
 
-            // add the animation to the scene and render...
-            store.gameScene.addChild(pirate);
-            shark.x = 800;
-            store.gameScene.addChild(shark);
-            [shark, pirate].forEach(el => {
-              el.interactive = true;
-              if (el.state.hasAnimation("Idle"))
-                el.state.setAnimation(0, "Idle", true);
-              else el.state.setAnimation(0, "Walk", true);
-              el.on("pointerdown", () => {
-                el.state.setAnimation(0, "Attack_1", false);
-                if (el.state.hasAnimation("Idle"))
-                  el.state.addAnimation(0, "Idle", true, 0);
-                else el.state.addAnimation(0, "Walk", true, 0);
-              });
-            });
-          });
+        //     // add the animation to the scene and render...
+        //     store.gameScene.addChild(pirate);
+        //     shark.x = 800;
+        //     store.gameScene.addChild(shark);
+        //     [shark, pirate].forEach(el => {
+        //       el.interactive = true;
+        //       if (el.state.hasAnimation("Idle"))
+        //         el.state.setAnimation(0, "Idle", true);
+        //       else el.state.setAnimation(0, "Walk", true);
+        //       el.on("pointerdown", () => {
+        //         el.state.setAnimation(0, "Attack_1", false);
+        //         if (el.state.hasAnimation("Idle"))
+        //           el.state.addAnimation(0, "Idle", true, 0);
+        //         else el.state.addAnimation(0, "Walk", true, 0);
+        //       });
+        //     });
+        //   });
 
         let url = undefined;
         if (window.location.href.includes("localhost"))

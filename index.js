@@ -200,7 +200,7 @@ function calculateUnit(unit, items) {
       if (typeof value === "number") {
         newVal = newUnit[key] + value;
       } else {
-        newVal = newUnit[key] + (newUnit[key] * Number(value)) / 100;
+        newVal = newUnit[key] + (newUnit[key] * parseFloat(value)) / 100;
       }
       newUnit[key] = Math.round(newVal);
     });
