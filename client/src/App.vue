@@ -73,7 +73,7 @@
           <div class="img_info">
             <img
               :src="
-                require(`./assets/${activeUnit.type}/${activeUnit.weapon}/idle/1.png`)
+                require(`./assets/characters/${activeUnit.img.name}/card.png`)
               "
             />
             <div class="main_hp bar">
@@ -191,7 +191,7 @@
             </div>
             <div class="unit_img">
               <img
-                :src="require(`./assets/${u.type}/${u.weapon}/idle/1.png`)"
+                :src="require(`./assets/characters/${u.img.name}/card.png`)"
               />
             </div>
             <div style="color:mediumseagreen;font-size:10px">
@@ -223,7 +223,7 @@
         </div>
         <div class="character_wrapper">
           <div class="character_block" v-for="(val, key) in units" :key="key">
-            <img :src="`./assets/${key}/${val.weapon}/idle/0.png`" />
+            <img :src="`./assets/characters/${val.img.name}/card.png`" />
             <div class="character_stats" style="margin:5px;">
               <div>
                 <img :src="`./assets/heart.svg`" /> {{ val.strength }}
@@ -473,7 +473,7 @@ for (let i = 0; i < 4; i++) {
   sound.add("shot_" + i, "./assets/sounds/battle/shots/_" + i + ".wav");
 }
 for (let i = 0; i < 10; i++) {
-  sound.add("sword_" + i, "./assets/sounds/battle/sword/_" + i + ".ogg");
+  sound.add("sword_" + i, "./assets/sounds/battle/sword/_" + i + ".mp3");
 }
 sound.add({
   click: "./assets/sounds/click.wav",
@@ -481,6 +481,7 @@ sound.add({
   flip: "./assets/sounds/coin_flip.mp3",
   switch_on: "./assets/sounds/switch_on.wav",
   switch_off: "./assets/sounds/switch_off.wav",
+  critical: "./assets/sounds/critical.wav",
 });
 export default {
   components: { timer, fireText, ranger, coin },
@@ -704,21 +705,15 @@ export default {
         let random = Math.ceil(Math.random() * 10 - 1);
         sound.play("sword_" + random);
       }
+      if (critical) sound.play("critical");
       let random = Math.ceil(Math.random() * 3 - 1);
-      let texture = utils.TextureCache[`./assets/hits/${random}.png`];
-      console.log(random);
-      texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
-      let textures = [];
-      for (let i = 0; i < 16; i++) {
-        texture.frame = new Rectangle(
-          (i % 4) * 128,
-          Math.floor(i / 4) * 128,
-          128,
-          128
-        );
-        textures.push(new Texture(texture.baseTexture, texture.frame));
-      }
-      let hit = new AnimatedSprite(textures);
+      let hit = this.createAnimatedSprite(
+        `./assets/hits/${random}.png`,
+        128,
+        128,
+        16,
+        4
+      ).sprite;
       target.addChild(hit);
       hit.animationSpeed = 0.5;
       hit.loop = false;
@@ -729,19 +724,13 @@ export default {
       };
       hit.play();
       if (Math.random() > 0.6) {
-        texture = utils.TextureCache[`./assets/blood.png`];
-        texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
-        textures = [];
-        for (let i = 0; i < 8; i++) {
-          texture.frame = new Rectangle(
-            (i % 4) * 128,
-            Math.floor(i / 4) * 128,
-            128,
-            128
-          );
-          textures.push(new Texture(texture.baseTexture, texture.frame));
-        }
-        let blood = new AnimatedSprite(textures);
+        let blood = this.createAnimatedSprite(
+          "./assets/blood.png",
+          128,
+          128,
+          8,
+          4
+        ).sprite;
         store.gameScene.addChild(blood);
         let mult = 1;
         if (Math.random() > 0.5) mult = -1;
@@ -749,13 +738,13 @@ export default {
         blood.y = target.y + Math.random() * 100 * mult;
         blood.animationSpeed = 1;
         blood.loop = false;
+        blood.play();
         let scaled = Math.random() * 0.5;
         blood.scale.x = 0.5 + scaled;
         blood.scale.y = 0.5 + scaled;
-        blood.play();
       }
-      if (target.x > unit.x) unit.unit.scale.x = 1;
-      else unit.unit.scale.x = -1;
+      if (target.x > unit.x) unit.unit.scale.x = 1.5;
+      else unit.unit.scale.x = -1.5;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
       else unit.unit.x = 1;
       let miss = target.health == hp;
@@ -776,7 +765,7 @@ export default {
       };
 
       if (unit.weapon === "gun") {
-        let bullet = Sprite.from("./assets/Bullet.png");
+        let bullet = Sprite.from("./assets/bullet.png");
         store.gameScene.addChild(bullet);
         bullet.x = unit.x;
         bullet.y = unit.y;
@@ -785,7 +774,8 @@ export default {
         gsap.to(bullet, {
           x: target.x,
           y: target.y,
-          duration: 1,
+          alpha: 0.5,
+          duration: 0.3,
           onComplete: () => {
             store.gameScene.removeChild(bullet);
           },
@@ -820,6 +810,23 @@ export default {
         }
       }
     },
+    createAnimatedSprite(src, width, height, count, inLine) {
+      console.log(src, width, height, count, inLine);
+      let texture = utils.TextureCache[src];
+      texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
+      let textures = [];
+      for (let i = 0; i < count; i++) {
+        texture.frame = new Rectangle(
+          (i % inLine) * width,
+          Math.floor(i / inLine) * height,
+          width,
+          height
+        );
+        textures.push(new Texture(texture.baseTexture, texture.frame));
+      }
+      let sprite = new AnimatedSprite(textures);
+      return { sprite, textures };
+    },
     onChoose() {
       this.socket.emit("choose", {
         units: this.choosen,
@@ -843,8 +850,8 @@ export default {
       }
 
       unit.unit._textures = unit.unit.run;
-      if (target.x > unit.x) unit.unit.scale.x = 1;
-      else unit.unit.scale.x = -1;
+      if (target.x > unit.x) unit.unit.scale.x = 1.5;
+      else unit.unit.scale.x = -1.5;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
       else unit.unit.x = 1;
 
@@ -867,30 +874,27 @@ export default {
         .forEach(el => store.gameScene.removeChild(el));
     },
     getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2) {
-      let count = [
-        "1.png",
-        "2.png",
-        "3.png",
-        "4.png",
-        "5.png",
-        "6.png",
-        "7.png",
-        "8.png",
-        "9.png",
-      ];
-      let idle = count.map(el =>
-        Texture.from(`./assets/${type}/${weapon}/idle/${el}`)
-      );
-      let attack = count.map(el =>
-        Texture.from(`./assets/${type}/${weapon}/shot/${el}`)
-      );
-      let run = count.map(el =>
-        Texture.from(`./assets/${type}/${weapon}/run/${el}`)
-      );
-      let die = count.map(el => Texture.from(`./assets/${type}/die/${el}`));
-      let hurt = count.map(el =>
-        Texture.from(`./assets/${type}/${weapon}/hurt/${el}`)
-      );
+      console.log(el.img);
+      let idle = this.createAnimatedSprite.apply(this, [
+        `./assets/characters/${el.img.name}/idle.png`,
+        ...el.img.idle,
+      ]).textures;
+      let attack = this.createAnimatedSprite.apply(this, [
+        `./assets/characters/${el.img.name}/attack.png`,
+        ...el.img.attack,
+      ]).textures;
+      let run = this.createAnimatedSprite.apply(this, [
+        `./assets/characters/${el.img.name}/run.png`,
+        ...el.img.run,
+      ]).textures;
+      let die = this.createAnimatedSprite.apply(this, [
+        `./assets/characters/${el.img.name}/death.png`,
+        ...el.img.death,
+      ]).textures;
+      let hurt = this.createAnimatedSprite.apply(this, [
+        `./assets/characters/${el.img.name}/hurt.png`,
+        ...el.img.hurt,
+      ]).textures;
       let soldier = new AnimatedSprite(idle);
       let container = new Container();
       container.addChild(soldier);
@@ -909,24 +913,26 @@ export default {
       soldier.run = run;
       soldier.die = die;
       soldier.hurt = hurt;
-      soldier.animationSpeed = 0.28;
+      soldier.animationSpeed = 0.2;
       soldier.hp = el.hp;
       setTimeout(() => soldier.play(), Math.random() * 1000);
       let ground = store.map[y][x];
       container.ground = ground;
       ground.unit = container;
       container.zIndex = el.y + el.x;
-      container.x = ground.x + 20;
-      container.y = ground.y + 20;
-      container.scale.x = 0.3;
-      container.scale.y = 0.3;
+      container.x = ground.x;
+      container.y = ground.y;
+      container.scale.x = 0.35;
+      container.scale.y = 0.35;
       let reversed = el.name === "knight" || el.name === "goblin" ? -1 : 1;
+      soldier.scale.x = 1.5;
+      soldier.scale.y = 1.5;
       if (scaleX < 0) {
-        soldier.scale.x = -1;
+        soldier.scale.x = -1.5;
         soldier.x = 360;
       }
-      soldier.anchor.x = 0.1;
-      soldier.anchor.y = 0.1;
+      soldier.anchor.x = 0.4;
+      soldier.anchor.y = 0.35;
       let name = el.nickname || this.socket.id;
       let color = container.self ? 0x0033fa : 0xff0000;
       container.ownerText = new Text(`${name}`, {
@@ -962,7 +968,7 @@ export default {
       healthBar.scale.y = 4;
       healthBar.x = 50;
       healthBar.y = 20;
-      container.addChild(healthBar);
+      // container.addChild(healthBar);
       healthBar.zIndex = 3;
       let innerBar = new Graphics();
       innerBar.beginFill(0x333);
@@ -1013,7 +1019,7 @@ export default {
       staminaBar.scale.y = 4;
       staminaBar.x = 50;
       staminaBar.y = -30;
-      container.addChild(staminaBar);
+      // container.addChild(staminaBar);
       staminaBar.zIndex = 3;
       let innerBar1 = new Graphics();
       innerBar1.beginFill(0x333);
@@ -1059,6 +1065,9 @@ export default {
       return container;
     },
     initPixi() {
+      window.addEventListener("click", () => {
+        this.$refs.audio.play();
+      });
       const vm = this;
       initGsap();
       const app = new Application({
@@ -1081,14 +1090,7 @@ export default {
       app.stage.sortableChildren = true;
       app.renderer.backgroundColor = "0x202020";
       app.renderer.autoResize = true;
-      let loader = new Loader();
-      store.loader = loader;
-      loader
-        .add("./assets/hits/0.png")
-        .add("./assets/hits/1.png")
-        .add("./assets/hits/2.png")
-        .add("./assets/blood.png")
-        .load(() => console.log("loaded"));
+
       setup();
       function setup() {
         store.map = initMap([], store.id, store.allMapCount);
@@ -1285,6 +1287,23 @@ export default {
       el.active = false;
       (el.armor = ""), (el.boots = "");
     });
+    let loader = new Loader();
+    store.loader = loader;
+    loader
+      .add("./assets/hits/0.png")
+      .add("./assets/hits/1.png")
+      .add("./assets/hits/2.png")
+      .add("./assets/blood.png")
+      .add([
+        ...Object.values(r.data.units).reduce((acc, unit) => {
+          if (!unit.img) return acc;
+          ["idle", "attack", "hurt", "run", "death"].forEach(key => {
+            acc.push(`./assets/characters/${unit.img.name}/${key}.png`);
+          });
+          return acc;
+        }, []),
+      ])
+      .load(() => console.log("loaded"));
     this.units = r.data.units;
     this.items = r.data.items;
   },

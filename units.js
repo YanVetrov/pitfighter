@@ -1,5 +1,5 @@
 module.exports = {
-  sold: {
+  wizard: {
     id: 0,
     strength: 300,
     defence_melee: 1,
@@ -8,11 +8,19 @@ module.exports = {
     fire_radius: 4,
     speed: 1,
     agility: 22,
-    type: "sold",
+    type: "wizard",
     weapon: "gun",
     range: "ranged",
+    img: {
+      name: "wizard",
+      idle: [600, 600, 8, 8],
+      attack: [600, 600, 8, 8],
+      hurt: [600, 600, 4, 4],
+      run: [450, 450, 8, 8],
+      death: [600, 600, 5, 5],
+    },
   },
-  hero: {
+  solo: {
     id: 0,
     strength: 250,
     defence_melee: 1,
@@ -21,9 +29,17 @@ module.exports = {
     fire_radius: 4,
     speed: 1,
     agility: 25,
-    type: "hero",
+    type: "solo",
     weapon: "gun",
     range: "ranged",
+    img: {
+      name: "wizard2",
+      idle: [1000, 1000, 8, 8],
+      attack: [1000, 1000, 8, 8],
+      hurt: [750, 750, 3, 3],
+      run: [1000, 1000, 8, 8],
+      death: [1000, 1000, 7, 7],
+    },
   },
   samurai: {
     id: 0,
@@ -37,6 +53,14 @@ module.exports = {
     type: "samurai",
     weapon: "sword",
     range: "melee",
+    img: {
+      name: "samurai",
+      idle: [800, 800, 4, 4],
+      attack: [800, 800, 4, 4],
+      hurt: [800, 800, 3, 3],
+      run: [800, 800, 8, 8],
+      death: [800, 800, 7, 7],
+    },
   },
   bandit: {
     id: 0,
@@ -50,8 +74,16 @@ module.exports = {
     type: "bandit",
     weapon: "sword",
     range: "melee",
+    img: {
+      name: "samurai2",
+      idle: [800, 800, 8, 8],
+      attack: [800, 800, 6, 6],
+      hurt: [800, 800, 4, 4],
+      run: [800, 800, 8, 8],
+      death: [600, 600, 6, 6],
+    },
   },
-  goblin: {
+  bighead: {
     id: 0,
     strength: 450,
     defence_melee: 5,
@@ -60,11 +92,19 @@ module.exports = {
     fire_radius: 1,
     speed: 1,
     agility: 15,
-    type: "goblin",
+    type: "bighead",
     weapon: "sword",
     range: "melee",
+    img: {
+      name: "warrior",
+      idle: [736, 548, 6, 6],
+      attack: [736, 548, 4, 4],
+      hurt: [736, 548, 3, 3],
+      run: [736, 548, 8, 8],
+      death: [552, 411, 9, 9],
+    },
   },
-  knight: {
+  king: {
     id: 0,
     strength: 500,
     defence_melee: 30,
@@ -73,8 +113,16 @@ module.exports = {
     fire_radius: 1,
     speed: 1,
     agility: 10,
-    type: "knight",
+    type: "king",
     weapon: "sword",
     range: "melee",
+    img: {
+      name: "king",
+      idle: [620, 620, 6, 6],
+      attack: [620, 620, 6, 6],
+      hurt: [620, 620, 4, 4],
+      run: [620, 620, 8, 8],
+      death: [620, 620, 11, 11],
+    },
   },
 };

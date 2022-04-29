@@ -74,8 +74,6 @@ Object.defineProperty(store, "unit", {
   set(unit) {
     if (this.u) {
       this.u.active = false;
-      this.u.interactive = false;
-      this.u.buttonMode = false;
       let vueUnit = this.vue.selfUnits.find(el => el.id === this.u.id);
       if (vueUnit) vueUnit.active = false;
       if (this.u.ground) this.u.ground.tint = 0xffffff;
@@ -85,8 +83,6 @@ Object.defineProperty(store, "unit", {
       let vueUnit = this.vue.selfUnits.find(el => el.id === unit.id);
       if (vueUnit) vueUnit.active = true;
       console.log(vueUnit);
-      unit.buttonMode = true;
-      unit.interactive = true;
       if (unit.ground) unit.ground.tint = 0x99ff99;
     }
     this.u = unit;
