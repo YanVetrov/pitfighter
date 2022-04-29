@@ -442,6 +442,10 @@ import {
   Text,
   AnimatedSprite,
   Texture,
+  Loader,
+  Rectangle,
+  SCALE_MODES,
+  utils,
 } from "pixi.js";
 import { Spine } from "pixi-spine";
 import {
@@ -653,6 +657,7 @@ export default {
     },
     async clickSprite(target, event) {
       console.log(target);
+      console.log(utils.TextureCache);
       if (store.gameScene.blockedUI) return console.log("blocked");
       sound.play("click");
       if (!store.unit && target.unit && target.unit.owner === this.socket.id) {
@@ -699,6 +704,56 @@ export default {
         let random = Math.ceil(Math.random() * 10 - 1);
         sound.play("sword_" + random);
       }
+      let random = Math.ceil(Math.random() * 3 - 1);
+      let texture = utils.TextureCache[`./assets/hits/${random}.png`];
+      console.log(random);
+      texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
+      let textures = [];
+      for (let i = 0; i < 16; i++) {
+        texture.frame = new Rectangle(
+          (i % 4) * 128,
+          Math.floor(i / 4) * 128,
+          128,
+          128
+        );
+        textures.push(new Texture(texture.baseTexture, texture.frame));
+      }
+      let hit = new AnimatedSprite(textures);
+      target.addChild(hit);
+      hit.animationSpeed = 0.5;
+      hit.loop = false;
+      hit.scale.x = 3;
+      hit.scale.y = 3;
+      hit.onComplete = () => {
+        target.removeChild(hit);
+      };
+      hit.play();
+      if (Math.random() > 0.6) {
+        texture = utils.TextureCache[`./assets/blood.png`];
+        texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
+        textures = [];
+        for (let i = 0; i < 8; i++) {
+          texture.frame = new Rectangle(
+            (i % 4) * 128,
+            Math.floor(i / 4) * 128,
+            128,
+            128
+          );
+          textures.push(new Texture(texture.baseTexture, texture.frame));
+        }
+        let blood = new AnimatedSprite(textures);
+        store.gameScene.addChild(blood);
+        let mult = 1;
+        if (Math.random() > 0.5) mult = -1;
+        blood.x = target.x + Math.random() * 100 * mult;
+        blood.y = target.y + Math.random() * 100 * mult;
+        blood.animationSpeed = 1;
+        blood.loop = false;
+        let scaled = Math.random() * 0.5;
+        blood.scale.x = 0.5 + scaled;
+        blood.scale.y = 0.5 + scaled;
+        blood.play();
+      }
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
       if (unit.unit.scale.x < 0) unit.unit.x = 360;
@@ -712,6 +767,14 @@ export default {
         target.alphaCounter(`MISS!`, 0xffffff, 0.3);
       }
       unit.unit._textures = unit.unit.attack;
+      unit.unit.loop = false;
+      unit.unit.gotoAndPlay(0);
+      unit.unit.onComplete = () => {
+        unit.unit._textures = unit.unit.idle;
+        unit.unit.loop = true;
+        unit.unit.gotoAndPlay(0);
+      };
+
       if (unit.weapon === "gun") {
         let bullet = Sprite.from("./assets/Bullet.png");
         store.gameScene.addChild(bullet);
@@ -728,10 +791,10 @@ export default {
           },
         });
       }
-      unit.timeoutAnimation = setTimeout(() => {
-        unit.unit._textures = unit.unit.idle;
-        unit.blocked = false;
-      }, 1000);
+      // unit.timeoutAnimation = setTimeout(() => {
+      //   unit.unit._textures = unit.unit.idle;
+      //   unit.blocked = false;
+      // }, 1000);
       if (!miss) {
         if (target.health <= 0) {
           if (target.unit === store.unit) store.unit = {};
@@ -742,13 +805,18 @@ export default {
           target.unit.gotoAndPlay(0);
           target.ground.unit = null;
           target.ground = null;
+          target.unit.onComplete = () => console.log("dead");
           gsap.to(target, { alpha: 0.3, delay: 1 });
         } else {
           target.unit._textures = target.unit.hurt;
-          target.timeoutAnimation = setTimeout(() => {
+          target.unit.gotoAndPlay(0);
+          target.unit.loop = false;
+          target.unit.onComplete = () => {
             target.unit._textures = target.unit.idle;
+            target.unit.loop = true;
+            target.unit.gotoAndPlay(0);
             unit.blocked = false;
-          }, 1000);
+          };
         }
       }
     },
@@ -773,6 +841,7 @@ export default {
         selfUnit.x = x;
         selfUnit.y = y;
       }
+
       unit.unit._textures = unit.unit.run;
       if (target.x > unit.x) unit.unit.scale.x = 1;
       else unit.unit.scale.x = -1;
@@ -834,12 +903,13 @@ export default {
       container.stam = el.stamina;
       container.range = el.range;
       container.strength = el.strength;
+      container.zIndex = el.y + el.x;
       soldier.idle = idle;
       soldier.attack = attack;
       soldier.run = run;
       soldier.die = die;
       soldier.hurt = hurt;
-      soldier.animationSpeed = 0.35;
+      soldier.animationSpeed = 0.28;
       soldier.hp = el.hp;
       setTimeout(() => soldier.play(), Math.random() * 1000);
       let ground = store.map[y][x];
@@ -1011,6 +1081,14 @@ export default {
       app.stage.sortableChildren = true;
       app.renderer.backgroundColor = "0x202020";
       app.renderer.autoResize = true;
+      let loader = new Loader();
+      store.loader = loader;
+      loader
+        .add("./assets/hits/0.png")
+        .add("./assets/hits/1.png")
+        .add("./assets/hits/2.png")
+        .add("./assets/blood.png")
+        .load(() => console.log("loaded"));
       setup();
       function setup() {
         store.map = initMap([], store.id, store.allMapCount);
