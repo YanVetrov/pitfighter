@@ -124,6 +124,42 @@ io.on("connection", function (socket) {
     }
     setTurn(socket, target_user, attackCost, unit);
   });
+  socket.on("heal_team", ({ id }) => {
+    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+    let unit = socket.units.find(el => el.id === id);
+    if (
+      !unit ||
+      !unit.active_skills.includes("heal_team") ||
+      !unit.active_skill
+    )
+      return console.log("no unit or user");
+    setStun(socket);
+    let options = {
+      x1: unit.x,
+      y1: unit.y,
+      x2: target.x,
+      y2: target.y,
+      available: 4,
+    };
+    let availableUnits = socket.units
+      .filter(el => el !== unit)
+      .filter(el =>
+        isAvailable({
+          x1: unit.x,
+          y1: unit.y,
+          x2: el.x,
+          y2: el.y,
+          available: 4,
+        })
+      );
+    if (availableUnits.length === 0) return console.log("no available units");
+    availableUnits.forEach(el => {
+      if (el.hp + 40 > el.strength) el.hp = el.strength;
+      else el.hp += 40;
+      io.to(socket.gameRoom).emit("poison_hit", { id: el.id, hp: el.hp });
+    });
+    unit.active_skill = false;
+  });
   socket.on("turn_pass", async () => {
     if (socket.turn) {
       let room = socket.gameRoom;
@@ -181,6 +217,7 @@ function addUnits(socket, names, first) {
       owner: socket.id,
       nickname: socket.nickname,
       hp: unit.strength,
+      active_skill: true,
       items: { weapon, armor, boots },
       x,
       y,

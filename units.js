@@ -11,6 +11,8 @@ module.exports = {
     type: "wizard",
     weapon: "gun",
     range: "ranged",
+    passive_skills: ["magic_shield"],
+    active_skills: ["firewall"],
     img: {
       name: "wizard",
       idle: [600, 600, 8, 8],
@@ -32,6 +34,8 @@ module.exports = {
     type: "solo",
     weapon: "gun",
     range: "ranged",
+    passive_skills: ["magic_armor"],
+    active_skills: ["teleport"],
     img: {
       name: "wizard2",
       idle: [1000, 1000, 8, 8],
@@ -53,6 +57,8 @@ module.exports = {
     type: "samurai",
     weapon: "sword",
     range: "melee",
+    passive_skills: ["good_day_to_die"],
+    active_skills: ["double_strike"],
     img: {
       name: "samurai",
       idle: [800, 800, 4, 4],
@@ -74,6 +80,8 @@ module.exports = {
     type: "bandit",
     weapon: "sword",
     range: "melee",
+    passive_skills: ["ricochette"],
+    active_skills: ["steal"],
     img: {
       name: "samurai2",
       idle: [800, 800, 8, 8],
@@ -95,6 +103,8 @@ module.exports = {
     type: "bighead",
     weapon: "sword",
     range: "melee",
+    passive_skills: ["regeneration"],
+    active_skills: ["stun"],
     img: {
       name: "warrior",
       idle: [736, 548, 6, 6],
@@ -116,6 +126,8 @@ module.exports = {
     type: "king",
     weapon: "sword",
     range: "melee",
+    passive_skills: ["mandate"],
+    active_skills: ["heal_team"],
     img: {
       name: "king",
       idle: [620, 620, 6, 6],

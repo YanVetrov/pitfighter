@@ -7,7 +7,6 @@ import {
   AnimatedSprite,
 } from "pixi.js";
 import { gsap } from "gsap";
-import { generateSpinner } from "./graphics.js";
 import base from "./units_templates.js";
 import { ColorOverlayFilter } from "@pixi/filter-color-overlay";
 import unpack_units from "./parser";
