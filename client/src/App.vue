@@ -13,26 +13,7 @@
         id="canvas1"
         key="0"
       ></canvas>
-      <!-- <div class="waiting" v-show="socket.status === 'waiting'">
-      SEARCHING FOR PLAYERS...
-    </div> -->
-      <!-- <ranger
-        title="STAMINA"
-        color="#ffaa00"
-        :available="availableCost"
-        :total="totalCost"
-        v-if="availableCost !== null"
-        key="23"
-      />
-      <ranger
-        title="HP"
-        color="#33ff99"
-        style="left:0;right:auto"
-        :available="health"
-        v-if="health !== null"
-        :total="strength"
-        key="44"
-      /> -->
+
       <coin key="9" :yourTurn="whoTurn === socket.id" />
       <div
         class="waiting"
@@ -61,149 +42,19 @@
       >
         PASS
       </button>
-      <div class="units_bottom" :class="{ hide_bottom }" key="12">
-        <div class="hider" @click="hide_bottom = !hide_bottom">
-          <img src="./assets/cards.svg" />
-        </div>
-        <div
-          class="unit_main_info"
-          style="background:url('./assets/steel.jpeg')"
-          v-if="activeUnit"
-        >
-          <div class="img_info">
-            <img
-              :src="
-                require(`./assets/characters/${activeUnit.img.name}/card.png`)
-              "
-            />
-            <div class="main_hp bar">
-              <div
-                class="inner_bar"
-                :style="{
-                  width: (activeUnit.hp / activeUnit.strength) * 100 + '%',
-                }"
-              ></div>
-              <div class="inner_text">
-                {{ activeUnit.hp }}/{{ activeUnit.strength }}
-              </div>
-            </div>
-            <div class="main_stamina bar">
-              <div
-                class="inner_bar"
-                :style="{ width: (availableCost / totalCost) * 100 + '%' }"
-              ></div>
-              <div class="inner_text">{{ availableCost }}/{{ totalCost }}</div>
-            </div>
-          </div>
-          <div class="skills_info">
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.strength }}</span>
-              <img :src="`./assets/heart.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.damage }}</span>
-              <img :src="`./assets/damage.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.speed }}</span>
-              <img :src="`./assets/speed.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.fire_radius }}</span>
-              <img :src="`./assets/radius.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.agility }}</span>
-              <img :src="`./assets/agility.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.defence_melee }}</span>
-              <img :src="`./assets/sword_shield.svg`" />
-            </div>
-            <div class="unit_info_stat">
-              <span>{{ activeUnit.defence_ranged }}</span>
-              <img :src="`./assets/arrow-shield.svg`" />
-            </div>
-            <div class="row">
-              <img
-                v-if="activeUnit.items.weapon"
-                :src="require(`./assets/${activeUnit.items.weapon.key}.svg`)"
-              />
-              <img
-                v-if="activeUnit.items.armor"
-                :src="require(`./assets/${activeUnit.items.armor.key}.svg`)"
-              />
-              <img
-                v-if="activeUnit.items.boots"
-                :src="require(`./assets/${activeUnit.items.boots.key}.svg`)"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="units"
-          :style="{ backgroundImage: `url(${require('./assets/deck.jpeg')})` }"
-        >
-          <div
-            class="unit"
-            v-for="(u, i) in selfUnits"
-            @click="
-              teleportation(u);
-              tap();
-            "
-            :key="i"
-            :style="u === activeUnit ? { border: '1px solid whitesmoke' } : {}"
-          >
-            <div class="unit_info" @click.prevent="strength = strength">
-              <img src="./assets/info.svg" />
-              <div class="unit_info_blank">
-                <div class="unit_info_stats">
-                  <div class="unit_info_stat">
-                    <span>{{ u.strength }}</span>
-                    <img :src="`./assets/heart.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.damage }}</span>
-                    <img :src="`./assets/damage.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.speed }}</span>
-                    <img :src="`./assets/speed.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.fire_radius }}</span>
-                    <img :src="`./assets/radius.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.agility }}</span>
-                    <img :src="`./assets/agility.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.defence_melee }}</span>
-                    <img :src="`./assets/sword_shield.svg`" />
-                  </div>
-                  <div class="unit_info_stat">
-                    <span>{{ u.defence_ranged }}</span>
-                    <img :src="`./assets/arrow-shield.svg`" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="unit_img">
-              <img
-                :src="require(`./assets/characters/${u.img.name}/card.png`)"
-              />
-            </div>
-            <div style="color:mediumseagreen;font-size:10px">
-              <span :style="{ color: u.hp < 20 ? 'red' : 'mediumseagreen' }">{{
-                u.hp
-              }}</span
-              >/{{ u.strength }}
-            </div>
-            <div class="unit_name">{{ u.type }}</div>
-          </div>
-        </div>
-      </div>
+      <bottomBar
+        :activeUnit="activeUnit"
+        :selfUnits="selfUnits"
+        :totalCost="totalCost"
+        class="units_bottom"
+        :class="{ hide_bottom }"
+        @select="
+          teleportation($event);
+          tap();
+        "
+        @switch="hide_bottom = !hide_bottom"
+        key="12"
+      />
       <div key="440" class="characters" v-if="choose">
         CHOOSEN:
         <div class="character_wrapper">
@@ -222,194 +73,51 @@
           </div>
         </div>
         <div class="character_wrapper">
-          <div class="character_block" v-for="(val, key) in units" :key="key">
-            <img :src="`./assets/characters/${val.img.name}/card.png`" />
-            <div class="character_stats" style="margin:5px;">
-              <div>
-                <img :src="`./assets/heart.svg`" /> {{ val.strength }}
-                <span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'strength') > 0 ? 'green' : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "strength") || " " }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/speed.svg`" /> {{ val.speed
-                }}<span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'speed') > 0 ? 'green' : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "speed") || " " }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/damage.svg`" /> {{ val.damage
-                }}<span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'damage') > 0 ? 'green' : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "damage") || " " }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/radius.svg`" /> {{ val.fire_radius
-                }}<span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'fire_radius') > 0
-                        ? 'green'
-                        : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "fire_radius") || " " }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/agility.svg`" /> {{ val.agility }}%
-                <span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'agility') > 0 ? 'green' : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "agility") || " " }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/sword_shield.svg`" />
-                {{ val.defence_melee }}%
-                <span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'defence_melee') > 0
-                        ? 'green'
-                        : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "defence_melee") || "&zwnj;" }}</span
-                >
-              </div>
-              <div>
-                <img :src="`./assets/arrow-shield.svg`" />
-                {{ val.defence_ranged }}%
-                <span
-                  :style="{
-                    color:
-                      calculatePlus(val, 'defence_ranged') > 0
-                        ? 'green'
-                        : 'darkred',
-                  }"
-                >
-                  {{ calculatePlus(val, "defence_ranged") || "&zwnj;" }}</span
-                >
-              </div>
-            </div>
-            <div class="item">
-              <div
-                class="none"
-                @click="
-                  val.weap = '';
-                  tap();
-                "
-                :style="{ borderColor: !val.weap ? 'mediumvioletred' : '' }"
-              ></div>
-              <img
-                v-for="item in Object.keys(items).filter(
-                  el =>
-                    items[el].type === 'weapon' &&
-                    val.range === items[el].available
-                )"
-                class="item_img"
-                :style="{
-                  borderColor: val.weap === item ? 'mediumvioletred' : '',
-                }"
-                :src="require(`./assets/${item}.svg`)"
-                @click="
-                  val.weap = item;
-                  tap();
-                "
-                :key="item.name"
-              />
-            </div>
-            <div class="item">
-              <div
-                class="none"
-                @click="
-                  val.armor = '';
-                  tap();
-                "
-                :style="{ borderColor: !val.armor ? 'darkorange' : '' }"
-              ></div>
-              <img
-                v-for="item in Object.keys(items).filter(
-                  el => items[el].part === 'body'
-                )"
-                class="item_img"
-                :style="{
-                  borderColor: val.armor === item ? 'darkorange' : '',
-                }"
-                :src="require(`./assets/${item}.svg`)"
-                @click="
-                  val.armor = item;
-                  tap();
-                "
-                :key="item.name"
-              />
-            </div>
-            <div class="item">
-              <div
-                class="none"
-                @click="
-                  val.boots = '';
-                  tap();
-                "
-                :style="{ borderColor: !val.boots ? 'cornflowerblue' : '' }"
-              ></div>
-              <img
-                v-for="item in Object.keys(items).filter(
-                  el => items[el].part === 'boots'
-                )"
-                class="item_img"
-                :style="{
-                  borderColor: val.boots === item ? 'cornflowerblue' : '',
-                }"
-                :src="require(`./assets/${item}.svg`)"
-                @click="
-                  val.boots = item;
-                  tap();
-                "
-                :key="item.name"
-              />
-            </div>
-            <div class="character_name">{{ key }}</div>
-            <div style="display:flex;width:100%;justify-content:space-around;">
-              <button
-                style=" width: 100%;
-  margin: 40px 0 0 0;border-radius:0"
-                @click="
-                  choosen.length < 6
-                    ? choosen.push({
-                        name: val.type,
-                        weapon: val.weap,
-                        armor: val.armor,
-                        boots: val.boots,
-                      })
-                      ? tap()
-                      : tap()
-                    : ''
-                "
-              >
-                TAKE
-              </button>
-            </div>
-          </div>
+          <gameCard
+            v-for="(val, key) in units"
+            :strength="val.strength"
+            :img="val.img.name"
+            :name="val.type"
+            :speed="val.speed"
+            :defence_melee="val.defence_melee"
+            :damage="val.damage"
+            :fire_radius="val.fire_radius"
+            :agility="val.agility"
+            :calc_damage="calculatePlus(val, 'damage')"
+            :calc_fire_radius="calculatePlus(val, 'fire_radius')"
+            :calc_agility="calculatePlus(val, 'agility')"
+            :calc_defence_melee="calculatePlus(val, 'defence_melee')"
+            :calc_speed="calculatePlus(val, 'speed')"
+            :calc_strength="calculatePlus(val, 'strength')"
+            :activeWeapon="val.weap"
+            :activeArmor="val.armor"
+            :activeBoots="val.boots"
+            :weapons="
+              Object.keys(items).filter(
+                el =>
+                  items[el].type === 'weapon' &&
+                  val.range === items[el].available
+              )
+            "
+            :armors="Object.keys(items).filter(el => items[el].part === 'body')"
+            :boots="Object.keys(items).filter(el => items[el].part === 'boots')"
+            @weapon="val.weap = $event"
+            @armor="val.armor = $event"
+            @boots="val.boots = $event"
+            @choose="
+              choosen.length < 6
+                ? choosen.push({
+                    name: val.type,
+                    weapon: val.weap,
+                    armor: val.armor,
+                    boots: val.boots,
+                  })
+                  ? tap()
+                  : tap()
+                : ''
+            "
+            :key="key"
+          />
         </div>
         <div
           style="
@@ -469,6 +177,8 @@ import ranger from "./components/range.vue";
 import axios from "axios";
 import coin from "./components/coin.vue";
 import { sound } from "@pixi/sound";
+import bottomBar from "./components/bottom_bar.vue";
+import gameCard from "./components/gameCard.vue";
 for (let i = 0; i < 4; i++) {
   sound.add("shot_" + i, "./assets/sounds/battle/shots/_" + i + ".wav");
 }
@@ -484,7 +194,7 @@ sound.add({
   critical: "./assets/sounds/critical.wav",
 });
 export default {
-  components: { timer, fireText, ranger, coin },
+  components: { timer, fireText, ranger, coin, bottomBar, gameCard },
   data() {
     return {
       socket: {},
@@ -874,28 +584,18 @@ export default {
         .forEach(el => store.gameScene.removeChild(el));
     },
     getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2) {
-      console.log(el.img);
-      let idle = this.createAnimatedSprite.apply(this, [
-        `./assets/characters/${el.img.name}/idle.png`,
-        ...el.img.idle,
-      ]).textures;
-      let attack = this.createAnimatedSprite.apply(this, [
-        `./assets/characters/${el.img.name}/attack.png`,
-        ...el.img.attack,
-      ]).textures;
-      let run = this.createAnimatedSprite.apply(this, [
-        `./assets/characters/${el.img.name}/run.png`,
-        ...el.img.run,
-      ]).textures;
-      let die = this.createAnimatedSprite.apply(this, [
-        `./assets/characters/${el.img.name}/death.png`,
-        ...el.img.death,
-      ]).textures;
-      let hurt = this.createAnimatedSprite.apply(this, [
-        `./assets/characters/${el.img.name}/hurt.png`,
-        ...el.img.hurt,
-      ]).textures;
-      let soldier = new AnimatedSprite(idle);
+      let textures = ["idle", "run", "attack", "death", "hurt"].reduce(
+        (acc, el) => {
+          acc[el] = this.createAnimatedSprite.apply(this, [
+            `./assets/characters/${el.img.name}/${el}.png`,
+            ...el.img.idle,
+          ]).textures;
+          return acc;
+        },
+        {}
+      );
+
+      let soldier = new AnimatedSprite(textures.idle);
       let container = new Container();
       container.addChild(soldier);
       container.unit = soldier;
@@ -908,11 +608,11 @@ export default {
       container.range = el.range;
       container.strength = el.strength;
       container.zIndex = el.y + el.x;
-      soldier.idle = idle;
-      soldier.attack = attack;
-      soldier.run = run;
-      soldier.die = die;
-      soldier.hurt = hurt;
+      soldier.idle = textures.idle;
+      soldier.attack = textures.attack;
+      soldier.run = textures.run;
+      soldier.die = textures.death;
+      soldier.hurt = textures.hurt;
       soldier.animationSpeed = 0.2;
       soldier.hp = el.hp;
       setTimeout(() => soldier.play(), Math.random() * 1000);
@@ -1309,7 +1009,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style>
 .turn {
   font-size: 35px;
   bottom: 10px;
