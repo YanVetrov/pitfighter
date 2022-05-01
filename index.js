@@ -48,17 +48,22 @@ io.on("connection", function (socket) {
     let unit = socket.units.find(el => el.id === id);
     let cost = moveCost;
     if (unit) {
+      if (unit.stun > 0) return console.log("stunned");
+      let teleport = unit.selected_skill === "teleport" && unit.active_skill;
       if (unit.effects && unit.effects["stamina_discount"])
         cost -= unit.effects["stamina_discount"];
+      if (teleport) cost = 0;
       if (unit.stamina < cost) return console.log("no stamina");
       console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
+      let available = unit.speed;
+      if (teleport) available = 10;
       if (
         !isAvailable({
           x1: unit.x,
           y1: unit.y,
           x2: x,
           y2: y,
-          available: unit.speed,
+          available,
         })
       )
         return console.log("no speed", { x, y, unitX: unit.x, unitY: unit.y });
@@ -66,7 +71,11 @@ io.on("connection", function (socket) {
       unit.x = x;
       const room = socket.gameRoom;
       let enemy = await getEnemyInRoom(socket);
-      io.to(room).emit("unit_moved", { id, x, y });
+      io.to(room).emit("unit_moved", { id, x, y, teleport });
+      if (teleport) {
+        changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+        changeUnit(socket, { id, key: "active_skill", value: false, unit });
+      }
       let poison = rooms[room].poison;
       if (poison) {
         if (poison.x === x && poison.y === y) {
@@ -77,89 +86,9 @@ io.on("connection", function (socket) {
       setTurn(socket, enemy, cost, unit);
     }
   });
-  socket.on("attack", ({ id, target_id, target_owner }) => {
-    if (!id || !target_id || !target_owner || !socket.turn || socket.stun)
-      return console.log("no id or turn");
-    let unit = socket.units.find(el => el.id === id);
-    if (unit.stamina < attackCost) return console.log("no stamina");
-    let target_user = players.find(el => el.id === target_owner);
-    if (!unit || !target_user) return console.log("no unit or user");
-    setStun(socket);
-    setStun(target_user);
-    let target = target_user.units.find(el => el.id === target_id);
-    let options = {
-      x1: unit.x,
-      y1: unit.y,
-      x2: target.x,
-      y2: target.y,
-      available: unit.fire_radius,
-    };
-    if (!isAvailable(options)) return console.log(options);
-    let damage = unit.damage;
-    let chanceToHit = 100 - target.agility;
-    if (chanceToHit <= 5) chanceToHit = 5;
-    let miss = Math.round(Math.random() * 100) > chanceToHit;
-    if (miss) damage = 0;
-    let critical = false;
-    if (Math.round(Math.random() * 100) < 25 && !miss) critical = true;
-    if (critical) damage *= 1.5;
-    if (unit.range === "melee")
-      damage = damage - (damage * target.defence_melee) / 100;
-    else damage = damage - (damage * target.defence_ranged) / 100;
-    if (!miss && damage <= 0) damage = 1;
-    damage = Math.round(damage);
-    target.hp -= damage;
-    const room = socket.gameRoom;
-    io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
-    if (
-      target.hp / target.strength < 0.3 &&
-      !rooms[room].poison &&
-      Math.random() > 0.6
-    ) {
-      console.log("posion set");
-      let x = target.x + Math.floor(Math.random() * 2);
-      let y = target.y + Math.floor(Math.random() * 2);
-      rooms[room].poison = { x, y };
-      io.to(room).emit("poison_set", { x, y });
-    }
-    setTurn(socket, target_user, attackCost, unit);
-  });
-  socket.on("heal_team", ({ id }) => {
-    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
-    let unit = socket.units.find(el => el.id === id);
-    if (
-      !unit ||
-      !unit.active_skills.includes("heal_team") ||
-      !unit.active_skill
-    )
-      return console.log("no unit or user");
-    setStun(socket);
-    let options = {
-      x1: unit.x,
-      y1: unit.y,
-      x2: target.x,
-      y2: target.y,
-      available: 4,
-    };
-    let availableUnits = socket.units
-      .filter(el => el !== unit)
-      .filter(el =>
-        isAvailable({
-          x1: unit.x,
-          y1: unit.y,
-          x2: el.x,
-          y2: el.y,
-          available: 4,
-        })
-      );
-    if (availableUnits.length === 0) return console.log("no available units");
-    availableUnits.forEach(el => {
-      if (el.hp + 40 > el.strength) el.hp = el.strength;
-      else el.hp += 40;
-      io.to(socket.gameRoom).emit("poison_hit", { id: el.id, hp: el.hp });
-    });
-    unit.active_skill = false;
-  });
+  socket.on("attack", ({ id, target_id, target_owner }) =>
+    attack(socket, { id, target_id, target_owner })
+  );
   socket.on("turn_pass", async () => {
     if (socket.turn) {
       let room = socket.gameRoom;
@@ -167,7 +96,80 @@ io.on("connection", function (socket) {
       swapTurn(socket, enemy);
     }
   });
+  socket.on("activate_skill", ({ id, skill_id }) => {
+    console.log("activate skill", { id, skill_id });
+    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+    let unit = socket.units.find(el => el.id === id);
+    if (!unit) return console.log("no unit");
+    if (skill_id === "heal_team") heal_team(socket, id);
+    else if (skill_id === "firewall") firewall_skill(socket, id);
+    else
+      changeUnit(socket, {
+        id,
+        key: "selected_skill",
+        value: unit.selected_skill === skill_id ? "" : skill_id,
+        unit,
+      });
+  });
 });
+async function firewall_skill(socket, id) {
+  if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+  let unit = socket.units.find(el => el.id === id);
+  if (!unit || !unit.active_skills.includes("firewall") || !unit.active_skill)
+    return console.log("no unit or user");
+  // setStun(socket);
+  let enemy = await getEnemyInRoom(socket);
+  let availableUnits = enemy.units.filter(el =>
+    isAvailable({
+      x1: unit.x,
+      y1: unit.y,
+      x2: el.x,
+      y2: el.y,
+      available: 4,
+    })
+  );
+  if (availableUnits.length === 0) return console.log("no available units");
+  availableUnits.forEach((el, i) => {
+    attack(socket, {
+      id,
+      target_id: el.id,
+      target_owner: enemy.id,
+      noCost: i !== 0,
+    });
+  });
+  changeUnit(socket, { id, key: "active_skill", value: false, unit });
+  changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+}
+function heal_team(socket, id) {
+  if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+  let unit = socket.units.find(el => el.id === id);
+  if (!unit || !unit.active_skills.includes("heal_team") || !unit.active_skill)
+    return console.log("no unit or user");
+  setStun(socket);
+  let availableUnits = socket.units
+    .filter(el => el !== unit)
+    .filter(el =>
+      isAvailable({
+        x1: unit.x,
+        y1: unit.y,
+        x2: el.x,
+        y2: el.y,
+        available: 4,
+      })
+    );
+  if (availableUnits.length === 0) return console.log("no available units");
+  availableUnits.forEach(el => {
+    if (el.hp + 40 > el.strength) el.hp = el.strength;
+    else el.hp += 40;
+    io.to(socket.gameRoom).emit("poison_hit", { id: el.id, hp: el.hp });
+  });
+  changeUnit(socket, { id, key: "active_skill", value: false, unit });
+  changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+}
+function changeUnit(socket, { id, key, value, unit }) {
+  if (unit) unit[key] = value;
+  socket.emit("unit_changed", { id, key, value });
+}
 function startSession(player1, player2) {
   let room = Date.now();
   [player1, player2].forEach(socket => {
@@ -222,8 +224,93 @@ function addUnits(socket, names, first) {
       x,
       y,
       type,
+      stun: 0,
+      selected_skill: "",
       side: first ? "left" : "right",
       stamina: turnCount,
+    });
+  }
+}
+function attack(socket, { id, target_id, target_owner, noCost = false }) {
+  if (!id || !target_id || !target_owner || !socket.turn || socket.stun)
+    return console.log({
+      id,
+      target_id,
+      target_owner,
+      noCost,
+      turn: socket.turn,
+      stun: socket.stun,
+    });
+  let unit = socket.units.find(el => el.id === id);
+  let target_user = players.find(el => el.id === target_owner);
+  if (!unit || !target_user) return console.log("no unit or user");
+  if (unit.stun > 0) return console.log("stunned");
+  if (unit.stamina < attackCost && !noCost) return console.log("no stamina");
+  // setStun(socket);
+  setStun(target_user);
+  let target = target_user.units.find(el => el.id === target_id);
+  let options = {
+    x1: unit.x,
+    y1: unit.y,
+    x2: target.x,
+    y2: target.y,
+    available: unit.fire_radius,
+  };
+  if (!isAvailable(options)) return console.log(options);
+  let damage = unit.damage;
+  let steal = unit.selected_skill === "steal" && unit.active_skill;
+  let critical = false;
+  if (!steal) {
+    let chanceToHit = 100 - target.agility;
+    if (chanceToHit <= 5) chanceToHit = 5;
+    let miss = Math.round(Math.random() * 100) > chanceToHit;
+    if (miss) damage = 0;
+    if (Math.round(Math.random() * 100) < 25 && !miss) critical = true;
+    if (critical) damage *= 1.5;
+    if (unit.range === "melee")
+      damage = damage - (damage * target.defence_melee) / 100;
+    else damage = damage - (damage * target.defence_ranged) / 100;
+    if (!miss && damage <= 0) damage = 1;
+  }
+  damage = Math.round(damage);
+  target.hp -= damage;
+  const room = socket.gameRoom;
+  io.to(room).emit("attacked", { id, target_id, hp: target.hp, critical });
+  if (steal) {
+    if (unit.hp + damage > unit.strength) unit.hp = unit.strength;
+    else unit.hp += damage;
+    changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+    changeUnit(socket, { id, key: "active_skill", value: false, unit });
+    io.to(room).emit("poison_hit", { id, hp: unit.hp });
+  }
+  if (
+    target.hp / target.strength < 0.3 &&
+    !rooms[room].poison &&
+    Math.random() > 0.6
+  ) {
+    console.log("posion set");
+    let x = target.x + Math.floor(Math.random() * 2);
+    let y = target.y + Math.floor(Math.random() * 2);
+    rooms[room].poison = { x, y };
+    io.to(room).emit("poison_set", { x, y });
+  }
+  setTurn(socket, target_user, noCost ? 0 : attackCost, unit);
+  if (unit.selected_skill === "double_strike" && unit.active_skill) {
+    changeUnit(socket, { id, key: "active_skill", value: false, unit });
+    changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+    setTimeout(() => {
+      attack(socket, { id, target_id, target_owner, noCost: true });
+    }, 500);
+  }
+  if (unit.selected_skill === "stun" && unit.active_skill) {
+    changeUnit(socket, { id, key: "active_skill", value: false, unit });
+    changeUnit(socket, { id, key: "selected_skill", value: "", unit });
+    target.stun = 2;
+    changeUnit(target_user, {
+      id: target_id,
+      key: "stun",
+      value: 2,
+      unit: target,
     });
   }
 }
@@ -310,6 +397,19 @@ async function swapTurn(player1, player2) {
   let whoWait = player1.turn ? player2.id : player1.id;
   player1.units.forEach(el => (el.stamina = turnCount));
   player2.units.forEach(el => (el.stamina = turnCount));
+  [player1, player2].forEach(socket =>
+    socket.units
+      .filter(el => el.stun > 0)
+      .forEach(el => {
+        el.stun--;
+        changeUnit(socket, {
+          id: el.id,
+          key: "stun",
+          value: el.stun,
+          unit: el,
+        });
+      })
+  );
   io.to(player1.gameRoom).emit("update_cost", {
     total: turnCount,
     available: turnCount,

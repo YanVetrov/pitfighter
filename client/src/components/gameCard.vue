@@ -9,7 +9,7 @@
             color: $props['calc_' + stat] > $props[stat] ? 'green' : 'darkred',
           }"
         >
-          {{ $props["calc_" + stat] || " " }}</span
+          {{ $props["calc_" + stat] || "&zwnj;" }}</span
         >
       </div>
       <!-- <div>
@@ -129,10 +129,18 @@
       />
     </div>
     <div class="character_name">{{ name }}</div>
+    <div class="row skills">
+      <img
+        class="skill"
+        v-for="skill in skills"
+        :key="skill"
+        :src="`../assets/skills/${skill}.png`"
+      />
+    </div>
     <div style="display:flex;width:100%;justify-content:space-around;">
       <button
         style=" width: 100%;
-  margin: 40px 0 0 0;border-radius:0"
+  margin: 20px 0 0 0;border-radius:0"
         @click="$emit('choose')"
       >
         TAKE
@@ -162,6 +170,7 @@ export default {
     "armors",
     "boots",
     "key",
+    "skills",
     ...stats,
     ...stats.map(el => "calc_" + el),
   ],
@@ -172,5 +181,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

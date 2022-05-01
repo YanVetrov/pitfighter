@@ -4,6 +4,33 @@
       <img src="../assets/cards.svg" />
     </div>
     <div
+      class="row skills"
+      v-if="activeUnit"
+      :style="{ backgroundImage: `url(${require('../assets/deck.jpeg')})` }"
+    >
+      <div v-for="skill in activeUnit.passive_skills" :key="skill">
+        <img class="skill" :src="`../assets/skills/${skill}.png`" />
+        <div>{{ skill }}</div>
+        <div>[passive]</div>
+      </div>
+      <div
+        v-for="skill in activeUnit.active_skills"
+        :key="skill"
+        @click="$emit('activate_skill', { id: activeUnit.id, skill_id: skill })"
+      >
+        <img
+          class="skill"
+          :style="{
+            borderColor: activeUnit.selected_skill === skill ? 'green' : '',
+            opacity: activeUnit.active_skill ? 1 : 0.6,
+          }"
+          :src="`../assets/skills/${skill}.png`"
+        />
+        <div>{{ skill }}</div>
+        <div>[{{ activeUnit.active_skill ? 1 : 0 }}]</div>
+      </div>
+    </div>
+    <div
       class="unit_main_info"
       style="background:url('../assets/steel.jpeg')"
       v-if="activeUnit"
@@ -12,6 +39,7 @@
         <img
           :src="require(`../assets/characters/${activeUnit.img.name}/card.png`)"
         />
+        <div class="stunned" v-if="activeUnit.stun > 0">STUNNED</div>
         <div class="main_hp bar">
           <div
             class="inner_bar"
@@ -141,4 +169,37 @@ export default {
   props: ["activeUnit", "selfUnits", "totalCost"],
 };
 </script>
-<style scoped></style>
+<style scoped>
+.skills {
+  margin-top: 0;
+  position: absolute;
+  top: -120px;
+  width: 229px;
+  left: 30px;
+  padding: 10px;
+  border: 5px solid #bbb;
+  border-radius: 15px;
+}
+.skills > div {
+  color: white;
+  font-size: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 1px 1px 1px black;
+}
+.skill {
+  border: 3px solid #aaa;
+  width: 50px;
+}
+.stunned {
+  position: absolute;
+  top: 10px;
+  color: red;
+  padding: 5px;
+  font-size: 20px;
+  border: 3px solid red;
+  background: black;
+  transform: rotate(30deg);
+}
+</style>
