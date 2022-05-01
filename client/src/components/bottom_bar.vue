@@ -9,7 +9,7 @@
       :style="{ backgroundImage: `url(${require('../assets/deck.jpeg')})` }"
     >
       <div v-for="skill in activeUnit.passive_skills" :key="skill">
-        <img class="skill" :src="`../assets/skills/${skill}.png`" />
+        <img class="skill" :src="require(`../assets/skills/${skill}.png`)" />
         <div>{{ skill }}</div>
         <div>[passive]</div>
       </div>
@@ -24,7 +24,7 @@
             borderColor: activeUnit.selected_skill === skill ? 'green' : '',
             opacity: activeUnit.active_skill ? 1 : 0.6,
           }"
-          :src="`../assets/skills/${skill}.png`"
+          :src="require(`../assets/skills/${skill}.png`)"
         />
         <div>{{ skill }}</div>
         <div>[{{ activeUnit.active_skill ? 1 : 0 }}]</div>
@@ -62,31 +62,31 @@
       <div class="skills_info">
         <div class="unit_info_stat">
           <span>{{ activeUnit.strength }}</span>
-          <img :src="`../assets/heart.svg`" />
+          <img :src="require(`../assets/heart.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.damage }}</span>
-          <img :src="`../assets/damage.svg`" />
+          <img :src="require(`../assets/damage.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.speed }}</span>
-          <img :src="`../assets/speed.svg`" />
+          <img :src="require(`../assets/speed.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.fire_radius }}</span>
-          <img :src="`../assets/radius.svg`" />
+          <img :src="require(`../assets/radius.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.agility }}</span>
-          <img :src="`../assets/agility.svg`" />
+          <img :src="require(`../assets/agility.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.defence_melee }}</span>
-          <img :src="`../assets/sword_shield.svg`" />
+          <img :src="require(`../assets/sword_shield.svg`)" />
         </div>
         <div class="unit_info_stat">
           <span>{{ activeUnit.defence_ranged }}</span>
-          <img :src="`../assets/arrow-shield.svg`" />
+          <img :src="require(`../assets/arrow-shield.svg`)" />
         </div>
         <div class="row">
           <img
@@ -121,31 +121,31 @@
             <div class="unit_info_stats">
               <div class="unit_info_stat">
                 <span>{{ u.strength }}</span>
-                <img :src="`../assets/heart.svg`" />
+                <img :src="require(`../assets/heart.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.damage }}</span>
-                <img :src="`../assets/damage.svg`" />
+                <img :src="require(`../assets/damage.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.speed }}</span>
-                <img :src="`../assets/speed.svg`" />
+                <img :src="require(`../assets/speed.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.fire_radius }}</span>
-                <img :src="`../assets/radius.svg`" />
+                <img :src="require(`../assets/radius.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.agility }}</span>
-                <img :src="`../assets/agility.svg`" />
+                <img :src="require(`../assets/agility.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.defence_melee }}</span>
-                <img :src="`../assets/sword_shield.svg`" />
+                <img :src="require(`../assets/sword_shield.svg`)" />
               </div>
               <div class="unit_info_stat">
                 <span>{{ u.defence_ranged }}</span>
-                <img :src="`../assets/arrow-shield.svg`" />
+                <img :src="require(`../assets/arrow-shield.svg`)" />
               </div>
             </div>
           </div>

@@ -1,9 +1,9 @@
 <template>
   <div class="character_block">
-    <img :src="`../assets/characters/${img}/card.png`" />
+    <img :src="require(`../assets/characters/${img}/card.png`)" />
     <div class="character_stats" style="margin:5px;">
       <div v-for="stat in stats" :key="stat">
-        <img :src="`../assets/heart.svg`" /> {{ $props[stat] }}
+        <img :src="require(`../assets/heart.svg`)" /> {{ $props[stat] }}
         <span
           :style="{
             color: $props['calc_' + stat] > $props[stat] ? 'green' : 'darkred',
@@ -134,7 +134,7 @@
         class="skill"
         v-for="skill in skills"
         :key="skill"
-        :src="`../assets/skills/${skill}.png`"
+        :src="require(`../assets/skills/${skill}.png`)"
       />
     </div>
     <div style="display:flex;width:100%;justify-content:space-around;">
