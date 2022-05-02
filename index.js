@@ -462,7 +462,13 @@ async function swapTurn(player1, player2) {
   });
 }
 app.use(express.static(__dirname));
-
+app.get("/clients-count", (req, res) => {
+  console.log("ok");
+  res.send({
+    count: io.engine.clientsCount,
+    rooms: Object.keys(rooms),
+  });
+});
 app.get("/", (req, res) =>
   res.sendFile(__dirname + "/landing/dist/index.html")
 );
@@ -488,12 +494,8 @@ app.get(
     res.sendFile(__dirname + "/client/" + req.url.replace("game", "dist"))
   // console.log(req)
 );
+
 app.get("*", (req, res) => res.sendFile(__dirname + "/landing/dist" + req.url));
-app.get("/clients-count", (req, res) => {
-  res.send({
-    count: io.engine.clientsCount,
-  });
-});
 app.post("/units_templates", (req, res) => {
   res.send({ units, items });
 });
