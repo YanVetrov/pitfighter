@@ -198,7 +198,7 @@ export default {
       selfUnits: [],
       items: {},
       roomId: "",
-      speactator: false,
+      spectator: false,
       hide_bottom: false,
       whoTurn: "",
       whoWait: "",

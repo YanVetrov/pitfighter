@@ -403,6 +403,7 @@ async function destroySession(room) {
     el.stun = false;
     Object.values(rooms[room]).forEach(el => clearTimeout(el));
     rooms[room] = null;
+    delete rooms[room];
   });
 }
 function setStun(socket) {
