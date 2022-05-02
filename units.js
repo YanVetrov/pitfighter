@@ -13,6 +13,7 @@ module.exports = {
     range: "ranged",
     passive_skills: ["magic_shield"],
     active_skills: ["firewall"],
+    active_skill_cooldown: 150,
     img: {
       name: "wizard",
       idle: [600, 600, 8, 8],
@@ -36,6 +37,7 @@ module.exports = {
     range: "ranged",
     passive_skills: ["magic_armor"],
     active_skills: ["teleport"],
+    active_skill_cooldown: 150,
     img: {
       name: "wizard2",
       idle: [1000, 1000, 8, 8],
@@ -59,6 +61,7 @@ module.exports = {
     range: "melee",
     passive_skills: ["good_day_to_die"],
     active_skills: ["double_strike"],
+    active_skill_cooldown: 150,
     img: {
       name: "samurai",
       idle: [800, 800, 4, 4],
@@ -82,6 +85,7 @@ module.exports = {
     range: "melee",
     passive_skills: ["ricochette"],
     active_skills: ["steal"],
+    active_skill_cooldown: 180,
     img: {
       name: "samurai2",
       idle: [800, 800, 8, 8],
@@ -105,6 +109,7 @@ module.exports = {
     range: "melee",
     passive_skills: ["regeneration"],
     active_skills: ["stun"],
+    active_skill_cooldown: 180,
     img: {
       name: "warrior",
       idle: [736, 548, 6, 6],
@@ -128,6 +133,7 @@ module.exports = {
     range: "melee",
     passive_skills: ["mandate"],
     active_skills: ["heal_team"],
+    active_skill_cooldown: 200,
     img: {
       name: "king",
       idle: [620, 620, 6, 6],

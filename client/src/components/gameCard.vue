@@ -3,10 +3,10 @@
     <img :src="require(`../assets/characters/${img}/card.png`)" />
     <div class="character_stats" style="margin:5px;">
       <div v-for="stat in stats" :key="stat">
-        <img :src="require(`../assets/heart.svg`)" /> {{ $props[stat] }}
+        <img :src="require(`../assets/${imgs[stat]}.svg`)" /> {{ $props[stat] }}
         <span
           :style="{
-            color: $props['calc_' + stat] > $props[stat] ? 'green' : 'darkred',
+            color: parseInt($props['calc_' + stat]) > 0 ? 'green' : 'darkred',
           }"
         >
           {{ $props["calc_" + stat] || "&zwnj;" }}</span
@@ -169,7 +169,6 @@ export default {
     "weapons",
     "armors",
     "boots",
-    "key",
     "skills",
     ...stats,
     ...stats.map(el => "calc_" + el),
@@ -177,6 +176,15 @@ export default {
   data() {
     return {
       stats,
+      imgs: {
+        strength: "heart",
+        speed: "speed",
+        damage: "damage",
+        fire_radius: "radius",
+        agility: "agility",
+        defence_melee: "sword_shield",
+        defence_ranged: "arrow-shield",
+      },
     };
   },
 };

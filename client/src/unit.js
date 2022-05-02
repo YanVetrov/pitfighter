@@ -88,19 +88,19 @@ function getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2, nick) {
   healthBar.scale.x = 4;
   healthBar.scale.y = 4;
   healthBar.x = 50;
-  healthBar.y = 20;
-  // container.addChild(healthBar);
+  healthBar.y = -60;
+  container.addChild(healthBar);
   healthBar.zIndex = 3;
   let innerBar = new Graphics();
   innerBar.beginFill(0x333);
-  innerBar.drawRoundedRect(0, 0, 100, 8, 30);
+  innerBar.drawRoundedRect(0, 0, 100, 4, 30);
   innerBar.endFill();
   healthBar.addChild(innerBar);
 
   let outerBar = new Graphics();
   let percent = (el.hp / el.strength) * 100;
-  outerBar.beginFill(percent < 30 ? 0x990000 : 0x009900);
-  outerBar.drawRoundedRect(0, 0, (el.hp / el.strength) * 100, 8, 30);
+  outerBar.beginFill(0xff1151);
+  outerBar.drawRoundedRect(0, 0, (el.hp / el.strength) * 100, 4, 30);
   outerBar.endFill();
   healthBar.addChild(outerBar);
 
@@ -111,7 +111,7 @@ function getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2, nick) {
     stroke: "#454545",
     strokeThickness: 2,
   });
-  healthBar.addChild(container.hpText);
+  // healthBar.addChild(container.hpText);
   container.hpText.x = 30;
   container.hpText.y = -3;
   container.healthBar = outerBar;
@@ -121,11 +121,8 @@ function getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2, nick) {
     },
     async set(val) {
       if (val < 0) val = 0;
-      let color = 0x00ff00;
+      let color = 0xff1151;
       let percent = (val / el.strength) * 100;
-      if (percent <= 30) {
-        color = 0xff9999;
-      }
       this.healthBar.width = (val / el.strength) * 100 || 1;
       this.healthBar.tint = color;
       this.unit.hp = val;
@@ -139,18 +136,18 @@ function getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2, nick) {
   staminaBar.scale.x = 4;
   staminaBar.scale.y = 4;
   staminaBar.x = 50;
-  staminaBar.y = -30;
-  // container.addChild(staminaBar);
+  staminaBar.y = -40;
+  container.addChild(staminaBar);
   staminaBar.zIndex = 3;
   let innerBar1 = new Graphics();
   innerBar1.beginFill(0x333);
-  innerBar1.drawRoundedRect(0, 0, 100, 8, 30);
+  innerBar1.drawRoundedRect(0, 0, 100, 4, 30);
   innerBar1.endFill();
   staminaBar.addChild(innerBar1);
 
   let outerBar1 = new Graphics();
   outerBar1.beginFill(0xff9900);
-  outerBar1.drawRoundedRect(0, 0, (el.stamina / 9) * 100, 8, 30);
+  outerBar1.drawRoundedRect(0, 0, (el.stamina / 9) * 100, 4, 30);
   outerBar1.endFill();
   staminaBar.addChild(outerBar1);
 
@@ -161,7 +158,7 @@ function getUnit({ type, weapon, ...el }, x, y, scaleX = 0.2, nick) {
     stroke: "#454545",
     strokeThickness: 2,
   });
-  staminaBar.addChild(container.staminaText);
+  // staminaBar.addChild(container.staminaText);
   container.staminaText.x = 38;
   container.staminaText.y = -3;
   container.staminaBar = outerBar1;

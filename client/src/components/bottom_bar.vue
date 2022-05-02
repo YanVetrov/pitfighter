@@ -27,12 +27,14 @@
           :src="require(`../assets/skills/${skill}.png`)"
         />
         <div>{{ skill }}</div>
-        <div>[{{ activeUnit.active_skill ? 1 : 0 }}]</div>
+        <div>
+          [<timer :time="activeUnit.skill_available_time" text="available" />]
+        </div>
       </div>
     </div>
     <div
       class="unit_main_info"
-      style="background:url('../assets/steel.jpeg')"
+      :style="{ background: `url(${require('../assets/steel.jpeg')})` }"
       v-if="activeUnit"
     >
       <div class="img_info">
@@ -165,7 +167,9 @@
   </div>
 </template>
 <script>
+import timer from "./timer.vue";
 export default {
+  components: { timer },
   props: ["activeUnit", "selfUnits", "totalCost"],
 };
 </script>
