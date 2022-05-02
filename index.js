@@ -35,11 +35,36 @@ io.on("connection", function (socket) {
     socket.status = "waiting";
     if (anotherPlayer) startSession(socket, anotherPlayer);
   });
+  socket.on("join", async ({ roomId }) => {
+    if (rooms[roomId]) {
+      roomId = Number(roomId);
+      let enemy = rooms[roomId].players.map(el => el.units).flat();
+      socket.client_type = "spectator";
+      socket.gameRoom = roomId;
+      socket.join(roomId);
+      const sockets = await io.in(socket.gameRoom).fetchSockets();
+      console.log(sockets.length);
+      socket.emit("start_game", {
+        enemy,
+        self: [],
+        roomId,
+        spectator: true,
+      });
+      let { whoTurn, whoWait, availableTime } = rooms[roomId];
+      socket.emit("turn_changed", {
+        whoTurn,
+        whoWait,
+        availableTime,
+      });
+    }
+  });
   socket.on("disconnect", function (e) {
-    const room = socket.gameRoom;
+    if (socket.client_type === "player") {
+      const room = socket.gameRoom;
+      io.to(room).emit("user_leaved", socket.id);
+      destroySession(room);
+    }
     players.splice(players.indexOf(socket), 1);
-    io.to(room).emit("user_leaved", socket.id);
-    destroySession(room);
     console.log("A player disconnected");
     console.log("A number of players now ", players.length);
   });
@@ -187,6 +212,7 @@ function startSession(player1, player2) {
   [player1, player2].forEach(socket => {
     socket.turnCount = turnCount;
     socket.status = "playing";
+    socket.client_type = "player";
     socket.join(room);
     socket.gameRoom = room;
   });
@@ -348,7 +374,9 @@ async function getPlayersInRoom(room) {
 }
 async function getEnemyInRoom(socket) {
   const sockets = await io.in(socket.gameRoom).fetchSockets();
-  return sockets.filter(el => el.id !== socket.id)[0];
+  return sockets.filter(
+    el => el.id !== socket.id && el.client_type === "player"
+  )[0];
 }
 function isAvailable({ x1, x2, y1, y2, available }) {
   let hex1 = y1 % 2;
@@ -405,6 +433,9 @@ async function swapTurn(player1, player2) {
   player2.timeout = timeout;
   let whoTurn = player1.turn ? player1.id : player2.id;
   let whoWait = player1.turn ? player2.id : player1.id;
+  rooms[player1.gameRoom].availableTime = availableTime;
+  rooms[player1.gameRoom].whoTurn = whoTurn;
+  rooms[player1.gameRoom].whoWait = whoWait;
   player1.units.forEach(el => (el.stamina = turnCount));
   player2.units.forEach(el => (el.stamina = turnCount));
   [player1, player2].forEach(socket =>

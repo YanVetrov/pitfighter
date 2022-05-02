@@ -23,7 +23,8 @@
         <fireText message="searching for players..." />
       </div>
       <div key="101" class="room" v-show="roomId">
-        ARENA ID: {{ roomId }} ver 0.0.2
+        ARENA ID: {{ roomId }},
+        <span v-if="spectator">who turn: {{ whoTurn }}</span>
       </div>
       <div
         key="202"
@@ -43,6 +44,7 @@
         PASS
       </button>
       <bottomBar
+        v-if="!spectator"
         :activeUnit="activeUnit"
         :selfUnits="selfUnits"
         :totalCost="totalCost"
@@ -196,6 +198,7 @@ export default {
       selfUnits: [],
       items: {},
       roomId: "",
+      speactator: false,
       hide_bottom: false,
       whoTurn: "",
       whoWait: "",
@@ -341,10 +344,18 @@ export default {
         socket.status = "waiting";
         console.log(store.vue);
         vm.socket = socket;
+        let hash = window.location.hash.slice(1);
+        if (hash) {
+          socket.emit("join", {
+            roomId: hash,
+          });
+        }
         socket.on("start_game", data => {
           gsap.to(vm.$refs.audio, { volume: 0.15, duration: 0.5 });
           vm.socket.status = "playing";
           vm.roomId = data.roomId;
+          vm.spectator = data.spectator;
+          history.pushState(null, null, `#${data.roomId}`);
           data.self.forEach(el => {
             el.self = true;
             el.active = false;
@@ -361,6 +372,7 @@ export default {
             );
             store.gameScene.addChild(hero);
           });
+          vm.choose = false;
         });
         socket.on("user_leaved", user_leaved);
         socket.on("unit_moved", unit_moved);
@@ -388,7 +400,6 @@ export default {
   },
   async mounted() {
     store.vue = this;
-    this.initPixi();
     let url = "";
     if (window.location.href.includes("localhost"))
       url = "http://localhost:8080";
@@ -415,7 +426,7 @@ export default {
           return acc;
         }, []),
       ])
-      .load(() => console.log("loaded"));
+      .load(() => this.initPixi());
     this.units = r.data.units;
     this.items = r.data.items;
   },
