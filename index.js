@@ -214,10 +214,10 @@ function addUnits(socket, names, first) {
   names = names.slice(0, 6);
   for (let i = 0; i < names.length; i++) {
     let x = Math.floor(Math.random() * (max - min) + min);
-    let y = Math.floor(Math.random() * (25 - 5) + 5);
+    let y = Math.floor(Math.random() * (20 - 10) + 10);
     while (socket.units.find(el => el.x === x && el.y === y)) {
       x = Math.floor(Math.random() * (max - min) + min);
-      y = Math.floor(Math.random() * (25 - 5) + 5);
+      y = Math.floor(Math.random() * (20 - 10) + 10);
     }
     let type = units[names[i].name].type;
     let weapon = items[names[i].weapon];
