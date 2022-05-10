@@ -13,7 +13,7 @@ let attackCost = 4;
 const stunTime = 500;
 const MAX_WAITING = 50000;
 let unit_count = 6;
-const server = app.listen(port, () => console.log("server started"));
+const server = app.listen(port, () => console.log("server started: ", port));
 io = require("socket.io")(server, {
   cors: {
     origin: "*",
