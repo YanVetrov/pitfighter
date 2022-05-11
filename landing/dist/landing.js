@@ -138,96 +138,6 @@ eval("module.exports = __webpack_require__.p + \"src/assets/arrow_right.svg\";\n
 
 /***/ }),
 
-/***/ "./src/assets/back_card.png":
-/*!**********************************!*\
-  !*** ./src/assets/back_card.png ***!
-  \**********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/back_card.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/back_card.png?");
-
-/***/ }),
-
-/***/ "./src/assets/bg.png":
-/*!***************************!*\
-  !*** ./src/assets/bg.png ***!
-  \***************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/bg.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/bg.png?");
-
-/***/ }),
-
-/***/ "./src/assets/book.png":
-/*!*****************************!*\
-  !*** ./src/assets/book.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/book.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/book.png?");
-
-/***/ }),
-
-/***/ "./src/assets/border.png":
-/*!*******************************!*\
-  !*** ./src/assets/border.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/border.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/border.png?");
-
-/***/ }),
-
-/***/ "./src/assets/card.png":
-/*!*****************************!*\
-  !*** ./src/assets/card.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/card.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/card.png?");
-
-/***/ }),
-
-/***/ "./src/assets/card1.png":
-/*!******************************!*\
-  !*** ./src/assets/card1.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/card1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/card1.png?");
-
-/***/ }),
-
-/***/ "./src/assets/card2.png":
-/*!******************************!*\
-  !*** ./src/assets/card2.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/card2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/card2.png?");
-
-/***/ }),
-
-/***/ "./src/assets/card3.png":
-/*!******************************!*\
-  !*** ./src/assets/card3.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/card3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/card3.png?");
-
-/***/ }),
-
-/***/ "./src/assets/card4.png":
-/*!******************************!*\
-  !*** ./src/assets/card4.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/card4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/card4.png?");
-
-/***/ }),
-
 /***/ "./src/assets/close.svg":
 /*!******************************!*\
   !*** ./src/assets/close.svg ***!
@@ -238,66 +148,6 @@ eval("module.exports = __webpack_require__.p + \"src/assets/close.svg\";\n\n//# 
 
 /***/ }),
 
-/***/ "./src/assets/corner.png":
-/*!*******************************!*\
-  !*** ./src/assets/corner.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/corner.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/corner.png?");
-
-/***/ }),
-
-/***/ "./src/assets/crate1.png":
-/*!*******************************!*\
-  !*** ./src/assets/crate1.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/crate1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate1.png?");
-
-/***/ }),
-
-/***/ "./src/assets/crate2.png":
-/*!*******************************!*\
-  !*** ./src/assets/crate2.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/crate2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate2.png?");
-
-/***/ }),
-
-/***/ "./src/assets/crate3.png":
-/*!*******************************!*\
-  !*** ./src/assets/crate3.png ***!
-  \*******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/crate3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate3.png?");
-
-/***/ }),
-
-/***/ "./src/assets/cup.png":
-/*!****************************!*\
-  !*** ./src/assets/cup.png ***!
-  \****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/cup.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/cup.png?");
-
-/***/ }),
-
-/***/ "./src/assets/element.png":
-/*!********************************!*\
-  !*** ./src/assets/element.png ***!
-  \********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/element.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/element.png?");
-
-/***/ }),
-
 /***/ "./src/assets/fb.svg":
 /*!***************************!*\
   !*** ./src/assets/fb.svg ***!
@@ -305,56 +155,6 @@ eval("module.exports = __webpack_require__.p + \"src/assets/element.png\";\n\n//
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"src/assets/fb.svg\";\n\n//# sourceURL=webpack://pixi/./src/assets/fb.svg?");
-
-/***/ }),
-
-/***/ "./src/assets/fighters_bg.png":
-/*!************************************!*\
-  !*** ./src/assets/fighters_bg.png ***!
-  \************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/fighters_bg.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/fighters_bg.png?");
-
-/***/ }),
-
-/***/ "./src/assets/gold.png":
-/*!*****************************!*\
-  !*** ./src/assets/gold.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/gold.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/gold.png?");
-
-/***/ }),
-
-/***/ "./src/assets/intro_bg.png":
-/*!*********************************!*\
-  !*** ./src/assets/intro_bg.png ***!
-  \*********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/intro_bg.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/intro_bg.png?");
-
-/***/ }),
-
-/***/ "./src/assets/key.png":
-/*!****************************!*\
-  !*** ./src/assets/key.png ***!
-  \****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/key.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/key.png?");
-
-/***/ }),
-
-/***/ "./src/assets/key2.png":
-/*!*****************************!*\
-  !*** ./src/assets/key2.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/key2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/key2.png?");
 
 /***/ }),
 
@@ -378,46 +178,6 @@ eval("module.exports = __webpack_require__.p + \"src/assets/near.svg\";\n\n//# s
 
 /***/ }),
 
-/***/ "./src/assets/opencrate1.png":
-/*!***********************************!*\
-  !*** ./src/assets/opencrate1.png ***!
-  \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/opencrate1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate1.png?");
-
-/***/ }),
-
-/***/ "./src/assets/opencrate2.png":
-/*!***********************************!*\
-  !*** ./src/assets/opencrate2.png ***!
-  \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/opencrate2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate2.png?");
-
-/***/ }),
-
-/***/ "./src/assets/opencrate3.png":
-/*!***********************************!*\
-  !*** ./src/assets/opencrate3.png ***!
-  \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/opencrate3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate3.png?");
-
-/***/ }),
-
-/***/ "./src/assets/paper.png":
-/*!******************************!*\
-  !*** ./src/assets/paper.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/paper.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/paper.png?");
-
-/***/ }),
-
 /***/ "./src/assets/paras.svg":
 /*!******************************!*\
   !*** ./src/assets/paras.svg ***!
@@ -428,13 +188,263 @@ eval("module.exports = __webpack_require__.p + \"src/assets/paras.svg\";\n\n//# 
 
 /***/ }),
 
+/***/ "./src/assets/twitter.svg":
+/*!********************************!*\
+  !*** ./src/assets/twitter.svg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/twitter.svg\";\n\n//# sourceURL=webpack://pixi/./src/assets/twitter.svg?");
+
+/***/ }),
+
+/***/ "./src/assets/back_card.png":
+/*!**********************************!*\
+  !*** ./src/assets/back_card.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/back_card.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/back_card.png?");
+
+/***/ }),
+
+/***/ "./src/assets/bg.png":
+/*!***************************!*\
+  !*** ./src/assets/bg.png ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/bg.png?");
+
+/***/ }),
+
+/***/ "./src/assets/book.png":
+/*!*****************************!*\
+  !*** ./src/assets/book.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/book.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/book.png?");
+
+/***/ }),
+
+/***/ "./src/assets/border.png":
+/*!*******************************!*\
+  !*** ./src/assets/border.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/border.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/border.png?");
+
+/***/ }),
+
+/***/ "./src/assets/card.png":
+/*!*****************************!*\
+  !*** ./src/assets/card.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card.png?");
+
+/***/ }),
+
+/***/ "./src/assets/card1.png":
+/*!******************************!*\
+  !*** ./src/assets/card1.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/card2.png":
+/*!******************************!*\
+  !*** ./src/assets/card2.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/card3.png":
+/*!******************************!*\
+  !*** ./src/assets/card3.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/card4.png":
+/*!******************************!*\
+  !*** ./src/assets/card4.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/corner.png":
+/*!*******************************!*\
+  !*** ./src/assets/corner.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/corner.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/corner.png?");
+
+/***/ }),
+
+/***/ "./src/assets/crate1.png":
+/*!*******************************!*\
+  !*** ./src/assets/crate1.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/crate2.png":
+/*!*******************************!*\
+  !*** ./src/assets/crate2.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/crate3.png":
+/*!*******************************!*\
+  !*** ./src/assets/crate3.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/cup.png":
+/*!****************************!*\
+  !*** ./src/assets/cup.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/cup.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/cup.png?");
+
+/***/ }),
+
+/***/ "./src/assets/element.png":
+/*!********************************!*\
+  !*** ./src/assets/element.png ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/element.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/element.png?");
+
+/***/ }),
+
+/***/ "./src/assets/fighters_bg.png":
+/*!************************************!*\
+  !*** ./src/assets/fighters_bg.png ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/fighters_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/fighters_bg.png?");
+
+/***/ }),
+
+/***/ "./src/assets/gold.png":
+/*!*****************************!*\
+  !*** ./src/assets/gold.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/gold.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/gold.png?");
+
+/***/ }),
+
+/***/ "./src/assets/intro_bg.png":
+/*!*********************************!*\
+  !*** ./src/assets/intro_bg.png ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/intro_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/intro_bg.png?");
+
+/***/ }),
+
+/***/ "./src/assets/key.png":
+/*!****************************!*\
+  !*** ./src/assets/key.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/key.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/key.png?");
+
+/***/ }),
+
+/***/ "./src/assets/key2.png":
+/*!*****************************!*\
+  !*** ./src/assets/key2.png ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/key2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/key2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate1.png":
+/*!***********************************!*\
+  !*** ./src/assets/opencrate1.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate2.png":
+/*!***********************************!*\
+  !*** ./src/assets/opencrate2.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate3.png":
+/*!***********************************!*\
+  !*** ./src/assets/opencrate3.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/paper.png":
+/*!******************************!*\
+  !*** ./src/assets/paper.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/paper.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/paper.png?");
+
+/***/ }),
+
 /***/ "./src/assets/roadmap1.png":
 /*!*********************************!*\
   !*** ./src/assets/roadmap1.png ***!
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap1.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap1.png?");
 
 /***/ }),
 
@@ -444,7 +454,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap1.png\";\n\n/
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap2.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap2.png?");
 
 /***/ }),
 
@@ -454,7 +464,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap2.png\";\n\n/
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap3.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap3.png?");
 
 /***/ }),
 
@@ -464,7 +474,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap3.png\";\n\n/
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap4.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap4.png?");
 
 /***/ }),
 
@@ -474,7 +484,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap4.png\";\n\n/
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap5.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap5.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap5.png?");
 
 /***/ }),
 
@@ -484,7 +494,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap5.png\";\n\n/
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/roadmap6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap6.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap6.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap6.png?");
 
 /***/ }),
 
@@ -494,7 +504,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/roadmap6.png\";\n\n/
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/rune.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/rune.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/rune.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/rune.png?");
 
 /***/ }),
 
@@ -504,7 +514,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/rune.png\";\n\n//# s
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/schema.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/schema.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/schema.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/schema.png?");
 
 /***/ }),
 
@@ -514,7 +524,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/schema.png\";\n\n//#
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/shield.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/shield.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/shield.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/shield.png?");
 
 /***/ }),
 
@@ -524,7 +534,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/shield.png\";\n\n//#
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/slide1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide1.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/slide1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide1.png?");
 
 /***/ }),
 
@@ -534,7 +544,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/slide1.png\";\n\n//#
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/slide2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide2.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/slide2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide2.png?");
 
 /***/ }),
 
@@ -544,7 +554,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/slide2.png\";\n\n//#
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/slide3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide3.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/slide3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide3.png?");
 
 /***/ }),
 
@@ -554,7 +564,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/slide3.png\";\n\n//#
   \*******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/slide4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide4.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/slide4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide4.png?");
 
 /***/ }),
 
@@ -564,7 +574,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/slide4.png\";\n\n//#
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/sword.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/sword.png?");
+eval("module.exports = __webpack_require__.p + \"src/assets/sword.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/sword.png?");
 
 /***/ }),
 
@@ -574,17 +584,7 @@ eval("module.exports = __webpack_require__.p + \"src/assets/sword.png\";\n\n//# 
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"src/assets/token_bg.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/token_bg.png?");
-
-/***/ }),
-
-/***/ "./src/assets/twitter.svg":
-/*!********************************!*\
-  !*** ./src/assets/twitter.svg ***!
-  \********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"src/assets/twitter.svg\";\n\n//# sourceURL=webpack://pixi/./src/assets/twitter.svg?");
+eval("module.exports = __webpack_require__.p + \"src/assets/token_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/token_bg.png?");
 
 /***/ }),
 

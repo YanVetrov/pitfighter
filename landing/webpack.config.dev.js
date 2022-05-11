@@ -1,5 +1,6 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const { VueLoaderPlugin } = require("vue-loader");
 const path = require("path");
 const webpack = require("webpack");
@@ -58,7 +59,7 @@ module.exports = {
       //   ],
       // },
       {
-        test: /\.(png|jpg|jpeg|gif|mp3|ttf|svg)$/i,
+        test: /\.(gif|mp3|ttf|svg)$/i,
         use: [
           {
             loader: "file-loader",
@@ -70,9 +71,23 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|jpeg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[path][name].webp",
+              sourceMap: false,
+              esModule: false,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
+    new ImageminWebpWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
