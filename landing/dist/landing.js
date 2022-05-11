@@ -198,6 +198,396 @@ eval("module.exports = __webpack_require__.p + \"src/assets/twitter.svg\";\n\n//
 
 /***/ }),
 
+/***/ "./src/assets/back_card.webp":
+/*!***********************************!*\
+  !*** ./src/assets/back_card.webp ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/back_card.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/back_card.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/bg.webp":
+/*!****************************!*\
+  !*** ./src/assets/bg.webp ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/bg.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/book.webp":
+/*!******************************!*\
+  !*** ./src/assets/book.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/book.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/book.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/border.webp":
+/*!********************************!*\
+  !*** ./src/assets/border.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/border.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/border.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/card.webp":
+/*!******************************!*\
+  !*** ./src/assets/card.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/card1.webp":
+/*!*******************************!*\
+  !*** ./src/assets/card1.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card1.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/card2.webp":
+/*!*******************************!*\
+  !*** ./src/assets/card2.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/card3.webp":
+/*!*******************************!*\
+  !*** ./src/assets/card3.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card3.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/card4.webp":
+/*!*******************************!*\
+  !*** ./src/assets/card4.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/card4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/card4.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/corner.webp":
+/*!********************************!*\
+  !*** ./src/assets/corner.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/corner.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/corner.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/crate1.webp":
+/*!********************************!*\
+  !*** ./src/assets/crate1.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate1.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/crate2.webp":
+/*!********************************!*\
+  !*** ./src/assets/crate2.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/crate3.webp":
+/*!********************************!*\
+  !*** ./src/assets/crate3.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/crate3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/crate3.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/cup.webp":
+/*!*****************************!*\
+  !*** ./src/assets/cup.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/cup.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/cup.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/element.webp":
+/*!*********************************!*\
+  !*** ./src/assets/element.webp ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/element.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/element.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/fighters_bg.webp":
+/*!*************************************!*\
+  !*** ./src/assets/fighters_bg.webp ***!
+  \*************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/fighters_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/fighters_bg.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/gold.webp":
+/*!******************************!*\
+  !*** ./src/assets/gold.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/gold.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/gold.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/intro_bg.webp":
+/*!**********************************!*\
+  !*** ./src/assets/intro_bg.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/intro_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/intro_bg.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/key.webp":
+/*!*****************************!*\
+  !*** ./src/assets/key.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/key.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/key.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/key2.webp":
+/*!******************************!*\
+  !*** ./src/assets/key2.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/key2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/key2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate1.webp":
+/*!************************************!*\
+  !*** ./src/assets/opencrate1.webp ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate1.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate2.webp":
+/*!************************************!*\
+  !*** ./src/assets/opencrate2.webp ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/opencrate3.webp":
+/*!************************************!*\
+  !*** ./src/assets/opencrate3.webp ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/opencrate3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate3.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/paper.webp":
+/*!*******************************!*\
+  !*** ./src/assets/paper.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/paper.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/paper.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap1.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap1.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap1.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap2.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap2.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap3.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap3.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap3.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap4.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap4.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap4.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap5.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap5.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap5.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap5.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/roadmap6.webp":
+/*!**********************************!*\
+  !*** ./src/assets/roadmap6.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/roadmap6.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap6.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/rune.webp":
+/*!******************************!*\
+  !*** ./src/assets/rune.webp ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/rune.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/rune.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/schema.webp":
+/*!********************************!*\
+  !*** ./src/assets/schema.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/schema.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/schema.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/shield.webp":
+/*!********************************!*\
+  !*** ./src/assets/shield.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/shield.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/shield.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/slide1.webp":
+/*!********************************!*\
+  !*** ./src/assets/slide1.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/slide1.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide1.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/slide2.webp":
+/*!********************************!*\
+  !*** ./src/assets/slide2.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/slide2.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide2.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/slide3.webp":
+/*!********************************!*\
+  !*** ./src/assets/slide3.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/slide3.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide3.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/slide4.webp":
+/*!********************************!*\
+  !*** ./src/assets/slide4.webp ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/slide4.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/slide4.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/sword.webp":
+/*!*******************************!*\
+  !*** ./src/assets/sword.webp ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/sword.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/sword.webp?");
+
+/***/ }),
+
+/***/ "./src/assets/token_bg.webp":
+/*!**********************************!*\
+  !*** ./src/assets/token_bg.webp ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/token_bg.webp\";\n\n//# sourceURL=webpack://pixi/./src/assets/token_bg.webp?");
+
+/***/ }),
+
 /***/ "./node_modules/vue-carousel/dist/vue-carousel.min.js":
 /*!************************************************************!*\
   !*** ./node_modules/vue-carousel/dist/vue-carousel.min.js ***!
@@ -692,396 +1082,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("/**\n *\n * @author    Jerry Bendy\n * @since     4/12/2017\n */\n\nfunction touchX(event) {\n    if(event.type.indexOf('mouse') !== -1){\n        return event.clientX;\n    }\n    return event.touches[0].clientX;\n}\n\nfunction touchY(event) {\n    if(event.type.indexOf('mouse') !== -1){\n        return event.clientY;\n    }\n    return event.touches[0].clientY;\n}\n\nvar isPassiveSupported = (function() {\n    var supportsPassive = false;\n    try {\n        var opts = Object.defineProperty({}, 'passive', {\n            get: function() {\n                supportsPassive = true;\n            }\n        });\n        window.addEventListener('test', null, opts);\n    } catch (e) {}\n    return supportsPassive;\n})();\n\n// Save last touch time globally (touch start time or touch end time), if a `click` event triggered,\n// and the time near by the last touch time, this `click` event will be ignored. This is used for\n// resolve touch through issue.\nvar globalLastTouchTime = 0;\n\nvar vueTouchEvents = {\n    install: function (Vue, constructorOptions) {\n\n        var globalOptions = Object.assign({}, {\n            disableClick: false,\n            tapTolerance: 10,  // px\n            swipeTolerance: 30,  // px\n            touchHoldTolerance: 400,  // ms\n            longTapTimeInterval: 400,  // ms\n            touchClass: '',\n            namespace: 'touch'\n        }, constructorOptions);\n\n        function touchStartEvent(event) {\n            var $this = this.$$touchObj,\n                isTouchEvent = event.type.indexOf('touch') >= 0,\n                isMouseEvent = event.type.indexOf('mouse') >= 0,\n                $el = this;\n\n            if (isTouchEvent) {\n                globalLastTouchTime = event.timeStamp;\n            }\n\n            if (isMouseEvent && globalLastTouchTime && event.timeStamp - globalLastTouchTime < 350) {\n                return;\n            }\n\n            if ($this.touchStarted) {\n                return;\n            }\n\n            addTouchClass(this);\n\n            $this.touchStarted = true;\n\n            $this.touchMoved = false;\n            $this.swipeOutBounded = false;\n\n            $this.startX = touchX(event);\n            $this.startY = touchY(event);\n\n            $this.currentX = 0;\n            $this.currentY = 0;\n\n            $this.touchStartTime = event.timeStamp;\n\n            // Trigger touchhold event after `touchHoldTolerance`ms\n            $this.touchHoldTimer = setTimeout(function() {\n                $this.touchHoldTimer = null;\n                triggerEvent(event, $el, 'touchhold');\n            }, $this.options.touchHoldTolerance);\n\n            triggerEvent(event, this, 'start');\n        }\n\n        function touchMoveEvent(event) {\n            var $this = this.$$touchObj;\n\n            $this.currentX = touchX(event);\n            $this.currentY = touchY(event);\n\n            if (!$this.touchMoved) {\n                var tapTolerance = $this.options.tapTolerance;\n\n                $this.touchMoved = Math.abs($this.startX - $this.currentX) > tapTolerance ||\n                    Math.abs($this.startY - $this.currentY) > tapTolerance;\n\n                if($this.touchMoved){\n                    cancelTouchHoldTimer($this);\n                    triggerEvent(event, this, 'moved');\n                }\n\n            } else if (!$this.swipeOutBounded) {\n                var swipeOutBounded = $this.options.swipeTolerance;\n\n                $this.swipeOutBounded = Math.abs($this.startX - $this.currentX) > swipeOutBounded &&\n                    Math.abs($this.startY - $this.currentY) > swipeOutBounded;\n            }\n\n            if($this.touchMoved){\n                triggerEvent(event, this, 'moving');\n            }\n        }\n\n        function touchCancelEvent() {\n            var $this = this.$$touchObj;\n\n            cancelTouchHoldTimer($this);\n            removeTouchClass(this);\n\n            $this.touchStarted = $this.touchMoved = false;\n            $this.startX = $this.startY = 0;\n        }\n\n        function touchEndEvent(event) {\n            var $this = this.$$touchObj,\n                isTouchEvent = event.type.indexOf('touch') >= 0,\n                isMouseEvent = event.type.indexOf('mouse') >= 0;\n\n            if (isTouchEvent) {\n                globalLastTouchTime = event.timeStamp;\n            }\n\n            var touchholdEnd = isTouchEvent && !$this.touchHoldTimer;\n            cancelTouchHoldTimer($this);\n\n            $this.touchStarted = false;\n\n            removeTouchClass(this);\n\n            if (isMouseEvent && globalLastTouchTime && event.timeStamp - globalLastTouchTime < 350) {\n                return;\n            }\n\n            // Fix #33, Trigger `end` event when touch stopped\n            triggerEvent(event, this, 'end');\n\n            if (!$this.touchMoved) {\n                // detect if this is a longTap event or not\n                if ($this.callbacks.longtap && event.timeStamp - $this.touchStartTime > $this.options.longTapTimeInterval) {\n                    if (event.cancelable) {\n                        event.preventDefault();\n                    }\n                    triggerEvent(event, this, 'longtap');\n\n                } else if ($this.callbacks.touchhold && touchholdEnd) {\n                    if (event.cancelable) {\n                        event.preventDefault();\n                    }\n                    return;\n                } else {\n                    // emit tap event\n                    triggerEvent(event, this, 'tap');\n                }\n\n            } else if (!$this.swipeOutBounded) {\n                var swipeOutBounded = $this.options.swipeTolerance,\n                    direction,\n                    distanceY = Math.abs($this.startY - $this.currentY),\n                    distanceX = Math.abs($this.startX - $this.currentX);\n\n                if (distanceY > swipeOutBounded || distanceX > swipeOutBounded) {\n                    if (distanceY > swipeOutBounded) {\n                        direction = $this.startY > $this.currentY ? 'top' : 'bottom';\n                    } else {\n                        direction = $this.startX > $this.currentX ? 'left' : 'right';\n                    }\n\n                    // Only emit the specified event when it has modifiers\n                    if ($this.callbacks['swipe.' + direction]) {\n                        triggerEvent(event, this, 'swipe.' + direction, direction);\n                    } else {\n                        // Emit a common event when it has no any modifier\n                        triggerEvent(event, this, 'swipe', direction);\n                    }\n                }\n            }\n        }\n\n        function mouseEnterEvent() {\n            addTouchClass(this);\n        }\n\n        function mouseLeaveEvent() {\n            removeTouchClass(this);\n        }\n\n        function triggerEvent(e, $el, eventType, param) {\n            var $this = $el.$$touchObj;\n\n            // get the callback list\n            var callbacks = $this && $this.callbacks[eventType] || [];\n            if (callbacks.length === 0) {\n                return null;\n            }\n\n            for (var i = 0; i < callbacks.length; i++) {\n                var binding = callbacks[i];\n\n                if (binding.modifiers.stop) {\n                    e.stopPropagation();\n                }\n\n                if (binding.modifiers.prevent && e.cancelable) {\n                    e.preventDefault();\n                }\n\n                // handle `self` modifier`\n                if (binding.modifiers.self && e.target !== e.currentTarget) {\n                    continue;\n                }\n\n                if (typeof binding.value === 'function') {\n                    if (param) {\n                        binding.value(param, e);\n                    } else {\n                        binding.value(e);\n                    }\n                }\n            }\n        }\n\n        function addTouchClass($el) {\n            var className = $el.$$touchObj.options.touchClass;\n            className && $el.classList.add(className);\n        }\n\n        function removeTouchClass($el) {\n            var className = $el.$$touchObj.options.touchClass;\n            className && $el.classList.remove(className);\n        }\n\n        function cancelTouchHoldTimer($this) {\n            if ($this.touchHoldTimer) {\n                clearTimeout($this.touchHoldTimer);\n                $this.touchHoldTimer = null;\n            }\n        }\n\n        function buildTouchObj($el, extraOptions) {\n            var touchObj = $el.$$touchObj || {\n                // an object contains all callbacks registered,\n                // key is event name, value is an array\n                callbacks: {},\n                // prevent bind twice, set to true when event bound\n                hasBindTouchEvents: false,\n                // default options, would be override by v-touch-options\n                options: globalOptions\n            };\n            if (extraOptions) {\n                touchObj.options = Object.assign({}, touchObj.options, extraOptions);\n            }\n            $el.$$touchObj = touchObj;\n            return $el.$$touchObj;\n        }\n\n        Vue.directive(globalOptions.namespace, {\n            bind: function ($el, binding) {\n                // build a touch configuration object\n                var $this = buildTouchObj($el);\n                // declare passive option for the event listener. Defaults to { passive: true } if supported\n                var passiveOpt = isPassiveSupported ? { passive: true } : false;\n                // register callback\n                var eventType = binding.arg || 'tap';\n                switch (eventType) {\n                    case 'swipe':\n                        var _m = binding.modifiers;\n                        if (_m.left || _m.right || _m.top || _m.bottom) {\n                            for (var i in binding.modifiers) {\n                                if (['left', 'right', 'top', 'bottom'].indexOf(i) >= 0) {\n                                    var _e = 'swipe.' + i;\n                                    $this.callbacks[_e] = $this.callbacks[_e] || [];\n                                    $this.callbacks[_e].push(binding);\n                                }\n                            }\n                        } else {\n                            $this.callbacks.swipe = $this.callbacks.swipe || [];\n                            $this.callbacks.swipe.push(binding);\n                        }\n                        break;\n                    \n                    case 'start':\n                    case 'moving':\n                        if (binding.modifiers.disablePassive) {\n                            // change the passive option for the moving event if disablePassive modifier exists\n                            passiveOpt = false;\n                        }\n                    // fallthrough\n                    default:\n                        $this.callbacks[eventType] = $this.callbacks[eventType] || [];\n                        $this.callbacks[eventType].push(binding);\n                }\n\n                // prevent bind twice\n                if ($this.hasBindTouchEvents) {\n                    return;\n                }\n\n                $el.addEventListener('touchstart', touchStartEvent, passiveOpt);\n                $el.addEventListener('touchmove', touchMoveEvent, passiveOpt);\n                $el.addEventListener('touchcancel', touchCancelEvent);\n                $el.addEventListener('touchend', touchEndEvent);\n\n                if (!$this.options.disableClick) {\n                    $el.addEventListener('mousedown', touchStartEvent);\n                    $el.addEventListener('mousemove', touchMoveEvent);\n                    $el.addEventListener('mouseup', touchEndEvent);\n                    $el.addEventListener('mouseenter', mouseEnterEvent);\n                    $el.addEventListener('mouseleave', mouseLeaveEvent);\n                }\n\n                // set bind mark to true\n                $this.hasBindTouchEvents = true;\n            },\n\n            unbind: function ($el) {\n                $el.removeEventListener('touchstart', touchStartEvent);\n                $el.removeEventListener('touchmove', touchMoveEvent);\n                $el.removeEventListener('touchcancel', touchCancelEvent);\n                $el.removeEventListener('touchend', touchEndEvent);\n\n                if ($el.$$touchObj && !$el.$$touchObj.options.disableClick) {\n                    $el.removeEventListener('mousedown', touchStartEvent);\n                    $el.removeEventListener('mousemove', touchMoveEvent);\n                    $el.removeEventListener('mouseup', touchEndEvent);\n                    $el.removeEventListener('mouseenter', mouseEnterEvent);\n                    $el.removeEventListener('mouseleave', mouseLeaveEvent);\n                }\n\n                // remove vars\n                delete $el.$$touchObj;\n            }\n        });\n\n        Vue.directive(globalOptions.namespace + '-class', {\n            bind: function ($el, binding) {\n                buildTouchObj($el, {\n                    touchClass: binding.value\n                });\n            }\n        });\n\n        Vue.directive(globalOptions.namespace + '-options', {\n            bind: function($el, binding) {\n                buildTouchObj($el, binding.value);\n            }\n        });\n    }\n};\n\n\n/*\n * Exports\n */\nif (true) {\n    module.exports = vueTouchEvents;\n\n} else {}\n\n\n//# sourceURL=webpack://pixi/./node_modules/vue2-touch-events/index.js?");
-
-/***/ }),
-
-/***/ "./src/assets/back_card.webp":
-/*!***********************************!*\
-  !*** ./src/assets/back_card.webp ***!
-  \***********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/back_card.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/bg.webp":
-/*!****************************!*\
-  !*** ./src/assets/bg.webp ***!
-  \****************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/bg.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/book.webp":
-/*!******************************!*\
-  !*** ./src/assets/book.webp ***!
-  \******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/book.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/border.webp":
-/*!********************************!*\
-  !*** ./src/assets/border.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/border.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/card.webp":
-/*!******************************!*\
-  !*** ./src/assets/card.webp ***!
-  \******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/card.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/card1.webp":
-/*!*******************************!*\
-  !*** ./src/assets/card1.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/card1.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/card2.webp":
-/*!*******************************!*\
-  !*** ./src/assets/card2.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/card2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/card3.webp":
-/*!*******************************!*\
-  !*** ./src/assets/card3.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '@' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/card3.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/card4.webp":
-/*!*******************************!*\
-  !*** ./src/assets/card4.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/card4.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/corner.webp":
-/*!********************************!*\
-  !*** ./src/assets/corner.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/corner.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/crate1.webp":
-/*!********************************!*\
-  !*** ./src/assets/crate1.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/crate1.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/crate2.webp":
-/*!********************************!*\
-  !*** ./src/assets/crate2.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0004' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/crate2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/crate3.webp":
-/*!********************************!*\
-  !*** ./src/assets/crate3.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/crate3.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/cup.webp":
-/*!*****************************!*\
-  !*** ./src/assets/cup.webp ***!
-  \*****************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/cup.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/element.webp":
-/*!*********************************!*\
-  !*** ./src/assets/element.webp ***!
-  \*********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/element.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/fighters_bg.webp":
-/*!*************************************!*\
-  !*** ./src/assets/fighters_bg.webp ***!
-  \*************************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/fighters_bg.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/gold.webp":
-/*!******************************!*\
-  !*** ./src/assets/gold.webp ***!
-  \******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0014' (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/gold.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/intro_bg.webp":
-/*!**********************************!*\
-  !*** ./src/assets/intro_bg.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Expecting Unicode escape sequence \\\\uXXXX (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/intro_bg.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/key.webp":
-/*!*****************************!*\
-  !*** ./src/assets/key.webp ***!
-  \*****************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/key.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/key2.webp":
-/*!******************************!*\
-  !*** ./src/assets/key2.webp ***!
-  \******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/key2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/opencrate1.webp":
-/*!************************************!*\
-  !*** ./src/assets/opencrate1.webp ***!
-  \************************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate1.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/opencrate2.webp":
-/*!************************************!*\
-  !*** ./src/assets/opencrate2.webp ***!
-  \************************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/opencrate3.webp":
-/*!************************************!*\
-  !*** ./src/assets/opencrate3.webp ***!
-  \************************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u001f' (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/opencrate3.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/paper.webp":
-/*!*******************************!*\
-  !*** ./src/assets/paper.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected token (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/paper.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap1.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap1.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap1.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap2.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap2.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap3.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap3.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap3.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap4.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap4.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected token (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap4.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap5.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap5.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap5.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/roadmap6.webp":
-/*!**********************************!*\
-  !*** ./src/assets/roadmap6.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected token (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/roadmap6.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/rune.webp":
-/*!******************************!*\
-  !*** ./src/assets/rune.webp ***!
-  \******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0011' (1:5)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/rune.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/schema.webp":
-/*!********************************!*\
-  !*** ./src/assets/schema.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/schema.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/shield.webp":
-/*!********************************!*\
-  !*** ./src/assets/shield.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0018' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/shield.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/slide1.webp":
-/*!********************************!*\
-  !*** ./src/assets/slide1.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0000' (1:6)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/slide1.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/slide2.webp":
-/*!********************************!*\
-  !*** ./src/assets/slide2.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/slide2.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/slide3.webp":
-/*!********************************!*\
-  !*** ./src/assets/slide3.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/slide3.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/slide4.webp":
-/*!********************************!*\
-  !*** ./src/assets/slide4.webp ***!
-  \********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u001c' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/slide4.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/sword.webp":
-/*!*******************************!*\
-  !*** ./src/assets/sword.webp ***!
-  \*******************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '�' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/sword.webp?");
-
-/***/ }),
-
-/***/ "./src/assets/token_bg.webp":
-/*!**********************************!*\
-  !*** ./src/assets/token_bg.webp ***!
-  \**********************************/
-/***/ (() => {
-
-eval("throw new Error(\"Module parse failed: Unexpected character '\\u0016' (1:4)\\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\\n(Source code omitted for this binary file)\");\n\n//# sourceURL=webpack://pixi/./src/assets/token_bg.webp?");
 
 /***/ }),
 
