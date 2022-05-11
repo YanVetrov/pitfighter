@@ -3,7 +3,7 @@ const express = require("express"),
 const cors = require("cors");
 const units = require("./units.js");
 const items = require("./items.js");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let players = [];
 const rooms = {};
