@@ -77,7 +77,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[path][name].webp",
+              name: "[path][name].[ext]",
               sourceMap: false,
               esModule: false,
             },
