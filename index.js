@@ -24,6 +24,7 @@ app.use(
     origin: "*",
   })
 );
+app.use(express.compress());
 io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
