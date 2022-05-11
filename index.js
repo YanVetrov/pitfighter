@@ -26,6 +26,8 @@ app.use(
   })
 );
 app.use(compression());
+app.use("/", express.static("landing/dist"));
+app.use("/game", express.static("client/dist"));
 io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
@@ -475,30 +477,9 @@ app.get("/clients-count", (req, res) => {
 app.get("/", (req, res) =>
   res.sendFile(__dirname + "/landing/dist/index.html")
 );
-app.get(
-  "/landing",
-  (req, res) => res.sendFile(__dirname + "/landing/dist/index.html")
-  // console.log(req)
+app.get("/game/", (req, res) =>
+  res.sendFile(__dirname + "/client/dist/index.html")
 );
-app.get(
-  "/game/",
-  (req, res) => res.sendFile(__dirname + "/client/dist/index.html")
-  // console.log(req)
-);
-app.get(
-  "/landing/*",
-  (req, res) =>
-    res.sendFile(__dirname + "/landing/" + req.url.replace("landing", "dist"))
-  // console.log(req)
-);
-app.get(
-  "/game/*",
-  (req, res) =>
-    res.sendFile(__dirname + "/client/" + req.url.replace("game", "dist"))
-  // console.log(req)
-);
-
-app.get("*", (req, res) => res.sendFile(__dirname + "/landing/dist" + req.url));
 app.post("/units_templates", (req, res) => {
   res.send({ units, items });
 });

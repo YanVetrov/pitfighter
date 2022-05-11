@@ -9,6 +9,9 @@ module.exports = {
     contentBase: "dist",
     port: 3000,
   },
+  output: {
+    filename: "landing.js",
+  },
   resolve: {
     alias: {
       "~": [path.resolve(__dirname, "src/")],
