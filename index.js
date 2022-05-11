@@ -1,5 +1,6 @@
 const express = require("express"),
   app = express();
+const compression = require("compression");
 const cors = require("cors");
 const units = require("./units.js");
 const items = require("./items.js");
@@ -24,7 +25,7 @@ app.use(
     origin: "*",
   })
 );
-app.use(express.compress());
+app.use(compression());
 io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
