@@ -24,7 +24,7 @@
       </div>
       <div key="101" class="room" v-show="roomId">
         ARENA ID: {{ roomId }},
-        <span v-if="spectator">who turn: {{ whoTurn }}</span>
+        <span v-if="spectator">Who turn: {{ whoTurn }}</span>
       </div>
       <div
         key="202"
