@@ -7,7 +7,7 @@
     <cornerDiv
       class="title_block"
       ref="main"
-      style="background-image: url('./assets/bg.png')"
+      style="background-image: url('./assets/bg.webp')"
     >
       <div class="header" :class="{ active_header }">
         <div
@@ -97,7 +97,7 @@
         class="wrapper"
         style="
           min-height: 100vh;
-          background-image: url('./assets/intro_bg.png');
+          background-image: url('./assets/intro_bg.webp');
         "
       >
         <div class="bg_blur"></div>
@@ -113,7 +113,7 @@
           >
             <div class="row">
               <h1>introduction</h1>
-              <img src="./assets/book.png" />
+              <img src="./assets/book.webp" />
             </div>
 
             <div class="sub_intro">
@@ -138,7 +138,7 @@
             data-aos-easing="ease-in-out"
           >
             <div class="wrapper_demo">
-              <img src="./assets/border.png" />
+              <img src="./assets/border.webp" />
               <!-- <iframe
                 height="315"
                 style="
@@ -163,7 +163,7 @@
     <cornerDiv ref="fighters">
       <div
         class="wrapper padding bg1"
-        style="background-image: url('./assets/fighters_bg.png')"
+        style="background-image: url('./assets/fighters_bg.webp')"
       >
         <div class="deck_wrapper">
           <deck />
@@ -186,7 +186,7 @@
               data-aos-delay="500"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
-              src="./assets/sword.png"
+              src="./assets/sword.webp"
             />
           </div>
           <h2
@@ -269,7 +269,7 @@
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
-              src="./assets/key.png"
+              src="./assets/key.webp"
             />
           </div>
           <h2
@@ -364,10 +364,10 @@
             :autoplayTimeout="timeout"
             :perPage="1"
           >
-            <slide> <img src="./assets/slide1.png" /> </slide>
-            <slide> <img src="./assets/slide2.png" /> </slide>
-            <slide> <img src="./assets/slide3.png" /> </slide>
-            <slide> <img src="./assets/slide4.png" /> </slide>
+            <slide> <img src="./assets/slide1.webp" /> </slide>
+            <slide> <img src="./assets/slide2.webp" /> </slide>
+            <slide> <img src="./assets/slide3.webp" /> </slide>
+            <slide> <img src="./assets/slide4.webp" /> </slide>
           </carousel>
         </div>
       </div>
@@ -375,7 +375,7 @@
     <cornerDiv
       ref="tokenomic"
       class="token_bg"
-      style="background-image: url('./assets/token_bg.png')"
+      style="background-image: url('./assets/token_bg.webp')"
     >
       <div class="wrapper padding">
         <div class="token_main">
@@ -388,7 +388,7 @@
           >
             <div class="row">
               <h1>TOKENOMICS</h1>
-              <img src="./assets/cup.png" />
+              <img src="./assets/cup.webp" />
             </div>
             <h2>PLAY TO EARN</h2>
           </div>
@@ -400,7 +400,7 @@
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
-            <img class="schema_img" src="./assets/schema.png" />
+            <img class="schema_img" src="./assets/schema.webp" />
           </div>
         </div>
         <div class="token_blocks">
@@ -425,8 +425,8 @@
                 </div>
               </div>
               <div class="token_img">
-                <img src="./assets/shield.png" />
-                <img src="./assets/gold.png" class="token_icon" />
+                <img src="./assets/shield.webp" />
+                <img src="./assets/gold.webp" class="token_icon" />
               </div>
             </div>
           </div>
@@ -451,10 +451,10 @@
                 </div>
               </div>
               <div class="token_img">
-                <img src="./assets/shield.png" />
+                <img src="./assets/shield.webp" />
                 <img
                   style="transform: scale(0.7)"
-                  src="./assets/rune.png"
+                  src="./assets/rune.webp"
                   class="token_icon"
                 />
               </div>
@@ -490,9 +490,9 @@
             <transition name="fade">
               <div class="crates_pelen" v-if="crateText">
                 <div class="row">
-                  <img src="./assets/card.png" />
-                  <img src="./assets/card2.png" />
-                  <img src="./assets/card3.png" />
+                  <img src="./assets/card.webp" />
+                  <img src="./assets/card2.webp" />
+                  <img src="./assets/card3.webp" />
                 </div>
                 <div class="row">
                   MOST RECENT OFFER EVER BEST CARDS FOR YOUR GAME PLAY ! ! ! !
@@ -554,11 +554,11 @@
     </cornerDiv>
     <cornerDiv ref="roadmap">
       <div class="wrapper column">
-        <img class="element" src="./assets/element.png" />
+        <img class="element" src="./assets/element.webp" />
         <div class="row roadmap_title">
-          <img src="./assets/paper.png" />
+          <img src="./assets/paper.webp" />
           <h1>Roadmap</h1>
-          <img src="./assets/paper.png" />
+          <img src="./assets/paper.webp" />
         </div>
         <div class="row center roadmap_row">
           <div
@@ -572,7 +572,7 @@
             v-for="(k, i) in roadmap"
             :key="k"
           >
-            <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+            <img :src="require(`./assets/roadmap${i + 1}.webp`)" />
             <div class="road_title">{{ k.title }}</div>
             <div
               class="road_descr"
@@ -583,7 +583,7 @@
         <div class="row center roadmap_row_mobile">
           <carousel :autoplay="false" :autoplayTimeout="timeout" :perPage="1">
             <slide class="road" v-for="(k, i) in roadmap" :key="k">
-              <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+              <img :src="require(`./assets/roadmap${i + 1}.webp`)" />
               <div class="road_title">{{ k.title }}</div>
               <div
                 class="road_descr"

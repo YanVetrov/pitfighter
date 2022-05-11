@@ -3,7 +3,7 @@
     <slot />
     <img
       style="position: absolute; top: 5px; width: 150px; left: 5px"
-      src="../assets/corner.png"
+      src="../assets/corner.webp"
     />
     <img
       style="
@@ -14,7 +14,7 @@
         top: 0;
         transform: scale(-1, 1);
       "
-      src="../assets/corner.png"
+      src="../assets/corner.webp"
     />
     <img
       style="
@@ -25,7 +25,7 @@
         bottom: 5px;
         transform: rotate(-90deg);
       "
-      src="../assets/corner.png"
+      src="../assets/corner.webp"
     />
     <img
       style="
@@ -37,7 +37,7 @@
         transform: rotate(180deg);
         width: 150px;
       "
-      src="../assets/corner.png"
+      src="../assets/corner.webp"
     />
   </div>
 </template>

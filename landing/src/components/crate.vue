@@ -3,13 +3,13 @@
     <img
       @animationend="shake = false"
       :class="{ shake }"
-      :src="require(`../assets/${open ? openCrate : crate}.png`)"
+      :src="require(`../assets/${open ? openCrate : crate}.webp`)"
       class="crate_img"
     />
-    <img src="../assets/shield.png" class="shield" />
+    <img src="../assets/shield.webp" class="shield" />
     <img
       @transitionend="keyEnd"
-      src="../assets/key2.png"
+      src="../assets/key2.webp"
       class="key"
       :class="{ active_key: key }"
     />

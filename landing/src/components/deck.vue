@@ -17,9 +17,9 @@
         transform: `translate(${k.id * 10}px,${k.id * 10}px)`,
       }"
     >
-      <img :src="require(`../assets/${k.img}.png`)" />
+      <img :src="require(`../assets/${k.img}.webp`)" />
       <div
-        style="background-image: url('../assets/back_card.png')"
+        style="background-image: url('../assets/back_card.webp')"
         class="card_info"
       >
         <div class="backstory">
