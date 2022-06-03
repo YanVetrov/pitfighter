@@ -159,7 +159,7 @@ img {
   align-items: center;
 }
 .partner{
-  width:25%;
+  width:18%;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -172,6 +172,7 @@ img {
   display: flex;
   justify-content: space-around;
   align-items: center !important;
+  width:100%;
 }
 .partner img{
   /* width:100%; */
@@ -576,6 +577,7 @@ ul {
   justify-content: space-around;
   padding:0 20px;
   margin:40px 0;
+  width:100%;
 }
 
 .roadmap_row_mobile{

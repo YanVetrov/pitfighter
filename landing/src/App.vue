@@ -120,13 +120,14 @@
               The pit fighter Is a play to earn turn based rpg in medieval
               fantasy.
             </div>
-            <div class="intro_descr">
+            <div class="intro_descr" style="text-align: center">
               Choose the right fighters for your squad. Equip them with a
-              variety of weapons, dress them in the strongest armor. Become the
-              best in the arena with your squad. Become the best in your town,
-              get an invitation to the great arena, write your name in history.
-              Earn the reputation to build your clan. Make the world reckon with
-              you: seize power in your city.
+              variety of weapons, dress them in the strongest armor.<br /><br />
+              Become the best in the arena with your squad. Become the best in
+              your town, get an invitation to the grand arena, write your name
+              in history. Earn the reputation to build your clan.<br /><br />
+              Make the world reckon with you:<br /><br />
+              seize power in your city.
             </div>
           </div>
           <div
@@ -400,7 +401,7 @@
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
-            <img class="schema_img" src="./assets/schema.webp" />
+            <img class="schema_img" src="./assets/schema.png" />
           </div>
         </div>
         <div class="token_blocks">
@@ -508,50 +509,6 @@
         </div>
       </div>
     </cornerDiv>
-    <cornerDiv ref="partners">
-      <div style="text-align: center" class="roadmap_title partner_h1">
-        <h1>PARTNERS</h1>
-      </div>
-      <div class="wrapper column">
-        <div class="row partner_row">
-          <div
-            class="partner"
-            data-aos="flip-right"
-            data-aos-once="false"
-            data-aos-offset="150"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out"
-          >
-            <img src="./assets/near.svg" />
-            <div class="partner_title">NEAR protocol</div>
-            <div class="partner_descr">
-              decentralized application platform that enables decentralized
-              applications to run on the blockchain.
-              <br />
-              <a target="_blank" href="https://near.org/">Go to near</a>
-            </div>
-          </div>
-
-          <div
-            class="partner"
-            data-aos="flip-left"
-            data-aos-once="false"
-            data-aos-offset="150"
-            data-aos-delay="50"
-            data-aos-duration="500"
-            data-aos-easing="ease-in-out"
-          >
-            <img src="./assets/paras.svg" />
-            <div class="partner_title">Paras.id</div>
-            <div class="partner_descr">
-              NFT market based on near protocol.<br />
-              <a target="_blank" href="https://paras.id/">Go to paras.id</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </cornerDiv>
     <cornerDiv ref="roadmap">
       <div class="wrapper column">
         <img class="element" src="./assets/element.webp" />
@@ -592,55 +549,102 @@
             </slide>
           </carousel>
         </div>
-        <div class="row center input_row">
-          <div class="input margin15">
-            <span>Enter your email address</span>
-            <input />
-          </div>
-          <div class="button">Subscribe</div>
-        </div>
-        <div class="footer row center">
-          <div
-            class="header_point"
-            @click="
-              $refs.main.$el.scrollIntoView({ behavior: 'smooth' });
-              active_header = false;
-            "
-          >
-            main
-          </div>
-          <div
-            @click="
-              $refs.about.$el.scrollIntoView({ behavior: 'smooth' });
-              active_header = false;
-            "
-            class="header_point"
-          >
-            about
-          </div>
-          <div
-            @click="
-              $refs.features.$el.scrollIntoView({ behavior: 'smooth' });
-              active_header = false;
-            "
-            class="header_point"
-          >
-            features
-          </div>
-          <div
-            @click="
-              $refs.tokenomic.$el.scrollIntoView({ behavior: 'smooth' });
-              active_header = false;
-            "
-            class="header_point"
-          >
-            tokenomics
-          </div>
-          <img style="width: 10px" src="./assets/fb.svg" />
-          <img src="./assets/twitter.svg" />
-        </div>
       </div>
     </cornerDiv>
+    <cornerDiv ref="partners">
+      <div style="text-align: center" class="roadmap_title partner_h1">
+        <h1>PARTNERS AND INVESTORS</h1>
+      </div>
+      <div class="wrapper column">
+        <div class="row partner_row">
+          <div
+            class="partner"
+            data-aos="flip-right"
+            data-aos-once="false"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="./assets/near.svg" />
+            <div class="partner_title">NEAR protocol</div>
+          </div>
+          <div
+            class="partner"
+            data-aos="flip-right"
+            data-aos-once="false"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="./assets/boca_chica.png" />
+            <div class="partner_title">BOCA CHICA</div>
+          </div>
+
+          <div
+            class="partner"
+            data-aos="flip-left"
+            data-aos-once="false"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out"
+          >
+            <img src="./assets/paras.svg" />
+            <div class="partner_title">Paras.id</div>
+          </div>
+        </div>
+      </div>
+      <div class="row center input_row">
+        <div class="input margin15">
+          <span>Enter your email address</span>
+          <input />
+        </div>
+        <div class="button">Subscribe</div>
+      </div>
+      <div class="footer row center">
+        <div
+          class="header_point"
+          @click="
+            $refs.main.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+        >
+          main
+        </div>
+        <div
+          @click="
+            $refs.about.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+          class="header_point"
+        >
+          about
+        </div>
+        <div
+          @click="
+            $refs.features.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+          class="header_point"
+        >
+          features
+        </div>
+        <div
+          @click="
+            $refs.tokenomic.$el.scrollIntoView({ behavior: 'smooth' });
+            active_header = false;
+          "
+          class="header_point"
+        >
+          tokenomics
+        </div>
+        <img style="width: 10px" src="./assets/fb.svg" />
+        <img src="./assets/twitter.svg" />
+      </div>
+    </cornerDiv>
+
     <div class="sub_footer">
       <div class="copyright">2022 © pitfighter.io</div>
       <div class="privacy">
@@ -666,25 +670,28 @@ export default {
       crateText: "",
       roadmap: [
         {
-          title: "Q1 2022",
+          title: "PHASE 1",
+          content: "$PFR 100<br/> MINT PASSES<br/>DEMO ARENA<br/>NFT DROP",
+        },
+        {
+          title: "PHASE 2",
           content:
-            "MINT PASS. DEMO ARENA. TOKENS REALEASE. STAKING CONTRACT. MARKETPLACE",
+            "STAKING NFT<br/> P2P MARKETPLACE<br/> DEX LISTING<br/> FEW CITIES RELEASE<br/> UNRANKED ARENA ",
         },
         {
-          title: "Q2 2022",
-          content: "TWO CITIES. HERO FORGING. WEAPON FORGING. UNRANKED ARENA ",
-        },
-        {
-          title: "Q3 2022",
+          title: "PHASE 3",
           content:
-            "rANKED ARENA. more cities. nft collection. grand arena tournament. dao clan. good and chattels ",
+            "hero forging<br/> weapon forging<br/> more cities<br/> rent mechanics",
         },
         {
-          title: "soon",
-          content: "renting mechanics. storage clanwars. grand arena bets",
+          title: "PHASE 4",
+          content:
+            "ranked arena<br/> nft drop<br/> grand arena<br/> tournament",
         },
-        { title: "soon", content: "soon" },
-        { title: "soon", content: "soon" },
+        {
+          title: "PHASE 5",
+          content: "dao guild<br/> goods and chattels<br/> tournament bets",
+        },
       ],
     };
   },
