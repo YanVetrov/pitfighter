@@ -259,6 +259,12 @@ img {
   margin:5px;
   width:40px;
 }
+.crates_pelen .row{
+  justify-content:space-around;
+}
+.crates_pelen .row img{
+  width:20%;
+}
 .close{
   position: absolute;
   right:10px;
@@ -656,6 +662,13 @@ ul {
     top: 50px;
     left: 0;
     width: 100%;
+  }
+  .crates_pelen .row{
+    flex-direction: column;
+    align-items: center;
+  }
+  .crates_pelen .row img{
+    width:35%;
   }
   .partner_row{
     flex-direction: column;

@@ -490,13 +490,31 @@
             </div>
             <transition name="fade">
               <div class="crates_pelen" v-if="crateText">
-                <div class="row">
-                  <img src="./assets/card.webp" />
-                  <img src="./assets/card2.webp" />
-                  <img src="./assets/card3.webp" />
-                </div>
-                <div class="row">
-                  MOST RECENT OFFER EVER BEST CARDS FOR YOUR GAME PLAY ! ! ! !
+                <div class="row" style="width: 100%">
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-offset="150"
+                    data-aos-delay="150"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    src="./assets/card.webp"
+                  />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-offset="150"
+                    data-aos-delay="250"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    src="./assets/card2.webp"
+                  />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-offset="150"
+                    data-aos-delay="350"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    src="./assets/card3.webp"
+                  />
                 </div>
                 <img
                   src="./assets/close.svg"
