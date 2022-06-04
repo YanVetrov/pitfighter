@@ -439,7 +439,7 @@
             data-aos-duration="500"
             data-aos-easing="ease-in-out"
           >
-            <div class="token_title">SHARDS</div>
+            <div class="token_title">RUNES</div>
             <div class="token_content">
               <div class="token_list">
                 <div class="token_listitem">Governance token.</div>
