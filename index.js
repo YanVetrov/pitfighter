@@ -32,114 +32,24 @@ io.on("connection", function (socket) {
   console.log("a user connected");
   socket.status = "choose";
   players.push(socket);
-  socket.on("choose", ({ units, nickname }) => {
-    let anotherPlayer = players.find(el => el.status === "waiting");
-    if (nickname) socket.nickname = nickname;
-    addUnits(socket, units, !!anotherPlayer);
-    socket.status = "waiting";
-    if (anotherPlayer) startSession(socket, anotherPlayer);
-  });
-  socket.on("join", async ({ roomId }) => {
-    if (rooms[roomId]) {
-      roomId = Number(roomId);
-      let enemy = rooms[roomId].players.map(el => el.units).flat();
-      socket.client_type = "spectator";
-      socket.gameRoom = roomId;
-      socket.join(roomId);
-      const sockets = await io.in(socket.gameRoom).fetchSockets();
-      console.log(sockets.length);
-      socket.emit("start_game", {
-        enemy,
-        self: [],
-        roomId,
-        spectator: true,
-      });
-      let { whoTurn, whoWait, availableTime } = rooms[roomId];
-      socket.emit("turn_changed", {
-        whoTurn,
-        whoWait,
-        availableTime,
-      });
-    }
-  });
-  socket.on("disconnect", function (e) {
-    if (socket.client_type === "player") {
-      const room = socket.gameRoom;
-      io.to(room).emit("user_leaved", socket.id);
-      destroySession(room);
-    }
-    players.splice(players.indexOf(socket), 1);
-    console.log("A player disconnected");
-    console.log("A number of players now ", players.length);
-  });
-  socket.on("move_unit", async ({ id, x, y }) => {
-    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
-    let unit = socket.units.find(el => el.id === id);
-    let cost = moveCost;
-    if (unit) {
-      if (unit.stun > 0) return console.log("stunned");
-      let teleport = unit.selected_skill === "teleport" && unit.active_skill;
-      if (unit.effects && unit.effects["stamina_discount"])
-        cost -= unit.effects["stamina_discount"];
-      if (teleport) cost = 0;
-      if (unit.stamina < cost) return console.log("no stamina");
-      console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
-      let available = unit.speed;
-      if (teleport) available = 10;
-      if (
-        !isAvailable({
-          x1: unit.x,
-          y1: unit.y,
-          x2: x,
-          y2: y,
-          available,
-        })
-      )
-        return console.log("no speed", { x, y, unitX: unit.x, unitY: unit.y });
-      unit.y = y;
-      unit.x = x;
-      const room = socket.gameRoom;
-      let enemy = await getEnemyInRoom(socket);
-      io.to(room).emit("unit_moved", { id, x, y, teleport });
-      if (teleport) {
-        disableSkill(socket, id, unit);
-      }
-      let poison = rooms[room].poison;
-      if (poison) {
-        if (poison.x === x && poison.y === y) {
-          unit.hp = unit.strength;
-          io.to(room).emit("poison_hit", { id, hp: unit.hp });
-        }
-      }
-      setTurn(socket, enemy, cost, unit);
-    }
-  });
-  socket.on("attack", ({ id, target_id, target_owner }) =>
-    attack(socket, { id, target_id, target_owner })
-  );
-  socket.on("turn_pass", async () => {
-    if (socket.turn) {
-      let room = socket.gameRoom;
-      let enemy = await getEnemyInRoom(socket);
-      swapTurn(socket, enemy);
-    }
-  });
-  socket.on("activate_skill", ({ id, skill_id }) => {
-    console.log("activate skill", { id, skill_id });
-    if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
-    let unit = socket.units.find(el => el.id === id);
-    if (!unit) return console.log("no unit");
-    if (skill_id === "heal_team") heal_team(socket, id);
-    else if (skill_id === "firewall") firewall_skill(socket, id);
-    else
-      changeUnit(socket, {
-        id,
-        key: "selected_skill",
-        value: unit.selected_skill === skill_id ? "" : skill_id,
-        unit,
-      });
-  });
+  socket.on("choose", ev => onChoose(socket, ev));
+  socket.on("join", ev => onJoin(socket, ev));
+  socket.on("disconnect", ev => onDisconnect(socket, ev));
+  socket.on("move_unit", ev => onMove(socket, ev));
+  socket.on("attack", ev => attack(socket, ev));
+  socket.on("turn_pass", () => onPass(socket));
+  socket.on("activate_skill", ev => onActivateSkill(socket, ev));
 });
+function onDisconnect(socket, e) {
+  if (socket.client_type === "player") {
+    const room = socket.gameRoom;
+    io.to(room).emit("user_leaved", socket.id);
+    destroySession(room);
+  }
+  players.splice(players.indexOf(socket), 1);
+  console.log("A player disconnected");
+  console.log("A number of players now ", players.length);
+}
 async function firewall_skill(socket, id) {
   if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
   let unit = socket.units.find(el => el.id === id);
@@ -166,6 +76,100 @@ async function firewall_skill(socket, id) {
     });
   });
   disableSkill(socket, id, unit);
+}
+function onChoose(socket, { units, nickname }) {
+  let anotherPlayer = players.find(el => el.status === "waiting");
+  if (nickname) socket.nickname = nickname;
+  addUnits(socket, units, !!anotherPlayer);
+  socket.status = "waiting";
+  if (anotherPlayer) startSession(socket, anotherPlayer);
+}
+function onActivateSkill(socket, { id, skill_id }) {
+  console.log("activate skill", { id, skill_id });
+  if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+  let unit = socket.units.find(el => el.id === id);
+  if (!unit) return console.log("no unit");
+  if (skill_id === "heal_team") heal_team(socket, id);
+  else if (skill_id === "firewall") firewall_skill(socket, id);
+  else
+    changeUnit(socket, {
+      id,
+      key: "selected_skill",
+      value: unit.selected_skill === skill_id ? "" : skill_id,
+      unit,
+    });
+}
+async function onPass(socket) {
+  if (socket.turn) {
+    let room = socket.gameRoom;
+    let enemy = await getEnemyInRoom(socket);
+    swapTurn(socket, enemy);
+  }
+}
+async function onJoin(socket, { roomId }) {
+  if (rooms[roomId]) {
+    roomId = Number(roomId);
+    let enemy = rooms[roomId].players.map(el => el.units).flat();
+    socket.client_type = "spectator";
+    socket.gameRoom = roomId;
+    socket.join(roomId);
+    const sockets = await io.in(socket.gameRoom).fetchSockets();
+    console.log(sockets.length);
+    socket.emit("start_game", {
+      enemy,
+      self: [],
+      roomId,
+      spectator: true,
+    });
+    let { whoTurn, whoWait, availableTime } = rooms[roomId];
+    socket.emit("turn_changed", {
+      whoTurn,
+      whoWait,
+      availableTime,
+    });
+  }
+}
+async function onMove(socket, { id, x, y }) {
+  if (!id || !socket.turn || socket.stun) return console.log("no id or turn");
+  let unit = socket.units.find(el => el.id === id);
+  let cost = moveCost;
+  if (unit) {
+    if (unit.stun > 0) return console.log("stunned");
+    let teleport = unit.selected_skill === "teleport" && unit.active_skill;
+    if (unit.effects && unit.effects["stamina_discount"])
+      cost -= unit.effects["stamina_discount"];
+    if (teleport) cost = 0;
+    if (unit.stamina < cost) return console.log("no stamina");
+    console.log({ newX: x, newY: y, oldX: unit.x, oldY: unit.y });
+    let available = unit.speed;
+    if (teleport) available = 10;
+    if (
+      !isAvailable({
+        x1: unit.x,
+        y1: unit.y,
+        x2: x,
+        y2: y,
+        available,
+      })
+    )
+      return console.log("no speed", { x, y, unitX: unit.x, unitY: unit.y });
+    unit.y = y;
+    unit.x = x;
+    const room = socket.gameRoom;
+    let enemy = await getEnemyInRoom(socket);
+    io.to(room).emit("unit_moved", { id, x, y, teleport });
+    if (teleport) {
+      disableSkill(socket, id, unit);
+    }
+    let poison = rooms[room].poison;
+    if (poison) {
+      if (poison.x === x && poison.y === y) {
+        unit.hp = unit.strength;
+        io.to(room).emit("poison_hit", { id, hp: unit.hp });
+      }
+    }
+    setTurn(socket, enemy, cost, unit);
+  }
 }
 function heal_team(socket, id) {
   if (!id || !socket.turn || socket.stun) return console.log("no id or turn");

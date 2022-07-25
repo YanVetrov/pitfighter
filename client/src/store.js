@@ -1,47 +1,81 @@
 let store = {
-  id: null,
-
+  app: null,
   gameScene: null,
-
-  clicked: true,
   blockedUI: false,
-  cellsInLine: 30,
-  countLines: 30,
+  cellsInLine: 8,
+  countLines: 8,
   map: [],
-  allMapCount: 900,
-  u: {},
-  text: {},
+  allMapCount: 64,
+  left: "mountain-3",
+  top: "forrest-3",
+  right: "forrest-3",
+  bottom: "lake-1",
+  center: "grass-7",
   visibleZone: [],
-  defaultPosX: -400,
-  defaultPosY: -650,
-  x: 0,
-  y: 0,
-  user: {},
-  units: [],
-  unusedUnits: [],
+  defaultPosX: 800,
+  defaultPosY: 250,
   vue: {},
+  itemsPrice: {
+    pickaxe: {
+      wood: 5,
+      stone: 3,
+    },
+    axe: {
+      wood: 8,
+      stone: 5,
+    },
+    // spining: {
+    //   wood: 5,
+    //   stone: 5,
+    // },
+  },
+  objectsOnMap: [
+    {
+      type: "building",
+      name: "sawmill",
+      level: 1,
+      advice: "click to create woods",
+      requirements: {
+        wood: 35,
+        stone: 35,
+      },
+      defaultX: 4,
+      defaultY: 2,
+    },
+    {
+      type: "building",
+      name: "quarry",
+      level: 1,
+      requirements: {
+        wood: 55,
+        desk: 10,
+      },
+      defaultX: 2,
+      defaultY: 4,
+    },
+    {
+      type: "building",
+      name: "camp",
+      level: 1,
+      requirements: {
+        wood: 25,
+        stone: 25,
+      },
+      defaultX: 5,
+      defaultY: 5,
+    },
+    {
+      type: "building",
+      name: "workshop",
+      level: 1,
+      requirements: {
+        steel: 25,
+        desk: 10,
+      },
+      defaultX: 3,
+      defaultY: 3,
+    },
+  ],
 };
-Object.defineProperty(store, "unit", {
-  get() {
-    if (this.u && this.u.x) return this.u;
-    else return false;
-  },
-  set(unit) {
-    if (this.u) {
-      this.u.active = false;
-      let vueUnit = this.vue.selfUnits.find(el => el.id === this.u.id);
-      if (vueUnit) vueUnit.active = false;
-      if (this.u.ground) this.u.ground.tint = 0xffffff;
-    }
-    if (unit) {
-      unit.active = true;
-      let vueUnit = this.vue.selfUnits.find(el => el.id === unit.id);
-      if (vueUnit) vueUnit.active = true;
-      console.log(vueUnit);
-      if (unit.ground) unit.ground.tint = 0x99ff99;
-    }
-    this.u = unit;
-  },
-});
 
 export { store };

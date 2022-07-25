@@ -1,309 +1,345 @@
 <template>
   <div class="main_view">
-    <audio
-      src="./assets/sounds/main_theme.mp3"
-      style="position:absolute;top:-999px"
-      autoplay
-      ref="audio"
-      loop
-    ></audio>
-    <transition-group tag="div" class="main_view" mode="out-in" name="fade">
-      <canvas
-        v-show="socket.status === 'playing'"
-        id="canvas1"
-        key="0"
-      ></canvas>
-
-      <coin key="9" :yourTurn="whoTurn === socket.id" />
+    <div class="resources">
+      <div class="resource" v-for="(count, name) in resources" :key="name">
+        <img :src="require(`./assets/${name}.png`)" /> {{ count }}
+      </div>
+    </div>
+    <div class="buttons">
       <div
-        class="waiting"
-        :key="1"
-        v-if="socket.status === 'waiting' && !choose"
+        class="button"
+        v-for="item in objectsOnMap.filter(el => el.type === 'building')"
+        v-if="!spawned.includes(item.name)"
+        :key="item.name"
+        @click="spawnBuild(item.name, item.defaultX, item.defaultY)"
       >
-        <fireText message="searching for players..." />
-      </div>
-      <div key="101" class="room" v-show="roomId">
-        ARENA ID: {{ roomId }},
-        <span v-if="spectator">Who turn: {{ whoTurn }}</span>
-      </div>
-      <div
-        key="202"
-        class="time_turn"
-        v-if="availableTime"
-        style="display:flex;flex-direction:column;align-items:center;left:8px;justify-content:flex-end"
-      >
-        <timer @timerUpdated="timeLeft = $event" :time="availableTime" />
-        <div :style="{ height: timeLeft * 2 + '%' }" class="time_count"></div>
-      </div>
-      <button
-        key="15"
-        style="position:fixed;right:10px;top:10px;font-size:30px"
-        @click="turnPass"
-        v-if="whoTurn === socket.id"
-      >
-        PASS
-      </button>
-      <bottomBar
-        v-if="!spectator"
-        :activeUnit="activeUnit"
-        :selfUnits="selfUnits"
-        :totalCost="totalCost"
-        class="units_bottom"
-        :class="{ hide_bottom }"
-        @select="
-          teleportation($event);
-          tap();
-        "
-        @switch="hide_bottom = !hide_bottom"
-        @activate_skill="
-          tap();
-          activate_skill($event);
-        "
-        key="12"
-      />
-      <div key="440" class="characters" v-if="choose">
-        CHOOSEN:
-        <div class="character_wrapper">
-          <div
-            v-for="(k, i) in choosen"
-            :key="i"
-            style="border: 1px solid rgba(255,255,255,0.2);
-    padding: 5px;
-    border-radius: 5px;
-    font-size: 15px;"
-          >
-            <div>{{ k.name }}</div>
-            <div>{{ k.weapon || "origin" }}</div>
-            <div>{{ k.armor || "origin" }}</div>
-            <div>{{ k.boots || "origin" }}</div>
-          </div>
-        </div>
-        <div class="character_wrapper">
-          <gameCard
-            v-for="(val, key) in units"
-            :strength="val.strength"
-            :img="val.img.name"
-            :name="val.type"
-            :speed="val.speed"
-            :skills="[...val.passive_skills, ...val.active_skills]"
-            :defence_melee="val.defence_melee"
-            :damage="val.damage"
-            :fire_radius="val.fire_radius"
-            :agility="val.agility"
-            :calc_damage="calculatePlus(val, 'damage')"
-            :calc_fire_radius="calculatePlus(val, 'fire_radius')"
-            :calc_agility="calculatePlus(val, 'agility')"
-            :calc_defence_melee="calculatePlus(val, 'defence_melee')"
-            :calc_speed="calculatePlus(val, 'speed')"
-            :calc_strength="calculatePlus(val, 'strength')"
-            :activeWeapon="val.weap"
-            :activeArmor="val.armor"
-            :activeBoots="val.boots"
-            :weapons="
-              Object.keys(items).filter(
-                el =>
-                  items[el].type === 'weapon' &&
-                  val.range === items[el].available
-              )
-            "
-            :armors="Object.keys(items).filter(el => items[el].part === 'body')"
-            :boots="Object.keys(items).filter(el => items[el].part === 'boots')"
-            @weapon="val.weap = $event"
-            @armor="val.armor = $event"
-            @boots="val.boots = $event"
-            @choose="
-              choosen.length < 6
-                ? choosen.push({
-                    name: val.type,
-                    weapon: val.weap,
-                    armor: val.armor,
-                    boots: val.boots,
-                  })
-                  ? tap()
-                  : tap()
-                : ''
-            "
-            :key="key"
-          />
-        </div>
+        <img :src="require(`./assets/${item.name}${item.level}.png`)" />BUILD
+        {{ item.name }} <br />
         <div
-          style="
-    display: flex;
-    flex-direction: column;
-    align-items: center;"
+          class="row center"
+          v-for="(val, key) in item.requirements"
+          :key="key"
         >
-          <input placeholder="nickname" v-model="nickname" />
-          <button
-            @click="
-              onChoose();
-              tap();
-            "
-          >
-            I'M READY
-          </button>
+          <img :src="require(`./assets/${key}.png`)" style="width:20px" />[{{
+            resources[key]
+          }}/{{ val }}]
         </div>
       </div>
-    </transition-group>
+      <div
+        class="button"
+        v-for="(item, name) in itemsPrice"
+        v-if="!inventory.includes(name)"
+        @click="buyItem(name)"
+        :key="name"
+      >
+        <img :src="require(`./assets/${name}.png`)" />create {{ name }} <br />
+        <div class="row center" v-for="(val, key) in item" :key="key">
+          <img :src="require(`./assets/${key}.png`)" style="width:20px" />[{{
+            resources[key]
+          }}/{{ val }}]
+        </div>
+      </div>
+    </div>
+    <div class="inventory">
+      <div class="inventory_title">INVENTORY</div>
+      <div class="inventory_items row center">
+        <div
+          class="inventory_item column center"
+          v-for="item in inventory"
+          :key="item"
+        >
+          <img :src="require(`./assets/${item}.png`)" />{{ item }}
+        </div>
+      </div>
+    </div>
+    <canvas id="canvas1"></canvas>
   </div>
 </template>
 
 <script>
-import { Application, Sprite, Container, Loader, utils } from "pixi.js";
-import { Spine } from "pixi-spine";
-import { initMap, enableInteractiveMap, renderMap } from "./map.js";
-import { store } from "./store.js";
-import { gsap } from "gsap";
-import { initGsap, createAnimatedSprite } from "./utils";
-import { io } from "socket.io-client";
-import timer from "./components/timer.vue";
-import fireText from "./components/fireText.vue";
-import ranger from "./components/range.vue";
-import axios from "axios";
-import coin from "./components/coin.vue";
-import { sound } from "@pixi/sound";
-import bottomBar from "./components/bottom_bar.vue";
-import gameCard from "./components/gameCard.vue";
-import { getUnit } from "./unit.js";
 import {
-  turn_changed,
-  poison_set,
-  poison_hit,
-  attacked,
-  unit_moved,
-  user_leaved,
-  start_game,
-  update_stamina,
-  unit_changed,
-} from "./socket.js";
-for (let i = 0; i < 4; i++) {
-  sound.add("shot_" + i, "./assets/sounds/battle/shots/_" + i + ".wav");
-}
-for (let i = 0; i < 10; i++) {
-  sound.add("sword_" + i, "./assets/sounds/battle/sword/_" + i + ".mp3");
-}
-[
-  "click.wav",
-  "move.mp3",
-  "coin_flip.mp3",
-  "switch_on.wav",
-  "switch_off.wav",
-  "critical.wav",
-].forEach(el => sound.add(el.split(".")[0], "./assets/sounds/" + el));
-
+  Application,
+  Sprite,
+  Container,
+  Polygon,
+  Graphics,
+  Text,
+  AnimatedSprite,
+  Texture,
+  Loader,
+} from "pixi.js";
+import { initMap, enableInteractiveMap } from "./functionality";
+import { BevelFilter } from "@pixi/filter-bevel";
+import { store } from "./store";
+import { gsap } from "gsap";
+import { initGsap } from "./utils";
+let { objectsOnMap, itemsPrice } = store;
 export default {
-  components: { timer, fireText, ranger, coin, bottomBar, gameCard },
   data() {
     return {
-      socket: {},
-      selfUnits: [],
-      items: {},
-      roomId: "",
-      spectator: false,
-      hide_bottom: false,
-      whoTurn: "",
-      whoWait: "",
-      availableTime: "",
-      availableCost: 9,
-      totalCost: 9,
-      health: null,
-      nickname: "",
-      strength: 1,
-      fireMessage: "",
-      choose: true,
-      units: {},
-      choosen: [],
-      timeLeft: 0,
+      objectsOnMap,
+      itemsPrice,
+      resources: {
+        wood: 0,
+        stone: 0,
+        food: 0,
+        desk: 0,
+        steel: 0,
+        fur: 0,
+        leather: 0,
+      },
+      inventory: [],
+      spawned: [],
     };
   },
-  computed: {
-    activeUnit() {
-      return this.selfUnits.find(el => el.active);
-    },
-  },
+  computed: {},
   methods: {
-    tap() {
-      sound.play("click");
-    },
-    activate_skill({ id, skill_id }) {
-      console.log(id, skill_id);
-      this.socket.emit("activate_skill", { id, skill_id });
-    },
-    calculatePlus(unit, key) {
-      let val = [unit.weap, unit.armor, unit.boots]
-        .filter(el => el)
-        .map(el => this.items[el].stats[key])
-        .filter(el => el)
-        .map(el =>
-          typeof el === "number"
-            ? el
-            : Math.round(unit[key] * (Number(el) / 100))
-        )
-        .reduce((a, b) => a + b, 0);
-      return val > 0 ? `+${val}` : val;
-    },
     async teleportation({ x, y, id }) {
-      gsap.to(store.gameScene, {
-        duration: 0.5,
-        x: -x * (170 * store.gameScene.scale.x) + window.innerWidth / 3.5,
-        y: -y * (139 * store.gameScene.scale.y) + window.innerHeight / 5,
-      });
+      x = x - store.cellsInLine / 2;
+      y = y - store.cellsInLine / 2;
+      store.x = x;
+      store.y = y;
+      await this.renderMap();
       if (id) {
-        let unit = store.gameScene.children.find(el => el.id === id);
-        if (unit) store.unit = unit;
-        console.log(this.activeUnit);
+        let tank = store.unitsFromKeys[id];
+        store.unit = tank;
       }
     },
+    getTime(num) {
+      let d = new Date(num);
+      let h = d.getHours();
+      let m = d.getMinutes();
+      let s = d.getSeconds();
+      let str = [h, m, s].map(el => (el < 10 ? "0" + el : el)).join(":");
+      return str;
+    },
 
+    async teleport({ units, garage }) {
+      let ids = units.map(el => el.asset_id).join(":");
+      let location = garage.posX * 100000 + garage.posY;
+      let count = garage.amount * units.length;
+      let memo = `tp:${location}:${ids}`;
+      await teleportTransaction({ memo, count });
+    },
+
+    spawnBuild(name, x, y, resources) {
+      let obj = store.objectsOnMap.find(el => el.name === name);
+      if (!obj) return 0;
+      resources = obj.requirements;
+      for (let key in resources) {
+        console.log(this.resources, resources);
+        if (resources[key] > this.resources[key]) {
+          return;
+        }
+        this.resources[key] -= resources[key];
+      }
+      this.addObjectOnMap({
+        ...obj,
+        x,
+        y,
+        level: 1,
+      });
+      this.spawned.push(obj.name);
+    },
+    buyItem(name) {
+      let resources = store.itemsPrice[name];
+      for (let key in resources) {
+        console.log(this.resources, resources);
+        if (resources[key] > this.resources[key]) {
+          return;
+        }
+        this.resources[key] -= resources[key];
+      }
+      this.inventory.push(name);
+    },
+    async renderMap() {
+      store.visibleZone.forEach(el => store.gameScene.removeChild(el));
+      store.gameScene.children.forEach(el => store.gameScene.removeChild(el));
+      store.visibleZone = [];
+      let date = Date.now();
+      console.log("map ready " + (Date.now() - date));
+      console.log("map rendered " + (Date.now() - date));
+      store.map.flat().forEach((el, i) => this.addSprite(el, i));
+      store.objectsOnMap.forEach(el => this.addObjectOnMap(el));
+    },
+
+    addSprite(target, i) {
+      let index = i;
+      let multipler = (143 - 2) * Math.ceil(i / store.cellsInLine) - 1;
+      let multiplerX = -(256 * Math.floor(i / store.cellsInLine));
+      // let multiplerX = 0;
+      if (multipler === 0) multipler = 200;
+      // if (index === 0) i = 1;
+      i = i % store.cellsInLine;
+      target.x = (i * (256 - 2)) / 2 - 250 + multiplerX / 2 + i;
+      if (i === 0) i = 1;
+      target.y = (i * (143 - 2)) / 2 - 250 + multipler / 2;
+      target.y -= target.height - 143;
+      target.interactive = true;
+      target.buttonMode = true;
+      // if (!target.isSprite) target.zIndex = store.cellsInLine - i;
+      store.gameScene.addChild(target);
+      if (target.unclickable) return 0;
+      target.on("pointerover", e => {
+        let color = 0xff69;
+
+        let filter = new BevelFilter({
+          lightColor: color,
+          thickness: 5,
+          rotation: 0,
+          shadowColor: color,
+          lightAlpha: 1,
+          shadowAlpha: 1,
+        });
+        if (target.obj) target.obj.sprite.filters = [filter];
+        else target.filters = [filter];
+      });
+      target.on("pointerout", e => {
+        target.filters = [];
+        if (target.obj) target.obj.sprite.filters = [];
+      });
+      target.on("pointerup", e => this.clickSprite(target, event));
+      target.hitArea = new Polygon([
+        0,
+        target.height / 2,
+        target.width / 2,
+        0,
+        target.width,
+        target.height / 2,
+        target.width / 2,
+        target.height,
+      ]);
+    },
     async clickSprite(target, event) {
       console.log(target);
-      console.log(utils.TextureCache);
-      if (store.gameScene.blockedUI) return console.log("blocked");
-      sound.play("click");
-      if (!store.unit && target.unit && target.unit.owner === this.socket.id) {
-        store.unit = target.unit;
-        this.availableCost = store.unit.stamina;
-        this.health = store.unit.health;
-        this.strength = store.unit.strength;
+      if (target.timeout) return 0;
+      let { type } = target;
+      if (["forrest", "mountain", "lake"].includes(type)) {
+        gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });
+        target.timeout = setTimeout(() => {
+          gsap.to(target.sprite, { alpha: 1, duration: 0.5 });
+          target.timeout = null;
+        }, 2000);
+        let count = 200;
+        if (type === "forrest") {
+          if (this.inventory.includes("axe")) {
+            target.mine("axe");
+            count = 10;
+          }
+          this.resources.wood += count;
+        }
+        if (type === "mountain") {
+          if (this.inventory.includes("pickaxe")) {
+            target.mine("pickaxe");
+            count = 10;
+          }
+          this.resources.stone += count;
+          this.resources.desk += count;
+          this.resources.steel += count;
+        }
+        if (type === "lake") this.resources.food += count;
       }
-      if (store.unit && target.unit) {
-        if (store.unit.owner !== target.unit.owner)
-          return this.socket.emit("attack", {
-            id: store.unit.id,
-            target_id: target.unit.id,
-            target_owner: target.unit.owner,
-          });
-        else {
-          store.unit = target.unit;
-          this.availableCost = store.unit.stamina;
-          this.health = store.unit.health;
-          this.strength = store.unit.strength;
+      if (target.name === "sawmill") {
+        if (this.resources.wood / 5 >= 1) {
+          await target.obj.shuffle();
+          this.resources.desk += Math.floor(this.resources.wood / 5);
+          this.resources.wood = this.resources.wood % 5;
+          target.obj.alphaCounter("+ 1 desk");
         }
       }
-      if (store.unit && !target.unit)
-        return this.socket.emit("move_unit", {
-          id: store.unit.id,
-          x: target.posX,
-          y: target.posY,
+    },
+    async addObjectOnMap(el) {
+      if (!el.x || !el.y) return 0;
+      let container = new Container();
+      let sprite = new Sprite(
+        store.app.loader.resources[`./assets/${el.name}${el.level}.png`].texture
+      );
+      const filter = new PIXI.Filter();
+      let ground = store.map[el.y][el.x];
+      ground.obj = container;
+      container.ground = ground;
+      container.addChild(sprite);
+      container.scale.x = ground.height / sprite.height;
+      container.scale.y = ground.height / sprite.height;
+      if (el.scaled) {
+        container.scale.x *= el.scaled;
+        container.scale.y *= el.scaled;
+      }
+      let x = ground.x;
+      let y = ground.y;
+      x += (ground.width - container.width) / 2;
+      y += (ground.height - container.height) / 2 - ground.height / 6;
+      container.y = y - 200;
+      container.x = x;
+      container.alpha = 0;
+      container.sprite = sprite;
+      container.type = el.type;
+      container.name = el.name;
+      container.shuffle = async function() {
+        await gsap.to(this.sprite.scale, { duration: 0.3, x: 0.95, y: 1.05 });
+        await gsap.to(this.sprite.scale, { duration: 0.2, x: 1.05, y: 0.95 });
+        await gsap.to(this.sprite.scale, { duration: 0.1, x: 1, y: 1 });
+      };
+      container.alphaCounter = async function(
+        text = "+1",
+        color = 0xeeeeee,
+        delay = 0
+      ) {
+        let options = {
+          fill: color,
+          fontFamily: "gothic",
+          fontSize: 25,
+        };
+        if (delay) {
+          options = {
+            ...options,
+            ...{
+              align: "center",
+              breakWords: true,
+              padding: 16,
+              trim: true,
+              fontSize: 25 - text.length / 5,
+              wordWrapWidth: 100,
+              stroke: "#333",
+              strokeThickness: 4,
+            },
+          };
+        }
+        if (/\p{Extended_Pictographic}/u.test(text)) options.fontSize = 55;
+        let node = new Text(text, options);
+        node.zIndex = 12;
+        this.addChild(node);
+        node.x = 40;
+        if (delay) {
+          node.x = 40 - text.length * 1.5;
+        }
+        node.y = 40;
+        await gsap.to(node, { y: 0, alpha: 0, duration: 2, delay });
+        this.removeChild(node);
+      };
+      ground.type = el.type;
+      ground.name = el.name;
+      if (el.type === "building") {
+        let text = new Text(el.name, {
+          fontSize: 22,
+          fontFamily: "gothic",
+          fill: "#ffaf00",
+          stroke: "#333",
+          strokeThickness: 4,
         });
+        container.addChild(text);
+        text.x = (ground.width - text.width) / 2;
+        text.y -= text.height;
+      }
+      store.gameScene.addChild(container);
+      await gsap.to(container, { duration: 0.5, alpha: 1, y });
+      console.log(el);
+      if (el.advice) {
+        console.log(el.advice);
+        container.alphaCounter(el.advice);
+      }
     },
-    turnPass() {
-      this.socket.emit("turn_pass");
-    },
-    onChoose() {
-      this.socket.emit("choose", {
-        units: this.choosen,
-        nickname: this.nickname,
-      });
-      this.choose = false;
-    },
-    sound() {
-      return sound;
-    },
-
     initPixi() {
-      window.addEventListener("click", () => {
-        this.$refs.audio.play();
-      });
       const vm = this;
       initGsap();
       const app = new Application({
@@ -314,6 +350,8 @@ export default {
         autoDensity: true,
         view: document.getElementById("canvas1"),
       });
+      store.app = app;
+      console.log("wowo");
 
       store.gameScene = new Container();
       store.gameScene.sortableChildren = true;
@@ -324,111 +362,58 @@ export default {
       store.gameScene.scale.x = 0.8;
       app.stage.addChild(store.gameScene);
       app.stage.sortableChildren = true;
-      app.renderer.backgroundColor = "0x202020";
+      app.renderer.backgroundColor = "0x009999";
       app.renderer.autoResize = true;
-
-      setup();
+      app.loader
+        .add(
+          [
+            store.top,
+            store.bottom,
+            store.left,
+            store.right,
+            store.center,
+          ].reduce((acc, el) => {
+            for (let i = 0; i < el.split("-")[1]; i++) {
+              let path = `./assets/${el.split("-")[0]}${i + 1}.png`;
+              if (!acc.includes(path)) acc.push(path);
+            }
+            return acc;
+          }, [])
+        )
+        .add(store.objectsOnMap.map(el => `./assets/${el.name}${el.level}.png`))
+        .add("gothic", "./assets/gothic.otf")
+        .load(setup);
+      console.log(store.app.loader.resources);
       function setup() {
-        store.map = initMap([], store.id, store.allMapCount);
-        renderMap(store, vm.clickSprite);
+        store.map = initMap("", store, store.allMapCount);
+        vm.renderMap();
         enableInteractiveMap(
           document.querySelector("canvas"),
           store.gameScene,
-          () => renderMap(store, vm.clickSprite),
+          vm.renderMap,
           vm
         );
-        let url = undefined;
-        if (window.location.href.includes("localhost"))
-          url = "ws://localhost:8080";
-        const socket = io(url);
-        socket.status = "waiting";
-        console.log(store.vue);
-        vm.socket = socket;
-        let hash = window.location.hash.slice(1);
-        if (hash) {
-          socket.emit("join", {
-            roomId: hash,
-          });
-        }
-        socket.on("start_game", data => {
-          gsap.to(vm.$refs.audio, { volume: 0.15, duration: 0.5 });
-          vm.socket.status = "playing";
-          vm.roomId = data.roomId;
-          vm.spectator = data.spectator;
-          history.pushState(null, null, `#${data.roomId}`);
-          data.self.forEach(el => {
-            el.self = true;
-            el.active = false;
-          });
-          vm.selfUnits = data.self;
-          console.log(vm.selfUnits);
-          [...data.self, ...data.enemy].forEach(el => {
-            let hero = getUnit(
-              el,
-              el.x,
-              el.y,
-              el.x > 14 ? -0.2 : 0.2,
-              el.nickname || vm.socket.id
-            );
-            store.gameScene.addChild(hero);
-          });
-          vm.choose = false;
+        window.addEventListener("resize", e => {
+          app.renderer.resize(window.innerWidth, window.innerHeight);
         });
-        socket.on("user_leaved", user_leaved);
-        socket.on("unit_moved", unit_moved);
-        socket.on("update_stamina", update_stamina);
-        socket.on("attacked", attacked);
-        socket.on("poison_set", poison_set);
-        socket.on("poison_hit", poison_hit);
-        socket.on("turn_changed", turn_changed);
-        socket.on("unit_changed", unit_changed);
+        document.querySelector("canvas").addEventListener("contextmenu", e => {
+          e.preventDefault();
+        });
+        document.addEventListener(
+          "contextmenu",
+          e => {
+            e.preventDefault();
+            e.stopPropagation();
+          },
+          true
+        );
       }
-
-      window.addEventListener("resize", e => {
-        app.renderer.resize(window.innerWidth, window.innerHeight);
-      });
-      document.querySelector("canvas").addEventListener("contextmenu", e => {
-        e.preventDefault();
-      });
     },
   },
-  watch: {
-    hide_bottom() {
-      if (this.hide_bottom) sound.play("switch_off");
-      else sound.play("switch_on");
-    },
-  },
-  async mounted() {
+  mounted() {
+    this.initPixi();
     store.vue = this;
-    let url = "";
-    if (window.location.href.includes("localhost"))
-      url = "http://localhost:8080";
-    let r = await axios.post(url + "/units_templates");
-    Object.values(r.data.units).forEach(el => {
-      el.weap = "";
-      el.active = false;
-      (el.armor = ""), (el.boots = "");
-    });
-    let loader = new Loader();
-    store.loader = loader;
-    loader
-      .add("./assets/hits/0.png")
-      .add("./assets/hits/1.png")
-      .add("./assets/hits/2.png")
-      .add("./assets/blood.png")
-      .add("./assets/teleport.png")
-      .add([
-        ...Object.values(r.data.units).reduce((acc, unit) => {
-          if (!unit.img) return acc;
-          ["idle", "attack", "hurt", "run", "death"].forEach(key => {
-            acc.push(`./assets/characters/${unit.img.name}/${key}.png`);
-          });
-          return acc;
-        }, []),
-      ])
-      .load(() => this.initPixi());
-    this.units = r.data.units;
-    this.items = r.data.items;
+    console.log("wowo");
   },
 };
 </script>

@@ -36,10 +36,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.scss$/,
-        use: ["vue-style-loader", "css-loader", "sass-loader"],
-      },
       // {
       //   test: /\.(png|jpg|gif|mp3|ttf|svg)$/i,
       //   use: [
@@ -55,7 +51,7 @@ module.exports = {
       //   ],
       // },
       {
-        test: /\.(png|jpg|jpeg|gif|mp3|ttf|svg)$/i,
+        test: /\.(png|jpg|jpeg|gif|mp3|ttf|svg|otf)$/i,
         use: [
           {
             loader: "file-loader",
