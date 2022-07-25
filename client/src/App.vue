@@ -13,8 +13,11 @@
         :key="item.name"
         @click="spawnBuild(item.name, item.defaultX, item.defaultY)"
       >
-        <img :src="require(`./assets/${item.name}${item.level}.png`)" />BUILD
-        {{ item.name }} <br />
+        <img :src="require(`./assets/${item.name}${item.level}.png`)" /><span
+          class="item_name"
+          >BUILD {{ item.name }}</span
+        >
+        <br />
         <div
           class="row center"
           v-for="(val, key) in item.requirements"
@@ -32,7 +35,9 @@
         @click="buyItem(name)"
         :key="name"
       >
-        <img :src="require(`./assets/${name}.png`)" />create {{ name }} <br />
+        <img :src="require(`./assets/${name}.png`)" /><span class="item_name"
+          >create {{ name }} </span
+        ><br />
         <div class="row center" v-for="(val, key) in item" :key="key">
           <img :src="require(`./assets/${key}.png`)" style="width:20px" />[{{
             resources[key]
@@ -196,6 +201,7 @@ export default {
     async clickSprite(target, event) {
       console.log(target);
       if (target.timeout) return 0;
+      if (store.gameScene.blockedUI) return 0;
       let { type } = target;
       if (["forrest", "mountain", "lake"].includes(type)) {
         gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });
@@ -203,7 +209,7 @@ export default {
           gsap.to(target.sprite, { alpha: 1, duration: 0.5 });
           target.timeout = null;
         }, 2000);
-        let count = 4;
+        let count = 400;
         if (type === "forrest") {
           if (this.inventory.includes("axe")) {
             target.mine("axe");

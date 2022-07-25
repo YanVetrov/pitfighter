@@ -48,7 +48,7 @@ body {
 .buttons{
   position: fixed;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   bottom:20px;
   color: gold;
@@ -103,10 +103,13 @@ body {
     transform: scale(0.5) translate(51px, -44px);
   }
   .buttons{
-    transform: scale(0.6) translate(-344px, 69px);
+    transform: scale(0.6) translate(0px, 87px);
   }
   .resources{
     transform: scale(0.5) translate(-275px, -44px);
+  }
+  .item_name{
+    display: none;
   }
 
 }
