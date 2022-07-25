@@ -62,12 +62,38 @@ function initMap(arr, store, count) {
   console.log(map);
   return map;
 }
-
-async function enableInteractiveMap(target, zone, renderMap, vue) {
+function centeringMap(zone, store, options) {
+  zone.blocked = true;
+  let winHeight = window.innerHeight;
+  let winWidth = window.innerWidth;
+  let mapHeight = store.groundHeight * zone.scale.y * store.countLines;
+  let mapWidth = store.groundWidth * zone.scale.x * store.cellsInLine;
+  if (!options)
+    options = {
+      x:
+        Math.abs(store.map[store.countLines - 1][0].x * zone.scale.x) +
+        (winWidth - mapWidth) / 2,
+      y: Math.abs(store.map[0][0].y * zone.scale.y),
+    };
+  gsap
+    .to(zone, {
+      duration: 0.5,
+      ...options,
+    })
+    .then(() => (zone.blocked = false));
+}
+async function enableInteractiveMap(target, zone, store) {
   target.addEventListener("mousewheel", e => {
+    if (zone.blocked) return 0;
     let { x, y } = zone.scale;
     let k = 1.02;
+    let winHeight = window.innerHeight;
+    let winWidth = window.innerWidth;
+    let mapHeight = store.groundHeight * zone.scale.y * store.countLines;
+    let mapWidth = store.groundWidth * zone.scale.x * store.cellsInLine;
     if (e.deltaY > 0 && x > 0.3) {
+      console.log(winHeight, mapHeight);
+      if (winHeight > mapHeight) return centeringMap(zone, store);
       zone.y +=
         ((store.cellsInLine * (150 - 2)) / 2) * zone.scale.y * (1 - 1 / k);
       zone.scale.x /= k;
@@ -120,6 +146,7 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
     }
   });
   target.addEventListener("touchmove", e => {
+    if (zone.blocked) return 0;
     let { x, y } = zone.scale;
     if (e.targetTouches.length < 2) {
       if (zone.blockedMultitouch) return 0;
@@ -151,8 +178,12 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
       var diff1 = leftFinger.clientX - tpCache.leftFinger.clientX;
       var diff2 = tpCache.rightFinger.clientX - rightFinger.clientX;
       let diff = -(diff1 + diff2);
-
+      let winHeight = window.innerHeight;
+      let winWidth = window.innerWidth;
+      let mapHeight = store.groundHeight * zone.scale.y * store.countLines;
+      let mapWidth = store.groundWidth * zone.scale.x * store.cellsInLine;
       if ((diff > 0 && x < 1.5) || (diff < 0 && x > 0.4)) {
+        if (winHeight > mapHeight) return centeringMap(zone, store);
         zone.scale.x += diff / 300;
         zone.scale.y += diff / 300;
         zone.x -= diff;
@@ -170,6 +201,7 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
     zone.dragX = null;
     zone.dragY = null;
     tpCache = {};
+    detectOverMap(zone, store);
     setTimeout(() => {
       zone.blockedUI = false;
       zone.blockedMultitouch = false;
@@ -180,7 +212,30 @@ async function enableInteractiveMap(target, zone, renderMap, vue) {
     zone.dragX = null;
     zone.dragY = null;
     setTimeout(() => (zone.blockedUI = false), 100);
+    detectOverMap(zone, store);
   });
 }
-
+function detectOverMap(zone, store) {
+  let winHeight = window.innerHeight;
+  let winWidth = window.innerWidth;
+  let mapHeight = store.groundHeight * zone.scale.y * store.countLines;
+  let mapWidth = store.groundWidth * zone.scale.x * store.cellsInLine;
+  let left = Math.abs(store.map[store.countLines - 1][0].x * zone.scale.x);
+  let right =
+    left -
+    Math.abs(
+      window.innerWidth - store.groundWidth * store.cellsInLine * zone.scale.x
+    );
+  let top = Math.abs(store.map[0][0].y * zone.scale.y);
+  let bottom =
+    top -
+    Math.abs(
+      window.innerHeight - store.groundHeight * store.countLines * zone.scale.y
+    );
+  if (zone.x > left) centeringMap(zone, store, { x: left });
+  if (zone.x < right) centeringMap(zone, store, { x: right });
+  if (zone.y > top) centeringMap(zone, store, { y: top });
+  if (zone.y < bottom) centeringMap(zone, store, { y: bottom });
+  if (mapWidth < winWidth) centeringMap(zone, store);
+}
 export { initMap, enableInteractiveMap };

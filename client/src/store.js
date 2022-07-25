@@ -14,6 +14,8 @@ let store = {
   visibleZone: [],
   defaultPosX: 800,
   defaultPosY: 250,
+  groundWidth: 256,
+  groundHeight: 143,
   vue: {},
   itemsPrice: {
     pickaxe: {

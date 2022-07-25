@@ -94,17 +94,6 @@ export default {
   },
   computed: {},
   methods: {
-    async teleportation({ x, y, id }) {
-      x = x - store.cellsInLine / 2;
-      y = y - store.cellsInLine / 2;
-      store.x = x;
-      store.y = y;
-      await this.renderMap();
-      if (id) {
-        let tank = store.unitsFromKeys[id];
-        store.unit = tank;
-      }
-    },
     getTime(num) {
       let d = new Date(num);
       let h = d.getHours();
@@ -114,23 +103,15 @@ export default {
       return str;
     },
 
-    async teleport({ units, garage }) {
-      let ids = units.map(el => el.asset_id).join(":");
-      let location = garage.posX * 100000 + garage.posY;
-      let count = garage.amount * units.length;
-      let memo = `tp:${location}:${ids}`;
-      await teleportTransaction({ memo, count });
-    },
-
     spawnBuild(name, x, y, resources) {
       let obj = store.objectsOnMap.find(el => el.name === name);
       if (!obj) return 0;
       resources = obj.requirements;
+      if (
+        Object.keys(resources).some(key => resources[key] > this.resources[key])
+      )
+        return 0;
       for (let key in resources) {
-        console.log(this.resources, resources);
-        if (resources[key] > this.resources[key]) {
-          return;
-        }
         this.resources[key] -= resources[key];
       }
       this.addObjectOnMap({
@@ -143,11 +124,12 @@ export default {
     },
     buyItem(name) {
       let resources = store.itemsPrice[name];
+      if (
+        Object.keys(resources).some(key => resources[key] > this.resources[key])
+      )
+        return 0;
       for (let key in resources) {
         console.log(this.resources, resources);
-        if (resources[key] > this.resources[key]) {
-          return;
-        }
         this.resources[key] -= resources[key];
       }
       this.inventory.push(name);
@@ -165,15 +147,16 @@ export default {
 
     addSprite(target, i) {
       let index = i;
-      let multipler = (143 - 2) * Math.ceil(i / store.cellsInLine) - 1;
-      let multiplerX = -(256 * Math.floor(i / store.cellsInLine));
+      let multipler =
+        (store.groundHeight - 2) * Math.ceil(i / store.cellsInLine) - 1;
+      let multiplerX = -(store.groundWidth * Math.floor(i / store.cellsInLine));
       // let multiplerX = 0;
       if (multipler === 0) multipler = 200;
       // if (index === 0) i = 1;
       i = i % store.cellsInLine;
-      target.x = (i * (256 - 2)) / 2 - 250 + multiplerX / 2 + i;
+      target.x = (i * (store.groundWidth - 2)) / 2 - 250 + multiplerX / 2 + i;
       if (i === 0) i = 1;
-      target.y = (i * (143 - 2)) / 2 - 250 + multipler / 2;
+      target.y = (i * (store.groundHeight - 2)) / 2 - 250 + multipler / 2;
       target.y -= target.height - 143;
       target.interactive = true;
       target.buttonMode = true;
@@ -220,22 +203,20 @@ export default {
           gsap.to(target.sprite, { alpha: 1, duration: 0.5 });
           target.timeout = null;
         }, 2000);
-        let count = 200;
+        let count = 4;
         if (type === "forrest") {
           if (this.inventory.includes("axe")) {
             target.mine("axe");
-            count = 10;
+            count = 12;
           }
           this.resources.wood += count;
         }
         if (type === "mountain") {
           if (this.inventory.includes("pickaxe")) {
             target.mine("pickaxe");
-            count = 10;
+            count = 12;
           }
           this.resources.stone += count;
-          this.resources.desk += count;
-          this.resources.steel += count;
         }
         if (type === "lake") this.resources.food += count;
       }
@@ -244,7 +225,23 @@ export default {
           await target.obj.shuffle();
           this.resources.desk += Math.floor(this.resources.wood / 5);
           this.resources.wood = this.resources.wood % 5;
-          target.obj.alphaCounter("+ 1 desk");
+          target.obj.alphaCounter("🪵");
+        }
+      }
+      if (target.name === "quarry") {
+        if (this.resources.stone / 8 >= 1) {
+          await target.obj.shuffle();
+          this.resources.steel += Math.floor(this.resources.stone / 8);
+          this.resources.stone = this.resources.stone % 8;
+          target.obj.alphaCounter("🪨");
+        }
+      }
+      if (target.name === "camp") {
+        if (this.resources.food / 3 >= 1) {
+          await target.obj.shuffle();
+          this.resources.leather += Math.floor(this.resources.food / 3);
+          this.resources.food = this.resources.food % 3;
+          target.obj.alphaCounter("🍖");
         }
       }
     },
@@ -390,8 +387,7 @@ export default {
         enableInteractiveMap(
           document.querySelector("canvas"),
           store.gameScene,
-          vm.renderMap,
-          vm
+          store
         );
         window.addEventListener("resize", e => {
           app.renderer.resize(window.innerWidth, window.innerHeight);
