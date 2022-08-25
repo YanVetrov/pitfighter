@@ -2,90 +2,113 @@
   font-family: "gothic";
   src: url("./assets/gothic.otf") format("opentype");
 }
-*{
-  transition:all .2s ease;
-  margin:0;
-  padding:0;
+
+* {
+  transition: all .2s ease;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-family: gothic;
 }
-.row{
-  display:flex;
+
+.row {
+  display: flex;
 }
-.column{
-  display:flex;
+
+.column {
+  display: flex;
   flex-direction: column;
 }
-.center{
-  justify-content:center;
-  align-items:center;
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
-.resources{
+
+.resources {
   position: fixed;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-size: 26px;
-    color: silver;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 26px;
+  color: silver;
 }
-.resource{
-  margin:5px;
-  padding:5px;
-  display:flex;
+
+.resource {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
   align-items: center;
   border: 3px solid #33efaa;
   border-radius: 5px;
   background: radial-gradient(gray, black);
 }
-.resource>img{
-  width:30px;
-  margin-right:20px;
+
+.resource>img {
+  width: 30px;
+  margin-right: 20px;
 }
-.buttons{
+
+.buttons {
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  bottom:20px;
+  bottom: 20px;
   color: gold;
 }
-.button{
-  padding:15px;
-  border: 3px solid rgba(230,150,0,0.5);
+
+.button {
+  padding: 15px;
+  border: 3px solid rgba(230, 150, 0, 0.5);
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 10px;
-  background:rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
   justify-content: center;
   text-align: center;
-  margin:0 15px;
+  margin: 0 15px;
+  position:relative;
 }
-.button:hover{
-  transform:scale(1.05);
-  background:rgba(0,0,0,0.7);
-  cursor:pointer;
-  box-shadow:1px 1px 10px black;
+.buy_button{
+  position: absolute;
+    right: 0;
+    top: 5px;
+    padding: 5px 15px;
+    color: gray;
+    font-size: 9px;
 }
-.button>img{
+.button:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  box-shadow: 1px 1px 10px black;
+}
+
+.button>img {
   width: 50px;
 }
-.inventory{
+.button .list img {
+  width: 100px;
+}
+.inventory {
   position: fixed;
   right: 0;
   color: silver;
   text-align: center;
 }
-.inventory_title{
-  
-}
-.inventory_item{
+
+.inventory_title {}
+
+.inventory_item {
   font-size: 10px;
   padding: 5px;
   margin: 5px;
@@ -93,23 +116,203 @@ body {
   border-radius: 5px;
   background: radial-gradient(gray, black);
 }
-.inventory_item>img{
+
+.inventory_item>img {
   width: 50px;
   margin: 0px 0px 11px 0;
 }
 
-@media screen and (max-width:899px){
-  .inventory{
+.login_view {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #003333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_title {
+  color: bisque;
+  text-shadow: 1px 1px 20px black;
+  font-size: 52px;
+  margin: 15px;
+  animation: shadow 5s infinite alternate-reverse;
+}
+
+.login_view input {
+  border: 3px solid silver;
+  border-radius: 5px;
+  font-size: 25px;
+  background: cadetblue;
+  margin: 5px;
+  color: white;
+  padding: 10px;
+}
+
+.login_view .button {
+  background: cadetblue;
+  font-size: 20px;
+  margin: 44px;
+  color: navajowhite;
+}
+
+.menu_wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  width: 80%;
+  height: 90%;
+  border: 1px solid gold;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.menu_tabs {
+  display: flex;
+  padding: 20px 51px;
+  color: silver;
+  position: relative;
+}
+
+.tab_active {
+  background: gold;
+  border-radius: 5px;
+  color: darkslategray;
+}
+
+.menu_tab {
+  margin-right: 15px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+}
+
+.menu_tab:hover {
+  color: white;
+  border-color: gold;
+  cursor: pointer;
+}
+
+.list {
+  flex-wrap: wrap;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.list .button {
+  color: antiquewhite;
+  margin-top: 10px;
+  width: 200px;
+}
+.wallet_info{
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  padding:0 10px;
+}
+.coins{
+  margin-left: 15px;
+  font-size: 17px;
+}
+.coins img{
+  width: 20px;
+  margin-right:5px;
+}
+.list{
+  overflow-y: scroll;
+    height: 89%;
+}
+.profit{
+  display: flex;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid rgba(255,255,255,0.2);
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 60%;
+    color:goldenrod;
+}
+.profit img{
+  width:20px;
+  margin-right:10px;
+}
+.aim_mode{
+  position: fixed;
+  top: 72px;
+  color: white;
+    text-shadow: 2px 2px 5px black;
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 20px;
+}
+.list_item{
+
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.8);
+}
+.acc-enter,
+.acc-leave-to {
+  opacity: 0;
+  height:0;
+}
+.common{
+  border-color: silver;
+}
+.uncommon{
+  border-color: burlywood;
+}
+.rare{
+  border-color: cadetblue;
+}
+.epic{
+  border-color: darkblue;
+}
+.legendary{
+  border-color: darkorange;
+}
+.heroic{
+  border-color:blueviolet;
+}
+@keyframes shadow {
+  100% {
+    text-shadow: 1px -10px 15px navajowhite;
+  }
+}
+
+@media screen and (max-width:899px) {
+  .inventory {
     transform: scale(0.5) translate(51px, -44px);
   }
-  .buttons{
-    transform: scale(0.6) translate(0px, 87px);
+
+  .buttons {
+    transform: scale(0.6) translate(-250px, 44px);
   }
-  .resources{
-    transform: scale(0.5) translate(-275px, -44px);
+
+  .resources {
+    transform: scale(0.5) translate(-211px, -43px);
   }
-  .item_name{
-    display: none;
+  .menu_tab{
+    font-size: 10px;
+  }
+  .list{
+    height: 83%;
   }
 
 }

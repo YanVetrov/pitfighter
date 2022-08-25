@@ -11,26 +11,25 @@ function initMap(arr, store, count) {
     let max = store.center.split("-")[1];
     let spriteName = store.center.split("-")[0];
     let container = new Container();
-    if (y < 1) {
+    if (y < store.unplayableCount) {
       spriteName = store.top.split("-")[0];
       max = store.top.split("-")[1];
     }
-    if (y >= multiplier - 1) {
+    if (y >= multiplier - store.unplayableCount) {
       spriteName = store.bottom.split("-")[0];
       max = store.bottom.split("-")[1];
     }
-    if (x < 1) {
+    if (x < store.unplayableCount) {
       spriteName = store.left.split("-")[0];
       max = store.left.split("-")[1];
     }
-    if (x >= multiplier - 1) {
+    if (x >= multiplier - store.unplayableCount) {
       spriteName = store.right.split("-")[0];
       max = store.right.split("-")[1];
     }
     let random = Math.ceil(Math.random() * max);
     let name = arr[random];
     let sprite;
-    console.log(`./assets/${spriteName}${random}.png`);
     sprite = new Sprite(
       store.app.loader.resources[`./assets/${spriteName}${random}.png`].texture
     );
@@ -39,7 +38,7 @@ function initMap(arr, store, count) {
     container.posY = y;
     container.type = spriteName;
     container.sprite = sprite;
-    container.mine = async function(name) {
+    container.mine = async function (name) {
       let sprite = Sprite.from(`./assets/${name}.png`);
       sprite.scale.x = 0.3;
       sprite.scale.y = 0.3;
@@ -73,7 +72,7 @@ function centeringMap(zone, store, options) {
       x:
         Math.abs(store.map[store.countLines - 1][0].x * zone.scale.x) +
         (winWidth - mapWidth) / 2,
-      y: Math.abs(store.map[0][0].y * zone.scale.y),
+      y: -((mapHeight - winHeight) / 3),
     };
   gsap
     .to(zone, {
@@ -93,7 +92,7 @@ async function enableInteractiveMap(target, zone, store) {
     let mapWidth = store.groundWidth * zone.scale.x * store.cellsInLine;
     if (e.deltaY > 0 && x > 0.3) {
       console.log(winHeight, mapHeight);
-      if (winHeight > mapHeight) return centeringMap(zone, store);
+      if (winHeight > mapHeight - store.groundHeight * store.unplayableCount * 2) return centeringMap(zone, store);
       zone.y +=
         ((store.cellsInLine * (150 - 2)) / 2) * zone.scale.y * (1 - 1 / k);
       zone.scale.x /= k;
@@ -238,4 +237,4 @@ function detectOverMap(zone, store) {
   if (zone.y < bottom) centeringMap(zone, store, { y: bottom });
   if (mapWidth < winWidth) centeringMap(zone, store);
 }
-export { initMap, enableInteractiveMap };
+export { initMap, enableInteractiveMap, centeringMap };

@@ -2,10 +2,11 @@ let store = {
   app: null,
   gameScene: null,
   blockedUI: false,
-  cellsInLine: 8,
-  countLines: 8,
+  cellsInLine: 12,
+  countLines: 12,
   map: [],
-  allMapCount: 64,
+  allMapCount: 12 * 12,
+  unplayableCount: 3,
   left: "mountain-3",
   top: "forrest-3",
   right: "forrest-3",
@@ -31,53 +32,8 @@ let store = {
     //   stone: 5,
     // },
   },
-  objectsOnMap: [
-    {
-      type: "building",
-      name: "sawmill",
-      level: 1,
-      advice: "click to create woods",
-      requirements: {
-        wood: 35,
-        stone: 35,
-      },
-      defaultX: 4,
-      defaultY: 2,
-    },
-    {
-      type: "building",
-      name: "quarry",
-      level: 1,
-      requirements: {
-        wood: 55,
-        desk: 10,
-      },
-      defaultX: 2,
-      defaultY: 4,
-    },
-    {
-      type: "building",
-      name: "camp",
-      level: 1,
-      requirements: {
-        wood: 25,
-        stone: 25,
-      },
-      defaultX: 5,
-      defaultY: 5,
-    },
-    {
-      type: "building",
-      name: "workshop",
-      level: 1,
-      requirements: {
-        steel: 25,
-        desk: 10,
-      },
-      defaultX: 3,
-      defaultY: 3,
-    },
-  ],
+  objectsOnMap: [],
+  selfBuildings: {},
 };
 
 export { store };
