@@ -100,7 +100,8 @@ let tabs = [
 ];
 let { objectsOnMap, itemsPrice } = store;
 let domain = "";
-if (window.location.href.includes("localhost")) domain = "ws://localhost:8080";
+if (window.location.href.includes("localhost"))
+  domain = "http://localhost:8080";
 export default {
   components: { buildings, menuWrapper, items },
   data() {
