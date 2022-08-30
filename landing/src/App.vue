@@ -365,10 +365,10 @@
             :autoplayTimeout="timeout"
             :perPage="1"
           >
-            <slide> <img src="./assets/slide1.webp" /> </slide>
-            <slide> <img src="./assets/slide2.webp" /> </slide>
+            <slide> <img src="./assets/slide1.png" /> </slide>
+            <!-- <slide> <img src="./assets/slide2.webp" /> </slide>
             <slide> <img src="./assets/slide3.webp" /> </slide>
-            <slide> <img src="./assets/slide4.webp" /> </slide>
+            <slide> <img src="./assets/slide4.webp" /> </slide> -->
           </carousel>
         </div>
       </div>
@@ -472,20 +472,15 @@
             <div class="token_title">nft crates</div>
             <div class="crates_row" style="position: relative">
               <crate
-                crate="crate1"
+                crate="build1"
                 @open="crateText = true"
-                openCrate="opencrate1"
+                openCrate="build1"
                 :preShake="true"
               />
               <crate
-                crate="crate2"
+                crate="build2"
                 @open="crateText = true"
-                openCrate="opencrate2"
-              />
-              <crate
-                crate="crate3"
-                @open="crateText = true"
-                openCrate="opencrate3"
+                openCrate="build2"
               />
             </div>
             <transition name="fade">
@@ -547,23 +542,15 @@
             v-for="(k, i) in roadmap"
             :key="k"
           >
-            <img :src="require(`./assets/roadmap${i + 1}.webp`)" />
-            <div class="road_title">{{ k.title }}</div>
-            <div
-              class="road_descr"
-              v-html="k.content.replace(/\./g, '<br/>')"
-            ></div>
+            <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+            <div class="road_descr"></div>
           </div>
         </div>
         <div class="row center roadmap_row_mobile">
           <carousel :autoplay="false" :autoplayTimeout="timeout" :perPage="1">
             <slide class="road" v-for="(k, i) in roadmap" :key="k">
-              <img :src="require(`./assets/roadmap${i + 1}.webp`)" />
-              <div class="road_title">{{ k.title }}</div>
-              <div
-                class="road_descr"
-                v-html="k.content.replace(/\./g, '<br/>')"
-              ></div>
+              <img :src="require(`./assets/roadmap${i + 1}.png`)" />
+              <div class="road_descr"></div>
             </slide>
           </carousel>
         </div>

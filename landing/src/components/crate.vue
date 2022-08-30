@@ -3,7 +3,7 @@
     <img
       @animationend="shake = false"
       :class="{ shake }"
-      :src="require(`../assets/${open ? openCrate : crate}.webp`)"
+      :src="require(`../assets/${open ? openCrate : crate}.png`)"
       class="crate_img"
     />
     <img src="../assets/shield.webp" class="shield" />
