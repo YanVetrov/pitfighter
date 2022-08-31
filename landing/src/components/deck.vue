@@ -17,7 +17,7 @@
         transform: `translate(${k.id * 10}px,${k.id * 10}px)`,
       }"
     >
-      <img :src="require(`../assets/${k.img}.webp`)" />
+      <img :src="require(`../assets/${k.img}.png`)" />
       <div
         style="background-image: url('../assets/back_card.webp')"
         class="card_info"
@@ -36,7 +36,7 @@
     <transition mode="out-in" name="fade">
       <div
         class="card_title fire"
-        v-if="cards.every(k => !k.flip)"
+        v-if="cards.every((k) => !k.flip)"
         :key="[...cards].sort((a, b) => b.id - a.id)[0].name"
       >
         {{ [...cards].sort((a, b) => b.id - a.id)[0].name }}
@@ -51,17 +51,8 @@ export default {
       block: false,
       cards: [
         {
-          id: 1,
-          name: "goblin",
-          img: "card",
-          color: "#abc",
-          rotate: true,
-          flip: false,
-          opacity: 0,
-        },
-        {
           id: 2,
-          name: "knight",
+          name: "knight rare",
           img: "card1",
           color: "#bfc",
           rotate: true,
@@ -70,7 +61,7 @@ export default {
         },
         {
           id: 3,
-          name: "margrave",
+          name: "hobgoblin",
           img: "card2",
           color: "red",
           rotate: true,
@@ -79,7 +70,7 @@ export default {
         },
         {
           id: 4,
-          name: "smuggler",
+          name: "knight",
           img: "card3",
           color: "blue",
           rotate: true,
@@ -88,7 +79,7 @@ export default {
         },
         {
           id: 5,
-          name: "hobgoblin",
+          name: "shaman",
           img: "card4",
           color: "green",
           rotate: true,
@@ -100,15 +91,15 @@ export default {
   },
   methods: {
     rotate(id, flipped) {
-      if (this.cards.some(el => el.rotate)) return;
-      this.cards.forEach(el => (el.flip = false));
-      let card = this.cards.find(card => card.id === id);
+      if (this.cards.some((el) => el.rotate)) return;
+      this.cards.forEach((el) => (el.flip = false));
+      let card = this.cards.find((card) => card.id === id);
       console.log(id);
       card.rotate = true;
       setTimeout(() => this.animationEnd(id), 200);
     },
     flip(id) {
-      let card = this.cards.find(card => card.id === id);
+      let card = this.cards.find((card) => card.id === id);
       if (!card.flip) card.flip = true;
       else {
         card.flip = false;
@@ -117,9 +108,9 @@ export default {
     },
     animationEnd(id, e) {
       console.log("end");
-      let card = this.cards.find(card => card.id === id);
+      let card = this.cards.find((card) => card.id === id);
       console.log("ok");
-      this.cards.forEach(card => card.id++);
+      this.cards.forEach((card) => card.id++);
       card.id = 1;
       setTimeout(() => (card.rotate = false), 100);
     },

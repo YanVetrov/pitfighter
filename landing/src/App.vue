@@ -294,57 +294,47 @@
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>fORGING FEATURE</h3>
+                <h3>MINING NFTS</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
-                  >Each piece of equipment has 10 levels, as well as each
-                  character has 11 levels to which they can be upgraded.</span
+                  >Mining buildings are needed to ensure the life of the
+                  town.</span
                 >
               </template>
             </accordion-item>
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>CHARACTERS TRAITS</h3>
+                <h3>BASE DEFENSE</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
-                  >UPGRADED FIGHTERS MAY HAVE 0TO 2 RANDOMLY SELECTED TRAITS
-                  THAT AFFECT THEIR STATS IN POSITIVE WAYS.SOME BACKGROUNDS WILL
-                  DISALLOW CERTAIN TRAITS, AS WILL SOME TRAITS DISALLOW
-                  OTHERS.</span
+                  >Build up your squad to protect your camp from enemy
+                  attack</span
                 >
               </template>
             </accordion-item>
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>LEVEL and EXPERINCE</h3>
+                <h3>NFT CRATES</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
-                <span
-                  >THE CHARACTERS LEVEL IS A VALUE BETWEEN 1 AND 11 AND MEASURES
-                  IN BATTLE. CHARACTERS RISE IN LEVELS AS THEY GAIN EXPERINCE
-                  AND ARE ABLE TO INCREASE THEIR ATTRIBUTES</span
-                >
+                <span>You need at least one Mining NFT to start the game</span>
               </template>
             </accordion-item>
             <accordion-item>
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3>BACKGROUND AND TIERS</h3>
+                <h3>FORGING</h3>
               </template>
               <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
-                <span
-                  >CHARACTERS BACKGROUNDS DEFINE A CHARACTER’S STORY,STARTING
-                  ATTRIBUTES, AND EQUIPMENT.BACKGROUNDS ALSO DETERMINE WHAT KIND
-                  OF TRAITS A CHARACTER CAN GET.</span
-                >
+                <span>Resource mining increases with each new level.</span>
               </template>
             </accordion-item>
           </accordion>
@@ -472,15 +462,15 @@
             <div class="token_title">nft crates</div>
             <div class="crates_row" style="position: relative">
               <crate
-                crate="build1"
+                crate="crate1"
                 @open="crateText = true"
-                openCrate="build1"
+                openCrate="opencrate1"
                 :preShake="true"
               />
               <crate
-                crate="build2"
+                crate="crate2"
                 @open="crateText = true"
-                openCrate="build2"
+                openCrate="opencrate2"
               />
             </div>
             <transition name="fade">
@@ -492,7 +482,7 @@
                     data-aos-delay="150"
                     data-aos-duration="500"
                     data-aos-easing="ease-in-out"
-                    src="./assets/card.webp"
+                    src="./assets/build1.png"
                   />
                   <img
                     data-aos="zoom-in"
@@ -500,15 +490,7 @@
                     data-aos-delay="250"
                     data-aos-duration="500"
                     data-aos-easing="ease-in-out"
-                    src="./assets/card2.webp"
-                  />
-                  <img
-                    data-aos="zoom-in"
-                    data-aos-offset="150"
-                    data-aos-delay="350"
-                    data-aos-duration="500"
-                    data-aos-easing="ease-in-out"
-                    src="./assets/card3.webp"
+                    src="./assets/build2.png"
                   />
                 </div>
                 <img
