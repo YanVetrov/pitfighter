@@ -30,7 +30,9 @@
           :spawned="selfBuildings"
           :objectsOnMap="objectsOnMap"
           :resources="resources"
+          :units="unitsTemplates"
           @buyItem="buyItem"
+          @buyUnit="buyUnit"
           @spawnBuild="
             aimMode = true;
             cashBuild = $event;
@@ -89,12 +91,13 @@ import { gsap } from "gsap";
 import { initGsap } from "./utils";
 import buildings from "./components/buildings.vue";
 import items from "./components/items.vue";
+import characters from "./components/characters.vue";
 import menuWrapper from "./components/menuWrapper.vue";
 import axios from "axios";
 import { io } from "socket.io-client";
 let tabs = [
   { component: buildings, title: "buildings" },
-  { component: items, title: "characters" },
+  { component: characters, title: "characters" },
   { component: {}, title: "forge" },
   { component: {}, title: "market" },
 ];
@@ -103,11 +106,14 @@ let domain = "";
 if (window.location.href.includes("localhost"))
   domain = "http://localhost:8080";
 export default {
-  components: { buildings, menuWrapper, items },
+  components: { buildings, menuWrapper, items, characters },
   data() {
     return {
       objectsOnMap: [],
+      unitsTemplates: {},
       selfBuildings: [],
+      selfUnits: [],
+      enemies: [],
       itemsPrice,
       showLogin: true,
       loginTimeout: "",
@@ -157,11 +163,13 @@ export default {
       let res = await axios.post(`${domain}/login`, form_data);
       res = res.data;
       if (res.error) return (this.loginError = res.message);
-      let { coins, runes, resources, buildings } = res;
+      let { coins, runes, resources, buildings, units, enemies } = res;
       this.coins = coins;
       this.runes = runes;
       this.resources = resources;
       this.selfBuildings = buildings;
+      this.selfUnits = units;
+      this.enemies = enemies;
       let url = undefined;
       if (window.location.href.includes("localhost"))
         url = "ws://localhost:8080";
@@ -175,6 +183,11 @@ export default {
         this.showMenu = false;
         this.addObjectOnMap(build, true);
         this.selfBuildings.push(build);
+      });
+      socket.on("new_unit", (unit) => {
+        this.showMenu = false;
+        this.addUnitOnMap(unit, true);
+        this.selfUnits.push(unit);
       });
       socket.on("update_resources", (reses) => (this.resources = reses));
       socket.on("build_collected", async (ev) => {
@@ -202,11 +215,20 @@ export default {
         build.store = data.store;
         build.nextTickIn = data.nextTickIn;
       });
+      socket.on("move_unit", (unit) =>
+        this.moveUnit(unit, { x: unit.posX, y: unit.posY })
+      );
+      socket.on("unit_attacked", ({ unit, target }) =>
+        this.attack(unit, target)
+      );
     },
 
     spawnBuild({ name, rarity, x, y }) {
       console.log(name, rarity, x, y);
       this.socket.emit("buy_building", { name, rarity, x, y });
+    },
+    buyUnit() {
+      this.socket.emit("buy_unit", {});
     },
     buyItem() {},
     renderMap() {
@@ -217,6 +239,8 @@ export default {
       console.log("map rendered " + (Date.now() - date));
       store.map.flat().forEach((el, i) => this.addSprite(el, i));
       this.selfBuildings.forEach((el) => this.addObjectOnMap(el));
+      this.selfUnits.forEach((el) => this.addUnitOnMap(el));
+      this.enemies.forEach((el) => this.addUnitOnMap(el));
     },
 
     addSprite(target, i) {
@@ -529,6 +553,132 @@ export default {
         container.alphaCounter(el.advice);
       }
     },
+    async moveUnit(unit, { x, y }) {
+      x = unit.posX;
+      y = unit.posY;
+      unit = store.units[unit.id];
+      let ground = store.map[y][x];
+      let dir = this.getDirection(
+        { x: unit.posX, y: unit.posY },
+        { x: ground.posX, y: ground.posY }
+      );
+      console.log(dir);
+      unit.sprite._textures = unit.run[dir];
+      let xx = ground.x;
+      let yy = ground.y;
+      unit.posX = ground.posX;
+      unit.posY = ground.posY;
+      await gsap.to(unit, { x: xx, y: yy - 50 });
+      unit.sprite._textures = unit.idle[dir];
+      unit.dir = dir;
+    },
+    async attack(unit, target) {
+      let local_unit = store.units[unit.id];
+      let local_target = store.units[target.id];
+      let ground = store.map[target.posY][target.posX];
+      let dir = this.getDirection(
+        { x: local_unit.posX, y: local_unit.posY },
+        { x: ground.posX, y: ground.posY }
+      );
+      local_unit.sprite._textures = local_unit.attack[dir];
+      local_unit.dir = dir;
+      local_target.health = target.hp;
+      setTimeout(
+        () => (local_unit.sprite._textures = local_unit.idle[dir]),
+        1500
+      );
+    },
+    addUnitOnMap(el) {
+      let directions = ["ur", "ul", "dl", "dr"];
+      let cnts = { attack: 12, run: 10, idle: 10, death: 12, hurt: 14 };
+      let random = Math.ceil(Math.random() * (directions.length - 1));
+      let container = new Container();
+      Object.keys(cnts).forEach((key) => {
+        container[key] = {};
+        directions.forEach((dir) => {
+          if (!container[key][dir]) container[key][dir] = [];
+          for (let i = 1; i <= cnts[key]; i++) {
+            container[key][dir].push(
+              Texture.from(`./assets/warrior/${key}/${dir}/t${i}.png`)
+            );
+          }
+        });
+      });
+      let sprite = new AnimatedSprite(container.idle.dr);
+      sprite.play();
+      container.addChild(sprite);
+      container.sprite = sprite;
+      container.dir = "dr";
+      sprite.animationSpeed = 0.3;
+      let ground = store.map[el.posY][el.posX];
+      let x = ground.x;
+      let y = ground.y;
+      container.zIndex = 99999;
+      container.y = y - 50;
+      container.x = x;
+      container.posX = ground.posX;
+      container.posY = ground.posY;
+      container.strength = el.strength;
+      container.hp = el.hp;
+      let healthBar = new Container();
+      healthBar.x = 80;
+      healthBar.y = 80;
+      container.addChild(healthBar);
+      healthBar.zIndex = 3;
+      let innerBar = new Graphics();
+      innerBar.beginFill(0x333);
+      innerBar.drawRoundedRect(0, 0, 70, 5, 30);
+      innerBar.endFill();
+      healthBar.addChild(innerBar);
+
+      let outerBar = new Graphics();
+      let percent = (el.hp / el.strength) * 100;
+      outerBar.beginFill(el.enemy ? 0xff0033 : 0x5599aa);
+      outerBar.drawRoundedRect(0, 0, (el.hp / el.strength) * 100, 5, 30);
+      outerBar.endFill();
+      healthBar.addChild(outerBar);
+      healthBar.outer = outerBar;
+      container.healthBar = outerBar;
+      Object.defineProperty(container, "health", {
+        get() {
+          return this.hp;
+        },
+        async set(val) {
+          let percent = (val / this.strength) * 100;
+          this.healthBar.width = percent || 1;
+          if (this.hp > val && val > 0) {
+            this.sprite._textures = this.hurt[this.dir];
+            this.sprite.gotoAndPlay(0);
+            setTimeout(() => {
+              this.sprite._textures = this.idle[this.dir];
+            }, 750);
+          }
+          this.hp = val;
+          if (this.hp <= 0) {
+            this.sprite._textures = this.death[this.dir];
+            this.sprite.loop = false;
+            this.sprite.gotoAndPlay(0);
+            gsap.to(this, { alpha: 0, delay: 1 });
+          }
+        },
+      });
+      if (el.hp <= 0) container.alpha = 0;
+      store.gameScene.addChild(container);
+      store.units[el.id] = container;
+    },
+    getDirection(fromPlace = {}, toPlace = {}) {
+      console.log(fromPlace, toPlace);
+      if (fromPlace.x > toPlace.x && fromPlace.y == toPlace.y) return "ul";
+      if (fromPlace.x < toPlace.x && fromPlace.y == toPlace.y) return "dr";
+      if (fromPlace.y > toPlace.y && fromPlace.x == toPlace.x) return "ur";
+      if (fromPlace.y < toPlace.y && fromPlace.x == toPlace.x) return "dl";
+
+      if (fromPlace.x > toPlace.x && fromPlace.y > toPlace.y) return "ul";
+      if (fromPlace.x < toPlace.x && fromPlace.y < toPlace.y) return "dr";
+      if (fromPlace.x < toPlace.x && fromPlace.y > toPlace.y) return "ur";
+      if (fromPlace.x > toPlace.x && fromPlace.y < toPlace.y) return "dl";
+      return "ul";
+    },
     async initPixi() {
       const vm = this;
       initGsap();
@@ -557,6 +707,7 @@ export default {
       this.objectsOnMap = Object.values(res.builds);
       store.objectsOnMap = Object.values(res.builds);
       this.resources = res.resources;
+      this.unitsTemplates = res.characters;
       app.loader
         .add(
           [
@@ -591,6 +742,7 @@ export default {
           store.gameScene,
           store
         );
+        // vm.addUnitOnMap({ posX: 5, posY: 5, hp: 50, strength: 100 });
         window.addEventListener("resize", (e) => {
           app.renderer.resize(window.innerWidth, window.innerHeight);
         });

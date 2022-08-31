@@ -595,6 +595,2326 @@ eval("module.exports = __webpack_require__.p + \"src/assets/stone.png\";\n\n//# 
 
 /***/ }),
 
+/***/ "./src/assets/warrior/attack/dl/t1.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t1.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t10.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t10.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t11.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t11.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t12.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t12.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t2.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t2.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t3.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t3.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t4.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t4.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t5.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t5.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t6.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t6.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t7.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t7.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t8.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t8.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dl/t9.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dl/t9.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dl/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dl/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t1.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t1.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t10.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t10.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t11.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t11.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t12.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t12.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t2.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t2.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t3.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t3.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t4.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t4.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t5.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t5.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t6.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t6.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t7.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t7.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t8.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t8.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/dr/t9.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/dr/t9.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/dr/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/dr/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t1.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t1.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t10.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t10.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t11.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t11.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t12.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t12.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t2.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t2.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t3.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t3.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t4.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t4.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t5.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t5.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t6.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t6.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t7.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t7.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t8.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t8.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ul/t9.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ul/t9.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ul/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ul/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t1.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t1.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t10.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t10.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t11.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t11.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t12.png":
+/*!**********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t12.png ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t2.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t2.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t3.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t3.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t4.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t4.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t5.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t5.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t6.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t6.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t7.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t7.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t8.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t8.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/attack/ur/t9.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/attack/ur/t9.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/attack/ur/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/attack/ur/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t1.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t1.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t10.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t10.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t11.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t11.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t12.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t12.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t2.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t2.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t3.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t3.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t4.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t4.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t5.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t5.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t6.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t6.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t7.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t7.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t8.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t8.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dl/t9.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dl/t9.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dl/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dl/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t1.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t1.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t10.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t10.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t11.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t11.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t12.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t12.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t2.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t2.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t3.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t3.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t4.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t4.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t5.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t5.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t6.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t6.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t7.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t7.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t8.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t8.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/dr/t9.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/dr/t9.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/dr/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/dr/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t1.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t1.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t10.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t10.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t11.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t11.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t12.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t12.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t2.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t2.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t3.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t3.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t4.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t4.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t5.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t5.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t6.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t6.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t7.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t7.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t8.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t8.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ul/t9.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ul/t9.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ul/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ul/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t1.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t1.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t10.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t10.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t11.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t11.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t12.png":
+/*!*********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t12.png ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t2.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t2.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t3.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t3.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t4.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t4.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t5.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t5.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t6.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t6.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t7.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t7.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t8.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t8.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/death/ur/t9.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/death/ur/t9.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/death/ur/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/death/ur/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t11.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t11.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t12.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t12.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t13.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t13.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t13.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t13.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t14.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t14.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t14.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t14.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dl/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dl/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dl/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dl/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t11.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t11.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t12.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t12.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t13.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t13.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t13.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t13.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t14.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t14.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t14.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t14.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/dr/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/dr/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/dr/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/dr/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t11.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t11.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t12.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t12.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t13.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t13.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t13.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t13.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t14.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t14.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t14.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t14.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ul/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ul/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ul/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ul/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t11.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t11.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t11.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t11.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t12.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t12.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t12.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t12.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t13.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t13.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t13.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t13.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t14.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t14.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t14.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t14.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/hurt/ur/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/hurt/ur/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/hurt/ur/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/hurt/ur/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dl/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dl/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dl/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dl/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/dr/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/dr/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/dr/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/dr/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ul/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ul/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ul/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ul/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t1.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t1.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t10.png":
+/*!********************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t10.png ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t2.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t2.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t3.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t3.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t4.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t4.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t5.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t5.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t6.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t6.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t7.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t7.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t8.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t8.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/idle/ur/t9.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/idle/ur/t9.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/idle/ur/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/idle/ur/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t1.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t1.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t10.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t10.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t2.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t2.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t3.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t3.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t4.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t4.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t5.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t5.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t6.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t6.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t7.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t7.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t8.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t8.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dl/t9.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dl/t9.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dl/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dl/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t1.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t1.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t10.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t10.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t2.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t2.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t3.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t3.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t4.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t4.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t5.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t5.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t6.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t6.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t7.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t7.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t8.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t8.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/dr/t9.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/dr/t9.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/dr/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/dr/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t1.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t1.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t10.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t10.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t2.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t2.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t3.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t3.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t4.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t4.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t5.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t5.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t6.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t6.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t7.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t7.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t8.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t8.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ul/t9.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ul/t9.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ul/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ul/t9.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t1.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t1.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t1.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t1.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t10.png":
+/*!*******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t10.png ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t10.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t10.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t2.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t2.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t2.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t2.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t3.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t3.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t3.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t3.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t4.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t4.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t4.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t4.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t5.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t5.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t5.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t5.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t6.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t6.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t6.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t6.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t7.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t7.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t7.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t7.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t8.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t8.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t8.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t8.png?");
+
+/***/ }),
+
+/***/ "./src/assets/warrior/run/ur/t9.png":
+/*!******************************************!*\
+  !*** ./src/assets/warrior/run/ur/t9.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"src/assets/warrior/run/ur/t9.png\";\n\n//# sourceURL=webpack://pixi/./src/assets/warrior/run/ur/t9.png?");
+
+/***/ }),
+
 /***/ "./src/assets/wood.png":
 /*!*****************************!*\
   !*** ./src/assets/wood.png ***!
@@ -819,7 +3139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.mjs\");\n/* harmony import */ var _functionality__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functionality */ \"./src/functionality.js\");\n/* harmony import */ var _pixi_filter_bevel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @pixi/filter-bevel */ \"./node_modules/@pixi/filter-bevel/dist/filter-bevel.esm.mjs\");\n/* harmony import */ var _pixi_filter_glow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @pixi/filter-glow */ \"./node_modules/@pixi/filter-glow/dist/filter-glow.esm.mjs\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store */ \"./src/store.js\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n/* harmony import */ var _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/buildings.vue */ \"./src/components/buildings.vue\");\n/* harmony import */ var _components_items_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/items.vue */ \"./src/components/items.vue\");\n/* harmony import */ var _components_menuWrapper_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/menuWrapper.vue */ \"./src/components/menuWrapper.vue\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! axios */ \"../node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! socket.io-client */ \"./node_modules/socket.io-client/build/esm/index.js\");\n/* provided dependency */ var PIXI = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.mjs\");\n\n\n\n\n\n\n\n\n\n\n\n\n\nlet tabs = [\n  { component: _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__[\"default\"], title: \"buildings\" },\n  { component: _components_items_vue__WEBPACK_IMPORTED_MODULE_7__[\"default\"], title: \"characters\" },\n  { component: {}, title: \"forge\" },\n  { component: {}, title: \"market\" },\n];\nlet { objectsOnMap, itemsPrice } = _store__WEBPACK_IMPORTED_MODULE_4__.store;\nlet domain = \"\";\nif (window.location.href.includes(\"localhost\"))\n  domain = \"http://localhost:8080\";\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  components: { buildings: _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__[\"default\"], menuWrapper: _components_menuWrapper_vue__WEBPACK_IMPORTED_MODULE_8__[\"default\"], items: _components_items_vue__WEBPACK_IMPORTED_MODULE_7__[\"default\"] },\n  data() {\n    return {\n      objectsOnMap: [],\n      selfBuildings: [],\n      itemsPrice,\n      showLogin: true,\n      loginTimeout: \"\",\n      showMenu: false,\n      loginError: \"\",\n      aimMode: false,\n      cashBuild: null,\n      tabs,\n      login: \"admin\",\n      password: \"admin\",\n      activeTab: tabs[0].component,\n      coins: 0,\n      runes: 0,\n      resources: {\n        wood: 0,\n        stone: 0,\n        steel: 0,\n        leather: 0,\n      },\n      inventory: [],\n      spawned: [],\n    };\n  },\n  computed: {\n    keysBuildings() {\n      return this.selfBuildings.reduce((acc, el) => {\n        acc[el.id] = el;\n        return acc;\n      }, {});\n    },\n  },\n  methods: {\n    getTime(num) {\n      let d = new Date(num);\n      let h = d.getHours();\n      let m = d.getMinutes();\n      let s = d.getSeconds();\n      let str = [h, m, s].map((el) => (el < 10 ? \"0\" + el : el)).join(\":\");\n      return str;\n    },\n    async enterLogin() {\n      this.loginError = \"\";\n      let { login, password } = this;\n      var form_data = new FormData();\n      form_data.append(\"username\", login);\n      form_data.append(\"password\", password);\n      let res = await axios__WEBPACK_IMPORTED_MODULE_9___default().post(`${domain}/login`, form_data);\n      res = res.data;\n      if (res.error) return (this.loginError = res.message);\n      let { coins, runes, resources, buildings } = res;\n      this.coins = coins;\n      this.runes = runes;\n      this.resources = resources;\n      this.selfBuildings = buildings;\n      let url = undefined;\n      if (window.location.href.includes(\"localhost\"))\n        url = \"ws://localhost:8080\";\n      const socket = await (0,socket_io_client__WEBPACK_IMPORTED_MODULE_10__.io)(url);\n      socket.status = \"waiting\";\n      console.log(socket);\n      this.socket = socket;\n      this.showLogin = false;\n      this.renderMap();\n      socket.on(\"new_build\", (build) => {\n        this.showMenu = false;\n        this.addObjectOnMap(build, true);\n        this.selfBuildings.push(build);\n      });\n      socket.on(\"update_resources\", (reses) => (this.resources = reses));\n      socket.on(\"build_collected\", async (ev) => {\n        let build = _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[ev.id];\n        if (!build) return 0;\n        build.gs_store = 0;\n        await build.shuffle();\n        await build.alphaCounter(\n          `+ ${ev.lastCollected}`,\n          undefined,\n          undefined,\n          ev.resource\n        );\n        build = this.keysBuildings[ev.id];\n        build.store = 0;\n      });\n      socket.on(\"update_build\", (data) => {\n        console.log(\"update\");\n        let build = _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[data.id];\n        if (!build) return 0;\n        build.gs_store = data.store;\n        build.gs_nextTickIn = data.nextTickIn;\n\n        build = this.keysBuildings[data.id];\n        build.store = data.store;\n        build.nextTickIn = data.nextTickIn;\n      });\n    },\n\n    spawnBuild({ name, rarity, x, y }) {\n      console.log(name, rarity, x, y);\n      this.socket.emit(\"buy_building\", { name, rarity, x, y });\n    },\n    buyItem() {},\n    renderMap() {\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.children.forEach((el) => _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.removeChild(el));\n      console.log(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.children);\n      let date = Date.now();\n      console.log(\"map ready \" + (Date.now() - date));\n      console.log(\"map rendered \" + (Date.now() - date));\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.map.flat().forEach((el, i) => this.addSprite(el, i));\n      this.selfBuildings.forEach((el) => this.addObjectOnMap(el));\n    },\n\n    addSprite(target, i) {\n      let index = i;\n      let multipler =\n        (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundHeight - 2) * Math.ceil(i / _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine) - 1;\n      let multiplerX = -(_store__WEBPACK_IMPORTED_MODULE_4__.store.groundWidth * Math.floor(i / _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine));\n      // let multiplerX = 0;\n      if (multipler === 0) multipler = 200;\n      // if (index === 0) i = 1;\n      i = i % _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine;\n      target.x = (i * (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundWidth - 2)) / 2 - 250 + multiplerX / 2 + i;\n      if (i === 0) i = 1;\n      target.y = (i * (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundHeight - 2)) / 2 - 250 + multipler / 2;\n      target.y -= target.height - 143;\n      target.originY = target.y;\n      target.originX = target.x;\n      target.interactive = true;\n      target.buttonMode = true;\n      // if (!target.isSprite) target.zIndex = store.cellsInLine - i;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.addChild(target);\n      if (target.unclickable) return 0;\n      target.on(\"pointerover\", (e) => {\n        let color = 0xff69;\n\n        let filter = new _pixi_filter_glow__WEBPACK_IMPORTED_MODULE_3__.GlowFilter({\n          lightColor: color,\n          thickness: 5,\n          rotation: 0,\n          shadowColor: color,\n          lightAlpha: 1,\n          shadowAlpha: 1,\n        });\n        if (target.obj) {\n          target.obj.sprite.filters = [filter];\n          target.zIndex = 1;\n        } else {\n          target.filters = [filter];\n          if (target.type === \"grass\")\n            gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(target, { y: target.originY - 5 });\n          if (this.aimMode && !target.ghost) {\n            let sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(\n              _store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources[\n                `./assets/${this.cashBuild.name}${this.cashBuild.rarityNum}.png`\n              ].texture\n            );\n            sprite.alpha = 0.5;\n            sprite.scale.set(0.6);\n            sprite.x = 50;\n            target.addChild(sprite);\n            target.ghost = sprite;\n          }\n        }\n      });\n      target.on(\"pointerout\", (e) => {\n        target.filters = [];\n        target.zIndex = 0;\n        if (target.ghost) {\n          target.removeChild(target.ghost);\n          target.ghost = null;\n          gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(target, { y: target.originY });\n        }\n        if (target.obj) target.obj.sprite.filters = [];\n        else {\n          gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(target, { y: target.originY });\n        }\n      });\n      target.on(\"pointerup\", (e) => this.clickSprite(target, event));\n      target.hitArea = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Polygon([\n        0,\n        target.height / 2,\n        target.width / 2,\n        0,\n        target.width,\n        target.height / 2,\n        target.width / 2,\n        target.height,\n      ]);\n    },\n    async clickSprite(target, event) {\n      if (target.blocked) return 0;\n      target.blocked = true;\n      if (_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.blockedUI) return (target.blocked = false);\n      if (target.timeout) return 0;\n      console.log(target, _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings);\n      let { type } = target;\n      if ([\"forrest\", \"mountain\", \"lake\"].includes(type)) {\n        gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });\n        target.timeout = setTimeout(() => {\n          gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(target.sprite, { alpha: 1, duration: 0.5 });\n          target.timeout = null;\n        }, 2000);\n        if (type === \"forrest\") {\n          target.mine(\"axe\");\n        }\n        if (type === \"mountain\") {\n          target.mine(\"pickaxe\");\n        }\n      }\n      if (type === \"building\") {\n        console.log(\"build click\");\n        this.socket.emit(\"collect_build\", { id: target.obj.id });\n      }\n      if (type === \"grass\" && this.aimMode) {\n        this.aimMode = false;\n        this.spawnBuild({ ...this.cashBuild, x: target.posX, y: target.posY });\n        this.cashBuild = null;\n      }\n      setTimeout(() => (target.blocked = false), 300);\n    },\n    checkTimers() {\n      this.checker = setInterval(() => {\n        Object.values(_store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings).forEach((build) => {\n          if (build.nextTickIn < Date.now()) return 0;\n          let allSeconds = Math.ceil((build.nextTickIn - Date.now()) / 1000);\n          let seconds = allSeconds % 60;\n          if (seconds < 10) seconds = \"0\" + seconds;\n          let minutes = Math.floor(Math.floor(allSeconds / 60) % 60);\n          if (minutes < 10) minutes = \"0\" + minutes;\n          let hours = Math.floor(allSeconds / 60 / 60);\n          if (hours < 10) hours = \"0\" + hours;\n          build.timerNode.text = `${hours}:${minutes}:${seconds}`;\n        });\n      }, 1000);\n    },\n    async addObjectOnMap(el, newBuild = false) {\n      console.log(el);\n      el.x = el.defaultX;\n      el.y = el.defaultY;\n      if (!el.x || !el.y) return 0;\n      let container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      let sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(\n        _store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources[\n          `./assets/${el.name}${el.rarityNum}.png`\n        ].texture\n      );\n      const filter = new PIXI.Filter();\n      let ground = _store__WEBPACK_IMPORTED_MODULE_4__.store.map[el.y][el.x];\n      ground.obj = container;\n      container.ground = ground;\n      container.addChild(sprite);\n      container.scale.x = ground.height / sprite.height;\n      container.scale.y = ground.height / sprite.height;\n      if (el.scaled) {\n        container.scale.x *= el.scaled;\n        container.scale.y *= el.scaled;\n      }\n      let x = ground.x;\n      let y = ground.y;\n      x += (ground.width - container.width) / 2;\n      y += (ground.height - container.height) / 2 - ground.height / 6;\n      container.y = y - 200;\n      container.x = x;\n      container.alpha = 0;\n      container.sprite = sprite;\n      container.zIndex = el.y + el.x;\n      [\n        \"store\",\n        \"name\",\n        \"type\",\n        \"storage\",\n        \"nextTickIn\",\n        \"owner\",\n        \"countPerTick\",\n        \"tick\",\n        \"rarityNum\",\n        \"id\",\n      ].forEach((key) => (container[key] = el[key]));\n      container.shuffle = async function () {\n        await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(this.sprite.scale, { duration: 0.3, x: 0.95, y: 1.05 });\n        await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(this.sprite.scale, { duration: 0.2, x: 1.05, y: 0.95 });\n        await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(this.sprite.scale, { duration: 0.1, x: 1, y: 1 });\n      };\n      container.alphaCounter = async function (\n        text = \"+1\",\n        color = 0xeeeeee,\n        delay = 0,\n        sprite\n      ) {\n        let options = {\n          fill: color,\n          fontFamily: \"gothic\",\n          fontSize: 30,\n          wordWrapWidth: 100,\n          stroke: \"#333\",\n          strokeThickness: 4,\n          trim: true,\n        };\n        if (delay) {\n          options = {\n            ...options,\n            ...{\n              breakWords: true,\n              padding: 16,\n              fontSize: 25 - text.length / 5,\n            },\n          };\n        }\n        if (/\\p{Extended_Pictographic}/u.test(text)) options.fontSize = 55;\n        let node = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(text, options);\n        let container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n        container.addChild(node);\n        container.zIndex = 12;\n        this.addChild(container);\n        container.x = 40;\n        if (delay) {\n          container.x = 40 - text.length * 1.5;\n        }\n        container.y = 40;\n        if (sprite) {\n          let spr = pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite.from(`./assets/${sprite}.png`);\n          spr.scale.set(0.4);\n          container.addChild(spr);\n          container.sortChildren = true;\n          spr.zIndex = 3;\n        }\n        await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(container, { y: 0, alpha: 0, duration: 2, delay });\n        this.removeChild(container);\n      };\n      ground.type = el.type;\n      ground.name = el.name;\n      if (el.type === \"building\") {\n        let text = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(el.name, {\n          fontSize: 22,\n          fontFamily: \"gothic\",\n          fill: \"#ffaf00\",\n          stroke: \"#333\",\n          strokeThickness: 4,\n        });\n        container.addChild(text);\n        text.x = (ground.width - text.width) / 2;\n        text.y -= text.height;\n      }\n      let storeBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      storeBar.x = 50;\n      storeBar.y = 20;\n      container.addChild(storeBar);\n      storeBar.zIndex = 3;\n      let innerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      innerBar.beginFill(0xababab);\n      innerBar.drawRoundedRect(0, 0, 100, 15, 30);\n      innerBar.endFill();\n      storeBar.addChild(innerBar);\n\n      let outerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      container.storeBar = outerBar;\n      let percent = (el.store / el.storage) * 100;\n      outerBar.beginFill(0xff9900);\n      outerBar.drawRoundedRect(0, 0, percent || 1, 15, 80);\n      outerBar.endFill();\n      storeBar.addChild(outerBar);\n      storeBar.outer = outerBar;\n      container.storeText = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(`${el.store}/${el.storage}`, {\n        fill: 0xefefef,\n        fontFamily: \"gothic\",\n        fontSize: 10,\n        stroke: \"#454545\",\n        strokeThickness: 2,\n      });\n      container.storeText.x = 30;\n      storeBar.y = -40;\n      storeBar.x = 100;\n      storeBar.addChild(container.storeText);\n      const timerNode = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(\"\", {\n        fill: 0xefefef,\n        fontFamily: \"gothic\",\n        fontSize: 15,\n        stroke: \"#454545\",\n        strokeThickness: 2,\n      });\n      timerNode.y = -70;\n      timerNode.x = 110;\n      container.timerNode = timerNode;\n      container.addChild(timerNode);\n      gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(ground, { y: ground.originY });\n      ground.removeChild(ground.ghost);\n      ground.ghost = null;\n      Object.defineProperty(container, \"gs_nextTickIn\", {\n        get() {\n          return this.nextTickIn;\n        },\n        async set(val) {\n          this.nextTickIn = val;\n        },\n      });\n      Object.defineProperty(container, \"gs_store\", {\n        get() {\n          return this.store;\n        },\n        async set(val) {\n          let percent = (val / this.storage) * 100;\n          this.storeBar.width = percent || 1;\n          this.store = val;\n          this.storeText.text = `${val}/${this.storage}`;\n          await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(this.storeText.scale, {\n            x: 1.1,\n            y: 1.1,\n            duration: 0.1,\n          });\n          await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(this.storeText.scale, { x: 1, y: 1, duration: 0.1 });\n        },\n      });\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.addChild(container);\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[el.id] = container;\n      let duration = 0;\n      if (newBuild) duration = 0.5;\n      await gsap__WEBPACK_IMPORTED_MODULE_11__.gsap.to(container, { duration, alpha: 1, y });\n      if (el.advice) {\n        console.log(el.advice);\n        container.alphaCounter(el.advice);\n      }\n    },\n    async initPixi() {\n      const vm = this;\n      (0,_utils__WEBPACK_IMPORTED_MODULE_5__.initGsap)();\n      const app = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Application({\n        width: window.innerWidth,\n        height: window.innerHeight,\n        // antialias: true,\n        resolution: devicePixelRatio,\n        autoDensity: true,\n        view: document.getElementById(\"canvas1\"),\n      });\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.app = app;\n      console.log(\"wowo\");\n\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.sortableChildren = true;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.zIndex = 2;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.x = _store__WEBPACK_IMPORTED_MODULE_4__.store.defaultPosX;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.y = _store__WEBPACK_IMPORTED_MODULE_4__.store.defaultPosY;\n      app.stage.addChild(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene);\n      app.stage.sortableChildren = true;\n      app.renderer.backgroundColor = \"0x8db792\";\n      app.renderer.autoResize = true;\n      let res = await axios__WEBPACK_IMPORTED_MODULE_9___default().post(`${domain}/templates`);\n      res = res.data;\n      this.objectsOnMap = Object.values(res.builds);\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.objectsOnMap = Object.values(res.builds);\n      this.resources = res.resources;\n      app.loader\n        .add(\n          [\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.top,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.bottom,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.left,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.right,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.center,\n          ].reduce((acc, el) => {\n            for (let i = 0; i < el.split(\"-\")[1]; i++) {\n              let path = `./assets/${el.split(\"-\")[0]}${i + 1}.png`;\n              if (!acc.includes(path)) acc.push(path);\n            }\n            return acc;\n          }, [])\n        )\n        .add(\n          _store__WEBPACK_IMPORTED_MODULE_4__.store.objectsOnMap.map(\n            (el) => `./assets/${el.name}${el.rarityNum}.png`\n          )\n        )\n        .add(\"gothic\", \"./assets/gothic.otf\")\n        .load(setup);\n      function setup() {\n        console.log(_store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources);\n        _store__WEBPACK_IMPORTED_MODULE_4__.store.map = (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.initMap)(\"\", _store__WEBPACK_IMPORTED_MODULE_4__.store, _store__WEBPACK_IMPORTED_MODULE_4__.store.allMapCount);\n        vm.renderMap();\n        vm.checkTimers();\n        (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.centeringMap)(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene, _store__WEBPACK_IMPORTED_MODULE_4__.store);\n        (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.enableInteractiveMap)(\n          document.querySelector(\"canvas\"),\n          _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene,\n          _store__WEBPACK_IMPORTED_MODULE_4__.store\n        );\n        window.addEventListener(\"resize\", (e) => {\n          app.renderer.resize(window.innerWidth, window.innerHeight);\n        });\n        document\n          .querySelector(\"canvas\")\n          .addEventListener(\"contextmenu\", (e) => {\n            e.preventDefault();\n          });\n        document.addEventListener(\n          \"contextmenu\",\n          (e) => {\n            e.preventDefault();\n            e.stopPropagation();\n          },\n          true\n        );\n      }\n    },\n  },\n  async mounted() {\n    this.initPixi();\n    _store__WEBPACK_IMPORTED_MODULE_4__.store.vue = this;\n  },\n});\n\n\n//# sourceURL=webpack://pixi/./src/App.vue?./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var pixi_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.mjs\");\n/* harmony import */ var _functionality__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functionality */ \"./src/functionality.js\");\n/* harmony import */ var _pixi_filter_bevel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @pixi/filter-bevel */ \"./node_modules/@pixi/filter-bevel/dist/filter-bevel.esm.mjs\");\n/* harmony import */ var _pixi_filter_glow__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @pixi/filter-glow */ \"./node_modules/@pixi/filter-glow/dist/filter-glow.esm.mjs\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./store */ \"./src/store.js\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils */ \"./src/utils.js\");\n/* harmony import */ var _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/buildings.vue */ \"./src/components/buildings.vue\");\n/* harmony import */ var _components_items_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/items.vue */ \"./src/components/items.vue\");\n/* harmony import */ var _components_characters_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/characters.vue */ \"./src/components/characters.vue\");\n/* harmony import */ var _components_menuWrapper_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/menuWrapper.vue */ \"./src/components/menuWrapper.vue\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! axios */ \"../node_modules/axios/index.js\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var socket_io_client__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! socket.io-client */ \"./node_modules/socket.io-client/build/esm/index.js\");\n/* provided dependency */ var PIXI = __webpack_require__(/*! pixi.js */ \"./node_modules/pixi.js/dist/esm/pixi.mjs\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlet tabs = [\n  { component: _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__[\"default\"], title: \"buildings\" },\n  { component: _components_characters_vue__WEBPACK_IMPORTED_MODULE_8__[\"default\"], title: \"characters\" },\n  { component: {}, title: \"forge\" },\n  { component: {}, title: \"market\" },\n];\nlet { objectsOnMap, itemsPrice } = _store__WEBPACK_IMPORTED_MODULE_4__.store;\nlet domain = \"\";\nif (window.location.href.includes(\"localhost\"))\n  domain = \"http://localhost:8080\";\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  components: { buildings: _components_buildings_vue__WEBPACK_IMPORTED_MODULE_6__[\"default\"], menuWrapper: _components_menuWrapper_vue__WEBPACK_IMPORTED_MODULE_9__[\"default\"], items: _components_items_vue__WEBPACK_IMPORTED_MODULE_7__[\"default\"], characters: _components_characters_vue__WEBPACK_IMPORTED_MODULE_8__[\"default\"] },\n  data() {\n    return {\n      objectsOnMap: [],\n      unitsTemplates: {},\n      selfBuildings: [],\n      selfUnits: [],\n      enemies: [],\n      itemsPrice,\n      showLogin: true,\n      loginTimeout: \"\",\n      showMenu: false,\n      loginError: \"\",\n      aimMode: false,\n      cashBuild: null,\n      tabs,\n      login: \"admin\",\n      password: \"admin\",\n      activeTab: tabs[0].component,\n      coins: 0,\n      runes: 0,\n      resources: {\n        wood: 0,\n        stone: 0,\n        steel: 0,\n        leather: 0,\n      },\n      inventory: [],\n      spawned: [],\n    };\n  },\n  computed: {\n    keysBuildings() {\n      return this.selfBuildings.reduce((acc, el) => {\n        acc[el.id] = el;\n        return acc;\n      }, {});\n    },\n  },\n  methods: {\n    getTime(num) {\n      let d = new Date(num);\n      let h = d.getHours();\n      let m = d.getMinutes();\n      let s = d.getSeconds();\n      let str = [h, m, s].map((el) => (el < 10 ? \"0\" + el : el)).join(\":\");\n      return str;\n    },\n    async enterLogin() {\n      this.loginError = \"\";\n      let { login, password } = this;\n      var form_data = new FormData();\n      form_data.append(\"username\", login);\n      form_data.append(\"password\", password);\n      let res = await axios__WEBPACK_IMPORTED_MODULE_10___default().post(`${domain}/login`, form_data);\n      res = res.data;\n      if (res.error) return (this.loginError = res.message);\n      let { coins, runes, resources, buildings, units, enemies } = res;\n      this.coins = coins;\n      this.runes = runes;\n      this.resources = resources;\n      this.selfBuildings = buildings;\n      this.selfUnits = units;\n      this.enemies = enemies;\n      let url = undefined;\n      if (window.location.href.includes(\"localhost\"))\n        url = \"ws://localhost:8080\";\n      const socket = await (0,socket_io_client__WEBPACK_IMPORTED_MODULE_11__.io)(url);\n      socket.status = \"waiting\";\n      console.log(socket);\n      this.socket = socket;\n      this.showLogin = false;\n      this.renderMap();\n      socket.on(\"new_build\", (build) => {\n        this.showMenu = false;\n        this.addObjectOnMap(build, true);\n        this.selfBuildings.push(build);\n      });\n      socket.on(\"new_unit\", (unit) => {\n        this.showMenu = false;\n        this.addUnitOnMap(unit, true);\n        this.selfUnits.push(unit);\n      });\n      socket.on(\"update_resources\", (reses) => (this.resources = reses));\n      socket.on(\"build_collected\", async (ev) => {\n        let build = _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[ev.id];\n        if (!build) return 0;\n        build.gs_store = 0;\n        await build.shuffle();\n        await build.alphaCounter(\n          `+ ${ev.lastCollected}`,\n          undefined,\n          undefined,\n          ev.resource\n        );\n        build = this.keysBuildings[ev.id];\n        build.store = 0;\n      });\n      socket.on(\"update_build\", (data) => {\n        console.log(\"update\");\n        let build = _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[data.id];\n        if (!build) return 0;\n        build.gs_store = data.store;\n        build.gs_nextTickIn = data.nextTickIn;\n\n        build = this.keysBuildings[data.id];\n        build.store = data.store;\n        build.nextTickIn = data.nextTickIn;\n      });\n      socket.on(\"move_unit\", (unit) =>\n        this.moveUnit(unit, { x: unit.posX, y: unit.posY })\n      );\n      socket.on(\"unit_attacked\", ({ unit, target }) =>\n        this.attack(unit, target)\n      );\n    },\n\n    spawnBuild({ name, rarity, x, y }) {\n      console.log(name, rarity, x, y);\n      this.socket.emit(\"buy_building\", { name, rarity, x, y });\n    },\n    buyUnit() {\n      this.socket.emit(\"buy_unit\", {});\n    },\n    buyItem() {},\n    renderMap() {\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.children.forEach((el) => _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.removeChild(el));\n      console.log(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.children);\n      let date = Date.now();\n      console.log(\"map ready \" + (Date.now() - date));\n      console.log(\"map rendered \" + (Date.now() - date));\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.map.flat().forEach((el, i) => this.addSprite(el, i));\n      this.selfBuildings.forEach((el) => this.addObjectOnMap(el));\n      this.selfUnits.forEach((el) => this.addUnitOnMap(el));\n      this.enemies.forEach((el) => this.addUnitOnMap(el));\n    },\n\n    addSprite(target, i) {\n      let index = i;\n      let multipler =\n        (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundHeight - 2) * Math.ceil(i / _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine) - 1;\n      let multiplerX = -(_store__WEBPACK_IMPORTED_MODULE_4__.store.groundWidth * Math.floor(i / _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine));\n      // let multiplerX = 0;\n      if (multipler === 0) multipler = 200;\n      // if (index === 0) i = 1;\n      i = i % _store__WEBPACK_IMPORTED_MODULE_4__.store.cellsInLine;\n      target.x = (i * (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundWidth - 2)) / 2 - 250 + multiplerX / 2 + i;\n      if (i === 0) i = 1;\n      target.y = (i * (_store__WEBPACK_IMPORTED_MODULE_4__.store.groundHeight - 2)) / 2 - 250 + multipler / 2;\n      target.y -= target.height - 143;\n      target.originY = target.y;\n      target.originX = target.x;\n      target.interactive = true;\n      target.buttonMode = true;\n      // if (!target.isSprite) target.zIndex = store.cellsInLine - i;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.addChild(target);\n      if (target.unclickable) return 0;\n      target.on(\"pointerover\", (e) => {\n        let color = 0xff69;\n\n        let filter = new _pixi_filter_glow__WEBPACK_IMPORTED_MODULE_3__.GlowFilter({\n          lightColor: color,\n          thickness: 5,\n          rotation: 0,\n          shadowColor: color,\n          lightAlpha: 1,\n          shadowAlpha: 1,\n        });\n        if (target.obj) {\n          target.obj.sprite.filters = [filter];\n          target.zIndex = 1;\n        } else {\n          target.filters = [filter];\n          if (target.type === \"grass\")\n            gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(target, { y: target.originY - 5 });\n          if (this.aimMode && !target.ghost) {\n            let sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(\n              _store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources[\n                `./assets/${this.cashBuild.name}${this.cashBuild.rarityNum}.png`\n              ].texture\n            );\n            sprite.alpha = 0.5;\n            sprite.scale.set(0.6);\n            sprite.x = 50;\n            target.addChild(sprite);\n            target.ghost = sprite;\n          }\n        }\n      });\n      target.on(\"pointerout\", (e) => {\n        target.filters = [];\n        target.zIndex = 0;\n        if (target.ghost) {\n          target.removeChild(target.ghost);\n          target.ghost = null;\n          gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(target, { y: target.originY });\n        }\n        if (target.obj) target.obj.sprite.filters = [];\n        else {\n          gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(target, { y: target.originY });\n        }\n      });\n      target.on(\"pointerup\", (e) => this.clickSprite(target, event));\n      target.hitArea = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Polygon([\n        0,\n        target.height / 2,\n        target.width / 2,\n        0,\n        target.width,\n        target.height / 2,\n        target.width / 2,\n        target.height,\n      ]);\n    },\n    async clickSprite(target, event) {\n      if (target.blocked) return 0;\n      target.blocked = true;\n      if (_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.blockedUI) return (target.blocked = false);\n      if (target.timeout) return 0;\n      console.log(target, _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings);\n      let { type } = target;\n      if ([\"forrest\", \"mountain\", \"lake\"].includes(type)) {\n        gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });\n        target.timeout = setTimeout(() => {\n          gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(target.sprite, { alpha: 1, duration: 0.5 });\n          target.timeout = null;\n        }, 2000);\n        if (type === \"forrest\") {\n          target.mine(\"axe\");\n        }\n        if (type === \"mountain\") {\n          target.mine(\"pickaxe\");\n        }\n      }\n      if (type === \"building\") {\n        console.log(\"build click\");\n        this.socket.emit(\"collect_build\", { id: target.obj.id });\n      }\n      if (type === \"grass\" && this.aimMode) {\n        this.aimMode = false;\n        this.spawnBuild({ ...this.cashBuild, x: target.posX, y: target.posY });\n        this.cashBuild = null;\n      }\n      setTimeout(() => (target.blocked = false), 300);\n    },\n    checkTimers() {\n      this.checker = setInterval(() => {\n        Object.values(_store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings).forEach((build) => {\n          if (build.nextTickIn < Date.now()) return 0;\n          let allSeconds = Math.ceil((build.nextTickIn - Date.now()) / 1000);\n          let seconds = allSeconds % 60;\n          if (seconds < 10) seconds = \"0\" + seconds;\n          let minutes = Math.floor(Math.floor(allSeconds / 60) % 60);\n          if (minutes < 10) minutes = \"0\" + minutes;\n          let hours = Math.floor(allSeconds / 60 / 60);\n          if (hours < 10) hours = \"0\" + hours;\n          build.timerNode.text = `${hours}:${minutes}:${seconds}`;\n        });\n      }, 1000);\n    },\n    async addObjectOnMap(el, newBuild = false) {\n      console.log(el);\n      el.x = el.defaultX;\n      el.y = el.defaultY;\n      if (!el.x || !el.y) return 0;\n      let container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      let sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite(\n        _store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources[\n          `./assets/${el.name}${el.rarityNum}.png`\n        ].texture\n      );\n      const filter = new PIXI.Filter();\n      let ground = _store__WEBPACK_IMPORTED_MODULE_4__.store.map[el.y][el.x];\n      ground.obj = container;\n      container.ground = ground;\n      container.addChild(sprite);\n      container.scale.x = ground.height / sprite.height;\n      container.scale.y = ground.height / sprite.height;\n      if (el.scaled) {\n        container.scale.x *= el.scaled;\n        container.scale.y *= el.scaled;\n      }\n      let x = ground.x;\n      let y = ground.y;\n      x += (ground.width - container.width) / 2;\n      y += (ground.height - container.height) / 2 - ground.height / 6;\n      container.y = y - 200;\n      container.x = x;\n      container.alpha = 0;\n      container.sprite = sprite;\n      container.zIndex = el.y + el.x;\n      [\n        \"store\",\n        \"name\",\n        \"type\",\n        \"storage\",\n        \"nextTickIn\",\n        \"owner\",\n        \"countPerTick\",\n        \"tick\",\n        \"rarityNum\",\n        \"id\",\n      ].forEach((key) => (container[key] = el[key]));\n      container.shuffle = async function () {\n        await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this.sprite.scale, { duration: 0.3, x: 0.95, y: 1.05 });\n        await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this.sprite.scale, { duration: 0.2, x: 1.05, y: 0.95 });\n        await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this.sprite.scale, { duration: 0.1, x: 1, y: 1 });\n      };\n      container.alphaCounter = async function (\n        text = \"+1\",\n        color = 0xeeeeee,\n        delay = 0,\n        sprite\n      ) {\n        let options = {\n          fill: color,\n          fontFamily: \"gothic\",\n          fontSize: 30,\n          wordWrapWidth: 100,\n          stroke: \"#333\",\n          strokeThickness: 4,\n          trim: true,\n        };\n        if (delay) {\n          options = {\n            ...options,\n            ...{\n              breakWords: true,\n              padding: 16,\n              fontSize: 25 - text.length / 5,\n            },\n          };\n        }\n        if (/\\p{Extended_Pictographic}/u.test(text)) options.fontSize = 55;\n        let node = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(text, options);\n        let container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n        container.addChild(node);\n        container.zIndex = 12;\n        this.addChild(container);\n        container.x = 40;\n        if (delay) {\n          container.x = 40 - text.length * 1.5;\n        }\n        container.y = 40;\n        if (sprite) {\n          let spr = pixi_js__WEBPACK_IMPORTED_MODULE_0__.Sprite.from(`./assets/${sprite}.png`);\n          spr.scale.set(0.4);\n          container.addChild(spr);\n          container.sortChildren = true;\n          spr.zIndex = 3;\n        }\n        await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(container, { y: 0, alpha: 0, duration: 2, delay });\n        this.removeChild(container);\n      };\n      ground.type = el.type;\n      ground.name = el.name;\n      if (el.type === \"building\") {\n        let text = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(el.name, {\n          fontSize: 22,\n          fontFamily: \"gothic\",\n          fill: \"#ffaf00\",\n          stroke: \"#333\",\n          strokeThickness: 4,\n        });\n        container.addChild(text);\n        text.x = (ground.width - text.width) / 2;\n        text.y -= text.height;\n      }\n      let storeBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      storeBar.x = 50;\n      storeBar.y = 20;\n      container.addChild(storeBar);\n      storeBar.zIndex = 3;\n      let innerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      innerBar.beginFill(0xababab);\n      innerBar.drawRoundedRect(0, 0, 100, 15, 30);\n      innerBar.endFill();\n      storeBar.addChild(innerBar);\n\n      let outerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      container.storeBar = outerBar;\n      let percent = (el.store / el.storage) * 100;\n      outerBar.beginFill(0xff9900);\n      outerBar.drawRoundedRect(0, 0, percent || 1, 15, 80);\n      outerBar.endFill();\n      storeBar.addChild(outerBar);\n      storeBar.outer = outerBar;\n      container.storeText = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(`${el.store}/${el.storage}`, {\n        fill: 0xefefef,\n        fontFamily: \"gothic\",\n        fontSize: 10,\n        stroke: \"#454545\",\n        strokeThickness: 2,\n      });\n      container.storeText.x = 30;\n      storeBar.y = -40;\n      storeBar.x = 100;\n      storeBar.addChild(container.storeText);\n      const timerNode = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Text(\"\", {\n        fill: 0xefefef,\n        fontFamily: \"gothic\",\n        fontSize: 15,\n        stroke: \"#454545\",\n        strokeThickness: 2,\n      });\n      timerNode.y = -70;\n      timerNode.x = 110;\n      container.timerNode = timerNode;\n      container.addChild(timerNode);\n      gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(ground, { y: ground.originY });\n      ground.removeChild(ground.ghost);\n      ground.ghost = null;\n      Object.defineProperty(container, \"gs_nextTickIn\", {\n        get() {\n          return this.nextTickIn;\n        },\n        async set(val) {\n          this.nextTickIn = val;\n        },\n      });\n      Object.defineProperty(container, \"gs_store\", {\n        get() {\n          return this.store;\n        },\n        async set(val) {\n          let percent = (val / this.storage) * 100;\n          this.storeBar.width = percent || 1;\n          this.store = val;\n          this.storeText.text = `${val}/${this.storage}`;\n          await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this.storeText.scale, {\n            x: 1.1,\n            y: 1.1,\n            duration: 0.1,\n          });\n          await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this.storeText.scale, { x: 1, y: 1, duration: 0.1 });\n        },\n      });\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.addChild(container);\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.selfBuildings[el.id] = container;\n      let duration = 0;\n      if (newBuild) duration = 0.5;\n      await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(container, { duration, alpha: 1, y });\n      if (el.advice) {\n        console.log(el.advice);\n        container.alphaCounter(el.advice);\n      }\n    },\n    async moveUnit(unit, { x, y }) {\n      x = unit.posX;\n      y = unit.posY;\n      unit = _store__WEBPACK_IMPORTED_MODULE_4__.store.units[unit.id];\n      let ground = _store__WEBPACK_IMPORTED_MODULE_4__.store.map[y][x];\n      let dir = this.getDirection(\n        { x: unit.posX, y: unit.posY },\n        { x: ground.posX, y: ground.posY }\n      );\n      console.log(dir);\n      unit.sprite._textures = unit.run[dir];\n      let xx = ground.x;\n      let yy = ground.y;\n      unit.posX = ground.posX;\n      unit.posY = ground.posY;\n      await gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(unit, { x: xx, y: yy - 50 });\n      unit.sprite._textures = unit.idle[dir];\n      unit.dir = dir;\n    },\n    async attack(unit, target) {\n      let local_unit = _store__WEBPACK_IMPORTED_MODULE_4__.store.units[unit.id];\n      let local_target = _store__WEBPACK_IMPORTED_MODULE_4__.store.units[target.id];\n      let ground = _store__WEBPACK_IMPORTED_MODULE_4__.store.map[target.posY][target.posX];\n      let dir = this.getDirection(\n        { x: local_unit.posX, y: local_unit.posY },\n        { x: ground.posX, y: ground.posY }\n      );\n      local_unit.sprite._textures = local_unit.attack[dir];\n      local_unit.dir = dir;\n      local_target.health = target.hp;\n      setTimeout(\n        () => (local_unit.sprite._textures = local_unit.idle[dir]),\n        1500\n      );\n    },\n    addUnitOnMap(el) {\n      let directions = [\"ur\", \"ul\", \"dl\", \"dr\"];\n      let cnts = { attack: 12, run: 10, idle: 10, death: 12, hurt: 14 };\n      let random = Math.ceil(Math.random() * (directions.length - 1));\n      let container = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      Object.keys(cnts).forEach((key) => {\n        container[key] = {};\n        directions.forEach((dir) => {\n          if (!container[key][dir]) container[key][dir] = [];\n          for (let i = 1; i <= cnts[key]; i++) {\n            container[key][dir].push(\n              pixi_js__WEBPACK_IMPORTED_MODULE_0__.Texture.from(`./assets/warrior/${key}/${dir}/t${i}.png`)\n            );\n          }\n        });\n      });\n      let sprite = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.AnimatedSprite(container.idle.dr);\n      sprite.play();\n      container.addChild(sprite);\n      container.sprite = sprite;\n      container.dir = \"dr\";\n      sprite.animationSpeed = 0.3;\n      let ground = _store__WEBPACK_IMPORTED_MODULE_4__.store.map[el.posY][el.posX];\n      let x = ground.x;\n      let y = ground.y;\n      container.zIndex = 99999;\n      container.y = y - 50;\n      container.x = x;\n      container.posX = ground.posX;\n      container.posY = ground.posY;\n      container.strength = el.strength;\n      container.hp = el.hp;\n      let healthBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      healthBar.x = 80;\n      healthBar.y = 80;\n      container.addChild(healthBar);\n      healthBar.zIndex = 3;\n      let innerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      innerBar.beginFill(0x333);\n      innerBar.drawRoundedRect(0, 0, 70, 5, 30);\n      innerBar.endFill();\n      healthBar.addChild(innerBar);\n\n      let outerBar = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Graphics();\n      let percent = (el.hp / el.strength) * 100;\n      outerBar.beginFill(el.enemy ? 0xff0033 : 0x5599aa);\n      outerBar.drawRoundedRect(0, 0, (el.hp / el.strength) * 100, 5, 30);\n      outerBar.endFill();\n      healthBar.addChild(outerBar);\n      healthBar.outer = outerBar;\n      container.healthBar = outerBar;\n      Object.defineProperty(container, \"health\", {\n        get() {\n          return this.hp;\n        },\n        async set(val) {\n          let percent = (val / this.strength) * 100;\n          this.healthBar.width = percent || 1;\n          if (this.hp > val && val > 0) {\n            this.sprite._textures = this.hurt[this.dir];\n            this.sprite.gotoAndPlay(0);\n            setTimeout(() => {\n              this.sprite._textures = this.idle[this.dir];\n            }, 750);\n          }\n          this.hp = val;\n          if (this.hp <= 0) {\n            this.sprite._textures = this.death[this.dir];\n            this.sprite.loop = false;\n            this.sprite.gotoAndPlay(0);\n            gsap__WEBPACK_IMPORTED_MODULE_12__.gsap.to(this, { alpha: 0, delay: 1 });\n          }\n        },\n      });\n      if (el.hp <= 0) container.alpha = 0;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.addChild(container);\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.units[el.id] = container;\n    },\n    getDirection(fromPlace = {}, toPlace = {}) {\n      console.log(fromPlace, toPlace);\n      if (fromPlace.x > toPlace.x && fromPlace.y == toPlace.y) return \"ul\";\n      if (fromPlace.x < toPlace.x && fromPlace.y == toPlace.y) return \"dr\";\n      if (fromPlace.y > toPlace.y && fromPlace.x == toPlace.x) return \"ur\";\n      if (fromPlace.y < toPlace.y && fromPlace.x == toPlace.x) return \"dl\";\n\n      if (fromPlace.x > toPlace.x && fromPlace.y > toPlace.y) return \"ul\";\n      if (fromPlace.x < toPlace.x && fromPlace.y < toPlace.y) return \"dr\";\n      if (fromPlace.x < toPlace.x && fromPlace.y > toPlace.y) return \"ur\";\n      if (fromPlace.x > toPlace.x && fromPlace.y < toPlace.y) return \"dl\";\n      return \"ul\";\n    },\n    async initPixi() {\n      const vm = this;\n      (0,_utils__WEBPACK_IMPORTED_MODULE_5__.initGsap)();\n      const app = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Application({\n        width: window.innerWidth,\n        height: window.innerHeight,\n        // antialias: true,\n        resolution: devicePixelRatio,\n        autoDensity: true,\n        view: document.getElementById(\"canvas1\"),\n      });\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.app = app;\n      console.log(\"wowo\");\n\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene = new pixi_js__WEBPACK_IMPORTED_MODULE_0__.Container();\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.sortableChildren = true;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.zIndex = 2;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.x = _store__WEBPACK_IMPORTED_MODULE_4__.store.defaultPosX;\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene.y = _store__WEBPACK_IMPORTED_MODULE_4__.store.defaultPosY;\n      app.stage.addChild(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene);\n      app.stage.sortableChildren = true;\n      app.renderer.backgroundColor = \"0x8db792\";\n      app.renderer.autoResize = true;\n      let res = await axios__WEBPACK_IMPORTED_MODULE_10___default().post(`${domain}/templates`);\n      res = res.data;\n      this.objectsOnMap = Object.values(res.builds);\n      _store__WEBPACK_IMPORTED_MODULE_4__.store.objectsOnMap = Object.values(res.builds);\n      this.resources = res.resources;\n      this.unitsTemplates = res.characters;\n      app.loader\n        .add(\n          [\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.top,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.bottom,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.left,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.right,\n            _store__WEBPACK_IMPORTED_MODULE_4__.store.center,\n          ].reduce((acc, el) => {\n            for (let i = 0; i < el.split(\"-\")[1]; i++) {\n              let path = `./assets/${el.split(\"-\")[0]}${i + 1}.png`;\n              if (!acc.includes(path)) acc.push(path);\n            }\n            return acc;\n          }, [])\n        )\n        .add(\n          _store__WEBPACK_IMPORTED_MODULE_4__.store.objectsOnMap.map(\n            (el) => `./assets/${el.name}${el.rarityNum}.png`\n          )\n        )\n        .add(\"gothic\", \"./assets/gothic.otf\")\n        .load(setup);\n      function setup() {\n        console.log(_store__WEBPACK_IMPORTED_MODULE_4__.store.app.loader.resources);\n        _store__WEBPACK_IMPORTED_MODULE_4__.store.map = (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.initMap)(\"\", _store__WEBPACK_IMPORTED_MODULE_4__.store, _store__WEBPACK_IMPORTED_MODULE_4__.store.allMapCount);\n        vm.renderMap();\n        vm.checkTimers();\n        (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.centeringMap)(_store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene, _store__WEBPACK_IMPORTED_MODULE_4__.store);\n        (0,_functionality__WEBPACK_IMPORTED_MODULE_1__.enableInteractiveMap)(\n          document.querySelector(\"canvas\"),\n          _store__WEBPACK_IMPORTED_MODULE_4__.store.gameScene,\n          _store__WEBPACK_IMPORTED_MODULE_4__.store\n        );\n        // vm.addUnitOnMap({ posX: 5, posY: 5, hp: 50, strength: 100 });\n        window.addEventListener(\"resize\", (e) => {\n          app.renderer.resize(window.innerWidth, window.innerHeight);\n        });\n        document\n          .querySelector(\"canvas\")\n          .addEventListener(\"contextmenu\", (e) => {\n            e.preventDefault();\n          });\n        document.addEventListener(\n          \"contextmenu\",\n          (e) => {\n            e.preventDefault();\n            e.stopPropagation();\n          },\n          true\n        );\n      }\n    },\n  },\n  async mounted() {\n    this.initPixi();\n    _store__WEBPACK_IMPORTED_MODULE_4__.store.vue = this;\n  },\n});\n\n\n//# sourceURL=webpack://pixi/./src/App.vue?./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -842,6 +3162,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  props: [\"objectsOnMap\", \"spawned\", \"resources\"],\n});\n\n\n//# sourceURL=webpack://pixi/./src/components/buildings.vue?./node_modules/vue-loader/lib/index.js??vue-loader-options");
+
+/***/ }),
+
+/***/ "./src/components/characters.vue":
+/*!***************************************!*\
+  !*** ./src/components/characters.vue ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./characters.vue?vue&type=template&id=0738b37a& */ \"./src/components/characters.vue?vue&type=template&id=0738b37a&\");\n/* harmony import */ var _characters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./characters.vue?vue&type=script&lang=js& */ \"./src/components/characters.vue?vue&type=script&lang=js&\");\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n;\nvar component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _characters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__.render,\n  _characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/components/characters.vue\"\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);\n\n//# sourceURL=webpack://pixi/./src/components/characters.vue?");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n  props: [\"units\", \"resources\"],\n});\n\n\n//# sourceURL=webpack://pixi/./src/components/characters.vue?./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -911,6 +3253,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/characters.vue?vue&type=script&lang=js&":
+/*!****************************************************************!*\
+  !*** ./src/components/characters.vue?vue&type=script&lang=js& ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_lib_index_js_vue_loader_options_characters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./characters.vue?vue&type=script&lang=js& */ \"./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=script&lang=js&\");\n /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_vue_loader_lib_index_js_vue_loader_options_characters_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack://pixi/./src/components/characters.vue?");
+
+/***/ }),
+
 /***/ "./src/components/items.vue?vue&type=script&lang=js&":
 /*!***********************************************************!*\
   !*** ./src/components/items.vue?vue&type=script&lang=js& ***!
@@ -955,6 +3308,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/components/characters.vue?vue&type=template&id=0738b37a&":
+/*!**********************************************************************!*\
+  !*** ./src/components/characters.vue?vue&type=template&id=0738b37a& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_1_node_modules_vue_loader_lib_index_js_vue_loader_options_characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__.render),\n/* harmony export */   \"staticRenderFns\": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_1_node_modules_vue_loader_lib_index_js_vue_loader_options_characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)\n/* harmony export */ });\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_1_node_modules_vue_loader_lib_index_js_vue_loader_options_characters_vue_vue_type_template_id_0738b37a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[1]!../../node_modules/vue-loader/lib/index.js??vue-loader-options!./characters.vue?vue&type=template&id=0738b37a& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=template&id=0738b37a&\");\n\n\n//# sourceURL=webpack://pixi/./src/components/characters.vue?");
+
+/***/ }),
+
 /***/ "./src/components/items.vue?vue&type=template&id=0e805840&":
 /*!*****************************************************************!*\
   !*** ./src/components/items.vue?vue&type=template&id=0e805840& ***!
@@ -984,7 +3348,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c\n  return _c(\n    \"div\",\n    { staticClass: \"main_view\" },\n    [\n      _c(\n        \"div\",\n        { staticClass: \"resources\" },\n        _vm._l(_vm.resources, function (count, name) {\n          return _c(\"div\", { key: name, staticClass: \"resource\" }, [\n            _c(\"img\", { attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${name}.png`) } }),\n            _vm._v(\" \" + _vm._s(count) + \"\\n    \"),\n          ])\n        }),\n        0\n      ),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"buttons\" }, [\n        _c(\n          \"div\",\n          {\n            staticClass: \"button\",\n            on: {\n              click: function ($event) {\n                _vm.showMenu = true\n              },\n            },\n          },\n          [_c(\"img\", { attrs: { src: __webpack_require__(/*! ./assets/molotok.png */ \"./src/assets/molotok.png\") } })]\n        ),\n      ]),\n      _vm._v(\" \"),\n      _c(\"transition\", { attrs: { name: \"fade\" } }, [\n        _vm.aimMode\n          ? _c(\"div\", { staticClass: \"aim_mode\" }, [\n              _vm._v(\"Choose build location\"),\n            ])\n          : _vm._e(),\n      ]),\n      _vm._v(\" \"),\n      _c(\n        \"transition\",\n        { attrs: { name: \"fade\" } },\n        [\n          _vm.showMenu\n            ? _c(\n                \"menuWrapper\",\n                {\n                  attrs: {\n                    tabs: _vm.tabs,\n                    activeTab: _vm.activeTab,\n                    coins: _vm.coins,\n                    runes: _vm.runes,\n                  },\n                  on: {\n                    switchTab: function ($event) {\n                      _vm.activeTab = $event\n                    },\n                    missclick: function ($event) {\n                      _vm.showMenu = false\n                    },\n                  },\n                },\n                [\n                  _c(_vm.activeTab, {\n                    tag: \"component\",\n                    attrs: {\n                      inventory: _vm.inventory,\n                      itemsPrice: _vm.itemsPrice,\n                      spawned: _vm.selfBuildings,\n                      objectsOnMap: _vm.objectsOnMap,\n                      resources: _vm.resources,\n                    },\n                    on: {\n                      buyItem: _vm.buyItem,\n                      spawnBuild: function ($event) {\n                        _vm.aimMode = true\n                        _vm.cashBuild = $event\n                        _vm.showMenu = false\n                      },\n                    },\n                  }),\n                ],\n                1\n              )\n            : _vm._e(),\n        ],\n        1\n      ),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"inventory\" }, [\n        _c(\"div\", { staticClass: \"inventory_title\" }, [_vm._v(\"INVENTORY\")]),\n        _vm._v(\" \"),\n        _c(\n          \"div\",\n          { staticClass: \"inventory_items row center\" },\n          _vm._l(_vm.inventory, function (item) {\n            return _c(\n              \"div\",\n              { key: item, staticClass: \"inventory_item column center\" },\n              [\n                _c(\"img\", { attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${item}.png`) } }),\n                _vm._v(_vm._s(item) + \"\\n      \"),\n              ]\n            )\n          }),\n          0\n        ),\n      ]),\n      _vm._v(\" \"),\n      _vm.showLogin\n        ? _c(\"div\", { staticClass: \"login_view\" }, [\n            _c(\"div\", { staticClass: \"login_block\" }, [\n              _c(\"div\", { staticClass: \"login_title\" }, [_vm._v(\"PitFarmer\")]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticStyle: { color: \"red\" } }, [\n                _vm._v(_vm._s(_vm.loginError)),\n              ]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticClass: \"login_name\" }, [\n                _c(\"input\", {\n                  directives: [\n                    {\n                      name: \"model\",\n                      rawName: \"v-model\",\n                      value: _vm.login,\n                      expression: \"login\",\n                    },\n                  ],\n                  attrs: { placeholder: \"Enter your login...\" },\n                  domProps: { value: _vm.login },\n                  on: {\n                    input: function ($event) {\n                      if ($event.target.composing) return\n                      _vm.login = $event.target.value\n                    },\n                  },\n                }),\n              ]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticClass: \"login_pass\" }, [\n                _c(\"input\", {\n                  directives: [\n                    {\n                      name: \"model\",\n                      rawName: \"v-model\",\n                      value: _vm.password,\n                      expression: \"password\",\n                    },\n                  ],\n                  attrs: { placeholder: \"and your password...\" },\n                  domProps: { value: _vm.password },\n                  on: {\n                    input: function ($event) {\n                      if ($event.target.composing) return\n                      _vm.password = $event.target.value\n                    },\n                  },\n                }),\n              ]),\n              _vm._v(\" \"),\n              !_vm.loginTimeout\n                ? _c(\n                    \"div\",\n                    { staticClass: \"button\", on: { click: _vm.enterLogin } },\n                    [_vm._v(\"ENTER\")]\n                  )\n                : _vm._e(),\n            ]),\n          ])\n        : _vm._e(),\n      _vm._v(\" \"),\n      _c(\"canvas\", { attrs: { id: \"canvas1\" } }),\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://pixi/./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c\n  return _c(\n    \"div\",\n    { staticClass: \"main_view\" },\n    [\n      _c(\n        \"div\",\n        { staticClass: \"resources\" },\n        _vm._l(_vm.resources, function (count, name) {\n          return _c(\"div\", { key: name, staticClass: \"resource\" }, [\n            _c(\"img\", { attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${name}.png`) } }),\n            _vm._v(\" \" + _vm._s(count) + \"\\n    \"),\n          ])\n        }),\n        0\n      ),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"buttons\" }, [\n        _c(\n          \"div\",\n          {\n            staticClass: \"button\",\n            on: {\n              click: function ($event) {\n                _vm.showMenu = true\n              },\n            },\n          },\n          [_c(\"img\", { attrs: { src: __webpack_require__(/*! ./assets/molotok.png */ \"./src/assets/molotok.png\") } })]\n        ),\n      ]),\n      _vm._v(\" \"),\n      _c(\"transition\", { attrs: { name: \"fade\" } }, [\n        _vm.aimMode\n          ? _c(\"div\", { staticClass: \"aim_mode\" }, [\n              _vm._v(\"Choose build location\"),\n            ])\n          : _vm._e(),\n      ]),\n      _vm._v(\" \"),\n      _c(\n        \"transition\",\n        { attrs: { name: \"fade\" } },\n        [\n          _vm.showMenu\n            ? _c(\n                \"menuWrapper\",\n                {\n                  attrs: {\n                    tabs: _vm.tabs,\n                    activeTab: _vm.activeTab,\n                    coins: _vm.coins,\n                    runes: _vm.runes,\n                  },\n                  on: {\n                    switchTab: function ($event) {\n                      _vm.activeTab = $event\n                    },\n                    missclick: function ($event) {\n                      _vm.showMenu = false\n                    },\n                  },\n                },\n                [\n                  _c(_vm.activeTab, {\n                    tag: \"component\",\n                    attrs: {\n                      inventory: _vm.inventory,\n                      itemsPrice: _vm.itemsPrice,\n                      spawned: _vm.selfBuildings,\n                      objectsOnMap: _vm.objectsOnMap,\n                      resources: _vm.resources,\n                      units: _vm.unitsTemplates,\n                    },\n                    on: {\n                      buyItem: _vm.buyItem,\n                      buyUnit: _vm.buyUnit,\n                      spawnBuild: function ($event) {\n                        _vm.aimMode = true\n                        _vm.cashBuild = $event\n                        _vm.showMenu = false\n                      },\n                    },\n                  }),\n                ],\n                1\n              )\n            : _vm._e(),\n        ],\n        1\n      ),\n      _vm._v(\" \"),\n      _c(\"div\", { staticClass: \"inventory\" }, [\n        _c(\"div\", { staticClass: \"inventory_title\" }, [_vm._v(\"INVENTORY\")]),\n        _vm._v(\" \"),\n        _c(\n          \"div\",\n          { staticClass: \"inventory_items row center\" },\n          _vm._l(_vm.inventory, function (item) {\n            return _c(\n              \"div\",\n              { key: item, staticClass: \"inventory_item column center\" },\n              [\n                _c(\"img\", { attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${item}.png`) } }),\n                _vm._v(_vm._s(item) + \"\\n      \"),\n              ]\n            )\n          }),\n          0\n        ),\n      ]),\n      _vm._v(\" \"),\n      _vm.showLogin\n        ? _c(\"div\", { staticClass: \"login_view\" }, [\n            _c(\"div\", { staticClass: \"login_block\" }, [\n              _c(\"div\", { staticClass: \"login_title\" }, [_vm._v(\"PitFarmer\")]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticStyle: { color: \"red\" } }, [\n                _vm._v(_vm._s(_vm.loginError)),\n              ]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticClass: \"login_name\" }, [\n                _c(\"input\", {\n                  directives: [\n                    {\n                      name: \"model\",\n                      rawName: \"v-model\",\n                      value: _vm.login,\n                      expression: \"login\",\n                    },\n                  ],\n                  attrs: { placeholder: \"Enter your login...\" },\n                  domProps: { value: _vm.login },\n                  on: {\n                    input: function ($event) {\n                      if ($event.target.composing) return\n                      _vm.login = $event.target.value\n                    },\n                  },\n                }),\n              ]),\n              _vm._v(\" \"),\n              _c(\"div\", { staticClass: \"login_pass\" }, [\n                _c(\"input\", {\n                  directives: [\n                    {\n                      name: \"model\",\n                      rawName: \"v-model\",\n                      value: _vm.password,\n                      expression: \"password\",\n                    },\n                  ],\n                  attrs: { placeholder: \"and your password...\" },\n                  domProps: { value: _vm.password },\n                  on: {\n                    input: function ($event) {\n                      if ($event.target.composing) return\n                      _vm.password = $event.target.value\n                    },\n                  },\n                }),\n              ]),\n              _vm._v(\" \"),\n              !_vm.loginTimeout\n                ? _c(\n                    \"div\",\n                    { staticClass: \"button\", on: { click: _vm.enterLogin } },\n                    [_vm._v(\"ENTER\")]\n                  )\n                : _vm._e(),\n            ]),\n          ])\n        : _vm._e(),\n      _vm._v(\" \"),\n      _c(\"canvas\", { attrs: { id: \"canvas1\" } }),\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://pixi/./src/App.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -996,6 +3360,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c\n  return _c(\n    \"div\",\n    { staticClass: \"row list\" },\n    _vm._l(\n      _vm.objectsOnMap.filter(\n        (el) =>\n          !_vm.spawned.some(\n            (sp) => el.name === sp.name && el.rarity === sp.rarity\n          )\n      ),\n      function (item) {\n        return _c(\n          \"div\",\n          {\n            key: item.name + item.rarityNum,\n            staticClass: \"button\",\n            class: item.rarity,\n            on: {\n              click: function ($event) {\n                return _vm.$emit(\"spawnBuild\", item)\n              },\n            },\n          },\n          [\n            _c(\n              \"div\",\n              { staticClass: \"buy_button\" },\n              _vm._l(item.requirements, function (val, key) {\n                return _c(\n                  \"div\",\n                  {\n                    key: key,\n                    staticClass: \"row center\",\n                    style:\n                      _vm.resources[key] >= val ? { color: \"forestgreen\" } : \"\",\n                  },\n                  [\n                    _c(\"img\", {\n                      staticStyle: { width: \"20px\" },\n                      attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${key}.png`) },\n                    }),\n                    _vm._v(\n                      \"[\" +\n                        _vm._s(_vm.resources[key]) +\n                        \"/\" +\n                        _vm._s(val) +\n                        \"]\\n      \"\n                    ),\n                  ]\n                )\n              }),\n              0\n            ),\n            _vm._v(\" \"),\n            _c(\"img\", {\n              attrs: {\n                src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*.*\\\\.png$\")(`./${item.name}${item.rarityNum}.png`),\n              },\n            }),\n            _c(\"span\", { staticClass: \"item_name\" }, [\n              _vm._v(_vm._s(item.name) + \" \" + _vm._s(item.rarity)),\n            ]),\n            _vm._v(\" \"),\n            _c(\"br\"),\n            _vm._v(\" \"),\n            _c(\"div\", { staticClass: \"profit\" }, [\n              _vm._v(\"\\n      \" + _vm._s(item.countPerTick) + \"\\n      \"),\n              _c(\"img\", {\n                attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${item.resource}.png`) },\n              }),\n              _vm._v(\" / hour\\n    \"),\n            ]),\n          ]\n        )\n      }\n    ),\n    0\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://pixi/./src/components/buildings.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=template&id=0738b37a&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[1]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/components/characters.vue?vue&type=template&id=0738b37a& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"render\": () => (/* binding */ render),\n/* harmony export */   \"staticRenderFns\": () => (/* binding */ staticRenderFns)\n/* harmony export */ });\nvar render = function render() {\n  var _vm = this,\n    _c = _vm._self._c\n  return _c(\n    \"div\",\n    { staticClass: \"row list\" },\n    _vm._l(Object.values(_vm.units), function (item) {\n      return _c(\n        \"div\",\n        {\n          key: item.name,\n          staticClass: \"button\",\n          staticStyle: { height: \"200px\" },\n          on: {\n            click: function ($event) {\n              return _vm.$emit(\"buyUnit\")\n            },\n          },\n        },\n        [\n          _c(\n            \"div\",\n            { staticClass: \"buy_button\" },\n            _vm._l(item.requirements, function (val, key) {\n              return _c(\n                \"div\",\n                {\n                  key: key,\n                  staticClass: \"row center\",\n                  style:\n                    _vm.resources[key] >= val ? { color: \"forestgreen\" } : \"\",\n                },\n                [\n                  _c(\"img\", {\n                    staticStyle: { width: \"20px\" },\n                    attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\")(`./${key}.png`) },\n                  }),\n                  _vm._v(\n                    \"[\" +\n                      _vm._s(_vm.resources[key]) +\n                      \"/\" +\n                      _vm._s(val) +\n                      \"]\\n      \"\n                  ),\n                ]\n              )\n            }),\n            0\n          ),\n          _vm._v(\" \"),\n          _c(\"img\", {\n            staticStyle: { width: \"180px\" },\n            attrs: { src: __webpack_require__(\"./src/assets sync recursive ^\\\\.\\\\/.*\\\\/idle\\\\/dr\\\\/t1\\\\.png$\")(`./${item.name}/idle/dr/t1.png`) },\n          }),\n          _c(\"span\", { staticClass: \"item_name\" }, [_vm._v(_vm._s(item.name))]),\n          _vm._v(\" \"),\n          _c(\"br\"),\n        ]\n      )\n    }),\n    0\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://pixi/./src/components/characters.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet%5B1%5D.rules%5B1%5D!./node_modules/vue-loader/lib/index.js??vue-loader-options");
 
 /***/ }),
 
@@ -1112,7 +3487,7 @@ eval("/*\n    * Vuescroll v4.17.5\n    * (c) 2018-2022 Yi(Yves) Wang\n    * Rele
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./axe.png\": \"./src/assets/axe.png\",\n\t\"./bag1.png\": \"./src/assets/bag1.png\",\n\t\"./camp1.png\": \"./src/assets/camp1.png\",\n\t\"./camp2.png\": \"./src/assets/camp2.png\",\n\t\"./camp3.png\": \"./src/assets/camp3.png\",\n\t\"./camp4.png\": \"./src/assets/camp4.png\",\n\t\"./camp5.png\": \"./src/assets/camp5.png\",\n\t\"./camp6.png\": \"./src/assets/camp6.png\",\n\t\"./coin.png\": \"./src/assets/coin.png\",\n\t\"./coin1.png\": \"./src/assets/coin1.png\",\n\t\"./desk.png\": \"./src/assets/desk.png\",\n\t\"./fish.png\": \"./src/assets/fish.png\",\n\t\"./food.png\": \"./src/assets/food.png\",\n\t\"./forrest1.png\": \"./src/assets/forrest1.png\",\n\t\"./forrest2.png\": \"./src/assets/forrest2.png\",\n\t\"./forrest3.png\": \"./src/assets/forrest3.png\",\n\t\"./fur.png\": \"./src/assets/fur.png\",\n\t\"./grass1.png\": \"./src/assets/grass1.png\",\n\t\"./grass2.png\": \"./src/assets/grass2.png\",\n\t\"./grass3.png\": \"./src/assets/grass3.png\",\n\t\"./grass4.png\": \"./src/assets/grass4.png\",\n\t\"./grass5.png\": \"./src/assets/grass5.png\",\n\t\"./grass6.png\": \"./src/assets/grass6.png\",\n\t\"./grass7.png\": \"./src/assets/grass7.png\",\n\t\"./lake1.png\": \"./src/assets/lake1.png\",\n\t\"./leather.png\": \"./src/assets/leather.png\",\n\t\"./mine1.png\": \"./src/assets/mine1.png\",\n\t\"./mine2.png\": \"./src/assets/mine2.png\",\n\t\"./mine3.png\": \"./src/assets/mine3.png\",\n\t\"./mine4.png\": \"./src/assets/mine4.png\",\n\t\"./mine5.png\": \"./src/assets/mine5.png\",\n\t\"./mine6.png\": \"./src/assets/mine6.png\",\n\t\"./molotok.png\": \"./src/assets/molotok.png\",\n\t\"./mountain1.png\": \"./src/assets/mountain1.png\",\n\t\"./mountain2.png\": \"./src/assets/mountain2.png\",\n\t\"./mountain3.png\": \"./src/assets/mountain3.png\",\n\t\"./pickaxe.png\": \"./src/assets/pickaxe.png\",\n\t\"./quarry1.png\": \"./src/assets/quarry1.png\",\n\t\"./quarry2.png\": \"./src/assets/quarry2.png\",\n\t\"./quarry3.png\": \"./src/assets/quarry3.png\",\n\t\"./quarry4.png\": \"./src/assets/quarry4.png\",\n\t\"./quarry5.png\": \"./src/assets/quarry5.png\",\n\t\"./quarry6.png\": \"./src/assets/quarry6.png\",\n\t\"./rune.png\": \"./src/assets/rune.png\",\n\t\"./sawmill1.png\": \"./src/assets/sawmill1.png\",\n\t\"./sawmill2.png\": \"./src/assets/sawmill2.png\",\n\t\"./sawmill3.png\": \"./src/assets/sawmill3.png\",\n\t\"./sawmill4.png\": \"./src/assets/sawmill4.png\",\n\t\"./sawmill5.png\": \"./src/assets/sawmill5.png\",\n\t\"./sawmill6.png\": \"./src/assets/sawmill6.png\",\n\t\"./steel.png\": \"./src/assets/steel.png\",\n\t\"./stone.png\": \"./src/assets/stone.png\",\n\t\"./wood.png\": \"./src/assets/wood.png\",\n\t\"./woods.png\": \"./src/assets/woods.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets sync recursive ^\\\\.\\\\/.*.*\\\\.png$\";\n\n//# sourceURL=webpack://pixi/./src/assets/_sync_^\\.\\/.*.*\\.png$?");
+eval("var map = {\n\t\"./axe.png\": \"./src/assets/axe.png\",\n\t\"./bag1.png\": \"./src/assets/bag1.png\",\n\t\"./camp1.png\": \"./src/assets/camp1.png\",\n\t\"./camp2.png\": \"./src/assets/camp2.png\",\n\t\"./camp3.png\": \"./src/assets/camp3.png\",\n\t\"./camp4.png\": \"./src/assets/camp4.png\",\n\t\"./camp5.png\": \"./src/assets/camp5.png\",\n\t\"./camp6.png\": \"./src/assets/camp6.png\",\n\t\"./coin.png\": \"./src/assets/coin.png\",\n\t\"./coin1.png\": \"./src/assets/coin1.png\",\n\t\"./desk.png\": \"./src/assets/desk.png\",\n\t\"./fish.png\": \"./src/assets/fish.png\",\n\t\"./food.png\": \"./src/assets/food.png\",\n\t\"./forrest1.png\": \"./src/assets/forrest1.png\",\n\t\"./forrest2.png\": \"./src/assets/forrest2.png\",\n\t\"./forrest3.png\": \"./src/assets/forrest3.png\",\n\t\"./fur.png\": \"./src/assets/fur.png\",\n\t\"./grass1.png\": \"./src/assets/grass1.png\",\n\t\"./grass2.png\": \"./src/assets/grass2.png\",\n\t\"./grass3.png\": \"./src/assets/grass3.png\",\n\t\"./grass4.png\": \"./src/assets/grass4.png\",\n\t\"./grass5.png\": \"./src/assets/grass5.png\",\n\t\"./grass6.png\": \"./src/assets/grass6.png\",\n\t\"./grass7.png\": \"./src/assets/grass7.png\",\n\t\"./lake1.png\": \"./src/assets/lake1.png\",\n\t\"./leather.png\": \"./src/assets/leather.png\",\n\t\"./mine1.png\": \"./src/assets/mine1.png\",\n\t\"./mine2.png\": \"./src/assets/mine2.png\",\n\t\"./mine3.png\": \"./src/assets/mine3.png\",\n\t\"./mine4.png\": \"./src/assets/mine4.png\",\n\t\"./mine5.png\": \"./src/assets/mine5.png\",\n\t\"./mine6.png\": \"./src/assets/mine6.png\",\n\t\"./molotok.png\": \"./src/assets/molotok.png\",\n\t\"./mountain1.png\": \"./src/assets/mountain1.png\",\n\t\"./mountain2.png\": \"./src/assets/mountain2.png\",\n\t\"./mountain3.png\": \"./src/assets/mountain3.png\",\n\t\"./pickaxe.png\": \"./src/assets/pickaxe.png\",\n\t\"./quarry1.png\": \"./src/assets/quarry1.png\",\n\t\"./quarry2.png\": \"./src/assets/quarry2.png\",\n\t\"./quarry3.png\": \"./src/assets/quarry3.png\",\n\t\"./quarry4.png\": \"./src/assets/quarry4.png\",\n\t\"./quarry5.png\": \"./src/assets/quarry5.png\",\n\t\"./quarry6.png\": \"./src/assets/quarry6.png\",\n\t\"./rune.png\": \"./src/assets/rune.png\",\n\t\"./sawmill1.png\": \"./src/assets/sawmill1.png\",\n\t\"./sawmill2.png\": \"./src/assets/sawmill2.png\",\n\t\"./sawmill3.png\": \"./src/assets/sawmill3.png\",\n\t\"./sawmill4.png\": \"./src/assets/sawmill4.png\",\n\t\"./sawmill5.png\": \"./src/assets/sawmill5.png\",\n\t\"./sawmill6.png\": \"./src/assets/sawmill6.png\",\n\t\"./steel.png\": \"./src/assets/steel.png\",\n\t\"./stone.png\": \"./src/assets/stone.png\",\n\t\"./warrior/attack/dl/t1.png\": \"./src/assets/warrior/attack/dl/t1.png\",\n\t\"./warrior/attack/dl/t10.png\": \"./src/assets/warrior/attack/dl/t10.png\",\n\t\"./warrior/attack/dl/t11.png\": \"./src/assets/warrior/attack/dl/t11.png\",\n\t\"./warrior/attack/dl/t12.png\": \"./src/assets/warrior/attack/dl/t12.png\",\n\t\"./warrior/attack/dl/t2.png\": \"./src/assets/warrior/attack/dl/t2.png\",\n\t\"./warrior/attack/dl/t3.png\": \"./src/assets/warrior/attack/dl/t3.png\",\n\t\"./warrior/attack/dl/t4.png\": \"./src/assets/warrior/attack/dl/t4.png\",\n\t\"./warrior/attack/dl/t5.png\": \"./src/assets/warrior/attack/dl/t5.png\",\n\t\"./warrior/attack/dl/t6.png\": \"./src/assets/warrior/attack/dl/t6.png\",\n\t\"./warrior/attack/dl/t7.png\": \"./src/assets/warrior/attack/dl/t7.png\",\n\t\"./warrior/attack/dl/t8.png\": \"./src/assets/warrior/attack/dl/t8.png\",\n\t\"./warrior/attack/dl/t9.png\": \"./src/assets/warrior/attack/dl/t9.png\",\n\t\"./warrior/attack/dr/t1.png\": \"./src/assets/warrior/attack/dr/t1.png\",\n\t\"./warrior/attack/dr/t10.png\": \"./src/assets/warrior/attack/dr/t10.png\",\n\t\"./warrior/attack/dr/t11.png\": \"./src/assets/warrior/attack/dr/t11.png\",\n\t\"./warrior/attack/dr/t12.png\": \"./src/assets/warrior/attack/dr/t12.png\",\n\t\"./warrior/attack/dr/t2.png\": \"./src/assets/warrior/attack/dr/t2.png\",\n\t\"./warrior/attack/dr/t3.png\": \"./src/assets/warrior/attack/dr/t3.png\",\n\t\"./warrior/attack/dr/t4.png\": \"./src/assets/warrior/attack/dr/t4.png\",\n\t\"./warrior/attack/dr/t5.png\": \"./src/assets/warrior/attack/dr/t5.png\",\n\t\"./warrior/attack/dr/t6.png\": \"./src/assets/warrior/attack/dr/t6.png\",\n\t\"./warrior/attack/dr/t7.png\": \"./src/assets/warrior/attack/dr/t7.png\",\n\t\"./warrior/attack/dr/t8.png\": \"./src/assets/warrior/attack/dr/t8.png\",\n\t\"./warrior/attack/dr/t9.png\": \"./src/assets/warrior/attack/dr/t9.png\",\n\t\"./warrior/attack/ul/t1.png\": \"./src/assets/warrior/attack/ul/t1.png\",\n\t\"./warrior/attack/ul/t10.png\": \"./src/assets/warrior/attack/ul/t10.png\",\n\t\"./warrior/attack/ul/t11.png\": \"./src/assets/warrior/attack/ul/t11.png\",\n\t\"./warrior/attack/ul/t12.png\": \"./src/assets/warrior/attack/ul/t12.png\",\n\t\"./warrior/attack/ul/t2.png\": \"./src/assets/warrior/attack/ul/t2.png\",\n\t\"./warrior/attack/ul/t3.png\": \"./src/assets/warrior/attack/ul/t3.png\",\n\t\"./warrior/attack/ul/t4.png\": \"./src/assets/warrior/attack/ul/t4.png\",\n\t\"./warrior/attack/ul/t5.png\": \"./src/assets/warrior/attack/ul/t5.png\",\n\t\"./warrior/attack/ul/t6.png\": \"./src/assets/warrior/attack/ul/t6.png\",\n\t\"./warrior/attack/ul/t7.png\": \"./src/assets/warrior/attack/ul/t7.png\",\n\t\"./warrior/attack/ul/t8.png\": \"./src/assets/warrior/attack/ul/t8.png\",\n\t\"./warrior/attack/ul/t9.png\": \"./src/assets/warrior/attack/ul/t9.png\",\n\t\"./warrior/attack/ur/t1.png\": \"./src/assets/warrior/attack/ur/t1.png\",\n\t\"./warrior/attack/ur/t10.png\": \"./src/assets/warrior/attack/ur/t10.png\",\n\t\"./warrior/attack/ur/t11.png\": \"./src/assets/warrior/attack/ur/t11.png\",\n\t\"./warrior/attack/ur/t12.png\": \"./src/assets/warrior/attack/ur/t12.png\",\n\t\"./warrior/attack/ur/t2.png\": \"./src/assets/warrior/attack/ur/t2.png\",\n\t\"./warrior/attack/ur/t3.png\": \"./src/assets/warrior/attack/ur/t3.png\",\n\t\"./warrior/attack/ur/t4.png\": \"./src/assets/warrior/attack/ur/t4.png\",\n\t\"./warrior/attack/ur/t5.png\": \"./src/assets/warrior/attack/ur/t5.png\",\n\t\"./warrior/attack/ur/t6.png\": \"./src/assets/warrior/attack/ur/t6.png\",\n\t\"./warrior/attack/ur/t7.png\": \"./src/assets/warrior/attack/ur/t7.png\",\n\t\"./warrior/attack/ur/t8.png\": \"./src/assets/warrior/attack/ur/t8.png\",\n\t\"./warrior/attack/ur/t9.png\": \"./src/assets/warrior/attack/ur/t9.png\",\n\t\"./warrior/death/dl/t1.png\": \"./src/assets/warrior/death/dl/t1.png\",\n\t\"./warrior/death/dl/t10.png\": \"./src/assets/warrior/death/dl/t10.png\",\n\t\"./warrior/death/dl/t11.png\": \"./src/assets/warrior/death/dl/t11.png\",\n\t\"./warrior/death/dl/t12.png\": \"./src/assets/warrior/death/dl/t12.png\",\n\t\"./warrior/death/dl/t2.png\": \"./src/assets/warrior/death/dl/t2.png\",\n\t\"./warrior/death/dl/t3.png\": \"./src/assets/warrior/death/dl/t3.png\",\n\t\"./warrior/death/dl/t4.png\": \"./src/assets/warrior/death/dl/t4.png\",\n\t\"./warrior/death/dl/t5.png\": \"./src/assets/warrior/death/dl/t5.png\",\n\t\"./warrior/death/dl/t6.png\": \"./src/assets/warrior/death/dl/t6.png\",\n\t\"./warrior/death/dl/t7.png\": \"./src/assets/warrior/death/dl/t7.png\",\n\t\"./warrior/death/dl/t8.png\": \"./src/assets/warrior/death/dl/t8.png\",\n\t\"./warrior/death/dl/t9.png\": \"./src/assets/warrior/death/dl/t9.png\",\n\t\"./warrior/death/dr/t1.png\": \"./src/assets/warrior/death/dr/t1.png\",\n\t\"./warrior/death/dr/t10.png\": \"./src/assets/warrior/death/dr/t10.png\",\n\t\"./warrior/death/dr/t11.png\": \"./src/assets/warrior/death/dr/t11.png\",\n\t\"./warrior/death/dr/t12.png\": \"./src/assets/warrior/death/dr/t12.png\",\n\t\"./warrior/death/dr/t2.png\": \"./src/assets/warrior/death/dr/t2.png\",\n\t\"./warrior/death/dr/t3.png\": \"./src/assets/warrior/death/dr/t3.png\",\n\t\"./warrior/death/dr/t4.png\": \"./src/assets/warrior/death/dr/t4.png\",\n\t\"./warrior/death/dr/t5.png\": \"./src/assets/warrior/death/dr/t5.png\",\n\t\"./warrior/death/dr/t6.png\": \"./src/assets/warrior/death/dr/t6.png\",\n\t\"./warrior/death/dr/t7.png\": \"./src/assets/warrior/death/dr/t7.png\",\n\t\"./warrior/death/dr/t8.png\": \"./src/assets/warrior/death/dr/t8.png\",\n\t\"./warrior/death/dr/t9.png\": \"./src/assets/warrior/death/dr/t9.png\",\n\t\"./warrior/death/ul/t1.png\": \"./src/assets/warrior/death/ul/t1.png\",\n\t\"./warrior/death/ul/t10.png\": \"./src/assets/warrior/death/ul/t10.png\",\n\t\"./warrior/death/ul/t11.png\": \"./src/assets/warrior/death/ul/t11.png\",\n\t\"./warrior/death/ul/t12.png\": \"./src/assets/warrior/death/ul/t12.png\",\n\t\"./warrior/death/ul/t2.png\": \"./src/assets/warrior/death/ul/t2.png\",\n\t\"./warrior/death/ul/t3.png\": \"./src/assets/warrior/death/ul/t3.png\",\n\t\"./warrior/death/ul/t4.png\": \"./src/assets/warrior/death/ul/t4.png\",\n\t\"./warrior/death/ul/t5.png\": \"./src/assets/warrior/death/ul/t5.png\",\n\t\"./warrior/death/ul/t6.png\": \"./src/assets/warrior/death/ul/t6.png\",\n\t\"./warrior/death/ul/t7.png\": \"./src/assets/warrior/death/ul/t7.png\",\n\t\"./warrior/death/ul/t8.png\": \"./src/assets/warrior/death/ul/t8.png\",\n\t\"./warrior/death/ul/t9.png\": \"./src/assets/warrior/death/ul/t9.png\",\n\t\"./warrior/death/ur/t1.png\": \"./src/assets/warrior/death/ur/t1.png\",\n\t\"./warrior/death/ur/t10.png\": \"./src/assets/warrior/death/ur/t10.png\",\n\t\"./warrior/death/ur/t11.png\": \"./src/assets/warrior/death/ur/t11.png\",\n\t\"./warrior/death/ur/t12.png\": \"./src/assets/warrior/death/ur/t12.png\",\n\t\"./warrior/death/ur/t2.png\": \"./src/assets/warrior/death/ur/t2.png\",\n\t\"./warrior/death/ur/t3.png\": \"./src/assets/warrior/death/ur/t3.png\",\n\t\"./warrior/death/ur/t4.png\": \"./src/assets/warrior/death/ur/t4.png\",\n\t\"./warrior/death/ur/t5.png\": \"./src/assets/warrior/death/ur/t5.png\",\n\t\"./warrior/death/ur/t6.png\": \"./src/assets/warrior/death/ur/t6.png\",\n\t\"./warrior/death/ur/t7.png\": \"./src/assets/warrior/death/ur/t7.png\",\n\t\"./warrior/death/ur/t8.png\": \"./src/assets/warrior/death/ur/t8.png\",\n\t\"./warrior/death/ur/t9.png\": \"./src/assets/warrior/death/ur/t9.png\",\n\t\"./warrior/hurt/dl/t1.png\": \"./src/assets/warrior/hurt/dl/t1.png\",\n\t\"./warrior/hurt/dl/t10.png\": \"./src/assets/warrior/hurt/dl/t10.png\",\n\t\"./warrior/hurt/dl/t11.png\": \"./src/assets/warrior/hurt/dl/t11.png\",\n\t\"./warrior/hurt/dl/t12.png\": \"./src/assets/warrior/hurt/dl/t12.png\",\n\t\"./warrior/hurt/dl/t13.png\": \"./src/assets/warrior/hurt/dl/t13.png\",\n\t\"./warrior/hurt/dl/t14.png\": \"./src/assets/warrior/hurt/dl/t14.png\",\n\t\"./warrior/hurt/dl/t2.png\": \"./src/assets/warrior/hurt/dl/t2.png\",\n\t\"./warrior/hurt/dl/t3.png\": \"./src/assets/warrior/hurt/dl/t3.png\",\n\t\"./warrior/hurt/dl/t4.png\": \"./src/assets/warrior/hurt/dl/t4.png\",\n\t\"./warrior/hurt/dl/t5.png\": \"./src/assets/warrior/hurt/dl/t5.png\",\n\t\"./warrior/hurt/dl/t6.png\": \"./src/assets/warrior/hurt/dl/t6.png\",\n\t\"./warrior/hurt/dl/t7.png\": \"./src/assets/warrior/hurt/dl/t7.png\",\n\t\"./warrior/hurt/dl/t8.png\": \"./src/assets/warrior/hurt/dl/t8.png\",\n\t\"./warrior/hurt/dl/t9.png\": \"./src/assets/warrior/hurt/dl/t9.png\",\n\t\"./warrior/hurt/dr/t1.png\": \"./src/assets/warrior/hurt/dr/t1.png\",\n\t\"./warrior/hurt/dr/t10.png\": \"./src/assets/warrior/hurt/dr/t10.png\",\n\t\"./warrior/hurt/dr/t11.png\": \"./src/assets/warrior/hurt/dr/t11.png\",\n\t\"./warrior/hurt/dr/t12.png\": \"./src/assets/warrior/hurt/dr/t12.png\",\n\t\"./warrior/hurt/dr/t13.png\": \"./src/assets/warrior/hurt/dr/t13.png\",\n\t\"./warrior/hurt/dr/t14.png\": \"./src/assets/warrior/hurt/dr/t14.png\",\n\t\"./warrior/hurt/dr/t2.png\": \"./src/assets/warrior/hurt/dr/t2.png\",\n\t\"./warrior/hurt/dr/t3.png\": \"./src/assets/warrior/hurt/dr/t3.png\",\n\t\"./warrior/hurt/dr/t4.png\": \"./src/assets/warrior/hurt/dr/t4.png\",\n\t\"./warrior/hurt/dr/t5.png\": \"./src/assets/warrior/hurt/dr/t5.png\",\n\t\"./warrior/hurt/dr/t6.png\": \"./src/assets/warrior/hurt/dr/t6.png\",\n\t\"./warrior/hurt/dr/t7.png\": \"./src/assets/warrior/hurt/dr/t7.png\",\n\t\"./warrior/hurt/dr/t8.png\": \"./src/assets/warrior/hurt/dr/t8.png\",\n\t\"./warrior/hurt/dr/t9.png\": \"./src/assets/warrior/hurt/dr/t9.png\",\n\t\"./warrior/hurt/ul/t1.png\": \"./src/assets/warrior/hurt/ul/t1.png\",\n\t\"./warrior/hurt/ul/t10.png\": \"./src/assets/warrior/hurt/ul/t10.png\",\n\t\"./warrior/hurt/ul/t11.png\": \"./src/assets/warrior/hurt/ul/t11.png\",\n\t\"./warrior/hurt/ul/t12.png\": \"./src/assets/warrior/hurt/ul/t12.png\",\n\t\"./warrior/hurt/ul/t13.png\": \"./src/assets/warrior/hurt/ul/t13.png\",\n\t\"./warrior/hurt/ul/t14.png\": \"./src/assets/warrior/hurt/ul/t14.png\",\n\t\"./warrior/hurt/ul/t2.png\": \"./src/assets/warrior/hurt/ul/t2.png\",\n\t\"./warrior/hurt/ul/t3.png\": \"./src/assets/warrior/hurt/ul/t3.png\",\n\t\"./warrior/hurt/ul/t4.png\": \"./src/assets/warrior/hurt/ul/t4.png\",\n\t\"./warrior/hurt/ul/t5.png\": \"./src/assets/warrior/hurt/ul/t5.png\",\n\t\"./warrior/hurt/ul/t6.png\": \"./src/assets/warrior/hurt/ul/t6.png\",\n\t\"./warrior/hurt/ul/t7.png\": \"./src/assets/warrior/hurt/ul/t7.png\",\n\t\"./warrior/hurt/ul/t8.png\": \"./src/assets/warrior/hurt/ul/t8.png\",\n\t\"./warrior/hurt/ul/t9.png\": \"./src/assets/warrior/hurt/ul/t9.png\",\n\t\"./warrior/hurt/ur/t1.png\": \"./src/assets/warrior/hurt/ur/t1.png\",\n\t\"./warrior/hurt/ur/t10.png\": \"./src/assets/warrior/hurt/ur/t10.png\",\n\t\"./warrior/hurt/ur/t11.png\": \"./src/assets/warrior/hurt/ur/t11.png\",\n\t\"./warrior/hurt/ur/t12.png\": \"./src/assets/warrior/hurt/ur/t12.png\",\n\t\"./warrior/hurt/ur/t13.png\": \"./src/assets/warrior/hurt/ur/t13.png\",\n\t\"./warrior/hurt/ur/t14.png\": \"./src/assets/warrior/hurt/ur/t14.png\",\n\t\"./warrior/hurt/ur/t2.png\": \"./src/assets/warrior/hurt/ur/t2.png\",\n\t\"./warrior/hurt/ur/t3.png\": \"./src/assets/warrior/hurt/ur/t3.png\",\n\t\"./warrior/hurt/ur/t4.png\": \"./src/assets/warrior/hurt/ur/t4.png\",\n\t\"./warrior/hurt/ur/t5.png\": \"./src/assets/warrior/hurt/ur/t5.png\",\n\t\"./warrior/hurt/ur/t6.png\": \"./src/assets/warrior/hurt/ur/t6.png\",\n\t\"./warrior/hurt/ur/t7.png\": \"./src/assets/warrior/hurt/ur/t7.png\",\n\t\"./warrior/hurt/ur/t8.png\": \"./src/assets/warrior/hurt/ur/t8.png\",\n\t\"./warrior/hurt/ur/t9.png\": \"./src/assets/warrior/hurt/ur/t9.png\",\n\t\"./warrior/idle/dl/t1.png\": \"./src/assets/warrior/idle/dl/t1.png\",\n\t\"./warrior/idle/dl/t10.png\": \"./src/assets/warrior/idle/dl/t10.png\",\n\t\"./warrior/idle/dl/t2.png\": \"./src/assets/warrior/idle/dl/t2.png\",\n\t\"./warrior/idle/dl/t3.png\": \"./src/assets/warrior/idle/dl/t3.png\",\n\t\"./warrior/idle/dl/t4.png\": \"./src/assets/warrior/idle/dl/t4.png\",\n\t\"./warrior/idle/dl/t5.png\": \"./src/assets/warrior/idle/dl/t5.png\",\n\t\"./warrior/idle/dl/t6.png\": \"./src/assets/warrior/idle/dl/t6.png\",\n\t\"./warrior/idle/dl/t7.png\": \"./src/assets/warrior/idle/dl/t7.png\",\n\t\"./warrior/idle/dl/t8.png\": \"./src/assets/warrior/idle/dl/t8.png\",\n\t\"./warrior/idle/dl/t9.png\": \"./src/assets/warrior/idle/dl/t9.png\",\n\t\"./warrior/idle/dr/t1.png\": \"./src/assets/warrior/idle/dr/t1.png\",\n\t\"./warrior/idle/dr/t10.png\": \"./src/assets/warrior/idle/dr/t10.png\",\n\t\"./warrior/idle/dr/t2.png\": \"./src/assets/warrior/idle/dr/t2.png\",\n\t\"./warrior/idle/dr/t3.png\": \"./src/assets/warrior/idle/dr/t3.png\",\n\t\"./warrior/idle/dr/t4.png\": \"./src/assets/warrior/idle/dr/t4.png\",\n\t\"./warrior/idle/dr/t5.png\": \"./src/assets/warrior/idle/dr/t5.png\",\n\t\"./warrior/idle/dr/t6.png\": \"./src/assets/warrior/idle/dr/t6.png\",\n\t\"./warrior/idle/dr/t7.png\": \"./src/assets/warrior/idle/dr/t7.png\",\n\t\"./warrior/idle/dr/t8.png\": \"./src/assets/warrior/idle/dr/t8.png\",\n\t\"./warrior/idle/dr/t9.png\": \"./src/assets/warrior/idle/dr/t9.png\",\n\t\"./warrior/idle/ul/t1.png\": \"./src/assets/warrior/idle/ul/t1.png\",\n\t\"./warrior/idle/ul/t10.png\": \"./src/assets/warrior/idle/ul/t10.png\",\n\t\"./warrior/idle/ul/t2.png\": \"./src/assets/warrior/idle/ul/t2.png\",\n\t\"./warrior/idle/ul/t3.png\": \"./src/assets/warrior/idle/ul/t3.png\",\n\t\"./warrior/idle/ul/t4.png\": \"./src/assets/warrior/idle/ul/t4.png\",\n\t\"./warrior/idle/ul/t5.png\": \"./src/assets/warrior/idle/ul/t5.png\",\n\t\"./warrior/idle/ul/t6.png\": \"./src/assets/warrior/idle/ul/t6.png\",\n\t\"./warrior/idle/ul/t7.png\": \"./src/assets/warrior/idle/ul/t7.png\",\n\t\"./warrior/idle/ul/t8.png\": \"./src/assets/warrior/idle/ul/t8.png\",\n\t\"./warrior/idle/ul/t9.png\": \"./src/assets/warrior/idle/ul/t9.png\",\n\t\"./warrior/idle/ur/t1.png\": \"./src/assets/warrior/idle/ur/t1.png\",\n\t\"./warrior/idle/ur/t10.png\": \"./src/assets/warrior/idle/ur/t10.png\",\n\t\"./warrior/idle/ur/t2.png\": \"./src/assets/warrior/idle/ur/t2.png\",\n\t\"./warrior/idle/ur/t3.png\": \"./src/assets/warrior/idle/ur/t3.png\",\n\t\"./warrior/idle/ur/t4.png\": \"./src/assets/warrior/idle/ur/t4.png\",\n\t\"./warrior/idle/ur/t5.png\": \"./src/assets/warrior/idle/ur/t5.png\",\n\t\"./warrior/idle/ur/t6.png\": \"./src/assets/warrior/idle/ur/t6.png\",\n\t\"./warrior/idle/ur/t7.png\": \"./src/assets/warrior/idle/ur/t7.png\",\n\t\"./warrior/idle/ur/t8.png\": \"./src/assets/warrior/idle/ur/t8.png\",\n\t\"./warrior/idle/ur/t9.png\": \"./src/assets/warrior/idle/ur/t9.png\",\n\t\"./warrior/run/dl/t1.png\": \"./src/assets/warrior/run/dl/t1.png\",\n\t\"./warrior/run/dl/t10.png\": \"./src/assets/warrior/run/dl/t10.png\",\n\t\"./warrior/run/dl/t2.png\": \"./src/assets/warrior/run/dl/t2.png\",\n\t\"./warrior/run/dl/t3.png\": \"./src/assets/warrior/run/dl/t3.png\",\n\t\"./warrior/run/dl/t4.png\": \"./src/assets/warrior/run/dl/t4.png\",\n\t\"./warrior/run/dl/t5.png\": \"./src/assets/warrior/run/dl/t5.png\",\n\t\"./warrior/run/dl/t6.png\": \"./src/assets/warrior/run/dl/t6.png\",\n\t\"./warrior/run/dl/t7.png\": \"./src/assets/warrior/run/dl/t7.png\",\n\t\"./warrior/run/dl/t8.png\": \"./src/assets/warrior/run/dl/t8.png\",\n\t\"./warrior/run/dl/t9.png\": \"./src/assets/warrior/run/dl/t9.png\",\n\t\"./warrior/run/dr/t1.png\": \"./src/assets/warrior/run/dr/t1.png\",\n\t\"./warrior/run/dr/t10.png\": \"./src/assets/warrior/run/dr/t10.png\",\n\t\"./warrior/run/dr/t2.png\": \"./src/assets/warrior/run/dr/t2.png\",\n\t\"./warrior/run/dr/t3.png\": \"./src/assets/warrior/run/dr/t3.png\",\n\t\"./warrior/run/dr/t4.png\": \"./src/assets/warrior/run/dr/t4.png\",\n\t\"./warrior/run/dr/t5.png\": \"./src/assets/warrior/run/dr/t5.png\",\n\t\"./warrior/run/dr/t6.png\": \"./src/assets/warrior/run/dr/t6.png\",\n\t\"./warrior/run/dr/t7.png\": \"./src/assets/warrior/run/dr/t7.png\",\n\t\"./warrior/run/dr/t8.png\": \"./src/assets/warrior/run/dr/t8.png\",\n\t\"./warrior/run/dr/t9.png\": \"./src/assets/warrior/run/dr/t9.png\",\n\t\"./warrior/run/ul/t1.png\": \"./src/assets/warrior/run/ul/t1.png\",\n\t\"./warrior/run/ul/t10.png\": \"./src/assets/warrior/run/ul/t10.png\",\n\t\"./warrior/run/ul/t2.png\": \"./src/assets/warrior/run/ul/t2.png\",\n\t\"./warrior/run/ul/t3.png\": \"./src/assets/warrior/run/ul/t3.png\",\n\t\"./warrior/run/ul/t4.png\": \"./src/assets/warrior/run/ul/t4.png\",\n\t\"./warrior/run/ul/t5.png\": \"./src/assets/warrior/run/ul/t5.png\",\n\t\"./warrior/run/ul/t6.png\": \"./src/assets/warrior/run/ul/t6.png\",\n\t\"./warrior/run/ul/t7.png\": \"./src/assets/warrior/run/ul/t7.png\",\n\t\"./warrior/run/ul/t8.png\": \"./src/assets/warrior/run/ul/t8.png\",\n\t\"./warrior/run/ul/t9.png\": \"./src/assets/warrior/run/ul/t9.png\",\n\t\"./warrior/run/ur/t1.png\": \"./src/assets/warrior/run/ur/t1.png\",\n\t\"./warrior/run/ur/t10.png\": \"./src/assets/warrior/run/ur/t10.png\",\n\t\"./warrior/run/ur/t2.png\": \"./src/assets/warrior/run/ur/t2.png\",\n\t\"./warrior/run/ur/t3.png\": \"./src/assets/warrior/run/ur/t3.png\",\n\t\"./warrior/run/ur/t4.png\": \"./src/assets/warrior/run/ur/t4.png\",\n\t\"./warrior/run/ur/t5.png\": \"./src/assets/warrior/run/ur/t5.png\",\n\t\"./warrior/run/ur/t6.png\": \"./src/assets/warrior/run/ur/t6.png\",\n\t\"./warrior/run/ur/t7.png\": \"./src/assets/warrior/run/ur/t7.png\",\n\t\"./warrior/run/ur/t8.png\": \"./src/assets/warrior/run/ur/t8.png\",\n\t\"./warrior/run/ur/t9.png\": \"./src/assets/warrior/run/ur/t9.png\",\n\t\"./wood.png\": \"./src/assets/wood.png\",\n\t\"./woods.png\": \"./src/assets/woods.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets sync recursive ^\\\\.\\\\/.*.*\\\\.png$\";\n\n//# sourceURL=webpack://pixi/./src/assets/_sync_^\\.\\/.*.*\\.png$?");
 
 /***/ }),
 
@@ -1122,7 +3497,17 @@ eval("var map = {\n\t\"./axe.png\": \"./src/assets/axe.png\",\n\t\"./bag1.png\":
   \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./axe.png\": \"./src/assets/axe.png\",\n\t\"./bag1.png\": \"./src/assets/bag1.png\",\n\t\"./camp1.png\": \"./src/assets/camp1.png\",\n\t\"./camp2.png\": \"./src/assets/camp2.png\",\n\t\"./camp3.png\": \"./src/assets/camp3.png\",\n\t\"./camp4.png\": \"./src/assets/camp4.png\",\n\t\"./camp5.png\": \"./src/assets/camp5.png\",\n\t\"./camp6.png\": \"./src/assets/camp6.png\",\n\t\"./coin.png\": \"./src/assets/coin.png\",\n\t\"./coin1.png\": \"./src/assets/coin1.png\",\n\t\"./desk.png\": \"./src/assets/desk.png\",\n\t\"./fish.png\": \"./src/assets/fish.png\",\n\t\"./food.png\": \"./src/assets/food.png\",\n\t\"./forrest1.png\": \"./src/assets/forrest1.png\",\n\t\"./forrest2.png\": \"./src/assets/forrest2.png\",\n\t\"./forrest3.png\": \"./src/assets/forrest3.png\",\n\t\"./fur.png\": \"./src/assets/fur.png\",\n\t\"./grass1.png\": \"./src/assets/grass1.png\",\n\t\"./grass2.png\": \"./src/assets/grass2.png\",\n\t\"./grass3.png\": \"./src/assets/grass3.png\",\n\t\"./grass4.png\": \"./src/assets/grass4.png\",\n\t\"./grass5.png\": \"./src/assets/grass5.png\",\n\t\"./grass6.png\": \"./src/assets/grass6.png\",\n\t\"./grass7.png\": \"./src/assets/grass7.png\",\n\t\"./lake1.png\": \"./src/assets/lake1.png\",\n\t\"./leather.png\": \"./src/assets/leather.png\",\n\t\"./mine1.png\": \"./src/assets/mine1.png\",\n\t\"./mine2.png\": \"./src/assets/mine2.png\",\n\t\"./mine3.png\": \"./src/assets/mine3.png\",\n\t\"./mine4.png\": \"./src/assets/mine4.png\",\n\t\"./mine5.png\": \"./src/assets/mine5.png\",\n\t\"./mine6.png\": \"./src/assets/mine6.png\",\n\t\"./molotok.png\": \"./src/assets/molotok.png\",\n\t\"./mountain1.png\": \"./src/assets/mountain1.png\",\n\t\"./mountain2.png\": \"./src/assets/mountain2.png\",\n\t\"./mountain3.png\": \"./src/assets/mountain3.png\",\n\t\"./pickaxe.png\": \"./src/assets/pickaxe.png\",\n\t\"./quarry1.png\": \"./src/assets/quarry1.png\",\n\t\"./quarry2.png\": \"./src/assets/quarry2.png\",\n\t\"./quarry3.png\": \"./src/assets/quarry3.png\",\n\t\"./quarry4.png\": \"./src/assets/quarry4.png\",\n\t\"./quarry5.png\": \"./src/assets/quarry5.png\",\n\t\"./quarry6.png\": \"./src/assets/quarry6.png\",\n\t\"./rune.png\": \"./src/assets/rune.png\",\n\t\"./sawmill1.png\": \"./src/assets/sawmill1.png\",\n\t\"./sawmill2.png\": \"./src/assets/sawmill2.png\",\n\t\"./sawmill3.png\": \"./src/assets/sawmill3.png\",\n\t\"./sawmill4.png\": \"./src/assets/sawmill4.png\",\n\t\"./sawmill5.png\": \"./src/assets/sawmill5.png\",\n\t\"./sawmill6.png\": \"./src/assets/sawmill6.png\",\n\t\"./steel.png\": \"./src/assets/steel.png\",\n\t\"./stone.png\": \"./src/assets/stone.png\",\n\t\"./wood.png\": \"./src/assets/wood.png\",\n\t\"./woods.png\": \"./src/assets/woods.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\";\n\n//# sourceURL=webpack://pixi/./src/assets/_sync_^\\.\\/.*\\.png$?");
+eval("var map = {\n\t\"./axe.png\": \"./src/assets/axe.png\",\n\t\"./bag1.png\": \"./src/assets/bag1.png\",\n\t\"./camp1.png\": \"./src/assets/camp1.png\",\n\t\"./camp2.png\": \"./src/assets/camp2.png\",\n\t\"./camp3.png\": \"./src/assets/camp3.png\",\n\t\"./camp4.png\": \"./src/assets/camp4.png\",\n\t\"./camp5.png\": \"./src/assets/camp5.png\",\n\t\"./camp6.png\": \"./src/assets/camp6.png\",\n\t\"./coin.png\": \"./src/assets/coin.png\",\n\t\"./coin1.png\": \"./src/assets/coin1.png\",\n\t\"./desk.png\": \"./src/assets/desk.png\",\n\t\"./fish.png\": \"./src/assets/fish.png\",\n\t\"./food.png\": \"./src/assets/food.png\",\n\t\"./forrest1.png\": \"./src/assets/forrest1.png\",\n\t\"./forrest2.png\": \"./src/assets/forrest2.png\",\n\t\"./forrest3.png\": \"./src/assets/forrest3.png\",\n\t\"./fur.png\": \"./src/assets/fur.png\",\n\t\"./grass1.png\": \"./src/assets/grass1.png\",\n\t\"./grass2.png\": \"./src/assets/grass2.png\",\n\t\"./grass3.png\": \"./src/assets/grass3.png\",\n\t\"./grass4.png\": \"./src/assets/grass4.png\",\n\t\"./grass5.png\": \"./src/assets/grass5.png\",\n\t\"./grass6.png\": \"./src/assets/grass6.png\",\n\t\"./grass7.png\": \"./src/assets/grass7.png\",\n\t\"./lake1.png\": \"./src/assets/lake1.png\",\n\t\"./leather.png\": \"./src/assets/leather.png\",\n\t\"./mine1.png\": \"./src/assets/mine1.png\",\n\t\"./mine2.png\": \"./src/assets/mine2.png\",\n\t\"./mine3.png\": \"./src/assets/mine3.png\",\n\t\"./mine4.png\": \"./src/assets/mine4.png\",\n\t\"./mine5.png\": \"./src/assets/mine5.png\",\n\t\"./mine6.png\": \"./src/assets/mine6.png\",\n\t\"./molotok.png\": \"./src/assets/molotok.png\",\n\t\"./mountain1.png\": \"./src/assets/mountain1.png\",\n\t\"./mountain2.png\": \"./src/assets/mountain2.png\",\n\t\"./mountain3.png\": \"./src/assets/mountain3.png\",\n\t\"./pickaxe.png\": \"./src/assets/pickaxe.png\",\n\t\"./quarry1.png\": \"./src/assets/quarry1.png\",\n\t\"./quarry2.png\": \"./src/assets/quarry2.png\",\n\t\"./quarry3.png\": \"./src/assets/quarry3.png\",\n\t\"./quarry4.png\": \"./src/assets/quarry4.png\",\n\t\"./quarry5.png\": \"./src/assets/quarry5.png\",\n\t\"./quarry6.png\": \"./src/assets/quarry6.png\",\n\t\"./rune.png\": \"./src/assets/rune.png\",\n\t\"./sawmill1.png\": \"./src/assets/sawmill1.png\",\n\t\"./sawmill2.png\": \"./src/assets/sawmill2.png\",\n\t\"./sawmill3.png\": \"./src/assets/sawmill3.png\",\n\t\"./sawmill4.png\": \"./src/assets/sawmill4.png\",\n\t\"./sawmill5.png\": \"./src/assets/sawmill5.png\",\n\t\"./sawmill6.png\": \"./src/assets/sawmill6.png\",\n\t\"./steel.png\": \"./src/assets/steel.png\",\n\t\"./stone.png\": \"./src/assets/stone.png\",\n\t\"./warrior/attack/dl/t1.png\": \"./src/assets/warrior/attack/dl/t1.png\",\n\t\"./warrior/attack/dl/t10.png\": \"./src/assets/warrior/attack/dl/t10.png\",\n\t\"./warrior/attack/dl/t11.png\": \"./src/assets/warrior/attack/dl/t11.png\",\n\t\"./warrior/attack/dl/t12.png\": \"./src/assets/warrior/attack/dl/t12.png\",\n\t\"./warrior/attack/dl/t2.png\": \"./src/assets/warrior/attack/dl/t2.png\",\n\t\"./warrior/attack/dl/t3.png\": \"./src/assets/warrior/attack/dl/t3.png\",\n\t\"./warrior/attack/dl/t4.png\": \"./src/assets/warrior/attack/dl/t4.png\",\n\t\"./warrior/attack/dl/t5.png\": \"./src/assets/warrior/attack/dl/t5.png\",\n\t\"./warrior/attack/dl/t6.png\": \"./src/assets/warrior/attack/dl/t6.png\",\n\t\"./warrior/attack/dl/t7.png\": \"./src/assets/warrior/attack/dl/t7.png\",\n\t\"./warrior/attack/dl/t8.png\": \"./src/assets/warrior/attack/dl/t8.png\",\n\t\"./warrior/attack/dl/t9.png\": \"./src/assets/warrior/attack/dl/t9.png\",\n\t\"./warrior/attack/dr/t1.png\": \"./src/assets/warrior/attack/dr/t1.png\",\n\t\"./warrior/attack/dr/t10.png\": \"./src/assets/warrior/attack/dr/t10.png\",\n\t\"./warrior/attack/dr/t11.png\": \"./src/assets/warrior/attack/dr/t11.png\",\n\t\"./warrior/attack/dr/t12.png\": \"./src/assets/warrior/attack/dr/t12.png\",\n\t\"./warrior/attack/dr/t2.png\": \"./src/assets/warrior/attack/dr/t2.png\",\n\t\"./warrior/attack/dr/t3.png\": \"./src/assets/warrior/attack/dr/t3.png\",\n\t\"./warrior/attack/dr/t4.png\": \"./src/assets/warrior/attack/dr/t4.png\",\n\t\"./warrior/attack/dr/t5.png\": \"./src/assets/warrior/attack/dr/t5.png\",\n\t\"./warrior/attack/dr/t6.png\": \"./src/assets/warrior/attack/dr/t6.png\",\n\t\"./warrior/attack/dr/t7.png\": \"./src/assets/warrior/attack/dr/t7.png\",\n\t\"./warrior/attack/dr/t8.png\": \"./src/assets/warrior/attack/dr/t8.png\",\n\t\"./warrior/attack/dr/t9.png\": \"./src/assets/warrior/attack/dr/t9.png\",\n\t\"./warrior/attack/ul/t1.png\": \"./src/assets/warrior/attack/ul/t1.png\",\n\t\"./warrior/attack/ul/t10.png\": \"./src/assets/warrior/attack/ul/t10.png\",\n\t\"./warrior/attack/ul/t11.png\": \"./src/assets/warrior/attack/ul/t11.png\",\n\t\"./warrior/attack/ul/t12.png\": \"./src/assets/warrior/attack/ul/t12.png\",\n\t\"./warrior/attack/ul/t2.png\": \"./src/assets/warrior/attack/ul/t2.png\",\n\t\"./warrior/attack/ul/t3.png\": \"./src/assets/warrior/attack/ul/t3.png\",\n\t\"./warrior/attack/ul/t4.png\": \"./src/assets/warrior/attack/ul/t4.png\",\n\t\"./warrior/attack/ul/t5.png\": \"./src/assets/warrior/attack/ul/t5.png\",\n\t\"./warrior/attack/ul/t6.png\": \"./src/assets/warrior/attack/ul/t6.png\",\n\t\"./warrior/attack/ul/t7.png\": \"./src/assets/warrior/attack/ul/t7.png\",\n\t\"./warrior/attack/ul/t8.png\": \"./src/assets/warrior/attack/ul/t8.png\",\n\t\"./warrior/attack/ul/t9.png\": \"./src/assets/warrior/attack/ul/t9.png\",\n\t\"./warrior/attack/ur/t1.png\": \"./src/assets/warrior/attack/ur/t1.png\",\n\t\"./warrior/attack/ur/t10.png\": \"./src/assets/warrior/attack/ur/t10.png\",\n\t\"./warrior/attack/ur/t11.png\": \"./src/assets/warrior/attack/ur/t11.png\",\n\t\"./warrior/attack/ur/t12.png\": \"./src/assets/warrior/attack/ur/t12.png\",\n\t\"./warrior/attack/ur/t2.png\": \"./src/assets/warrior/attack/ur/t2.png\",\n\t\"./warrior/attack/ur/t3.png\": \"./src/assets/warrior/attack/ur/t3.png\",\n\t\"./warrior/attack/ur/t4.png\": \"./src/assets/warrior/attack/ur/t4.png\",\n\t\"./warrior/attack/ur/t5.png\": \"./src/assets/warrior/attack/ur/t5.png\",\n\t\"./warrior/attack/ur/t6.png\": \"./src/assets/warrior/attack/ur/t6.png\",\n\t\"./warrior/attack/ur/t7.png\": \"./src/assets/warrior/attack/ur/t7.png\",\n\t\"./warrior/attack/ur/t8.png\": \"./src/assets/warrior/attack/ur/t8.png\",\n\t\"./warrior/attack/ur/t9.png\": \"./src/assets/warrior/attack/ur/t9.png\",\n\t\"./warrior/death/dl/t1.png\": \"./src/assets/warrior/death/dl/t1.png\",\n\t\"./warrior/death/dl/t10.png\": \"./src/assets/warrior/death/dl/t10.png\",\n\t\"./warrior/death/dl/t11.png\": \"./src/assets/warrior/death/dl/t11.png\",\n\t\"./warrior/death/dl/t12.png\": \"./src/assets/warrior/death/dl/t12.png\",\n\t\"./warrior/death/dl/t2.png\": \"./src/assets/warrior/death/dl/t2.png\",\n\t\"./warrior/death/dl/t3.png\": \"./src/assets/warrior/death/dl/t3.png\",\n\t\"./warrior/death/dl/t4.png\": \"./src/assets/warrior/death/dl/t4.png\",\n\t\"./warrior/death/dl/t5.png\": \"./src/assets/warrior/death/dl/t5.png\",\n\t\"./warrior/death/dl/t6.png\": \"./src/assets/warrior/death/dl/t6.png\",\n\t\"./warrior/death/dl/t7.png\": \"./src/assets/warrior/death/dl/t7.png\",\n\t\"./warrior/death/dl/t8.png\": \"./src/assets/warrior/death/dl/t8.png\",\n\t\"./warrior/death/dl/t9.png\": \"./src/assets/warrior/death/dl/t9.png\",\n\t\"./warrior/death/dr/t1.png\": \"./src/assets/warrior/death/dr/t1.png\",\n\t\"./warrior/death/dr/t10.png\": \"./src/assets/warrior/death/dr/t10.png\",\n\t\"./warrior/death/dr/t11.png\": \"./src/assets/warrior/death/dr/t11.png\",\n\t\"./warrior/death/dr/t12.png\": \"./src/assets/warrior/death/dr/t12.png\",\n\t\"./warrior/death/dr/t2.png\": \"./src/assets/warrior/death/dr/t2.png\",\n\t\"./warrior/death/dr/t3.png\": \"./src/assets/warrior/death/dr/t3.png\",\n\t\"./warrior/death/dr/t4.png\": \"./src/assets/warrior/death/dr/t4.png\",\n\t\"./warrior/death/dr/t5.png\": \"./src/assets/warrior/death/dr/t5.png\",\n\t\"./warrior/death/dr/t6.png\": \"./src/assets/warrior/death/dr/t6.png\",\n\t\"./warrior/death/dr/t7.png\": \"./src/assets/warrior/death/dr/t7.png\",\n\t\"./warrior/death/dr/t8.png\": \"./src/assets/warrior/death/dr/t8.png\",\n\t\"./warrior/death/dr/t9.png\": \"./src/assets/warrior/death/dr/t9.png\",\n\t\"./warrior/death/ul/t1.png\": \"./src/assets/warrior/death/ul/t1.png\",\n\t\"./warrior/death/ul/t10.png\": \"./src/assets/warrior/death/ul/t10.png\",\n\t\"./warrior/death/ul/t11.png\": \"./src/assets/warrior/death/ul/t11.png\",\n\t\"./warrior/death/ul/t12.png\": \"./src/assets/warrior/death/ul/t12.png\",\n\t\"./warrior/death/ul/t2.png\": \"./src/assets/warrior/death/ul/t2.png\",\n\t\"./warrior/death/ul/t3.png\": \"./src/assets/warrior/death/ul/t3.png\",\n\t\"./warrior/death/ul/t4.png\": \"./src/assets/warrior/death/ul/t4.png\",\n\t\"./warrior/death/ul/t5.png\": \"./src/assets/warrior/death/ul/t5.png\",\n\t\"./warrior/death/ul/t6.png\": \"./src/assets/warrior/death/ul/t6.png\",\n\t\"./warrior/death/ul/t7.png\": \"./src/assets/warrior/death/ul/t7.png\",\n\t\"./warrior/death/ul/t8.png\": \"./src/assets/warrior/death/ul/t8.png\",\n\t\"./warrior/death/ul/t9.png\": \"./src/assets/warrior/death/ul/t9.png\",\n\t\"./warrior/death/ur/t1.png\": \"./src/assets/warrior/death/ur/t1.png\",\n\t\"./warrior/death/ur/t10.png\": \"./src/assets/warrior/death/ur/t10.png\",\n\t\"./warrior/death/ur/t11.png\": \"./src/assets/warrior/death/ur/t11.png\",\n\t\"./warrior/death/ur/t12.png\": \"./src/assets/warrior/death/ur/t12.png\",\n\t\"./warrior/death/ur/t2.png\": \"./src/assets/warrior/death/ur/t2.png\",\n\t\"./warrior/death/ur/t3.png\": \"./src/assets/warrior/death/ur/t3.png\",\n\t\"./warrior/death/ur/t4.png\": \"./src/assets/warrior/death/ur/t4.png\",\n\t\"./warrior/death/ur/t5.png\": \"./src/assets/warrior/death/ur/t5.png\",\n\t\"./warrior/death/ur/t6.png\": \"./src/assets/warrior/death/ur/t6.png\",\n\t\"./warrior/death/ur/t7.png\": \"./src/assets/warrior/death/ur/t7.png\",\n\t\"./warrior/death/ur/t8.png\": \"./src/assets/warrior/death/ur/t8.png\",\n\t\"./warrior/death/ur/t9.png\": \"./src/assets/warrior/death/ur/t9.png\",\n\t\"./warrior/hurt/dl/t1.png\": \"./src/assets/warrior/hurt/dl/t1.png\",\n\t\"./warrior/hurt/dl/t10.png\": \"./src/assets/warrior/hurt/dl/t10.png\",\n\t\"./warrior/hurt/dl/t11.png\": \"./src/assets/warrior/hurt/dl/t11.png\",\n\t\"./warrior/hurt/dl/t12.png\": \"./src/assets/warrior/hurt/dl/t12.png\",\n\t\"./warrior/hurt/dl/t13.png\": \"./src/assets/warrior/hurt/dl/t13.png\",\n\t\"./warrior/hurt/dl/t14.png\": \"./src/assets/warrior/hurt/dl/t14.png\",\n\t\"./warrior/hurt/dl/t2.png\": \"./src/assets/warrior/hurt/dl/t2.png\",\n\t\"./warrior/hurt/dl/t3.png\": \"./src/assets/warrior/hurt/dl/t3.png\",\n\t\"./warrior/hurt/dl/t4.png\": \"./src/assets/warrior/hurt/dl/t4.png\",\n\t\"./warrior/hurt/dl/t5.png\": \"./src/assets/warrior/hurt/dl/t5.png\",\n\t\"./warrior/hurt/dl/t6.png\": \"./src/assets/warrior/hurt/dl/t6.png\",\n\t\"./warrior/hurt/dl/t7.png\": \"./src/assets/warrior/hurt/dl/t7.png\",\n\t\"./warrior/hurt/dl/t8.png\": \"./src/assets/warrior/hurt/dl/t8.png\",\n\t\"./warrior/hurt/dl/t9.png\": \"./src/assets/warrior/hurt/dl/t9.png\",\n\t\"./warrior/hurt/dr/t1.png\": \"./src/assets/warrior/hurt/dr/t1.png\",\n\t\"./warrior/hurt/dr/t10.png\": \"./src/assets/warrior/hurt/dr/t10.png\",\n\t\"./warrior/hurt/dr/t11.png\": \"./src/assets/warrior/hurt/dr/t11.png\",\n\t\"./warrior/hurt/dr/t12.png\": \"./src/assets/warrior/hurt/dr/t12.png\",\n\t\"./warrior/hurt/dr/t13.png\": \"./src/assets/warrior/hurt/dr/t13.png\",\n\t\"./warrior/hurt/dr/t14.png\": \"./src/assets/warrior/hurt/dr/t14.png\",\n\t\"./warrior/hurt/dr/t2.png\": \"./src/assets/warrior/hurt/dr/t2.png\",\n\t\"./warrior/hurt/dr/t3.png\": \"./src/assets/warrior/hurt/dr/t3.png\",\n\t\"./warrior/hurt/dr/t4.png\": \"./src/assets/warrior/hurt/dr/t4.png\",\n\t\"./warrior/hurt/dr/t5.png\": \"./src/assets/warrior/hurt/dr/t5.png\",\n\t\"./warrior/hurt/dr/t6.png\": \"./src/assets/warrior/hurt/dr/t6.png\",\n\t\"./warrior/hurt/dr/t7.png\": \"./src/assets/warrior/hurt/dr/t7.png\",\n\t\"./warrior/hurt/dr/t8.png\": \"./src/assets/warrior/hurt/dr/t8.png\",\n\t\"./warrior/hurt/dr/t9.png\": \"./src/assets/warrior/hurt/dr/t9.png\",\n\t\"./warrior/hurt/ul/t1.png\": \"./src/assets/warrior/hurt/ul/t1.png\",\n\t\"./warrior/hurt/ul/t10.png\": \"./src/assets/warrior/hurt/ul/t10.png\",\n\t\"./warrior/hurt/ul/t11.png\": \"./src/assets/warrior/hurt/ul/t11.png\",\n\t\"./warrior/hurt/ul/t12.png\": \"./src/assets/warrior/hurt/ul/t12.png\",\n\t\"./warrior/hurt/ul/t13.png\": \"./src/assets/warrior/hurt/ul/t13.png\",\n\t\"./warrior/hurt/ul/t14.png\": \"./src/assets/warrior/hurt/ul/t14.png\",\n\t\"./warrior/hurt/ul/t2.png\": \"./src/assets/warrior/hurt/ul/t2.png\",\n\t\"./warrior/hurt/ul/t3.png\": \"./src/assets/warrior/hurt/ul/t3.png\",\n\t\"./warrior/hurt/ul/t4.png\": \"./src/assets/warrior/hurt/ul/t4.png\",\n\t\"./warrior/hurt/ul/t5.png\": \"./src/assets/warrior/hurt/ul/t5.png\",\n\t\"./warrior/hurt/ul/t6.png\": \"./src/assets/warrior/hurt/ul/t6.png\",\n\t\"./warrior/hurt/ul/t7.png\": \"./src/assets/warrior/hurt/ul/t7.png\",\n\t\"./warrior/hurt/ul/t8.png\": \"./src/assets/warrior/hurt/ul/t8.png\",\n\t\"./warrior/hurt/ul/t9.png\": \"./src/assets/warrior/hurt/ul/t9.png\",\n\t\"./warrior/hurt/ur/t1.png\": \"./src/assets/warrior/hurt/ur/t1.png\",\n\t\"./warrior/hurt/ur/t10.png\": \"./src/assets/warrior/hurt/ur/t10.png\",\n\t\"./warrior/hurt/ur/t11.png\": \"./src/assets/warrior/hurt/ur/t11.png\",\n\t\"./warrior/hurt/ur/t12.png\": \"./src/assets/warrior/hurt/ur/t12.png\",\n\t\"./warrior/hurt/ur/t13.png\": \"./src/assets/warrior/hurt/ur/t13.png\",\n\t\"./warrior/hurt/ur/t14.png\": \"./src/assets/warrior/hurt/ur/t14.png\",\n\t\"./warrior/hurt/ur/t2.png\": \"./src/assets/warrior/hurt/ur/t2.png\",\n\t\"./warrior/hurt/ur/t3.png\": \"./src/assets/warrior/hurt/ur/t3.png\",\n\t\"./warrior/hurt/ur/t4.png\": \"./src/assets/warrior/hurt/ur/t4.png\",\n\t\"./warrior/hurt/ur/t5.png\": \"./src/assets/warrior/hurt/ur/t5.png\",\n\t\"./warrior/hurt/ur/t6.png\": \"./src/assets/warrior/hurt/ur/t6.png\",\n\t\"./warrior/hurt/ur/t7.png\": \"./src/assets/warrior/hurt/ur/t7.png\",\n\t\"./warrior/hurt/ur/t8.png\": \"./src/assets/warrior/hurt/ur/t8.png\",\n\t\"./warrior/hurt/ur/t9.png\": \"./src/assets/warrior/hurt/ur/t9.png\",\n\t\"./warrior/idle/dl/t1.png\": \"./src/assets/warrior/idle/dl/t1.png\",\n\t\"./warrior/idle/dl/t10.png\": \"./src/assets/warrior/idle/dl/t10.png\",\n\t\"./warrior/idle/dl/t2.png\": \"./src/assets/warrior/idle/dl/t2.png\",\n\t\"./warrior/idle/dl/t3.png\": \"./src/assets/warrior/idle/dl/t3.png\",\n\t\"./warrior/idle/dl/t4.png\": \"./src/assets/warrior/idle/dl/t4.png\",\n\t\"./warrior/idle/dl/t5.png\": \"./src/assets/warrior/idle/dl/t5.png\",\n\t\"./warrior/idle/dl/t6.png\": \"./src/assets/warrior/idle/dl/t6.png\",\n\t\"./warrior/idle/dl/t7.png\": \"./src/assets/warrior/idle/dl/t7.png\",\n\t\"./warrior/idle/dl/t8.png\": \"./src/assets/warrior/idle/dl/t8.png\",\n\t\"./warrior/idle/dl/t9.png\": \"./src/assets/warrior/idle/dl/t9.png\",\n\t\"./warrior/idle/dr/t1.png\": \"./src/assets/warrior/idle/dr/t1.png\",\n\t\"./warrior/idle/dr/t10.png\": \"./src/assets/warrior/idle/dr/t10.png\",\n\t\"./warrior/idle/dr/t2.png\": \"./src/assets/warrior/idle/dr/t2.png\",\n\t\"./warrior/idle/dr/t3.png\": \"./src/assets/warrior/idle/dr/t3.png\",\n\t\"./warrior/idle/dr/t4.png\": \"./src/assets/warrior/idle/dr/t4.png\",\n\t\"./warrior/idle/dr/t5.png\": \"./src/assets/warrior/idle/dr/t5.png\",\n\t\"./warrior/idle/dr/t6.png\": \"./src/assets/warrior/idle/dr/t6.png\",\n\t\"./warrior/idle/dr/t7.png\": \"./src/assets/warrior/idle/dr/t7.png\",\n\t\"./warrior/idle/dr/t8.png\": \"./src/assets/warrior/idle/dr/t8.png\",\n\t\"./warrior/idle/dr/t9.png\": \"./src/assets/warrior/idle/dr/t9.png\",\n\t\"./warrior/idle/ul/t1.png\": \"./src/assets/warrior/idle/ul/t1.png\",\n\t\"./warrior/idle/ul/t10.png\": \"./src/assets/warrior/idle/ul/t10.png\",\n\t\"./warrior/idle/ul/t2.png\": \"./src/assets/warrior/idle/ul/t2.png\",\n\t\"./warrior/idle/ul/t3.png\": \"./src/assets/warrior/idle/ul/t3.png\",\n\t\"./warrior/idle/ul/t4.png\": \"./src/assets/warrior/idle/ul/t4.png\",\n\t\"./warrior/idle/ul/t5.png\": \"./src/assets/warrior/idle/ul/t5.png\",\n\t\"./warrior/idle/ul/t6.png\": \"./src/assets/warrior/idle/ul/t6.png\",\n\t\"./warrior/idle/ul/t7.png\": \"./src/assets/warrior/idle/ul/t7.png\",\n\t\"./warrior/idle/ul/t8.png\": \"./src/assets/warrior/idle/ul/t8.png\",\n\t\"./warrior/idle/ul/t9.png\": \"./src/assets/warrior/idle/ul/t9.png\",\n\t\"./warrior/idle/ur/t1.png\": \"./src/assets/warrior/idle/ur/t1.png\",\n\t\"./warrior/idle/ur/t10.png\": \"./src/assets/warrior/idle/ur/t10.png\",\n\t\"./warrior/idle/ur/t2.png\": \"./src/assets/warrior/idle/ur/t2.png\",\n\t\"./warrior/idle/ur/t3.png\": \"./src/assets/warrior/idle/ur/t3.png\",\n\t\"./warrior/idle/ur/t4.png\": \"./src/assets/warrior/idle/ur/t4.png\",\n\t\"./warrior/idle/ur/t5.png\": \"./src/assets/warrior/idle/ur/t5.png\",\n\t\"./warrior/idle/ur/t6.png\": \"./src/assets/warrior/idle/ur/t6.png\",\n\t\"./warrior/idle/ur/t7.png\": \"./src/assets/warrior/idle/ur/t7.png\",\n\t\"./warrior/idle/ur/t8.png\": \"./src/assets/warrior/idle/ur/t8.png\",\n\t\"./warrior/idle/ur/t9.png\": \"./src/assets/warrior/idle/ur/t9.png\",\n\t\"./warrior/run/dl/t1.png\": \"./src/assets/warrior/run/dl/t1.png\",\n\t\"./warrior/run/dl/t10.png\": \"./src/assets/warrior/run/dl/t10.png\",\n\t\"./warrior/run/dl/t2.png\": \"./src/assets/warrior/run/dl/t2.png\",\n\t\"./warrior/run/dl/t3.png\": \"./src/assets/warrior/run/dl/t3.png\",\n\t\"./warrior/run/dl/t4.png\": \"./src/assets/warrior/run/dl/t4.png\",\n\t\"./warrior/run/dl/t5.png\": \"./src/assets/warrior/run/dl/t5.png\",\n\t\"./warrior/run/dl/t6.png\": \"./src/assets/warrior/run/dl/t6.png\",\n\t\"./warrior/run/dl/t7.png\": \"./src/assets/warrior/run/dl/t7.png\",\n\t\"./warrior/run/dl/t8.png\": \"./src/assets/warrior/run/dl/t8.png\",\n\t\"./warrior/run/dl/t9.png\": \"./src/assets/warrior/run/dl/t9.png\",\n\t\"./warrior/run/dr/t1.png\": \"./src/assets/warrior/run/dr/t1.png\",\n\t\"./warrior/run/dr/t10.png\": \"./src/assets/warrior/run/dr/t10.png\",\n\t\"./warrior/run/dr/t2.png\": \"./src/assets/warrior/run/dr/t2.png\",\n\t\"./warrior/run/dr/t3.png\": \"./src/assets/warrior/run/dr/t3.png\",\n\t\"./warrior/run/dr/t4.png\": \"./src/assets/warrior/run/dr/t4.png\",\n\t\"./warrior/run/dr/t5.png\": \"./src/assets/warrior/run/dr/t5.png\",\n\t\"./warrior/run/dr/t6.png\": \"./src/assets/warrior/run/dr/t6.png\",\n\t\"./warrior/run/dr/t7.png\": \"./src/assets/warrior/run/dr/t7.png\",\n\t\"./warrior/run/dr/t8.png\": \"./src/assets/warrior/run/dr/t8.png\",\n\t\"./warrior/run/dr/t9.png\": \"./src/assets/warrior/run/dr/t9.png\",\n\t\"./warrior/run/ul/t1.png\": \"./src/assets/warrior/run/ul/t1.png\",\n\t\"./warrior/run/ul/t10.png\": \"./src/assets/warrior/run/ul/t10.png\",\n\t\"./warrior/run/ul/t2.png\": \"./src/assets/warrior/run/ul/t2.png\",\n\t\"./warrior/run/ul/t3.png\": \"./src/assets/warrior/run/ul/t3.png\",\n\t\"./warrior/run/ul/t4.png\": \"./src/assets/warrior/run/ul/t4.png\",\n\t\"./warrior/run/ul/t5.png\": \"./src/assets/warrior/run/ul/t5.png\",\n\t\"./warrior/run/ul/t6.png\": \"./src/assets/warrior/run/ul/t6.png\",\n\t\"./warrior/run/ul/t7.png\": \"./src/assets/warrior/run/ul/t7.png\",\n\t\"./warrior/run/ul/t8.png\": \"./src/assets/warrior/run/ul/t8.png\",\n\t\"./warrior/run/ul/t9.png\": \"./src/assets/warrior/run/ul/t9.png\",\n\t\"./warrior/run/ur/t1.png\": \"./src/assets/warrior/run/ur/t1.png\",\n\t\"./warrior/run/ur/t10.png\": \"./src/assets/warrior/run/ur/t10.png\",\n\t\"./warrior/run/ur/t2.png\": \"./src/assets/warrior/run/ur/t2.png\",\n\t\"./warrior/run/ur/t3.png\": \"./src/assets/warrior/run/ur/t3.png\",\n\t\"./warrior/run/ur/t4.png\": \"./src/assets/warrior/run/ur/t4.png\",\n\t\"./warrior/run/ur/t5.png\": \"./src/assets/warrior/run/ur/t5.png\",\n\t\"./warrior/run/ur/t6.png\": \"./src/assets/warrior/run/ur/t6.png\",\n\t\"./warrior/run/ur/t7.png\": \"./src/assets/warrior/run/ur/t7.png\",\n\t\"./warrior/run/ur/t8.png\": \"./src/assets/warrior/run/ur/t8.png\",\n\t\"./warrior/run/ur/t9.png\": \"./src/assets/warrior/run/ur/t9.png\",\n\t\"./wood.png\": \"./src/assets/wood.png\",\n\t\"./woods.png\": \"./src/assets/woods.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets sync recursive ^\\\\.\\\\/.*\\\\.png$\";\n\n//# sourceURL=webpack://pixi/./src/assets/_sync_^\\.\\/.*\\.png$?");
+
+/***/ }),
+
+/***/ "./src/assets sync recursive ^\\.\\/.*\\/idle\\/dr\\/t1\\.png$":
+/*!******************************************************!*\
+  !*** ./src/assets/ sync ^\.\/.*\/idle\/dr\/t1\.png$ ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("var map = {\n\t\"./warrior/idle/dr/t1.png\": \"./src/assets/warrior/idle/dr/t1.png\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/assets sync recursive ^\\\\.\\\\/.*\\\\/idle\\\\/dr\\\\/t1\\\\.png$\";\n\n//# sourceURL=webpack://pixi/./src/assets/_sync_^\\.\\/.*\\/idle\\/dr\\/t1\\.png$?");
 
 /***/ }),
 
@@ -1155,7 +3540,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"store\": () => (/* binding */ store)\n/* harmony export */ });\nlet store = {\n  app: null,\n  gameScene: null,\n  blockedUI: false,\n  cellsInLine: 12,\n  countLines: 12,\n  map: [],\n  allMapCount: 12 * 12,\n  unplayableCount: 3,\n  left: \"mountain-3\",\n  top: \"forrest-3\",\n  right: \"forrest-3\",\n  bottom: \"lake-1\",\n  center: \"grass-7\",\n  visibleZone: [],\n  defaultPosX: 800,\n  defaultPosY: 250,\n  groundWidth: 256,\n  groundHeight: 143,\n  vue: {},\n  itemsPrice: {\n    pickaxe: {\n      wood: 5,\n      stone: 3,\n    },\n    axe: {\n      wood: 8,\n      stone: 5,\n    },\n    // spining: {\n    //   wood: 5,\n    //   stone: 5,\n    // },\n  },\n  objectsOnMap: [],\n  selfBuildings: {},\n};\n\n\n\n\n//# sourceURL=webpack://pixi/./src/store.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"store\": () => (/* binding */ store)\n/* harmony export */ });\nlet store = {\n  app: null,\n  gameScene: null,\n  blockedUI: false,\n  cellsInLine: 12,\n  countLines: 12,\n  map: [],\n  allMapCount: 12 * 12,\n  unplayableCount: 3,\n  left: \"mountain-3\",\n  top: \"forrest-3\",\n  right: \"forrest-3\",\n  bottom: \"lake-1\",\n  center: \"grass-7\",\n  visibleZone: [],\n  defaultPosX: 800,\n  defaultPosY: 250,\n  groundWidth: 256,\n  groundHeight: 143,\n  vue: {},\n  units: {},\n  itemsPrice: {\n    pickaxe: {\n      wood: 5,\n      stone: 3,\n    },\n    axe: {\n      wood: 8,\n      stone: 5,\n    },\n    // spining: {\n    //   wood: 5,\n    //   stone: 5,\n    // },\n  },\n  objectsOnMap: [],\n  selfBuildings: {},\n};\n\n\n\n\n//# sourceURL=webpack://pixi/./src/store.js?");
 
 /***/ }),
 

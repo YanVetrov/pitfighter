@@ -1,6 +1,6 @@
 
 class User {
-    constructor({ username, password, resources = require('./resources.js'), buildings = [], coins = 0, runes = 0, id = Date.now() }) {
+    constructor({ username, password, resources = require('./resources.js'), buildings = [], coins = 0, enemies = [], runes = 0, id = Date.now(), units = [] }) {
         this.username = username;
         this.login = username;
         this.password = password;
@@ -9,6 +9,9 @@ class User {
         this.coins = coins;
         this.runes = runes;
         this.id = id;
+        this.units = units;
+        this.enemies = enemies;
+        this.npcs = [];
     }
 }
 module.exports = User;

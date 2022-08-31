@@ -18,6 +18,7 @@ let store = {
   groundWidth: 256,
   groundHeight: 143,
   vue: {},
+  units: {},
   itemsPrice: {
     pickaxe: {
       wood: 5,
