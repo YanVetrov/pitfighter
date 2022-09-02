@@ -7,7 +7,10 @@
       :key="item.name"
       @click="$emit('buyUnit')"
     >
-      <div class="buy_button">
+      <div
+        class="buy_button"
+        :style="`background-image:url(${require('../assets/slot2.png')});`"
+      >
         <div
           class="row center"
           v-for="(val, key) in item.requirements"

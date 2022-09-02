@@ -9,6 +9,7 @@
   padding: 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 body {
@@ -79,11 +80,16 @@ body {
 }
 .buy_button{
   position: absolute;
-    right: 0;
-    top: 5px;
-    padding: 5px 15px;
-    color: gray;
-    font-size: 9px;
+  right: -15px;
+  top: -20px;
+  color: gray;
+  font-size: 8px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .button:hover {
   transform: scale(1.05);
@@ -176,10 +182,12 @@ body {
 .menu {
   width: 80%;
   height: 90%;
-  border: 5px solid #ab8833;
+  border: 5px solid #222;
   border-radius: 2px;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  box-shadow: 1px 1px 40px black;
 }
 
 .menu_tabs {
@@ -240,14 +248,13 @@ body {
 }
 .profit{
   display: flex;
-    padding: 5px;
-    margin: 5px;
-    border: 3px solid rgba(255,255,255,0.2);
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    width: 60%;
-    color:black;
+  padding: 7px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  color: burlywood;
+  width: 111px;
+  height: 50px
 }
 .profit img{
   width:20px;
@@ -301,7 +308,11 @@ body {
   border-radius: 0;
 }
 .building>img{
-  width:80%;
+  height:54%;
+  width: auto;
+}
+.building:hover{
+  transform: none;
 }
 .item_name{
   color: darkslategray;
@@ -311,6 +322,33 @@ body {
 .shop{
   background-repeat: no-repeat;
   background-size: cover;
+}
+.main_decor{
+  position: absolute;
+  width: 200px;
+  top: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.corner_decor{
+  position: absolute;
+    width: 220px;
+}
+.corner_topleft{
+  transform: rotate(-90deg) translate(-12%,-119%);
+}
+.corner_topright{
+  transform: scaleX(-1) rotate(-90deg) translate(-12%,-119%);
+  right: 0;
+}
+.corner_bottomright{
+  transform: scaleY(-1) rotate(-90deg) translate(-12%,84%);
+    right: 0;
+    bottom: 0;
+}
+.corner_bottomleft{
+  transform: scale(-1) rotate(-90deg) translate(-12%,84%);
+  bottom: 0;
 }
 @keyframes shadow {
   100% {
@@ -343,6 +381,14 @@ body {
   .item_name {
     margin-top: 15px;
     font-size: 10px;
+}
+.corner_decor {
+  width: 143px;
+}
+.buy_button {
+  right: -26px;
+  top: -26px;
+  transform: scale(0.9);
 }
 
 }

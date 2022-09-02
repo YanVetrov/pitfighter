@@ -10,7 +10,10 @@
       :key="item.name + item.rarityNum"
       @click="$emit('spawnBuild', item)"
     >
-      <div class="buy_button">
+      <div
+        class="buy_button"
+        :style="`background-image:url(${require('../assets/slot2.png')});`"
+      >
         <div
           class="row center"
           v-for="(val, key) in item.requirements"
@@ -37,7 +40,10 @@
           resources[key]
         }}/{{ val }}]
       </div> -->
-      <div class="profit">
+      <div
+        class="profit"
+        :style="`background-image:url(${require('../assets/bt2.png')});`"
+      >
         {{ item.countPerTick }}
         <img :src="require(`../assets/${item.resource}.png`)" /> / hour
       </div>

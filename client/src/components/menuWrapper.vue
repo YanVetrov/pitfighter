@@ -1,6 +1,11 @@
 <template>
     <div class="menu_wrapper"  @click.self="$emit('missclick')">
         <div class="menu" :style="`background-image:url(${require('../assets/bg.png')})`">
+        <img class="main_decor" src="../assets/decor_main1.png"></img>
+        <img class="corner_decor corner_topleft" src="../assets/decor_corner1.png"></img>
+        <img class="corner_decor corner_topright" src="../assets/decor_corner1.png"></img>
+        <img class="corner_decor corner_bottomleft" src="../assets/decor_corner1.png"></img>
+        <img class="corner_decor corner_bottomright" src="../assets/decor_corner1.png"></img>
           <div class="menu_tabs">
             <div
               class="menu_tab"
