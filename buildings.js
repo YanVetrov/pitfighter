@@ -5,6 +5,7 @@ const builds = [
         resource: 'wood',
         defaultX: 4,
         defaultY: 2,
+        maxRarityLvl: 3,
         requirements: {
             wood: 15,
             stone: 15,
@@ -15,6 +16,7 @@ const builds = [
         resource: 'stone',
         defaultX: 2,
         defaultY: 4,
+        maxRarityLvl: 3,
         requirements: {
             wood: 25,
             stone: 25,
@@ -25,6 +27,51 @@ const builds = [
         resource: 'steel',
         defaultX: 5,
         defaultY: 5,
+        maxRarityLvl: 3,
+        requirements: {
+            wood: 35,
+            stone: 35,
+        },
+    },
+    {
+        name: 'army',
+        resource: 'steel',
+        defaultX: 5,
+        defaultY: 5,
+        maxRarityLvl: 3,
+        requirements: {
+            wood: 35,
+            stone: 35,
+        },
+    },
+    {
+        name: 'barracks',
+        resource: 'steel',
+        defaultX: 5,
+        defaultY: 5,
+        maxRarityLvl: 3,
+        requirements: {
+            wood: 35,
+            stone: 35,
+        },
+    },
+    {
+        name: 'shooting',
+        resource: 'steel',
+        defaultX: 5,
+        defaultY: 5,
+        maxRarityLvl: 1,
+        requirements: {
+            wood: 35,
+            stone: 35,
+        },
+    },
+    {
+        name: 'hunter',
+        resource: 'steel',
+        defaultX: 5,
+        defaultY: 5,
+        maxRarityLvl: 1,
         requirements: {
             wood: 35,
             stone: 35,
@@ -43,13 +90,15 @@ const builds = [
 ].map(build => {
     return rarities.map((rar, i) => {
         let { requirements } = build;
+        let rarityNum = i + 1
+        if (rarityNum > build.maxRarityLvl) return null;
         requirements = { ...requirements }
         for (let k in requirements) {
             requirements[k] *= i + 1;
         }
-        return { ...build, rarityNum: i + 1, requirements, rarity: rar.name, countPerTick: rar.count, storage: rar.count * 24 }
+        return { ...build, rarityNum, requirements, rarity: rar.name, countPerTick: rar.count, storage: rar.count * 24 }
     })
-}).flat().sort((a, b) => a.rarityNum - b.rarityNum).reduce((acc, el) => {
+}).flat().filter(el => el).sort((a, b) => a.rarityNum - b.rarityNum).reduce((acc, el) => {
     acc[el.name + '_' + el.rarity] = el;
     return acc;
 }, {})

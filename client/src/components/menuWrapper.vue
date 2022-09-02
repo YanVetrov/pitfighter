@@ -1,6 +1,6 @@
 <template>
     <div class="menu_wrapper"  @click.self="$emit('missclick')">
-        <div class="menu">
+        <div class="menu" :style="`background-image:url(${require('../assets/bg.png')})`">
           <div class="menu_tabs">
             <div
               class="menu_tab"

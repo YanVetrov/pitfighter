@@ -1,13 +1,13 @@
 <template>
   <div class="row list">
     <div
-      class="button"
+      class="button building"
+      :style="`background-image:url(${require('../assets/bg1.png')});`"
       v-for="item in objectsOnMap.filter(
         (el) =>
           !spawned.some((sp) => el.name === sp.name && el.rarity === sp.rarity)
       )"
       :key="item.name + item.rarityNum"
-      :class="item.rarity"
       @click="$emit('spawnBuild', item)"
     >
       <div class="buy_button">
@@ -24,7 +24,8 @@
       </div>
       <img :src="require(`../assets/${item.name}${item.rarityNum}.png`)" /><span
         class="item_name"
-        >{{ item.name }} {{ item.rarity }}</span
+        >{{ item.name }}
+        <span :class="item.rarity">{{ item.rarity }}</span></span
       >
       <br />
       <!-- <div

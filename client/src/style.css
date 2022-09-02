@@ -7,6 +7,8 @@
   transition: all .2s ease;
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
@@ -41,12 +43,10 @@ body {
 
 .resource {
   margin: 5px;
-  padding: 5px;
+  padding: 6px;
   display: flex;
   align-items: center;
-  border: 3px solid #33efaa;
   border-radius: 5px;
-  background: radial-gradient(gray, black);
 }
 
 .resource>img {
@@ -57,22 +57,19 @@ body {
 .buttons {
   position: fixed;
   display: flex;
-  justify-content: space-between;
   width: 100%;
   bottom: 20px;
   color: gold;
 }
 
 .button {
-  padding: 15px;
-  border: 3px solid rgba(230, 150, 0, 0.5);
+  padding: 10px;
   border-radius: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 10px;
-  background: rgba(0, 0, 0, 0.35);
   justify-content: center;
   text-align: center;
   margin: 0 15px;
@@ -88,9 +85,9 @@ body {
 }
 .button:hover {
   transform: scale(1.05);
-  background: rgba(0, 0, 0, 0.7);
+  /* background: rgba(0, 0, 0, 0.7); */
   cursor: pointer;
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 1px 1px 20px black, inset 1px 1px 15px black;
 }
 
 .button>img {
@@ -126,7 +123,6 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #003333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,20 +143,23 @@ body {
 }
 
 .login_view input {
-  border: 3px solid silver;
-  border-radius: 5px;
-  font-size: 25px;
-  background: cadetblue;
-  margin: 5px;
-  color: white;
-  padding: 10px;
+  border: 0px solid transparent;
+    border-radius: 5px;
+    font-size: 25px;
+    background: transparent;
+    color:#4b2f21;
+    padding: 12px;
+    width: 300px;
 }
 
 .login_view .button {
-  background: cadetblue;
   font-size: 20px;
-  margin: 44px;
-  color: navajowhite;
+    margin: 44px;
+    padding: 25px 50px;
+    color: wheat;
+}
+.login_name,.login_pass{
+  margin:10px;
 }
 
 .menu_wrapper {
@@ -175,9 +174,10 @@ body {
 .menu {
   width: 80%;
   height: 90%;
-  border: 1px solid gold;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.8);
+  border: 5px solid #ab8833;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .menu_tabs {
@@ -214,9 +214,10 @@ body {
 
 .list .button {
   color: antiquewhite;
-  margin-top: 10px;
+  margin-top: 30px;
   width: 200px;
 }
+
 .wallet_info{
   position: absolute;
   font-size: 12px;
@@ -244,7 +245,7 @@ body {
     justify-content: center;
     border-radius: 5px;
     width: 60%;
-    color:goldenrod;
+    color:black;
 }
 .profit img{
   width:20px;
@@ -273,22 +274,41 @@ body {
   height:0;
 }
 .common{
-  border-color: silver;
+  color: silver;
 }
 .uncommon{
-  border-color: burlywood;
+  color: gray;
 }
 .rare{
-  border-color: cadetblue;
+  color: cadetblue;
 }
 .epic{
-  border-color: darkblue;
+  color: darkblue;
 }
 .legendary{
-  border-color: darkorange;
+  color: darkorange;
 }
 .heroic{
-  border-color:blueviolet;
+  color:blueviolet;
+}
+.building{
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: transparent;
+  height: 305px;
+  border-radius: 0;
+}
+.building>img{
+  width:80%;
+}
+.item_name{
+  color: darkslategray;
+  margin-top: 40px;
+  font-size: 15px;
+}
+.shop{
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @keyframes shadow {
   100% {
@@ -302,7 +322,7 @@ body {
   }
 
   .buttons {
-    transform: scale(0.6) translate(-250px, 44px);
+    transform: scale(0.7) translate(-170px, 24px);
   }
 
   .resources {
@@ -314,5 +334,13 @@ body {
   .list{
     height: 83%;
   }
+  .list .button{
+    width: 150px;
+    height: 228px;
+  }
+  .item_name {
+    margin-top: 15px;
+    font-size: 10px;
+}
 
 }

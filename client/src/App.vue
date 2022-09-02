@@ -1,14 +1,51 @@
 <template>
   <div class="main_view">
     <div class="resources">
-      <div class="resource" v-for="(count, name) in resources" :key="name">
+      <div
+        class="resource"
+        :style="`background-image:url(${require('./assets/slot1.png')});`"
+        v-for="(count, name) in resources"
+        :key="name"
+      >
         <img :src="require(`./assets/${name}.png`)" /> {{ count }}
       </div>
     </div>
 
     <div class="buttons">
-      <div class="button" @click="showMenu = true">
+      <div
+        class="button shop"
+        :style="`background-image:url(${require('./assets/bt1.png')});`"
+        @click="showMenu = true"
+      >
         <img src="./assets/molotok.png" />
+      </div>
+      <div
+        class="button shop"
+        :style="`background-image:url(${require('./assets/bt1.png')});`"
+        @click="showMenu = true"
+      >
+        <img src="./assets/fight.png" />
+      </div>
+      <div
+        class="button shop"
+        :style="`background-image:url(${require('./assets/bt1.png')});`"
+        @click="showMenu = true"
+      >
+        <img src="./assets/info.png" />
+      </div>
+      <div
+        class="button shop"
+        :style="`background-image:url(${require('./assets/bt1.png')});`"
+        @click="showMenu = true"
+      >
+        <img src="./assets/question.png" />
+      </div>
+      <div
+        class="button shop"
+        :style="`background-image:url(${require('./assets/bt1.png')});`"
+        @click="showMenu = true"
+      >
+        <img src="./assets/settings.png" />
       </div>
     </div>
     <transition name="fade">
@@ -54,17 +91,34 @@
         </div>
       </div>
     </div>
-    <div class="login_view" v-if="showLogin">
+    <div
+      class="login_view"
+      :style="`background-image:url(${require('./assets/bg2.png')});`"
+      v-if="showLogin"
+    >
       <div class="login_block">
         <div class="login_title">PitFarmer</div>
         <div style="color: red">{{ loginError }}</div>
-        <div class="login_name">
+        <div
+          class="login_name"
+          :style="`background-image:url(${require('./assets/input2.png')});`"
+        >
           <input v-model="login" placeholder="Enter your login..." />
         </div>
-        <div class="login_pass">
+        <div
+          class="login_pass"
+          :style="`background-image:url(${require('./assets/input2.png')});`"
+        >
           <input v-model="password" placeholder="and your password..." />
         </div>
-        <div class="button" v-if="!loginTimeout" @click="enterLogin">ENTER</div>
+        <div
+          class="button"
+          :style="`background-image:url(${require('./assets/bt2.png')});`"
+          v-if="!loginTimeout"
+          @click="enterLogin"
+        >
+          ENTER
+        </div>
       </div>
     </div>
     <canvas id="canvas1"></canvas>

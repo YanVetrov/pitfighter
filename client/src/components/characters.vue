@@ -1,10 +1,10 @@
 <template>
   <div class="row list">
     <div
-      class="button"
+      class="button building"
       v-for="item in Object.values(units)"
+      :style="`background-image:url(${require('../assets/bg1.png')});`"
       :key="item.name"
-      style="height: 200px"
       @click="$emit('buyUnit')"
     >
       <div class="buy_button">
