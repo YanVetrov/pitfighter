@@ -43,15 +43,17 @@ body {
 
 .resource {
   margin: 5px;
-  padding: 6px;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 94px;
+    font-size: 15px;
 }
 
 .resource>img {
   width: 30px;
-  margin-right: 20px;
+  margin-right: 6px;
 }
 
 .buttons {
@@ -326,7 +328,7 @@ body {
   }
 
   .resources {
-    transform: scale(0.5) translate(-211px, -43px);
+    transform: scale(0.6) translate(-150px, -33px);
   }
   .menu_tab{
     font-size: 10px;
