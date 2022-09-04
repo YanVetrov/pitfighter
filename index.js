@@ -14,6 +14,7 @@ const multer = require('multer')
 const upload = multer()
 const User = require('./user.js')
 const Building = require('./building.js')
+const Unit = require('./unit.js')
 const characters = require('./characters.js');
 const { use } = require("passport");
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -136,6 +137,8 @@ io.on("connection", function (socket) {
   let user = socket.request.user;
   console.log(`a user [${user.login}] connected`);
   user.buildings.forEach((build) => addBuildListeners(build, socket))
+  user.units.forEach((ev) => addUnitListeners(ev, socket))
+  user.enemies.forEach((ev) => addUnitListeners(ev, socket))
   socket.on('buy_building', async ({ name, rarity, x, y }) => {
     if (user.buildings.some(el => el.x === x && el.y === y)) return console.log('no place')
     let buildTemplate = builds[name + '_' + rarity];
@@ -167,10 +170,9 @@ io.on("connection", function (socket) {
     build.collect();
   })
   socket.on('buy_unit', async ({ name }) => {
-    if (user.units.length >= 3) return console.log('no more units')
     let template = characters.warrior;
     if (!template) return console.log('no build');
-    let unit = ({ ...characters.warrior, posY: 3 + user.units.length, posX: user.units.length + 4, id: 'u' + Date.now() + Math.ceil(Math.random() * 100) });
+    let unit = new Unit({ posY: Math.ceil(Math.random() * (5 - 3) + 3), posX: Math.ceil(Math.random() * (8 - 3) + 3) });
     let reqs = unit.requirements;
     let reses = user.resources;
     if (
@@ -186,43 +188,29 @@ io.on("connection", function (socket) {
     user.units.push(unit);
     socket.emit('new_unit', unit);
     socket.emit('update_resources', user.resources);
-    if (user.units.length === 3) {
-      let enemies = [1, 2, 3].map((el, i) => ({ ...characters.warrior, damage: 7, posY: 8, posX: i + 4, enemy: true, id: 'u' + Date.now() + Math.ceil(Math.random() * 100) }))
+    if (user.units.length === 5) {
+      let enemies = [1, 2, 3, 4, 5].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (9 - 7) + 7), posX: Math.ceil(Math.random() * (8 - 3) + 3), enemy: true }))
       user.enemies = enemies;
       setTimeout(() => {
         user.enemies.forEach((unit, i) => {
+          addUnitListeners(unit, socket)
           setTimeout(() => {
             socket.emit('new_unit', unit);
-            attackUnit(socket, { unit, target: user.units[i] })
-            setTimeout(() => attackUnit(socket, { unit: user.units[i], target: unit }), 4000)
+            unit.enableAI({ units: user.units, buildings: user.buildings })
+            setTimeout(() => { user.units[i].enableAI({ units: user.enemies }); addUnitListeners(user.units[i], socket) }, 1000)
           }, Math.random() * 8000)
         });
       }, 3000);
     }
   })
 });
-function isUnitFar(unit, { x, y }) {
-  if (Math.abs(unit.posX - x) > 1 || Math.abs(unit.posY - y) > 1) return true;
-  else return false;
-}
-function moveUnit(unit, { x, y }) {
-  if (unit.posX > x + 1) unit.posX--
-  if (unit.posX < x - 1) unit.posX++
-  if (unit.posY > y + 1) unit.posY--
-  if (unit.posY < y - 1) unit.posY++
-}
-function attackUnit(socket, { unit, target }) {
-  let pos = { x: target.posX, y: target.posY };
-  if (unit.hp <= 0) return 0;
-  if (isUnitFar(unit, pos)) {
-    setTimeout(() => attackUnit(socket, { unit, target }), Math.random() * 3000)
-    moveUnit(unit, pos);
-    return socket.emit('move_unit', unit);
+function addUnitListeners(unit, socket) {
+  unit.onMove = (ev) => {
+    return socket.emit('move_unit', ev);
   }
-  target.hp -= unit.damage;
-  if (target.hp < 0) target.hp = 0;
-  socket.emit('unit_attacked', { unit, target, hp: unit.hp });
-  if (target.hp > 0) setTimeout(() => attackUnit(socket, { unit, target }), 3000)
+  unit.onAttack = (ev, target) => {
+    socket.emit('unit_attacked', { unit: ev, target });
+  }
 }
 function addBuildListeners(build, socket) {
   build.onTick = (ev) => {

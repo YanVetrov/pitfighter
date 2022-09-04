@@ -450,6 +450,7 @@ export default {
       container.x = x;
       container.alpha = 0;
       container.sprite = sprite;
+      container.type = el.type;
       container.zIndex = el.y + el.x;
       [
         "store",
@@ -616,10 +617,10 @@ export default {
         { x: unit.posX, y: unit.posY },
         { x: ground.posX, y: ground.posY }
       );
-      console.log(dir);
+      // console.log(dir);
       unit.sprite._textures = unit.run[dir];
-      let xx = ground.x;
-      let yy = ground.y;
+      let xx = ground.x + Math.random() * (30 - -30) + -30;
+      let yy = ground.y + Math.random() * (30 - -30) + -30;
       unit.posX = ground.posX;
       unit.posY = ground.posY;
       await gsap.to(unit, { x: xx, y: yy - 50 });
@@ -629,14 +630,22 @@ export default {
     async attack(unit, target) {
       let local_unit = store.units[unit.id];
       let local_target = store.units[target.id];
+      if (!local_target) local_target = store.selfBuildings[target.id];
+      if (!local_target) return 0;
       let ground = store.map[target.posY][target.posX];
       let dir = this.getDirection(
         { x: local_unit.posX, y: local_unit.posY },
         { x: ground.posX, y: ground.posY }
       );
+      console.log(
+        { x: local_unit.posX, y: local_unit.posY },
+        { x: ground.posX, y: ground.posY }
+      );
       local_unit.sprite._textures = local_unit.attack[dir];
       local_unit.dir = dir;
-      local_target.health = target.hp;
+      if (local_target.type === "unit") {
+        local_target.health = target.hp;
+      } else local_target.gs_store = target.store;
       setTimeout(
         () => (local_unit.sprite._textures = local_unit.idle[dir]),
         1500
@@ -658,15 +667,15 @@ export default {
           }
         });
       });
-      let sprite = new AnimatedSprite(container.idle.dr);
+      let sprite = new AnimatedSprite(container.idle[directions[random]]);
       sprite.play();
       container.addChild(sprite);
       container.sprite = sprite;
       container.dir = "dr";
       sprite.animationSpeed = 0.3;
       let ground = store.map[el.posY][el.posX];
-      let x = ground.x;
-      let y = ground.y;
+      let x = ground.x + Math.random() * (30 - -30) + -30;
+      let y = ground.y + Math.random() * (30 - -30) + -30;
       container.zIndex = 99999;
       container.y = y - 50;
       container.x = x;
@@ -674,6 +683,7 @@ export default {
       container.posY = ground.posY;
       container.strength = el.strength;
       container.hp = el.hp;
+      container.type = el.type;
       let healthBar = new Container();
       healthBar.x = 80;
       healthBar.y = 80;
@@ -721,7 +731,6 @@ export default {
       store.units[el.id] = container;
     },
     getDirection(fromPlace = {}, toPlace = {}) {
-      console.log(fromPlace, toPlace);
       if (fromPlace.x > toPlace.x && fromPlace.y == toPlace.y) return "ul";
       if (fromPlace.x < toPlace.x && fromPlace.y == toPlace.y) return "dr";
       if (fromPlace.y > toPlace.y && fromPlace.x == toPlace.x) return "ur";

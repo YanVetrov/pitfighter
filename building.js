@@ -14,22 +14,17 @@ function Building() {
             resource,
             owner,
         }) {
-            this.name = name
-            this.resource = resource
-            this.defaultX = defaultX
-            this.defaultY = defaultY
+            let args = arguments[0];
+            Object.keys(args).forEach(key => this[key] = args[key])
             this.x = defaultX;
-            this.y = defaultY
-            this.requirements = requirements
+            this.y = defaultY;
+            this.posX = defaultX;
+            this.posY = defaultY;
             this.storage = countPerTick * 24
-            this.countPerTick = countPerTick;
-            this.rarityNum = rarityNum;
-            this.rarity = rarity
             this.tick = 60000;
             this.nextTickIn = 0;
             this.id = id;
             this.store = 0
-            this.owner = owner
             this.type = 'building'
             this.lastCollected = 0;
         }
