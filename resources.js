@@ -1,2 +1,2 @@
-let reses = { 'wood': 4000, 'steel': 100, 'leather': 100, 'stone': 4000 }
+let reses = { 'wood': 4000, 'steel': 300, 'leather': 300, 'stone': 4000 }
 module.exports = reses;

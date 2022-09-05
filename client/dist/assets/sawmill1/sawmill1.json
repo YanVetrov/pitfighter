@@ -1,0 +1,215 @@
+{
+    "skeleton": {
+        "hash": "B4tYrlMWhtNCaK2kqIiKQzt/Ml4",
+        "spine": "3.8.75",
+        "x": -128,
+        "y": -127,
+        "width": 256,
+        "height": 254,
+        "images": "E:\\1)NTF-PLAY-TO-EARN 2D CHARACTERS\\battle swords\\SPINE\\tut\\spine_sequence_tutorial_files",
+        "audio": "E:\\1)NTF-PLAY-TO-EARN 2D CHARACTERS\\battle swords\\SPINE\\tut\\spine_sequence_tutorial_files"
+    },
+    "bones": [
+        {
+            "name": "root"
+        }
+    ],
+    "slots": [
+        {
+            "name": "images/sawmill1/sawmill1",
+            "bone": "root",
+            "attachment": "images/sawmill1/sawmill1"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "images/sawmill1/sawmill1": {
+                    "images/sawmill1/sawmill1": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill2": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill3": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill4": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill5": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill6": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill7": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill8": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill9": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill10": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill11": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill12": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill13": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill14": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill15": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill16": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill17": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill18": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill19": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill20": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill21": {
+                        "width": 256,
+                        "height": 254
+                    },
+                    "images/sawmill1/sawmill22": {
+                        "width": 256,
+                        "height": 254
+                    }
+                }
+            }
+        }
+    ],
+    "animations": {
+        "animation": {
+            "slots": {
+                "images/sawmill1/sawmill1": {
+                    "attachment": [
+                        {
+                            "time": 0.0454,
+                            "name": "images/sawmill1/sawmill10"
+                        },
+                        {
+                            "time": 0.0909,
+                            "name": "images/sawmill1/sawmill11"
+                        },
+                        {
+                            "time": 0.1363,
+                            "name": "images/sawmill1/sawmill12"
+                        },
+                        {
+                            "time": 0.1818,
+                            "name": "images/sawmill1/sawmill13"
+                        },
+                        {
+                            "time": 0.2272,
+                            "name": "images/sawmill1/sawmill14"
+                        },
+                        {
+                            "time": 0.2727,
+                            "name": "images/sawmill1/sawmill15"
+                        },
+                        {
+                            "time": 0.3181,
+                            "name": "images/sawmill1/sawmill16"
+                        },
+                        {
+                            "time": 0.3636,
+                            "name": "images/sawmill1/sawmill17"
+                        },
+                        {
+                            "time": 0.409,
+                            "name": "images/sawmill1/sawmill18"
+                        },
+                        {
+                            "time": 0.4545,
+                            "name": "images/sawmill1/sawmill19"
+                        },
+                        {
+                            "time": 0.5,
+                            "name": "images/sawmill1/sawmill2"
+                        },
+                        {
+                            "time": 0.5454,
+                            "name": "images/sawmill1/sawmill20"
+                        },
+                        {
+                            "time": 0.5909,
+                            "name": "images/sawmill1/sawmill21"
+                        },
+                        {
+                            "time": 0.6363,
+                            "name": "images/sawmill1/sawmill22"
+                        },
+                        {
+                            "time": 0.6818,
+                            "name": "images/sawmill1/sawmill3"
+                        },
+                        {
+                            "time": 0.7272,
+                            "name": "images/sawmill1/sawmill4"
+                        },
+                        {
+                            "time": 0.7727,
+                            "name": "images/sawmill1/sawmill5"
+                        },
+                        {
+                            "time": 0.8181,
+                            "name": "images/sawmill1/sawmill6"
+                        },
+                        {
+                            "time": 0.8636,
+                            "name": "images/sawmill1/sawmill7"
+                        },
+                        {
+                            "time": 0.909,
+                            "name": "images/sawmill1/sawmill8"
+                        },
+                        {
+                            "time": 0.9545,
+                            "name": "images/sawmill1/sawmill9"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

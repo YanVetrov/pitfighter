@@ -82,6 +82,7 @@ const builds = [
         resource: 'leather',
         defaultX: 3,
         defaultY: 3,
+        maxRarityLvl: 3,
         requirements: {
             wood: 45,
             stone: 45,

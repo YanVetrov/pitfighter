@@ -21,7 +21,9 @@ class Unit {
     constructor(args) {
         if (!args.id) this.id = 'u' + Date.now() + Math.ceil(Math.random() * 100);
         this.AI_STATUS = 'disabled'
-        this.AI_TIMEOUT = 1000;
+        this.AI_TIMEOUT = 4000;
+        this.escape = false;
+        this.idleCount = 0;
         Object.keys(defaultUnit).forEach(key => this[key] = defaultUnit[key])
         Object.keys(args).forEach(key => this[key] = args[key])
     }
@@ -69,12 +71,25 @@ class Unit {
     }
     AI(target) {
         if (this.AI_STATUS === 'disabled') return console.log('ai disabled')
-        if (this.hp <= 0) return console.log('dead');
+        if (this.hp <= 0) {
+            this.disableAI();
+            return this.onDead(this);
+        }
         let units = target.units.filter(el => el.id !== this.id && el.hp !== 0);
         let buildings = target.buildings || [];
         buildings = buildings.filter(el => el.store > 0);
         let allObjects = [...units, ...buildings];
-        if (allObjects.length === 0) return setTimeout(() => this.AI(target), this.AI_TIMEOUT * 3)
+        if (units.length === 0) this.escape = false;
+        if (this.escape) {
+            this.displaceUnitTo({ x: this.posX, y: this.enemy ? 11 : 2 })
+            return setTimeout(() => this.AI(target), this.AI_TIMEOUT * 1.5)
+        }
+        if (allObjects.length === 0) {
+            if (this.enemy) return this.onEndCycle(this);
+            this.idleCount++;
+            if (this.idleCount > 25) { this.hp = 0; this.onDead(this); }
+            return setTimeout(() => this.AI(target), this.AI_TIMEOUT * 3)
+        }
         let nearest = this.findNearestObject(allObjects);
         if (!nearest) return console.log('no object near unit')
         if (this.isObjectFar({ x: nearest.posX, y: nearest.posY })) {
@@ -92,12 +107,16 @@ class Unit {
         this.onAttack(this, build)
     }
     attackUnit(target) {
-        target.hp -= this.damage * Math.ceil(Math.random() * 5);
+        console.log('attacked', { hp: this.hp, target: target.hp })
+        target.hp -= this.damage;
+        if (target.hp < 30 && Math.random() > 0.6) target.escape = true;
         if (target.hp < 0) target.hp = 0;
         this.onAttack(this, target)
     }
     onAttack() { }
     onMove() { }
+    onDead() { }
+    onEndCycle() { }
 
 }
 module.exports = Unit;

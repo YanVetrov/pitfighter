@@ -172,7 +172,7 @@ io.on("connection", function (socket) {
   socket.on('buy_unit', async ({ name }) => {
     let template = characters.warrior;
     if (!template) return console.log('no build');
-    let unit = new Unit({ posY: Math.ceil(Math.random() * (5 - 3) + 3), posX: Math.ceil(Math.random() * (8 - 3) + 3) });
+    let unit = new Unit({ posY: Math.ceil(Math.random() * (5 - 3) + 3), posX: Math.ceil(Math.random() * (9 - 2) + 2) });
     let reqs = unit.requirements;
     let reses = user.resources;
     if (
@@ -189,19 +189,19 @@ io.on("connection", function (socket) {
     socket.emit('new_unit', unit);
     socket.emit('update_resources', user.resources);
     if (user.units.length === 5) {
-      let enemies = [1, 2, 3, 4, 5].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (9 - 7) + 7), posX: Math.ceil(Math.random() * (8 - 3) + 3), enemy: true }))
+      let enemies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (9 - 7) + 7), posX: Math.ceil(Math.random() * (9 - 2) + 2), enemy: true }))
       user.enemies = enemies;
-      setTimeout(() => {
-        user.enemies.forEach((unit, i) => {
-          addUnitListeners(unit, socket)
-          setTimeout(() => {
-            socket.emit('new_unit', unit);
-            unit.enableAI({ units: user.units, buildings: user.buildings })
-            setTimeout(() => { user.units[i].enableAI({ units: user.enemies }); addUnitListeners(user.units[i], socket) }, 1000)
-          }, Math.random() * 8000)
-        });
-      }, 3000);
+      user.enemies.forEach((unit, i) => {
+        addUnitListeners(unit, socket)
+        setTimeout(() => {
+          socket.emit('new_unit', unit);
+          unit.enableAI({ units: user.units, buildings: user.buildings })
+          if (user.units[i]) setTimeout(() => { user.units[i].enableAI({ units: user.enemies }); addUnitListeners(user.units[i], socket) }, 1000)
+        }, Math.random() * 8000)
+      });
     }
+    else unit.enableAI({ units: user.enemies })
+    addUnitListeners(unit, socket)
   })
 });
 function addUnitListeners(unit, socket) {
@@ -210,6 +210,16 @@ function addUnitListeners(unit, socket) {
   }
   unit.onAttack = (ev, target) => {
     socket.emit('unit_attacked', { unit: ev, target });
+  }
+  unit.onDead = (ev) => {
+    let units = ev.enemy ? 'enemies' : 'units'
+    socket.request.user[units] = socket.request.user[units].filter(el => el.hp > 0);
+    return socket.emit('unit_dead', ev);
+  }
+  unit.onEndCycle = (ev) => {
+    console.log('end cycle bot')
+    ev.hp = 0;
+    unit.onDead(ev);
   }
 }
 function addBuildListeners(build, socket) {

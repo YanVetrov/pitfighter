@@ -275,6 +275,11 @@ export default {
       socket.on("unit_attacked", ({ unit, target }) =>
         this.attack(unit, target)
       );
+      socket.on("unit_dead", async (unit) => {
+        let u = store.units[unit.id];
+        await gsap.to(u, { alpha: 0 });
+        store.gameScene.removeChild(u);
+      });
     },
 
     spawnBuild({ name, rarity, x, y }) {
@@ -344,6 +349,7 @@ export default {
             sprite.alpha = 0.5;
             sprite.scale.set(0.6);
             sprite.x = 50;
+            sprite.y = -50;
             target.addChild(sprite);
             target.ghost = sprite;
           }
@@ -379,7 +385,7 @@ export default {
       target.blocked = true;
       if (store.gameScene.blockedUI) return (target.blocked = false);
       if (target.timeout) return 0;
-      console.log(target, store.selfBuildings);
+      console.log(store.units);
       let { type } = target;
       if (["forrest", "mountain", "lake"].includes(type)) {
         gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });
@@ -436,8 +442,8 @@ export default {
       ground.obj = container;
       container.ground = ground;
       container.addChild(sprite);
-      container.scale.x = ground.height / sprite.height;
-      container.scale.y = ground.height / sprite.height;
+      container.scale.x = ground.children[0].height / sprite.height;
+      container.scale.y = ground.children[0].height / sprite.height;
       if (el.scaled) {
         container.scale.x *= el.scaled;
         container.scale.y *= el.scaled;
@@ -619,12 +625,14 @@ export default {
       );
       // console.log(dir);
       unit.sprite._textures = unit.run[dir];
+      unit.state = "run";
       let xx = ground.x + Math.random() * (30 - -30) + -30;
       let yy = ground.y + Math.random() * (30 - -30) + -30;
       unit.posX = ground.posX;
       unit.posY = ground.posY;
       await gsap.to(unit, { x: xx, y: yy - 50 });
       unit.sprite._textures = unit.idle[dir];
+      unit.state = "idle";
       unit.dir = dir;
     },
     async attack(unit, target) {
@@ -632,24 +640,20 @@ export default {
       let local_target = store.units[target.id];
       if (!local_target) local_target = store.selfBuildings[target.id];
       if (!local_target) return 0;
-      let ground = store.map[target.posY][target.posX];
       let dir = this.getDirection(
         { x: local_unit.posX, y: local_unit.posY },
-        { x: ground.posX, y: ground.posY }
-      );
-      console.log(
-        { x: local_unit.posX, y: local_unit.posY },
-        { x: ground.posX, y: ground.posY }
+        { x: local_target.posX, y: local_target.posY }
       );
       local_unit.sprite._textures = local_unit.attack[dir];
+      local_unit.state = "attack";
       local_unit.dir = dir;
       if (local_target.type === "unit") {
         local_target.health = target.hp;
       } else local_target.gs_store = target.store;
-      setTimeout(
-        () => (local_unit.sprite._textures = local_unit.idle[dir]),
-        1500
-      );
+      setTimeout(() => {
+        local_unit.sprite._textures = local_unit.idle[dir];
+        local_unit.state = "idle";
+      }, 4000);
     },
     addUnitOnMap(el) {
       let directions = ["ur", "ul", "dl", "dr"];
@@ -710,11 +714,13 @@ export default {
         async set(val) {
           let percent = (val / this.strength) * 100;
           this.healthBar.width = percent || 1;
-          if (this.hp > val && val > 0) {
+          if (this.hp > val && val > 0 && this.state !== "attack") {
             this.sprite._textures = this.hurt[this.dir];
+            this.state = "hurt";
             this.sprite.gotoAndPlay(0);
             setTimeout(() => {
               this.sprite._textures = this.idle[this.dir];
+              this.state = "idle";
             }, 750);
           }
           this.hp = val;
@@ -722,6 +728,7 @@ export default {
             this.sprite._textures = this.death[this.dir];
             this.sprite.loop = false;
             this.sprite.gotoAndPlay(0);
+            this.state = "dead";
             gsap.to(this, { alpha: 0, delay: 1 });
           }
         },
@@ -735,7 +742,6 @@ export default {
       if (fromPlace.x < toPlace.x && fromPlace.y == toPlace.y) return "dr";
       if (fromPlace.y > toPlace.y && fromPlace.x == toPlace.x) return "ur";
       if (fromPlace.y < toPlace.y && fromPlace.x == toPlace.x) return "dl";
-
       if (fromPlace.x > toPlace.x && fromPlace.y > toPlace.y) return "ul";
       if (fromPlace.x < toPlace.x && fromPlace.y < toPlace.y) return "dr";
       if (fromPlace.x < toPlace.x && fromPlace.y > toPlace.y) return "ur";

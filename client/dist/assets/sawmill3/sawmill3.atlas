@@ -1,0 +1,167 @@
+
+sawmill3.png
+size: 2066,845
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sawmill1
+  rotate: false
+  xy: 2, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill2
+  rotate: false
+  xy: 2, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill10
+  rotate: false
+  xy: 776, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill11
+  rotate: false
+  xy: 518, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill12
+  rotate: false
+  xy: 776, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill13
+  rotate: false
+  xy: 1034, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill14
+  rotate: false
+  xy: 776, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill15
+  rotate: false
+  xy: 1034, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill16
+  rotate: false
+  xy: 1292, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill17
+  rotate: false
+  xy: 1034, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill18
+  rotate: false
+  xy: 1292, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill19
+  rotate: false
+  xy: 1550, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill20
+  rotate: false
+  xy: 1292, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill21
+  rotate: false
+  xy: 1550, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill22
+  rotate: false
+  xy: 1808, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill23
+  rotate: false
+  xy: 1550, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill3
+  rotate: false
+  xy: 2, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill4
+  rotate: false
+  xy: 260, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill5
+  rotate: false
+  xy: 2, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill6
+  rotate: false
+  xy: 260, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill7
+  rotate: false
+  xy: 518, 564
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill8
+  rotate: false
+  xy: 260, 2
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
+sawmill9
+  rotate: false
+  xy: 518, 283
+  size: 256, 279
+  orig: 256, 279
+  offset: 0, 0
+  index: -1
