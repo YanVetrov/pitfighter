@@ -1,4 +1,11 @@
-import { Sprite, Container } from "pixi.js";
+import {
+  Sprite, Container, utils,
+  SCALE_MODES,
+  Rectangle,
+  AnimatedSprite,
+  Texture
+} from "pixi.js";
+import * as PIXI from "pixi.js";
 import { store } from "./store";
 import { gsap } from "gsap";
 
@@ -237,4 +244,21 @@ function detectOverMap(zone, store) {
   if (zone.y < bottom) centeringMap(zone, store, { y: bottom });
   if (mapWidth < winWidth) centeringMap(zone, store);
 }
-export { initMap, enableInteractiveMap, centeringMap };
+function createAnimatedSprite(src, width, height, count, inLine) {
+  console.log(src, width, height, count, inLine);
+  let texture = utils.TextureCache[src];
+  texture.baseTexture.scaleMode = SCALE_MODES.NEAREST;
+  let textures = [];
+  for (let i = 0; i < count; i++) {
+    texture.frame = new Rectangle(
+      (i % inLine) * width,
+      Math.floor(i / inLine) * height,
+      width,
+      height
+    );
+    textures.push(new Texture(texture.baseTexture, texture.frame));
+  }
+  let sprite = new AnimatedSprite(textures);
+  return { sprite, textures };
+}
+export { initMap, enableInteractiveMap, centeringMap, createAnimatedSprite };

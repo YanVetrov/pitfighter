@@ -137,7 +137,12 @@ import {
   Texture,
   Loader,
 } from "pixi.js";
-import { initMap, enableInteractiveMap, centeringMap } from "./functionality";
+import {
+  initMap,
+  enableInteractiveMap,
+  centeringMap,
+  createAnimatedSprite,
+} from "./functionality";
 import { BevelFilter } from "@pixi/filter-bevel";
 import { GlowFilter } from "@pixi/filter-glow";
 import { store } from "./store";
@@ -149,6 +154,7 @@ import characters from "./components/characters.vue";
 import menuWrapper from "./components/menuWrapper.vue";
 import axios from "axios";
 import { io } from "socket.io-client";
+import { Spine } from "pixi-spine";
 let tabs = [
   { component: buildings, title: "buildings" },
   { component: characters, title: "characters" },
@@ -430,14 +436,60 @@ export default {
       console.log(el);
       el.x = el.defaultX;
       el.y = el.defaultY;
+      let size = {
+        mine1: {
+          h: 291.2,
+          c: 31,
+        },
+        mine2: {
+          h: 334.2,
+          c: 31,
+        },
+        mine3: {
+          h: 258,
+          c: 31,
+        },
+        quarry1: {
+          h: 242,
+          c: 31,
+        },
+        quarry2: {
+          h: 291,
+          c: 31,
+        },
+        quarry3: {
+          h: 251,
+          w: 256,
+          c: 31,
+        },
+        sawmill1: {
+          h: 254,
+          c: 22,
+        },
+        sawmill2: {
+          h: 273,
+          c: 23,
+        },
+        sawmill3: {
+          h: 279,
+          c: 23,
+        },
+        armycamp1: {
+          h: 260,
+          c: 22,
+        },
+      };
       if (!el.x || !el.y) return 0;
       let container = new Container();
-      let sprite = new Sprite(
-        store.app.loader.resources[
-          `./assets/${el.name}${el.rarityNum}.png`
-        ].texture
-      );
-      const filter = new PIXI.Filter();
+      let sprite = new createAnimatedSprite(
+        `./assets/frames/${el.name}${el.rarityNum}.png`,
+        size[`${el.name}${el.rarityNum}`].w || 257,
+        size[`${el.name}${el.rarityNum}`].h || 260,
+        size[`${el.name}${el.rarityNum}`].c || 22,
+        7
+      ).sprite;
+      sprite.play();
+      sprite.animationSpeed = 0.3;
       let ground = store.map[el.y][el.x];
       ground.obj = container;
       container.ground = ground;
@@ -630,22 +682,45 @@ export default {
       let yy = ground.y + Math.random() * (30 - -30) + -30;
       unit.posX = ground.posX;
       unit.posY = ground.posY;
-      await gsap.to(unit, { x: xx, y: yy - 50 });
-      unit.sprite._textures = unit.idle[dir];
-      unit.state = "idle";
-      unit.dir = dir;
+      await gsap.to(unit, { x: xx, y: yy, duration: 4 });
+      if (unit.state !== "attack") {
+        unit.sprite._textures = unit.idle[dir];
+        unit.state = "idle";
+        unit.dir = dir;
+      }
     },
     async attack(unit, target) {
       let local_unit = store.units[unit.id];
       let local_target = store.units[target.id];
       if (!local_target) local_target = store.selfBuildings[target.id];
       if (!local_target) return 0;
+      local_unit.sprite.animationSpeed = Math.random() * (0.4 - 0.15) + 0.15;
+      local_unit.state = "attack";
+      let local_y = local_unit.y;
+      let target_y = local_target.y;
+      let local_x = local_unit.x;
+      let target_x = local_target.x;
       let dir = this.getDirection(
-        { x: local_unit.posX, y: local_unit.posY },
-        { x: local_target.posX, y: local_target.posY }
+        { x: local_x, y: local_y },
+        { x: target_x, y: target_y }
+      );
+      local_unit.sprite._textures = local_unit.run[dir];
+      local_unit.dir = dir;
+      while (Math.abs(local_x - target_x) > local_unit.width / 3) {
+        if (local_x > target_x) local_x--;
+        if (local_x < target_x) local_x++;
+      }
+      while (Math.abs(local_y - target_y) > local_unit.width / 3) {
+        if (local_y > target_y) local_y--;
+        if (local_y < target_y) local_y++;
+      }
+
+      await gsap.to(local_unit, { y: local_y, x: local_x, duration: 0.5 });
+      dir = this.getDirection(
+        { x: local_x, y: local_y },
+        { x: target_x, y: target_y }
       );
       local_unit.sprite._textures = local_unit.attack[dir];
-      local_unit.state = "attack";
       local_unit.dir = dir;
       if (local_target.type === "unit") {
         local_target.health = target.hp;
@@ -683,6 +758,7 @@ export default {
       container.zIndex = 99999;
       container.y = y - 50;
       container.x = x;
+      container.scale.set(0.6);
       container.posX = ground.posX;
       container.posY = ground.posY;
       container.strength = el.strength;
@@ -792,6 +868,11 @@ export default {
             }
             return acc;
           }, [])
+        )
+        .add(
+          store.objectsOnMap.map(
+            (el) => `./assets/frames/${el.name}${el.rarityNum}.png`
+          )
         )
         .add(
           store.objectsOnMap.map(

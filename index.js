@@ -196,7 +196,7 @@ io.on("connection", function (socket) {
         setTimeout(() => {
           socket.emit('new_unit', unit);
           unit.enableAI({ units: user.units, buildings: user.buildings })
-          if (user.units[i]) setTimeout(() => { user.units[i].enableAI({ units: user.enemies }); addUnitListeners(user.units[i], socket) }, 1000)
+          setTimeout(() => { if (user.units[i]) { user.units[i].enableAI({ units: user.enemies }); addUnitListeners(user.units[i], socket) } }, 1000)
         }, Math.random() * 8000)
       });
     }

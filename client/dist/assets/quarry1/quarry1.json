@@ -1,1 +1,287 @@
-{"skeleton":{"hash":"VqIhweFV4HBOvNfe6bk0rHMjVYo","spine":"3.8.75","x":-128,"y":-122,"width":256,"height":244,"images":"../SPINE/tut/spine_sequence_tutorial_files/","audio":"E:/1)NTF-PLAY-TO-EARN 2D CHARACTERS/battle swords/SPINE/tut/spine_sequence_tutorial_files"},"bones":[{"name":"root"}],"slots":[{"name":"images/quarry1/quarry1","bone":"root","attachment":"images/quarry1/quarry1"}],"skins":[{"name":"default","attachments":{"images/quarry1/quarry1":{"images/quarry1/quarry1":{"width":256,"height":244},"images/quarry1/quarry2":{"width":256,"height":244},"images/quarry1/quarry3":{"width":256,"height":244},"images/quarry1/quarry4":{"width":256,"height":244},"images/quarry1/quarry5":{"width":256,"height":244},"images/quarry1/quarry6":{"width":256,"height":244},"images/quarry1/quarry7":{"width":256,"height":244},"images/quarry1/quarry8":{"width":256,"height":244},"images/quarry1/quarry9":{"width":256,"height":244},"images/quarry1/quarry10":{"width":256,"height":244},"images/quarry1/quarry11":{"width":256,"height":244},"images/quarry1/quarry12":{"width":256,"height":244},"images/quarry1/quarry13":{"width":256,"height":244},"images/quarry1/quarry14":{"width":256,"height":244},"images/quarry1/quarry15":{"width":256,"height":244},"images/quarry1/quarry16":{"width":256,"height":244},"images/quarry1/quarry17":{"width":256,"height":244},"images/quarry1/quarry18":{"width":256,"height":244},"images/quarry1/quarry19":{"width":256,"height":244},"images/quarry1/quarry20":{"width":256,"height":244},"images/quarry1/quarry21":{"width":256,"height":244},"images/quarry1/quarry22":{"width":256,"height":244},"images/quarry1/quarry23":{"width":256,"height":244},"images/quarry1/quarry24":{"width":256,"height":244},"images/quarry1/quarry25":{"width":256,"height":244},"images/quarry1/quarry26":{"width":256,"height":244},"images/quarry1/quarry27":{"width":256,"height":244},"images/quarry1/quarry28":{"width":256,"height":244},"images/quarry1/quarry29":{"width":256,"height":244},"images/quarry1/quarry30":{"width":256,"height":244},"images/quarry1/quarry31":{"width":256,"height":244}}}}],"animations":{"animation":{"slots":{"images/quarry1/quarry1":{"attachment":[{"time":0.0333,"name":"images/quarry1/quarry2"},{"time":0.0667,"name":"images/quarry1/quarry3"},{"time":0.1,"name":"images/quarry1/quarry4"},{"time":0.1333,"name":"images/quarry1/quarry5"},{"time":0.1667,"name":"images/quarry1/quarry6"},{"time":0.2,"name":"images/quarry1/quarry7"},{"time":0.2333,"name":"images/quarry1/quarry8"},{"time":0.2667,"name":"images/quarry1/quarry9"},{"time":0.3,"name":"images/quarry1/quarry10"},{"time":0.3333,"name":"images/quarry1/quarry11"},{"time":0.3667,"name":"images/quarry1/quarry12"},{"time":0.4,"name":"images/quarry1/quarry13"},{"time":0.4333,"name":"images/quarry1/quarry14"},{"time":0.4667,"name":"images/quarry1/quarry15"},{"time":0.5,"name":"images/quarry1/quarry16"},{"time":0.5333,"name":"images/quarry1/quarry17"},{"time":0.5667,"name":"images/quarry1/quarry18"},{"time":0.6,"name":"images/quarry1/quarry19"},{"time":0.6333,"name":"images/quarry1/quarry20"},{"time":0.6667,"name":"images/quarry1/quarry21"},{"time":0.7,"name":"images/quarry1/quarry22"},{"time":0.7333,"name":"images/quarry1/quarry23"},{"time":0.7667,"name":"images/quarry1/quarry24"},{"time":0.8,"name":"images/quarry1/quarry25"},{"time":0.8333,"name":"images/quarry1/quarry26"},{"time":0.8667,"name":"images/quarry1/quarry27"},{"time":0.9,"name":"images/quarry1/quarry28"},{"time":0.9333,"name":"images/quarry1/quarry29"},{"time":0.9667,"name":"images/quarry1/quarry30"},{"time":1,"name":"images/quarry1/quarry31"},{"time":1.0333,"name":"images/quarry1/quarry9"}]}}}}}
+{
+    "skeleton": {
+        "hash": "WcHZfiTh6h1RoVYdJytZYPXgiSI",
+        "spine": "3.8",
+        "x": -128,
+        "y": -122,
+        "width": 256,
+        "height": 244,
+        "images": "E:\\1)NTF-PLAY-TO-EARN 2D CHARACTERS\\battle swords\\SPINE\\animation json\\Новая папка (2)\\spine_sequence-master\\spine_sequence_tutorial_files",
+        "audio": "E:\\1)NTF-PLAY-TO-EARN 2D CHARACTERS\\battle swords\\SPINE\\animation json\\Новая папка (2)\\spine_sequence-master\\spine_sequence_tutorial_files"
+    },
+    "bones": [
+        {
+            "name": "root"
+        }
+    ],
+    "slots": [
+        {
+            "name": "images/quarry1/001",
+            "bone": "root",
+            "attachment": "images/quarry1/001"
+        }
+    ],
+    "skins": [
+        {
+            "name": "default",
+            "attachments": {
+                "images/quarry1/001": {
+                    "images/quarry1/001": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/002": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/003": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/004": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/005": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/006": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/007": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/008": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/009": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/010": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/011": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/012": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/013": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/014": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/015": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/016": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/017": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/018": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/019": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/020": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/021": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/022": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/023": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/024": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/025": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/026": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/027": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/028": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/029": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/030": {
+                        "width": 256,
+                        "height": 244
+                    },
+                    "images/quarry1/031": {
+                        "width": 256,
+                        "height": 244
+                    }
+                }
+            }
+        }
+    ],
+    "animations": {
+        "animation": {
+            "slots": {
+                "images/quarry1/001": {
+                    "attachment": [
+                        {
+                            "time": 0.0667,
+                            "name": "images/quarry1/002"
+                        },
+                        {
+                            "time": 0.1333,
+                            "name": "images/quarry1/003"
+                        },
+                        {
+                            "time": 0.2,
+                            "name": "images/quarry1/004"
+                        },
+                        {
+                            "time": 0.2667,
+                            "name": "images/quarry1/005"
+                        },
+                        {
+                            "time": 0.3333,
+                            "name": "images/quarry1/006"
+                        },
+                        {
+                            "time": 0.4,
+                            "name": "images/quarry1/007"
+                        },
+                        {
+                            "time": 0.4667,
+                            "name": "images/quarry1/008"
+                        },
+                        {
+                            "time": 0.5333,
+                            "name": "images/quarry1/009"
+                        },
+                        {
+                            "time": 0.6,
+                            "name": "images/quarry1/010"
+                        },
+                        {
+                            "time": 0.6667,
+                            "name": "images/quarry1/011"
+                        },
+                        {
+                            "time": 0.7333,
+                            "name": "images/quarry1/012"
+                        },
+                        {
+                            "time": 0.8,
+                            "name": "images/quarry1/013"
+                        },
+                        {
+                            "time": 0.8667,
+                            "name": "images/quarry1/014"
+                        },
+                        {
+                            "time": 0.9333,
+                            "name": "images/quarry1/015"
+                        },
+                        {
+                            "time": 1,
+                            "name": "images/quarry1/016"
+                        },
+                        {
+                            "time": 1.0667,
+                            "name": "images/quarry1/017"
+                        },
+                        {
+                            "time": 1.1333,
+                            "name": "images/quarry1/018"
+                        },
+                        {
+                            "time": 1.2,
+                            "name": "images/quarry1/019"
+                        },
+                        {
+                            "time": 1.2667,
+                            "name": "images/quarry1/020"
+                        },
+                        {
+                            "time": 1.3333,
+                            "name": "images/quarry1/021"
+                        },
+                        {
+                            "time": 1.4,
+                            "name": "images/quarry1/022"
+                        },
+                        {
+                            "time": 1.4667,
+                            "name": "images/quarry1/023"
+                        },
+                        {
+                            "time": 1.5333,
+                            "name": "images/quarry1/024"
+                        },
+                        {
+                            "time": 1.6,
+                            "name": "images/quarry1/025"
+                        },
+                        {
+                            "time": 1.6667,
+                            "name": "images/quarry1/026"
+                        },
+                        {
+                            "time": 1.7333,
+                            "name": "images/quarry1/027"
+                        },
+                        {
+                            "time": 1.8,
+                            "name": "images/quarry1/028"
+                        },
+                        {
+                            "time": 1.8667,
+                            "name": "images/quarry1/029"
+                        },
+                        {
+                            "time": 1.9333,
+                            "name": "images/quarry1/030"
+                        },
+                        {
+                            "time": 2,
+                            "name": "images/quarry1/031"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -34,29 +34,7 @@ const builds = [
         },
     },
     {
-        name: 'army',
-        resource: 'steel',
-        defaultX: 5,
-        defaultY: 5,
-        maxRarityLvl: 3,
-        requirements: {
-            wood: 35,
-            stone: 35,
-        },
-    },
-    {
-        name: 'barracks',
-        resource: 'steel',
-        defaultX: 5,
-        defaultY: 5,
-        maxRarityLvl: 3,
-        requirements: {
-            wood: 35,
-            stone: 35,
-        },
-    },
-    {
-        name: 'shooting',
+        name: 'armycamp',
         resource: 'steel',
         defaultX: 5,
         defaultY: 5,
@@ -66,28 +44,50 @@ const builds = [
             stone: 35,
         },
     },
-    {
-        name: 'hunter',
-        resource: 'steel',
-        defaultX: 5,
-        defaultY: 5,
-        maxRarityLvl: 1,
-        requirements: {
-            wood: 35,
-            stone: 35,
-        },
-    },
-    {
-        name: 'camp',
-        resource: 'leather',
-        defaultX: 3,
-        defaultY: 3,
-        maxRarityLvl: 3,
-        requirements: {
-            wood: 45,
-            stone: 45,
-        },
-    },
+    // {
+    //     name: 'barracks',
+    //     resource: 'steel',
+    //     defaultX: 5,
+    //     defaultY: 5,
+    //     maxRarityLvl: 3,
+    //     requirements: {
+    //         wood: 35,
+    //         stone: 35,
+    //     },
+    // },
+    // {
+    //     name: 'shooting',
+    //     resource: 'steel',
+    //     defaultX: 5,
+    //     defaultY: 5,
+    //     maxRarityLvl: 1,
+    //     requirements: {
+    //         wood: 35,
+    //         stone: 35,
+    //     },
+    // },
+    // {
+    //     name: 'hunter',
+    //     resource: 'steel',
+    //     defaultX: 5,
+    //     defaultY: 5,
+    //     maxRarityLvl: 1,
+    //     requirements: {
+    //         wood: 35,
+    //         stone: 35,
+    //     },
+    // },
+    // {
+    //     name: 'camp',
+    //     resource: 'leather',
+    //     defaultX: 3,
+    //     defaultY: 3,
+    //     maxRarityLvl: 3,
+    //     requirements: {
+    //         wood: 45,
+    //         stone: 45,
+    //     },
+    // },
 ].map(build => {
     return rarities.map((rar, i) => {
         let { requirements } = build;

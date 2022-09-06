@@ -21,7 +21,7 @@ class Unit {
     constructor(args) {
         if (!args.id) this.id = 'u' + Date.now() + Math.ceil(Math.random() * 100);
         this.AI_STATUS = 'disabled'
-        this.AI_TIMEOUT = 4000;
+        this.AI_TIMEOUT = 6000;
         this.escape = false;
         this.idleCount = 0;
         Object.keys(defaultUnit).forEach(key => this[key] = defaultUnit[key])
@@ -95,7 +95,7 @@ class Unit {
         if (this.isObjectFar({ x: nearest.posX, y: nearest.posY })) {
             console.log({ x: nearest.posX, y: nearest.posY });
             this.displaceUnitTo({ x: nearest.posX, y: nearest.posY })
-            return setTimeout(() => this.AI(target), this.AI_TIMEOUT / 2)
+            return setTimeout(() => this.AI(target), this.AI_TIMEOUT * 0.75)
         }
         if (nearest.type === 'building') this.attackBuilding(nearest)
         if (nearest.type === 'unit') this.attackUnit(nearest)
