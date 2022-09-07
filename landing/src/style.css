@@ -629,6 +629,9 @@ ul {
 }
 .fighters_wrapper{
   align-items: flex-start;
+  position: relative;
+  top: 70px;
+  left: -50px;
 }
 .fighter_img{
   width: 187px;
@@ -691,6 +694,7 @@ ul {
   .fighters_wrapper{
     align-items: center;
     flex-direction: column;
+    position: static;
   }
   .crates_pelen .row{
     flex-direction: column;
