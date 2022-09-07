@@ -477,6 +477,11 @@
                 @open="crateText = true"
                 openCrate="opencrate2"
               />
+              <crate
+                crate="crate3"
+                @open="crateText = true"
+                openCrate="opencrate3"
+              />
             </div>
             <transition name="fade">
               <div class="crates_pelen" v-if="crateText">
@@ -484,18 +489,39 @@
                   <img
                     data-aos="zoom-in"
                     data-aos-offset="150"
-                    data-aos-delay="150"
+                    data-aos-delay="750"
                     data-aos-duration="500"
                     data-aos-easing="ease-in-out"
-                    src="./assets/build1.png"
+                    :src="
+                      require(`./assets/build${
+                        Math.floor(Math.random() * (4 - 1 + 1)) + 1
+                      }.png`)
+                    "
                   />
                   <img
                     data-aos="zoom-in"
                     data-aos-offset="150"
-                    data-aos-delay="250"
+                    data-aos-delay="150"
                     data-aos-duration="500"
                     data-aos-easing="ease-in-out"
-                    src="./assets/build2.png"
+                    class="big_pelen_img"
+                    :src="
+                      require(`./assets/card${
+                        Math.floor(Math.random() * (4 - 1 + 1)) + 1
+                      }.png`)
+                    "
+                  />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-offset="150"
+                    data-aos-delay="500"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                    :src="
+                      require(`./assets/build${
+                        Math.floor(Math.random() * (4 - 1 + 1)) + 1
+                      }.png`)
+                    "
                   />
                 </div>
                 <img
