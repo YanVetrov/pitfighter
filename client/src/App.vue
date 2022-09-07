@@ -341,7 +341,7 @@ export default {
         });
         if (target.obj) {
           target.obj.sprite.filters = [filter];
-          target.zIndex = 1;
+          // target.zIndex = 1;
         } else {
           target.filters = [filter];
           if (target.type === "grass")
@@ -363,7 +363,7 @@ export default {
       });
       target.on("pointerout", (e) => {
         target.filters = [];
-        target.zIndex = 0;
+        // target.zIndex = 0;
         if (target.ghost) {
           target.removeChild(target.ghost);
           target.ghost = null;
@@ -391,7 +391,7 @@ export default {
       target.blocked = true;
       if (store.gameScene.blockedUI) return (target.blocked = false);
       if (target.timeout) return 0;
-      console.log(store.units);
+      console.log(target);
       let { type } = target;
       if (["forrest", "mountain", "lake"].includes(type)) {
         gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });
@@ -511,7 +511,7 @@ export default {
       container.alpha = 0;
       container.sprite = sprite;
       container.type = el.type;
-      container.zIndex = el.y + el.x;
+      container.zIndex = Number(el.y + "" + el.x);
       [
         "store",
         "name",
@@ -763,11 +763,15 @@ export default {
       let armycamp = Object.values(store.selfBuildings).find(
         (el) => el.building_type === "army"
       );
+      if (el.enemy) armycamp = store.map[3][2];
       container.zIndex = 99999;
-      if (!el.enemy) {
-        x = armycamp.x;
-        y = armycamp.y;
+      x = armycamp.x;
+      y = armycamp.y;
+      if (el.enemy) {
+        x += 70;
+        y += 30;
       }
+
       container.y = y;
       container.x = x;
       container.scale.set(0.6);

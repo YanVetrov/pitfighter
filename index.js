@@ -174,7 +174,7 @@ io.on("connection", function (socket) {
     if (!template) return console.log('no build');
     let armycamp = user.buildings.find(el => el.building_type === 'army')
     if (!armycamp || armycamp.store >= armycamp.storage) return console.log('no army camp');
-    let unit = new Unit({ posY: Math.ceil(Math.random() * (5 - 3) + 3), posX: Math.ceil(Math.random() * (9 - 2) + 2) });
+    let unit = new Unit({ posY: Math.round(Math.random() * (-1 - 1) + 1) + armycamp.posY, posX: Math.round(Math.random() * (-1 - 1) + 1) + armycamp.posX });
     let reqs = unit.requirements;
     let reses = user.resources;
     if (
@@ -193,7 +193,7 @@ io.on("connection", function (socket) {
     socket.emit('update_build', armycamp)
     socket.emit('update_resources', user.resources);
     if (user.units.length === 5) {
-      let enemies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (9 - 7) + 7), posX: Math.ceil(Math.random() * (9 - 2) + 2), enemy: true }))
+      let enemies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (6 - 3) + 3), posX: Math.ceil(Math.random() * (3 - 2) + 2), enemy: true }))
       user.enemies = enemies;
       user.enemies.forEach((unit, i) => {
         addUnitListeners(unit, socket)

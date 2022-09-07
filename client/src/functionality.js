@@ -3,7 +3,8 @@ import {
   SCALE_MODES,
   Rectangle,
   AnimatedSprite,
-  Texture
+  Texture,
+  Text
 } from "pixi.js";
 import * as PIXI from "pixi.js";
 import { store } from "./store";
@@ -40,11 +41,23 @@ function initMap(arr, store, count) {
     sprite = new Sprite(
       store.app.loader.resources[`./assets/${spriteName}${random}.png`].texture
     );
+    let text;
+    if (x === 2 && y === 3) {
+      sprite = Sprite.from('./assets/grass1.png')
+      sprite.y = 41;
+      container.addChild(sprite);
+      sprite = Sprite.from('./assets/quarry4.png')
+      sprite.x = 250;
+      sprite.scale.x = -1;
+      sprite.y = 10;
+    }
     container.addChild(sprite);
     container.posX = x;
     container.posY = y;
     container.type = spriteName;
     container.sprite = sprite;
+    container.zIndex = Number(y + '' + x);
+    if (x === 2 && y === 3) container.zIndex += 2;
     container.mine = async function (name) {
       let sprite = Sprite.from(`./assets/${name}.png`);
       sprite.scale.x = 0.3;
