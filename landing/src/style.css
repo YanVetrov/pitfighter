@@ -240,24 +240,7 @@ img {
   height:100%;
   position: relative;
 }
-.fighters_wrapper{
-  align-items: flex-start;
-}
-.fighter_img{
-  width: 187px;
-  margin: 36px;
-  z-index: 1;
-  position: relative;
-}
-.center_fighter{
-  margin-top: 210px;
-}
-.left_fighter{
-  left: 73px;
-}
-.right_fighter{
-  right:73px;
-}
+
 .crates_pelen{
   position: absolute;
   top: 0;
@@ -644,7 +627,24 @@ ul {
 .copyright{
   color:gray;
 }
-
+.fighters_wrapper{
+  align-items: flex-start;
+}
+.fighter_img{
+  width: 187px;
+  margin: 36px;
+  z-index: 1;
+  position: relative;
+}
+.center_fighter{
+  margin-top: 210px;
+}
+.left_fighter{
+  left: 73px;
+}
+.right_fighter{
+  right:73px;
+}
 @keyframes updown{
   0%{
     transform: translateY(0px);
