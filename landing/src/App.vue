@@ -240,7 +240,7 @@
               </template>
             </accordion-item>
           </accordion> -->
-          <div class="row center fighters_wrapper">
+          <div class="row fighters_wrapper">
             <img class="fighter_img left_fighter" src="./assets/fighter1.png" />
             <img
               class="fighter_img center_fighter"

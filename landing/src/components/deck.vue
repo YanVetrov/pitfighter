@@ -156,7 +156,7 @@ export default {
 .arrow_right img {
   width: 40px;
   position: absolute;
-  right: 0;
+  right: 90px;
 }
 .card_info {
   position: absolute;
