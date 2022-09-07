@@ -222,12 +222,22 @@ body {
   justify-content: center;
 }
 
-.list .button {
+.list .button.building {
   color: antiquewhite;
   margin-top: 30px;
   width: 200px;
 }
-
+.filter_button{
+  border: 3px solid;
+    border-radius: 15px;
+    border-color: transparent;
+}
+.filter_button:hover{
+  transform: scale(1.03);
+}
+.filter_button_active{
+  border-color: navajowhite;
+}
 .wallet_info{
   position: absolute;
   font-size: 12px;
@@ -245,10 +255,11 @@ body {
 .list{
   overflow-y: scroll;
     height: 89%;
+    align-items: flex-start;
 }
 .profit{
   display: flex;
-  padding: 7px;
+  padding: 23px;
   margin: 5px;
   align-items: center;
   justify-content: center;

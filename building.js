@@ -13,6 +13,7 @@ function Building() {
             rarityNum,
             resource,
             owner,
+            building_type,
         }) {
             let args = arguments[0];
             Object.keys(args).forEach(key => this[key] = args[key])
@@ -29,6 +30,7 @@ function Building() {
             this.lastCollected = 0;
         }
         activate() {
+            if (this.building_type === 'army') return console.log('army cant activate')
             if (!interval) {
                 this.ticker();
                 interval = setInterval(() => this.ticker(), this.tick)

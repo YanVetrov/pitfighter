@@ -77,7 +77,7 @@ class Unit {
         }
         let units = target.units.filter(el => el.id !== this.id && el.hp !== 0);
         let buildings = target.buildings || [];
-        buildings = buildings.filter(el => el.store > 0);
+        buildings = buildings.filter(el => el.store > 0 && el.building_type !== 'army');
         let allObjects = [...units, ...buildings];
         if (units.length === 0) this.escape = false;
         if (this.escape) {

@@ -6,6 +6,7 @@ const builds = [
         defaultX: 4,
         defaultY: 2,
         maxRarityLvl: 3,
+        building_type: 'miner',
         requirements: {
             wood: 15,
             stone: 15,
@@ -17,6 +18,7 @@ const builds = [
         defaultX: 2,
         defaultY: 4,
         maxRarityLvl: 3,
+        building_type: 'miner',
         requirements: {
             wood: 25,
             stone: 25,
@@ -28,6 +30,7 @@ const builds = [
         defaultX: 5,
         defaultY: 5,
         maxRarityLvl: 3,
+        building_type: 'miner',
         requirements: {
             wood: 35,
             stone: 35,
@@ -39,6 +42,7 @@ const builds = [
         defaultX: 5,
         defaultY: 5,
         maxRarityLvl: 1,
+        building_type: 'army',
         requirements: {
             wood: 35,
             stone: 35,

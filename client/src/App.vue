@@ -419,17 +419,19 @@ export default {
     },
     checkTimers() {
       this.checker = setInterval(() => {
-        Object.values(store.selfBuildings).forEach((build) => {
-          if (build.nextTickIn < Date.now()) return 0;
-          let allSeconds = Math.ceil((build.nextTickIn - Date.now()) / 1000);
-          let seconds = allSeconds % 60;
-          if (seconds < 10) seconds = "0" + seconds;
-          let minutes = Math.floor(Math.floor(allSeconds / 60) % 60);
-          if (minutes < 10) minutes = "0" + minutes;
-          let hours = Math.floor(allSeconds / 60 / 60);
-          if (hours < 10) hours = "0" + hours;
-          build.timerNode.text = `${hours}:${minutes}:${seconds}`;
-        });
+        Object.values(store.selfBuildings)
+          .filter((el) => el.building_type !== "army")
+          .forEach((build) => {
+            if (build.nextTickIn < Date.now()) return 0;
+            let allSeconds = Math.ceil((build.nextTickIn - Date.now()) / 1000);
+            let seconds = allSeconds % 60;
+            if (seconds < 10) seconds = "0" + seconds;
+            let minutes = Math.floor(Math.floor(allSeconds / 60) % 60);
+            if (minutes < 10) minutes = "0" + minutes;
+            let hours = Math.floor(allSeconds / 60 / 60);
+            if (hours < 10) hours = "0" + hours;
+            build.timerNode.text = `${hours}:${minutes}:${seconds}`;
+          });
       }, 1000);
     },
     async addObjectOnMap(el, newBuild = false) {
@@ -575,6 +577,7 @@ export default {
       };
       ground.type = el.type;
       ground.name = el.name;
+      container.building_type = el.building_type;
       if (el.type === "building") {
         let text = new Text(el.name, {
           fontSize: 22,
@@ -617,17 +620,19 @@ export default {
       storeBar.y = -40;
       storeBar.x = 100;
       storeBar.addChild(container.storeText);
-      const timerNode = new Text("", {
-        fill: 0xefefef,
-        fontFamily: "gothic",
-        fontSize: 15,
-        stroke: "#454545",
-        strokeThickness: 2,
-      });
-      timerNode.y = -70;
-      timerNode.x = 110;
-      container.timerNode = timerNode;
-      container.addChild(timerNode);
+      if (el.building_type !== "army") {
+        const timerNode = new Text("", {
+          fill: 0xefefef,
+          fontFamily: "gothic",
+          fontSize: 15,
+          stroke: "#454545",
+          strokeThickness: 2,
+        });
+        timerNode.y = -70;
+        timerNode.x = 110;
+        container.timerNode = timerNode;
+        container.addChild(timerNode);
+      }
       gsap.to(ground, { y: ground.originY });
       ground.removeChild(ground.ghost);
       ground.ghost = null;
@@ -672,8 +677,8 @@ export default {
       unit = store.units[unit.id];
       let ground = store.map[y][x];
       let dir = this.getDirection(
-        { x: unit.posX, y: unit.posY },
-        { x: ground.posX, y: ground.posY }
+        { x: unit.x, y: unit.y },
+        { x: ground.x, y: ground.y }
       );
       // console.log(dir);
       unit.sprite._textures = unit.run[dir];
@@ -755,8 +760,15 @@ export default {
       let ground = store.map[el.posY][el.posX];
       let x = ground.x + Math.random() * (30 - -30) + -30;
       let y = ground.y + Math.random() * (30 - -30) + -30;
+      let armycamp = Object.values(store.selfBuildings).find(
+        (el) => el.building_type === "army"
+      );
       container.zIndex = 99999;
-      container.y = y - 50;
+      if (!el.enemy) {
+        x = armycamp.x;
+        y = armycamp.y;
+      }
+      container.y = y;
       container.x = x;
       container.scale.set(0.6);
       container.posX = ground.posX;
@@ -764,6 +776,7 @@ export default {
       container.strength = el.strength;
       container.hp = el.hp;
       container.type = el.type;
+      container.id = el.id;
       let healthBar = new Container();
       healthBar.x = 80;
       healthBar.y = 80;
@@ -812,6 +825,7 @@ export default {
       if (el.hp <= 0) container.alpha = 0;
       store.gameScene.addChild(container);
       store.units[el.id] = container;
+      this.moveUnit(container, { x, y });
     },
     getDirection(fromPlace = {}, toPlace = {}) {
       if (fromPlace.x > toPlace.x && fromPlace.y == toPlace.y) return "ul";

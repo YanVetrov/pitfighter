@@ -172,6 +172,8 @@ io.on("connection", function (socket) {
   socket.on('buy_unit', async ({ name }) => {
     let template = characters.warrior;
     if (!template) return console.log('no build');
+    let armycamp = user.buildings.find(el => el.building_type === 'army')
+    if (!armycamp || armycamp.store >= armycamp.storage) return console.log('no army camp');
     let unit = new Unit({ posY: Math.ceil(Math.random() * (5 - 3) + 3), posX: Math.ceil(Math.random() * (9 - 2) + 2) });
     let reqs = unit.requirements;
     let reses = user.resources;
@@ -186,7 +188,9 @@ io.on("connection", function (socket) {
     }
     user.resources = reses;
     user.units.push(unit);
+    armycamp.store++;
     socket.emit('new_unit', unit);
+    socket.emit('update_build', armycamp)
     socket.emit('update_resources', user.resources);
     if (user.units.length === 5) {
       let enemies = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((el, i) => new Unit({ damage: 15, posY: Math.ceil(Math.random() * (9 - 7) + 7), posX: Math.ceil(Math.random() * (9 - 2) + 2), enemy: true }))
@@ -214,6 +218,11 @@ function addUnitListeners(unit, socket) {
   unit.onDead = (ev) => {
     let units = ev.enemy ? 'enemies' : 'units'
     socket.request.user[units] = socket.request.user[units].filter(el => el.hp > 0);
+    if (!ev.enemy) {
+      let armycamp = socket.request.user.buildings.find(el => el.building_type === 'army');
+      armycamp.store = socket.request.user.units.length;
+      socket.emit('update_build', armycamp)
+    }
     return socket.emit('unit_dead', ev);
   }
   unit.onEndCycle = (ev) => {
