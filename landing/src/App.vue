@@ -199,7 +199,7 @@
           >
             Fighters introduction
           </h2>
-          <accordion
+          <!-- <accordion
             data-aos="fade-left"
             data-aos-offset="150"
             data-aos-delay="50"
@@ -207,11 +207,9 @@
             data-aos-easing="ease-in-out"
           >
             <accordion-item>
-              <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
                 <h3>SURVIVE AT ALL COSTS</h3>
               </template>
-              <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
                   >Pit Fighter NFT Collectibles comes in 2 Fractions with three
@@ -220,11 +218,9 @@
               </template>
             </accordion-item>
             <accordion-item>
-              <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
                 <h3>CREATE ALLIES AND ENEMIES</h3>
               </template>
-              <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
                   >Each race will have their own town, arena, and more with
@@ -233,11 +229,9 @@
               </template>
             </accordion-item>
             <accordion-item>
-              <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
                 <h3>IMPRESS THE ARENA</h3>
               </template>
-              <!-- This slot will handle all the content that is passed to the accordion -->
               <template slot="accordion-content">
                 <span
                   >IMPRESS THE ARENA WITH THE STRENGTH OF YOUR FIGHTERS AND
@@ -245,7 +239,18 @@
                 >
               </template>
             </accordion-item>
-          </accordion>
+          </accordion> -->
+          <div class="row center fighters_wrapper">
+            <img class="fighter_img left_fighter" src="./assets/fighter1.png" />
+            <img
+              class="fighter_img center_fighter"
+              src="./assets/fighter2.png"
+            />
+            <img
+              class="fighter_img right_fighter"
+              src="./assets/fighter3.png"
+            />
+          </div>
         </div>
       </div>
     </cornerDiv>
@@ -356,9 +361,9 @@
             :perPage="1"
           >
             <slide> <img src="./assets/slide1.png" /> </slide>
-            <!-- <slide> <img src="./assets/slide2.webp" /> </slide>
-            <slide> <img src="./assets/slide3.webp" /> </slide>
-            <slide> <img src="./assets/slide4.webp" /> </slide> -->
+            <slide> <img src="./assets/slide2.png" /> </slide>
+            <slide> <img src="./assets/slide3.png" /> </slide>
+            <slide> <img src="./assets/slide4.png" /> </slide>
           </carousel>
         </div>
       </div>
