@@ -161,99 +161,7 @@
         </div>
       </div>
     </cornerDiv>
-    <cornerDiv ref="fighters">
-      <div
-        class="wrapper padding bg1"
-        style="background-image: url('./assets/fighters_bg.webp')"
-      >
-        <div class="deck_wrapper">
-          <deck />
-        </div>
-        <div class="time_line">
-          <div class="row">
-            <h1
-              data-aos="fade-down"
-              data-aos-offset="150"
-              data-aos-delay="50"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-            >
-              Choose your fighter
-            </h1>
-            <img
-              data-aos="fade-up"
-              data-aos-once="false"
-              data-aos-offset="150"
-              data-aos-delay="500"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              src="./assets/sword.webp"
-            />
-          </div>
-          <h2
-            data-aos="fade-left"
-            data-aos-offset="150"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            Fighters introduction
-          </h2>
-          <!-- <accordion
-            data-aos="fade-left"
-            data-aos-offset="150"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <accordion-item>
-              <template slot="accordion-trigger">
-                <h3>SURVIVE AT ALL COSTS</h3>
-              </template>
-              <template slot="accordion-content">
-                <span
-                  >Pit Fighter NFT Collectibles comes in 2 Fractions with three
-                  race each.</span
-                >
-              </template>
-            </accordion-item>
-            <accordion-item>
-              <template slot="accordion-trigger">
-                <h3>CREATE ALLIES AND ENEMIES</h3>
-              </template>
-              <template slot="accordion-content">
-                <span
-                  >Each race will have their own town, arena, and more with
-                  local benefits.</span
-                >
-              </template>
-            </accordion-item>
-            <accordion-item>
-              <template slot="accordion-trigger">
-                <h3>IMPRESS THE ARENA</h3>
-              </template>
-              <template slot="accordion-content">
-                <span
-                  >IMPRESS THE ARENA WITH THE STRENGTH OF YOUR FIGHTERS AND
-                  INGENIOUS TACTICAL SOLUTIONS</span
-                >
-              </template>
-            </accordion-item>
-          </accordion> -->
-          <div class="row fighters_wrapper">
-            <img class="fighter_img left_fighter" src="./assets/fighter1.png" />
-            <img
-              class="fighter_img center_fighter"
-              src="./assets/fighter2.png"
-            />
-            <img
-              class="fighter_img right_fighter"
-              src="./assets/fighter3.png"
-            />
-          </div>
-        </div>
-      </div>
-    </cornerDiv>
+
     <cornerDiv ref="features">
       <div class="wrapper padding">
         <div class="bg_blur"></div>
@@ -365,6 +273,99 @@
             <slide> <img src="./assets/slide3.png" /> </slide>
             <slide> <img src="./assets/slide4.png" /> </slide>
           </carousel>
+        </div>
+      </div>
+    </cornerDiv>
+    <cornerDiv ref="fighters">
+      <div
+        class="wrapper padding bg1"
+        style="background-image: url('./assets/fighters_bg.webp')"
+      >
+        <div class="deck_wrapper">
+          <deck />
+        </div>
+        <div class="time_line">
+          <div class="row">
+            <h1
+              data-aos="fade-down"
+              data-aos-offset="150"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+            >
+              Choose your fighter
+            </h1>
+            <img
+              data-aos="fade-up"
+              data-aos-once="false"
+              data-aos-offset="150"
+              data-aos-delay="500"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              src="./assets/sword.webp"
+            />
+          </div>
+          <h2
+            data-aos="fade-left"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            Fighters introduction
+          </h2>
+          <!-- <accordion
+            data-aos="fade-left"
+            data-aos-offset="150"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            <accordion-item>
+              <template slot="accordion-trigger">
+                <h3>SURVIVE AT ALL COSTS</h3>
+              </template>
+              <template slot="accordion-content">
+                <span
+                  >Pit Fighter NFT Collectibles comes in 2 Fractions with three
+                  race each.</span
+                >
+              </template>
+            </accordion-item>
+            <accordion-item>
+              <template slot="accordion-trigger">
+                <h3>CREATE ALLIES AND ENEMIES</h3>
+              </template>
+              <template slot="accordion-content">
+                <span
+                  >Each race will have their own town, arena, and more with
+                  local benefits.</span
+                >
+              </template>
+            </accordion-item>
+            <accordion-item>
+              <template slot="accordion-trigger">
+                <h3>IMPRESS THE ARENA</h3>
+              </template>
+              <template slot="accordion-content">
+                <span
+                  >IMPRESS THE ARENA WITH THE STRENGTH OF YOUR FIGHTERS AND
+                  INGENIOUS TACTICAL SOLUTIONS</span
+                >
+              </template>
+            </accordion-item>
+          </accordion> -->
+          <div class="row fighters_wrapper">
+            <img class="fighter_img left_fighter" src="./assets/fighter1.png" />
+            <img
+              class="fighter_img center_fighter"
+              src="./assets/fighter2.png"
+            />
+            <img
+              class="fighter_img right_fighter"
+              src="./assets/fighter3.png"
+            />
+          </div>
         </div>
       </div>
     </cornerDiv>
