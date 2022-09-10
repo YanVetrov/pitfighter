@@ -117,17 +117,18 @@
             </div>
 
             <div class="sub_intro">
-              The pit fighter Is a play to earn turn based rpg in medieval
-              fantasy.
+              THE PIT FIGHTER IS A PLAY-TO-EARN BASE DEFENSE IN A MEDIEVAL
+              FANTASY.
             </div>
             <div class="intro_descr" style="text-align: center">
-              Choose the right fighters for your squad. Equip them with a
-              variety of weapons, dress them in the strongest armor.<br /><br />
-              Become the best in the arena with your squad. Become the best in
-              your town, get an invitation to the grand arena, write your name
-              in history. Earn the reputation to build your clan.<br /><br />
-              Make the world reckon with you:<br /><br />
-              seize power in your city.
+              BUILD UP YOUR CAMP. STRATEGIZE YOUR ECONOMY AND TRADE WITH OTHER
+              PLAYERS.<br /><br />
+              HIRE AN ARMY OF WARRIORS. USE YOUR ARMY TO DEFEND YOUR CAMP. STEAL
+              FROM YOUR OPPONENTS AND GATHER TREASURIES FROM THE DUNGEON.
+              <br /><br />
+              HIRE AND EQUIP YOUR HERO COMMANDER TO COMPETE IN THE ARENA AND
+              BOOST YOUR ARMY PERFORMANCE.<br /><br />
+              JOIN A GUILD TO COMBINE FORCES.
             </div>
           </div>
           <div
@@ -414,12 +415,12 @@
               <div class="token_list">
                 <div class="token_listitem">Utility token</div>
                 <div class="token_listitem">
-                  Earn this token through in game activities.
+                  EARN THIS TOKEN THROUGH IN GAME ACTIVITIES.
                 </div>
-                <div class="token_listitem">Maintenance of players NFTs</div>
-                <div class="token_listitem">
+                <div class="token_listitem">MAINTENANCE OF PLAYERS NFTS</div>
+                <!-- <div class="token_listitem">
                   Earned by heroes in arena, farming, staking.
-                </div>
+                </div> -->
               </div>
               <div class="token_img">
                 <img src="./assets/shield.webp" />
@@ -440,12 +441,12 @@
               <div class="token_list">
                 <div class="token_listitem">Governance token.</div>
                 <div class="token_listitem">
-                  Available to buy on outside market.
+                  AVAILABLE TO BUY ON OUTSIDE MARKET.
                 </div>
                 <div class="token_listitem">Main Forging component</div>
-                <div class="token_listitem">
+                <!-- <div class="token_listitem">
                   Staking will give DAO for decentralized governance.
-                </div>
+                </div> -->
               </div>
               <div class="token_img">
                 <img src="./assets/shield.webp" />
