@@ -1,10 +1,12 @@
 <template>
-  <div class="row list">
+  <div class="row list" style="align-items: center">
     <div
       class="button building"
-      v-for="item in Object.values(units)"
+      v-for="(item, i) in Object.values(units)"
       :style="`background-image:url(${require('../assets/bg1.png')});`"
       :key="item.name"
+      :class="{ bubble: tutorial_step === 6 && i === 0 }"
+      :id="i === 0 ? 'tutorial6' : ''"
       @click="$emit('buyUnit')"
     >
       <div
@@ -44,6 +46,6 @@
 </template>
 <script>
 export default {
-  props: ["units", "resources"],
+  props: ["units", "resources", "tutorial_step"],
 };
 </script>

@@ -4,7 +4,10 @@
       <div
         v-for="(val, key) in resources"
         class="profit filter_button"
-        :class="{ filter_button_active: filter === key }"
+        :class="{
+          filter_button_active: filter === key,
+          opacity05: tutorial_step === 2,
+        }"
         @click="filter !== key ? (filter = key) : (filter = '')"
         :key="key"
         :style="`background-image:url(${require('../assets/bt2.png')});cursor:pointer;height:auto`"
@@ -15,7 +18,7 @@
     <div
       class="button building"
       :style="`background-image:url(${require('../assets/bg1.png')});`"
-      v-for="item in objectsOnMap
+      v-for="(item, i) in objectsOnMap
         .filter(
           (el) =>
             !spawned.some(
@@ -24,7 +27,15 @@
         )
         .filter((el) => (filter ? el.resource === filter : el))"
       :key="item.name + item.rarityNum"
-      @click="$emit('spawnBuild', item)"
+      :class="stylish(item, i)"
+      :id="
+        i === 0 ? 'tutorial2' : item.building_type === 'army' ? 'tutorial4' : ''
+      "
+      @click="
+        tutorial_step === 2 || tutorial_step === 4
+          ? $emit('setTutorial', item)
+          : $emit('spawnBuild', item)
+      "
     >
       <div
         class="buy_button"
@@ -81,11 +92,24 @@
 </template>
 <script>
 export default {
-  props: ["objectsOnMap", "spawned", "resources"],
+  props: ["objectsOnMap", "spawned", "resources", "tutorial_step"],
   data() {
     return {
       filter: "",
     };
+  },
+  methods: {
+    stylish(item, i) {
+      let style = { opacity05: false, bubble: false };
+      if (this.tutorial_step === 2) {
+        if (i > 0) style.opacity05 = true;
+        else style.bubble = true;
+      } else if (this.tutorial_step === 4) {
+        if (item.building_type === "army") style.bubble = true;
+        else style.opacity05 = true;
+      }
+      return style;
+    },
   },
 };
 </script>

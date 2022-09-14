@@ -11,16 +11,22 @@
       </div>
     </div>
 
-    <div class="buttons">
+    <div class="buttons" :class="{ zIndex2: tutorial_step === 1 }">
       <div
         class="button shop"
+        :class="{ bubble: tutorial_step === 1 }"
         :style="`background-image:url(${require('./assets/bt1.png')});`"
-        @click="showMenu = true"
+        id="tutorial1"
+        @click="
+          showMenu = true;
+          setTutorialStep();
+        "
       >
         <img src="./assets/molotok.png" />
       </div>
       <div
         class="button shop"
+        :class="{ opacity05: tutorial_step === 1 }"
         :style="`background-image:url(${require('./assets/bt1.png')});`"
         @click="showMenu = true"
       >
@@ -28,6 +34,7 @@
       </div>
       <div
         class="button shop"
+        :class="{ opacity05: tutorial_step === 1 }"
         :style="`background-image:url(${require('./assets/bt1.png')});`"
         @click="showMenu = true"
       >
@@ -35,13 +42,19 @@
       </div>
       <div
         class="button shop"
+        :class="{ opacity05: tutorial_step === 1 }"
         :style="`background-image:url(${require('./assets/bt1.png')});`"
-        @click="showMenu = true"
+        @click="
+          tutorial = true;
+          arrow = true;
+          setTutorialStep();
+        "
       >
         <img src="./assets/question.png" />
       </div>
       <div
         class="button shop"
+        :class="{ opacity05: tutorial_step === 1 }"
         :style="`background-image:url(${require('./assets/bt1.png')});`"
         @click="showMenu = true"
       >
@@ -58,6 +71,7 @@
         :activeTab="activeTab"
         :coins="coins"
         :runes="runes"
+        :class="{ zIndex2: tutorial_activeMenu[tutorial_step] }"
         @switchTab="activeTab = $event"
         @missclick="showMenu = false"
       >
@@ -68,6 +82,13 @@
           :objectsOnMap="objectsOnMap"
           :resources="resources"
           :units="unitsTemplates"
+          :tutorial_step="tutorial_step"
+          @setTutorial="
+            setTutorialStep();
+            aimMode = true;
+            cashBuild = $event;
+            showMenu = false;
+          "
           @buyItem="buyItem"
           @buyUnit="buyUnit"
           @spawnBuild="
@@ -91,6 +112,25 @@
         </div>
       </div>
     </div>
+    <div class="blocked" v-if="tutorial && tutorial_step"></div>
+    <transition name="faded">
+      <div
+        class="arrow"
+        :style="{ top: arrow_y, left: arrow_x }"
+        ref="arrow"
+        v-show="arrow && tutorial_step"
+      >
+        <img
+          v-if="arrow_visible"
+          class="arrow_img"
+          src="./assets/strelka.png"
+        />
+        <div class="arrow_text">
+          {{ tutorial_text[tutorial_step] }}
+        </div>
+        <img class="dwarf" src="./assets/dwarf.png" />
+      </div>
+    </transition>
     <div
       class="login_view"
       :style="`background-image:url(${require('./assets/bg2.png')});`"
@@ -181,6 +221,27 @@ export default {
       loginError: "",
       aimMode: false,
       cashBuild: null,
+      tutorial: false,
+      arrow: false,
+      arrow_x: 0,
+      arrow_y: 0,
+      arrow_visible: true,
+      tutorial_step: 0,
+      tutorial_activeMenu: {
+        2: true,
+        4: true,
+        6: true,
+      },
+      tutorial_text: [
+        "",
+        "first of all, to obtain resources, you need to build a building, you can buy it in the store",
+        "select your first building, the required resources for its construction are indicated in the corner of the card",
+        "above the building is a strip with the amount of resources, just click on the building to collect",
+        "it is very dangerous in the area and it would be nice to have defenders, for a start we will buy a camp for them",
+        "this is your army camp, click here",
+        "in the characters tab you will find fighters available for purchase, lets buy one",
+        "good luck boy.",
+      ],
       tabs,
       login: "admin",
       password: "admin",
@@ -214,6 +275,31 @@ export default {
       let str = [h, m, s].map((el) => (el < 10 ? "0" + el : el)).join(":");
       return str;
     },
+    setTutorialStep() {
+      if (!this.tutorial || !this.arrow) return 0;
+      this.tutorial_step++;
+      let step = this.tutorial_step;
+      setTimeout(() => {
+        console.log("step");
+        let arrow = this.$refs.arrow.getBoundingClientRect();
+        console.log(arrow);
+        let tutorial = document.getElementById("tutorial" + step);
+        console.log(tutorial);
+        if (tutorial) {
+          this.arrow = true;
+          this.tutorial = true;
+          tutorial = tutorial.getBoundingClientRect();
+        } else {
+          this.arrow = false;
+          this.tutorial = false;
+          console.log(this.tutorial_step);
+          return 0;
+        }
+        console.log(arrow, tutorial);
+        this.arrow_x = tutorial.x + "px";
+        this.arrow_y = tutorial.y - arrow.height + "px";
+      }, 200);
+    },
     async enterLogin() {
       this.loginError = "";
       let { login, password } = this;
@@ -230,6 +316,11 @@ export default {
       this.selfBuildings = buildings;
       this.selfUnits = units;
       this.enemies = enemies;
+      if (!this.selfBuildings.length) {
+        this.tutorial = true;
+        this.arrow = true;
+        this.setTutorialStep();
+      }
       let url = undefined;
       if (window.location.href.includes("localhost"))
         url = "ws://localhost:8080";
@@ -245,6 +336,16 @@ export default {
         this.selfBuildings.push(build);
       });
       socket.on("new_unit", (unit) => {
+        if (this.tutorial_step === 6) {
+          this.setTutorialStep();
+          setTimeout(() => {
+            this.arrow_visible = false;
+            this.arrow = true;
+            this.arrow_x = "10px";
+            this.arrow_y = "100px";
+          }, 250);
+          setTimeout(() => (this.arrow = false), 2000);
+        }
         this.showMenu = false;
         this.addUnitOnMap(unit, true);
         this.selfUnits.push(unit);
@@ -254,6 +355,21 @@ export default {
         let build = store.selfBuildings[ev.id];
         if (!build) return 0;
         build.gs_store = 0;
+        console.log(build.tutorial);
+        if (build.tutorial) {
+          console.log(build.tutorial);
+          if (this.tutorial_step === 5) {
+            this.activeTab = this.tabs[1].component;
+          }
+          setTimeout(() => {
+            this.showMenu = true;
+            this.tutorial = true;
+            this.arrow = true;
+            store.gameScene.removeChild(build.tutorial);
+            build.tutorial = null;
+            this.setTutorialStep();
+          }, 1500);
+        }
         await build.shuffle();
         await build.alphaCounter(
           `+ ${ev.lastCollected}`,
@@ -391,7 +507,7 @@ export default {
       target.blocked = true;
       if (store.gameScene.blockedUI) return (target.blocked = false);
       if (target.timeout) return 0;
-      console.log(target);
+      console.log(store.selfBuildings);
       let { type } = target;
       if (["forrest", "mountain", "lake"].includes(type)) {
         gsap.to(target.sprite, { alpha: 0.5, duration: 0.5 });
@@ -438,80 +554,35 @@ export default {
       console.log(el);
       el.x = el.defaultX;
       el.y = el.defaultY;
-      let size = {
-        mine1: {
-          h: 291.2,
-          c: 31,
-        },
-        mine2: {
-          h: 334.2,
-          c: 31,
-        },
-        mine3: {
-          h: 258,
-          c: 31,
-        },
-        quarry1: {
-          h: 242,
-          c: 31,
-        },
-        quarry2: {
-          h: 291,
-          c: 31,
-        },
-        quarry3: {
-          h: 251,
-          w: 256,
-          c: 31,
-        },
-        sawmill1: {
-          h: 254,
-          c: 22,
-        },
-        sawmill2: {
-          h: 273,
-          c: 23,
-        },
-        sawmill3: {
-          h: 279,
-          c: 23,
-        },
-        armycamp1: {
-          h: 260,
-          c: 22,
-        },
-      };
       if (!el.x || !el.y) return 0;
       let container = new Container();
-      let sprite = new createAnimatedSprite(
-        `./assets/frames/${el.name}${el.rarityNum}.png`,
-        size[`${el.name}${el.rarityNum}`].w || 257,
-        size[`${el.name}${el.rarityNum}`].h || 260,
-        size[`${el.name}${el.rarityNum}`].c || 22,
-        7
-      ).sprite;
-      sprite.play();
-      sprite.animationSpeed = 0.3;
+      let sprite = new Spine(
+        store.app.loader.resources[
+          `./assets/${el.name}${el.rarityNum}/${el.name}${el.rarityNum}.json`
+        ].spineData
+      );
+      sprite.state.setAnimation(0, "animation", true);
       let ground = store.map[el.y][el.x];
       ground.obj = container;
       container.ground = ground;
       container.addChild(sprite);
-      container.scale.x = ground.children[0].height / sprite.height;
-      container.scale.y = ground.children[0].height / sprite.height;
+      sprite.scale.y = (ground.children[0].width / sprite.width) * 0.6;
+      sprite.scale.x = (ground.children[0].width / sprite.width) * 0.6;
+      console.log(ground.children[0].width / sprite.width);
       if (el.scaled) {
         container.scale.x *= el.scaled;
         container.scale.y *= el.scaled;
       }
       let x = ground.x;
       let y = ground.y;
-      x += (ground.width - container.width) / 2;
-      y += (ground.height - container.height) / 2 - ground.height / 6;
-      container.y = y - 200;
+      x += ground.width / 2;
+      y += ground.height / 4;
+      container.y = y;
       container.x = x;
       container.alpha = 0;
       container.sprite = sprite;
       container.type = el.type;
-      container.zIndex = Number(el.y + "" + el.x);
+      container.zIndex = Number(el.y + "" + el.x) * 10;
       [
         "store",
         "name",
@@ -525,9 +596,18 @@ export default {
         "id",
       ].forEach((key) => (container[key] = el[key]));
       container.shuffle = async function () {
-        await gsap.to(this.sprite.scale, { duration: 0.3, x: 0.95, y: 1.05 });
-        await gsap.to(this.sprite.scale, { duration: 0.2, x: 1.05, y: 0.95 });
-        await gsap.to(this.sprite.scale, { duration: 0.1, x: 1, y: 1 });
+        let { x, y } = this.sprite.scale;
+        await gsap.to(this.sprite.scale, {
+          duration: 0.3,
+          x: x * 0.95,
+          y: y * 1.05,
+        });
+        await gsap.to(this.sprite.scale, {
+          duration: 0.2,
+          x: x * 1.05,
+          y: y * 0.95,
+        });
+        await gsap.to(this.sprite.scale, { duration: 0.1, x, y });
       };
       container.alphaCounter = async function (
         text = "+1",
@@ -560,19 +640,20 @@ export default {
         container.addChild(node);
         container.zIndex = 12;
         this.addChild(container);
-        container.x = 40;
+        // container.x = 15;
         if (delay) {
           container.x = 40 - text.length * 1.5;
         }
-        container.y = 40;
+        // container.y = 40;
         if (sprite) {
           let spr = Sprite.from(`./assets/${sprite}.png`);
-          spr.scale.set(0.4);
+          spr.scale.set(0.2);
           container.addChild(spr);
+          spr.x = 15;
           container.sortChildren = true;
           spr.zIndex = 3;
         }
-        await gsap.to(container, { y: 0, alpha: 0, duration: 2, delay });
+        await gsap.to(container, { y: -30, alpha: 0, duration: 2, delay });
         this.removeChild(container);
       };
       ground.type = el.type;
@@ -580,24 +661,22 @@ export default {
       container.building_type = el.building_type;
       if (el.type === "building") {
         let text = new Text(el.name, {
-          fontSize: 22,
+          fontSize: 12,
           fontFamily: "gothic",
           fill: "#ffaf00",
           stroke: "#333",
-          strokeThickness: 4,
+          strokeThickness: 2,
         });
         container.addChild(text);
-        text.x = (ground.width - text.width) / 2;
-        text.y -= text.height;
+        text.x = -30;
+        text.y = -70;
       }
       let storeBar = new Container();
-      storeBar.x = 50;
-      storeBar.y = 20;
       container.addChild(storeBar);
       storeBar.zIndex = 3;
       let innerBar = new Graphics();
       innerBar.beginFill(0xababab);
-      innerBar.drawRoundedRect(0, 0, 100, 15, 30);
+      innerBar.drawRoundedRect(0, 0, 70, 10, 30);
       innerBar.endFill();
       storeBar.addChild(innerBar);
 
@@ -605,31 +684,31 @@ export default {
       container.storeBar = outerBar;
       let percent = (el.store / el.storage) * 100;
       outerBar.beginFill(0xff9900);
-      outerBar.drawRoundedRect(0, 0, percent || 1, 15, 80);
+      outerBar.drawRoundedRect(0, 0, percent || 1, 10, 80);
       outerBar.endFill();
       storeBar.addChild(outerBar);
       storeBar.outer = outerBar;
       container.storeText = new Text(`${el.store}/${el.storage}`, {
         fill: 0xefefef,
         fontFamily: "gothic",
-        fontSize: 10,
+        fontSize: 7,
         stroke: "#454545",
-        strokeThickness: 2,
+        strokeThickness: 1,
       });
       container.storeText.x = 30;
-      storeBar.y = -40;
-      storeBar.x = 100;
+      storeBar.y = -80;
+      storeBar.x = -30;
       storeBar.addChild(container.storeText);
       if (el.building_type !== "army") {
         const timerNode = new Text("", {
           fill: 0xefefef,
           fontFamily: "gothic",
-          fontSize: 15,
+          fontSize: 13,
           stroke: "#454545",
           strokeThickness: 2,
         });
-        timerNode.y = -70;
-        timerNode.x = 110;
+        timerNode.y = -100;
+        timerNode.x = -30;
         container.timerNode = timerNode;
         container.addChild(timerNode);
       }
@@ -666,6 +745,37 @@ export default {
       let duration = 0;
       if (newBuild) duration = 0.5;
       await gsap.to(container, { duration, alpha: 1, y });
+      if (this.tutorial_step === 3 || this.tutorial_step === 5) {
+        let build = ground;
+        let spr = Sprite.from("./assets/strelka.png");
+        let dwarf = Sprite.from("./assets/dwarf.png");
+        let con = new Container();
+        let text = new Text(this.tutorial_text[this.tutorial_step], {
+          fontSize: 15,
+          fontFamily: "gothic",
+          fill: "#eeeeff",
+          stroke: "#333",
+          strokeThickness: 3,
+          wordWrap: true,
+          wordWrapWidth: 150,
+        });
+        dwarf.scale.set(0.2);
+        dwarf.x = -130;
+        dwarf.y = -40;
+        con.addChild(spr);
+        con.addChild(text);
+        con.addChild(dwarf);
+        text.y = -165;
+        con.x = build.x - 50;
+        con.y = build.y;
+        con.zIndex = 9999;
+        con.alpha = 0;
+        gsap.to(con, { alpha: 1 });
+        gsap.to(spr, { x: spr.x + 20, yoyo: true, repeat: -1 });
+        store.gameScene.addChild(con);
+        container.tutorial = con;
+        console.log(con);
+      }
       if (el.advice) {
         console.log(el.advice);
         container.alphaCounter(el.advice);
@@ -889,7 +999,8 @@ export default {
         )
         .add(
           store.objectsOnMap.map(
-            (el) => `./assets/frames/${el.name}${el.rarityNum}.png`
+            (el) =>
+              `./assets/${el.name}${el.rarityNum}/${el.name}${el.rarityNum}.json`
           )
         )
         .add(
@@ -899,7 +1010,7 @@ export default {
         )
         .add("gothic", "./assets/gothic.otf")
         .load(setup);
-      function setup() {
+      function setup(loader, res) {
         console.log(store.app.loader.resources);
         store.map = initMap("", store, store.allMapCount);
         vm.renderMap();

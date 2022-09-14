@@ -1,167 +1,69 @@
 
 sawmill2.png
-size: 1550,1102
+size: 1190,1091
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-sawmill1
+saw-front
   rotate: false
-  xy: 2, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 593, 2
+  size: 234, 231
+  orig: 235, 233
+  offset: 0, 2
   index: -1
-sawmill2
+sawmill2lvl1
   rotate: false
-  xy: 2, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 2, 556
+  size: 810, 533
+  orig: 834, 890
+  offset: 1, 0
   index: -1
-sawmill10
+sawmill2lvl2
   rotate: false
-  xy: 518, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 593, 235
+  size: 595, 319
+  orig: 834, 890
+  offset: 238, 0
   index: -1
-sawmill11
+sawmill2lvl3
   rotate: false
-  xy: 776, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 829, 43
+  size: 333, 190
+  orig: 834, 890
+  offset: 458, 110
   index: -1
-sawmill12
+sawmill2lvl4
   rotate: false
-  xy: 260, 2
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 982, 730
+  size: 134, 168
+  orig: 834, 890
+  offset: 349, 171
   index: -1
-sawmill13
+sawmill2lvlmain
   rotate: false
-  xy: 518, 277
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 2, 19
+  size: 589, 535
+  orig: 834, 890
+  offset: 170, 230
   index: -1
-sawmill14
+sawmilldoor+holder2
   rotate: false
-  xy: 776, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 982, 594
+  size: 134, 134
+  orig: 134, 134
+  offset: 0, 0
   index: -1
-sawmill15
+sawmilldoor+tube
   rotate: false
-  xy: 1034, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 814, 574
+  size: 166, 515
+  orig: 759, 890
+  offset: 195, 374
   index: -1
-sawmill16
+sawmilldoor+wood
   rotate: false
-  xy: 518, 2
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill17
-  rotate: false
-  xy: 776, 277
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill18
-  rotate: false
-  xy: 1034, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill19
-  rotate: false
-  xy: 1292, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill20
-  rotate: false
-  xy: 776, 2
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill21
-  rotate: false
-  xy: 1034, 277
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill22
-  rotate: false
-  xy: 1292, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill23
-  rotate: false
-  xy: 1034, 2
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill3
-  rotate: false
-  xy: 2, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill4
-  rotate: false
-  xy: 260, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill5
-  rotate: false
-  xy: 2, 277
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill6
-  rotate: false
-  xy: 260, 552
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill7
-  rotate: false
-  xy: 518, 827
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill8
-  rotate: false
-  xy: 2, 2
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
-  index: -1
-sawmill9
-  rotate: false
-  xy: 260, 277
-  size: 256, 273
-  orig: 256, 275
-  offset: 0, 1
+  xy: 982, 900
+  size: 161, 189
+  orig: 759, 890
+  offset: 514, 25
   index: -1

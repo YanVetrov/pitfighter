@@ -1,160 +1,41 @@
 
 armycamp1.png
-size: 1808,788
+size: 1349,565
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-armycamp1
-  rotate: false
-  xy: 2, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp2
-  rotate: false
-  xy: 2, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp10
-  rotate: false
-  xy: 776, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp11
-  rotate: false
-  xy: 518, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp12
-  rotate: false
-  xy: 776, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp13
-  rotate: false
-  xy: 1034, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp14
-  rotate: false
-  xy: 776, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp15
-  rotate: false
-  xy: 1034, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp16
-  rotate: false
-  xy: 1292, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp17
-  rotate: false
-  xy: 1034, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp18
-  rotate: false
-  xy: 1292, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp19
-  rotate: false
-  xy: 1550, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp20
-  rotate: false
-  xy: 1292, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp21
-  rotate: false
-  xy: 1550, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp22
-  rotate: false
-  xy: 1550, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp3
-  rotate: false
-  xy: 2, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp4
-  rotate: false
-  xy: 260, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
-  index: -1
-armycamp5
+quarry-main3
   rotate: false
   xy: 2, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
+  size: 574, 561
+  orig: 576, 564
+  offset: 1, 1
   index: -1
-armycamp6
+quarry-mincart3
   rotate: false
-  xy: 260, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
+  xy: 1154, 289
+  size: 62, 72
+  orig: 64, 74
+  offset: 1, 1
   index: -1
-armycamp7
+quarry-mincartback3
   rotate: false
-  xy: 518, 526
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
+  xy: 1154, 363
+  size: 68, 69
+  orig: 70, 71
+  offset: 1, 1
   index: -1
-armycamp8
+quarry-road3
   rotate: false
-  xy: 260, 2
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
+  xy: 1154, 434
+  size: 193, 129
+  orig: 195, 131
+  offset: 1, 1
   index: -1
-armycamp9
+quarry3lvl1
   rotate: false
-  xy: 518, 264
-  size: 256, 260
-  orig: 256, 260
-  offset: 0, 0
+  xy: 578, 2
+  size: 574, 561
+  orig: 576, 564
+  offset: 1, 1
   index: -1
