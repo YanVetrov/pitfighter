@@ -1,48 +1,90 @@
 
 sawmill3.png
-size: 1909,752
+size: 1726,1276
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-saw-front
+saw
   rotate: false
-  xy: 1673, 519
-  size: 234, 231
-  orig: 235, 233
-  offset: 0, 2
-  index: -1
-sawmill-sawholder
-  rotate: false
-  xy: 1505, 40
-  size: 140, 139
-  orig: 140, 139
+  xy: 891, 470
+  size: 256, 255
+  orig: 256, 255
   offset: 0, 0
-  index: -1
-sawmill-tube
-  rotate: false
-  xy: 1505, 181
-  size: 166, 569
-  orig: 836, 927
-  offset: 185, 358
   index: -1
 sawmill3lvl1
   rotate: false
-  xy: 2, 2
-  size: 848, 748
-  orig: 850, 927
-  offset: 1, 0
+  xy: 706, 727
+  size: 502, 547
+  orig: 917, 1000
+  offset: 0, 1
+  index: -1
+sawmill3lvl10
+  rotate: false
+  xy: 1210, 921
+  size: 514, 353
+  orig: 917, 1000
+  offset: 385, 18
+  index: -1
+sawmill3lvl11
+  rotate: false
+  xy: 891, 2
+  size: 614, 466
+  orig: 917, 1000
+  offset: 145, 94
+  index: -1
+sawmill3lvl12
+  rotate: false
+  xy: 2, 46
+  size: 180, 613
+  orig: 917, 1000
+  offset: 199, 387
   index: -1
 sawmill3lvl2
   rotate: false
-  xy: 852, 63
-  size: 651, 687
-  orig: 852, 927
-  offset: 200, 61
+  xy: 1210, 646
+  size: 510, 273
+  orig: 917, 1000
+  offset: 183, 2
   index: -1
 sawmill3lvl3
   rotate: false
-  xy: 1673, 267
-  size: 103, 250
-  orig: 836, 927
-  offset: 512, 187
+  xy: 2, 661
+  size: 702, 613
+  orig: 917, 1000
+  offset: 215, 169
+  index: -1
+sawmill3lvl4
+  rotate: false
+  xy: 1210, 495
+  size: 155, 149
+  orig: 917, 1000
+  offset: 479, 168
+  index: -1
+sawmill3lvl5
+  rotate: false
+  xy: 1507, 327
+  size: 188, 317
+  orig: 917, 1000
+  offset: 475, 202
+  index: -1
+sawmill3lvl7
+  rotate: false
+  xy: 1507, 54
+  size: 112, 271
+  orig: 917, 1000
+  offset: 551, 202
+  index: -1
+sawmill3lvl8
+  rotate: false
+  xy: 184, 68
+  size: 705, 591
+  orig: 917, 1000
+  offset: 162, 217
+  index: -1
+sawmill3lvl9
+  rotate: false
+  xy: 1149, 567
+  size: 59, 158
+  orig: 917, 1000
+  offset: 304, 369
   index: -1

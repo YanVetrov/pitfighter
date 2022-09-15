@@ -1,41 +1,41 @@
 
 quarry3.png
-size: 1349,565
+size: 1922,805
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-quarry-main3
-  rotate: false
-  xy: 2, 2
-  size: 574, 561
-  orig: 576, 564
-  offset: 1, 1
-  index: -1
-quarry-mincart3
-  rotate: false
-  xy: 1154, 289
-  size: 62, 72
-  orig: 64, 74
-  offset: 1, 1
-  index: -1
-quarry-mincartback3
-  rotate: false
-  xy: 1154, 363
-  size: 68, 69
-  orig: 70, 71
-  offset: 1, 1
-  index: -1
-quarry-road3
-  rotate: false
-  xy: 1154, 434
-  size: 193, 129
-  orig: 195, 131
-  offset: 1, 1
-  index: -1
 quarry3lvl1
   rotate: false
-  xy: 578, 2
-  size: 574, 561
-  orig: 576, 564
+  xy: 1644, 414
+  size: 88, 103
+  orig: 820, 803
+  offset: 213, 179
+  index: -1
+quarry3lvl2
+  rotate: false
+  xy: 1644, 519
+  size: 96, 97
+  orig: 820, 803
+  offset: 163, 217
+  index: -1
+quarry3lvl3
+  rotate: false
+  xy: 1644, 618
+  size: 276, 185
+  orig: 820, 803
+  offset: 201, 155
+  index: -1
+quarry3lvl4
+  rotate: false
+  xy: 823, 2
+  size: 819, 801
+  orig: 820, 803
+  offset: 1, 1
+  index: -1
+quarry3lvl5
+  rotate: false
+  xy: 2, 2
+  size: 819, 801
+  orig: 820, 803
   offset: 1, 1
   index: -1

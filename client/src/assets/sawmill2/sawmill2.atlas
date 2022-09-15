@@ -1,69 +1,69 @@
 
 sawmill2.png
-size: 1190,1091
+size: 1369,1096
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-saw-front
+saw
   rotate: false
-  xy: 593, 2
-  size: 234, 231
-  orig: 235, 233
-  offset: 0, 2
+  xy: 662, 2
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
   index: -1
 sawmill2lvl1
   rotate: false
-  xy: 2, 556
-  size: 810, 533
-  orig: 834, 890
-  offset: 1, 0
+  xy: 920, 25
+  size: 447, 232
+  orig: 897, 959
+  offset: 279, 0
   index: -1
 sawmill2lvl2
   rotate: false
-  xy: 593, 235
-  size: 595, 319
-  orig: 834, 890
-  offset: 238, 0
+  xy: 662, 391
+  size: 144, 144
+  orig: 897, 959
+  offset: 589, 188
   index: -1
 sawmill2lvl3
   rotate: false
-  xy: 829, 43
-  size: 333, 190
-  orig: 834, 890
-  offset: 458, 110
+  xy: 2, 516
+  size: 636, 578
+  orig: 897, 959
+  offset: 181, 247
   index: -1
 sawmill2lvl4
   rotate: false
-  xy: 982, 730
-  size: 134, 168
-  orig: 834, 890
-  offset: 349, 171
+  xy: 2, 18
+  size: 658, 496
+  orig: 897, 959
+  offset: 153, 79
   index: -1
-sawmill2lvlmain
+sawmill2lvl5
   rotate: false
-  xy: 2, 19
-  size: 589, 535
-  orig: 834, 890
-  offset: 170, 230
+  xy: 819, 582
+  size: 520, 181
+  orig: 897, 959
+  offset: 0, 186
   index: -1
-sawmilldoor+holder2
+sawmill2lvl6
   rotate: false
-  xy: 982, 594
-  size: 134, 134
-  orig: 134, 134
-  offset: 0, 0
+  xy: 819, 765
+  size: 521, 329
+  orig: 897, 959
+  offset: 0, 184
   index: -1
-sawmilldoor+tube
+sawmill2lvl7
   rotate: false
-  xy: 814, 574
-  size: 166, 515
-  orig: 759, 890
-  offset: 195, 374
+  xy: 640, 537
+  size: 177, 557
+  orig: 897, 959
+  offset: 211, 402
   index: -1
-sawmilldoor+wood
+sawmill2lvl8
   rotate: false
-  xy: 982, 900
-  size: 161, 189
-  orig: 759, 890
-  offset: 514, 25
+  xy: 819, 259
+  size: 447, 321
+  orig: 897, 959
+  offset: 447, 40
   index: -1

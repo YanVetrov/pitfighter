@@ -24,18 +24,18 @@ const builds = [
             stone: 25,
         },
     },
-    // {
-    //     name: 'mine',
-    //     resource: 'steel',
-    //     defaultX: 5,
-    //     defaultY: 5,
-    //     maxRarityLvl: 3,
-    //     building_type: 'miner',
-    //     requirements: {
-    //         wood: 35,
-    //         stone: 35,
-    //     },
-    // },
+    {
+        name: 'mine',
+        resource: 'steel',
+        defaultX: 5,
+        defaultY: 5,
+        maxRarityLvl: 3,
+        building_type: 'miner',
+        requirements: {
+            wood: 35,
+            stone: 35,
+        },
+    },
     {
         name: 'armycamp',
         resource: 'steel',

@@ -1,223 +1,76 @@
 
 mine2.png
-size: 1550,1655
+size: 2016,932
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-mine1
+mine2lvl1
   rotate: false
-  xy: 2, 1331
-  size: 256, 322
-  orig: 256, 336
-  offset: 0, 0
+  xy: 1621, 4
+  size: 241, 432
+  orig: 750, 966
+  offset: 468, 144
   index: -1
-mine10
+mine2lvl10
   rotate: false
-  xy: 776, 1003
-  size: 256, 326
-  orig: 256, 336
-  offset: 0, 0
+  xy: 700, 28
+  size: 130, 225
+  orig: 750, 966
+  offset: 619, 245
   index: -1
-mine11
+mine2lvl2
   rotate: false
-  xy: 518, 673
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
+  xy: 299, 23
+  size: 139, 125
+  orig: 750, 966
+  offset: 482, 508
   index: -1
-mine12
+mine2lvl3
   rotate: false
-  xy: 776, 673
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
+  xy: 2, 2
+  size: 167, 146
+  orig: 750, 966
+  offset: 355, 440
   index: -1
-mine13
+mine2lvl4
   rotate: false
-  xy: 1292, 2
-  size: 256, 336
-  orig: 256, 336
-  offset: 0, 0
+  xy: 171, 2
+  size: 126, 146
+  orig: 750, 966
+  offset: 16, 25
   index: -1
-mine14
+mine2lvl5
   rotate: false
-  xy: 518, 342
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
+  xy: 700, 255
+  size: 542, 675
+  orig: 750, 966
+  offset: 79, 144
   index: -1
-mine15
+mine2lvl6
   rotate: false
-  xy: 518, 1331
-  size: 256, 322
-  orig: 256, 336
-  offset: 0, 0
+  xy: 1244, 122
+  size: 375, 314
+  orig: 750, 966
+  offset: 0, 1
   index: -1
-mine16
+mine2lvl7
   rotate: false
-  xy: 2, 1005
-  size: 256, 324
-  orig: 256, 336
-  offset: 0, 0
+  xy: 2, 150
+  size: 696, 780
+  orig: 750, 966
+  offset: 54, 38
   index: -1
-mine17
+mine2lvl8
   rotate: false
-  xy: 1034, 1001
-  size: 256, 326
-  orig: 256, 336
-  offset: 0, 0
+  xy: 1864, 33
+  size: 150, 403
+  orig: 750, 966
+  offset: 300, 561
   index: -1
-mine18
+mine2lvl9
   rotate: false
-  xy: 1034, 671
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine19
-  rotate: false
-  xy: 776, 342
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine2
-  rotate: false
-  xy: 1034, 1329
-  size: 256, 324
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine20
-  rotate: false
-  xy: 518, 5
-  size: 256, 335
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine21
-  rotate: false
-  xy: 1034, 340
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine22
-  rotate: false
-  xy: 776, 1331
-  size: 256, 322
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine23
-  rotate: false
-  xy: 260, 1005
-  size: 256, 324
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine24
-  rotate: false
-  xy: 1292, 1001
-  size: 256, 326
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine25
-  rotate: false
-  xy: 1292, 671
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine26
-  rotate: false
-  xy: 1292, 340
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine27
-  rotate: false
-  xy: 2, 14
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine28
-  rotate: false
-  xy: 2, 345
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine29
-  rotate: false
-  xy: 776, 5
-  size: 256, 335
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine3
-  rotate: false
-  xy: 518, 1003
-  size: 256, 326
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine30
-  rotate: false
-  xy: 260, 13
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine31
-  rotate: false
-  xy: 260, 13
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine4
-  rotate: false
-  xy: 2, 675
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine5
-  rotate: false
-  xy: 260, 675
-  size: 256, 328
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine6
-  rotate: false
-  xy: 1034, 2
-  size: 256, 336
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine7
-  rotate: false
-  xy: 260, 344
-  size: 256, 329
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine8
-  rotate: false
-  xy: 260, 1331
-  size: 256, 322
-  orig: 256, 336
-  offset: 0, 0
-  index: -1
-mine9
-  rotate: false
-  xy: 1292, 1329
-  size: 256, 324
-  orig: 256, 336
-  offset: 0, 0
+  xy: 1244, 438
+  size: 646, 492
+  orig: 750, 966
+  offset: 79, 327
   index: -1
