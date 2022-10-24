@@ -1,8 +1,8 @@
 # pitfighter
 
 ## LINKS
-https://pitfighter.io/ -  promo landing
-https://pitfighter.io/game - farm game (branch farm)
+* https://pitfighter.io/ -  promo landing
+* https://pitfighter.io/game - farm game (branch farm)
 
 ## RU
 
