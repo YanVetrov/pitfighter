@@ -1,5 +1,9 @@
 # pitfighter
 
+## LINKS
+https://pitfighter.io/ -  promo landing
+https://pitfighter.io/game - farm game (branch farm)
+
 ## RU
 
 2 игры, основанных на Vue.js (интерфейс) и сanvas WebGL (pixi.js), каждая имеет свой бекенд основанный на node.js: express.js, socket.io,passport.js.
