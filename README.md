@@ -25,7 +25,7 @@
 1 landing promo site with features and design is based on vue.js .
 
 Games:
-1. the master branch. Session step-by-step 1x1 action game. Before you start, you need to assemble your squad of up to 6 fighters, press the ready button and wait for the other player to do the same (you can play the second player through another tab). The spectator mode is also available, just share the link with other people. The game uses assets that are freely available for commercial and non-commercial use.
+1. the master branch. Session turn-based 1x1 action game. Before you start, you need to choose your squad of up to 6 fighters, press the ready button and wait for the other player to do the same (you can play the second player through another tab). The spectator mode is also available, just share the link with other people. The game uses assets that are freely available for commercial and non-commercial use.
 2. Farm branch. A base farm with resource collection buildings and units for their protection. On the first screen, you are greeted by a login and password form that is both registration (if the user does not exist). Next in the game there is a tutorial that (I hope) will give you an understanding of the mechanics of the game. **!!!The game contains assets only for non-commercial use!!!**
 
 There is a problem (CORS's) of parallel launch of serevs. For example, the main game server localhost:8080, and the client webpack dev-server on localhost:3000
